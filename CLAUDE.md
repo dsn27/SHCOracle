@@ -20,7 +20,7 @@ führt die Abfragen selbst aus und schickt Ergebnisse zurück.
   | Schema | Mandant |
   |---|---|
   | `HS` | Herzau und Schmitt |
-  | `SHC` | KBS |
+  | `SHC` | KBS (ein Betrieb: `MANR = 46`) |
   | `SLDV` | SLDV |
   | `BS` | B. Schmitt |
   | `COCO` | unbekannt (vermutlich alter/Test-Mandant, 2.497 Tabellen) |

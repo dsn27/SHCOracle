@@ -75,7 +75,8 @@ Alles hier gilt als **ungeprüft**, bis es auf der eigenen DB bestätigt ist.
 - **Artikelstamm-Betrieb:** `T051ART.MANR` ist nicht zwingend der Mandant des Belegs, sondern
   `T070BETR.BETART` („Betriebsnummer für Artikelstamm“). Darum joinen viele Abfragen
   `T051ART` nur über `ARNR`. Sicher: `T051ART.MANR = (SELECT BETART FROM T070BETR WHERE MANR = <Beleg-MANR>)`.
-  → Bei uns prüfen, ob `BETART = MANR` ist.
+  → **Geprüft 2026-11-19, Schema `SHC`:** `T070BETR` hat genau einen Betrieb, `MANR = 46`,
+  `BETART = 46` → Artikel normal über `MANR + ARNR` joinen. (Andere Schemata noch offen.)
 - **Blank statt NULL:** Kennzeichen-/Freifelder enthalten oft `' '` (ein Leerzeichen) statt NULL
   (z.B. `T155PRGR.FREI = ' '`, `T064WGTX.UWGR = ' '`). Robust filtern mit `TRIM(spalte) IS NULL`.
 - **Preiseinheit:** Werte = Menge × Preis / `T051ART.PREIVK` (Preisfaktor 1/10/12/100/1000), z.B.
