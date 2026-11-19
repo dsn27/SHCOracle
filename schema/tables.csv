@@ -1,0 +1,3405 @@
+TABLE_NAME;NUM_ROWS;COMMENTS
+ABS_HIN;0;Börner ABS-Schnittstelle HIN-Datei
+ABS_STATUS;0;Status-Tabelle für die ABS-Schnittstelle
+AKTION_PARAM;0;t
+APEX_SAEGEN;0;Gescannte Auftragspositionen der APEX Sägen App
+AP000CONN;3068;Lizenzsteuerung SHC-Web-Apps
+AP000LIZENZ;5;Lizenzsteuerung SHC-Web-Apps
+AP001BERECHT;0;Berechtigungssteuerung für SHC-APps
+AP002CONFIG;18;Hier wird der letzte Besuch gespeichert und welche Pane ein Sachbearbeiter nutzt.
+AP003ADAPP;13;Hier wird der letzte Besuch gespeichert und welche Pane ein Sachbearbeiter nutzt.
+AP004ITEMS;0;Hier wird gesteuert welche Items einer App sichtabr sind und welche nicht !
+AP005ICONS;502;Hier wird gesteuert welche Icons einer App verwendet werden !
+AP006STAT;2463;Außendienst-Statistik
+AP007NOTIZ;0;Außendienst-Sachbearbeiter Notizbuch
+AP008INFOBUS;1;Außendienst Informations Bus
+AP009MAILVORLAGEN;1;Mailvorlagen für die Apex Außendienst-App
+AP010DYNINFO_KOPF;0;Dynamische Informationen in den SHCWare-Apps Kopftabelle
+AP010DYNINFO_POS;0;Dynamische Informationen in den SHCWare-Apps Positionentabelle
+AP099TREEVIEW;0;
+AQ$_REPORT_SERVICE_QUEUE_TAB_G;0;
+AQ$_REPORT_SERVICE_QUEUE_TAB_H;0;
+AQ$_REPORT_SERVICE_QUEUE_TAB_I;0;
+AQ$_REPORT_SERVICE_QUEUE_TAB_L;0;
+AQ$_REPORT_SERVICE_QUEUE_TAB_S;3;
+AQ$_REPORT_SERVICE_QUEUE_TAB_T;2;
+ART_CHANGE_LOG;0;
+ART_FULL_LOG;0;
+ASSTEC_CHANGE_LOG;0;Merken der Artikelnummern bei Stammdatenänderungen
+BENISCH_CHANGE_LOG;0;Merken der Artikelnummern bei Stammdatenänderungen Limmert
+BENISCH_TRANSFER;0;Transfertabelle Benisch Kopf
+BENISCH_T044IMG;0;Transfertabelle Bilddatei
+BENISCH_T051ART;0;Transfertabelle Artikelstamm
+BENISCH_T051KALK;0;Transfertabelle zukünftiger und vergangener Kalkulationsschalter
+BENISCH_T052PR;0;Transfertabelle Artikel-Preisdatei
+BENISCH_T075LAG;0;Transfertabelle Lagerstamm
+BENISCH_T080EAN;0;Transfertabelle EAN-Codes
+BENISCH_T099FTXT;0;Transfertabelle Texte
+BENISCH_T101MST;0;Transfertabelle Mengenstaffel
+BENISCH_T131ALI;0;Transfertabelle Artikellieferanten
+BENISCH_T177KATA;0;Transfertabelle Artikel-Katalogstamm
+BENISCH_T178ARTV;0;Artikel-Verweise
+BENISCH_T188AKT;0;Transfertabelle Aktionspreisdatei
+BENISCH_T202MEZU;0;Transfertabelle Metallzuschläge Artikel
+BENISCH_T336INFA;0;Transfertabelle Zusatzinfodetail Artikel
+BENISCH_T360EK;0;Transfertabelle Lieferanten - Einkaufskonditionen - Kopftabelle In dieser Tabelle steht ein Kopfsatz pro Lieferant und Gültigkeitskennzeichen
+BENISCH_T361NLP;0;Transfertabelle Lieferanten-Standardnachlässe
+BENISCH_T362KGR;0;Transfertabelle Lieferanten Kalkulationsgruppentabelle
+BENISCH_T363KGRP;0;Transfertabelle Nachlässe pro Kalkulationsgruppe Kopftabelle ist T362KGR
+BENISCH_T376PRGR;0;Transfertabelle Lieferanten - Preisgruppen
+BENISCH_T472SOP;0;Transfertabelle Artikel-Servicoptionen
+BENISCH_T481AFMAP;0;Transfertabelle ETIM-Feature-Details
+BENISCH_T481AFVAL;0;Transfertabelle ETIM-Features
+BENISCH_T481AID;0;Transfertabelle ETIM-Artikelzuordnung
+BENISCH_T481AMAP;0;Transfertabelle ETIM-Classes
+BENISCH_T481CFMAP;0;Transfertabelle t481cfmap
+BENISCH_T481CFVMAP;0;Transfertabelle t481cfvmap
+BENISCH_T481CLASS;0;Transfertabelle t481class
+BENISCH_T481FEAT;0;Transfertabelle t481feat
+BENISCH_T481GROUP;0;Transfertabelle t481group
+BENISCH_T481SYN;0;Transfertabelle t481syn
+BENISCH_T481UNIT;0;Transfertabelle t481unit
+BENISCH_T481VAL;0;Transfertabelle t481val
+BENISCH_T634VPE;0;Transfertabelle Verpackungseinheiten
+BENISCH_T683FSTEU;0;Transfertabelle Verarbeitungssteuerung (Feldsteuerung) für die Eingliederung des Schattenartikelstamm.
+BENISCH_T683STEU;0;Transfertabelle Verarbeitungssteuerung für die Eingliederung des Schattenartikelstamm.
+BEX_SENDEAUFTRAEGE;0;Sendeaufträge über die BEX-Ausfuhrschnittstelle
+BME_ARTICLE;0;
+BME_ARTICLE_FEATURES;0;
+BME_ARTICLE_FEATURE_VALUES;0;
+BME_ARTICLE_MIMES;0;
+BME_ARTICLE_PRICES;0;
+BME_EXTENSION;0;
+BME_HEADER;0;
+BSTD_ARCHIVE;0;
+BSTD_MEDIEN;0;
+BSTD_TABS;0;
+CF001CONFIG;1;Konfiguration für die Dienste der Creditreform
+CF010REQUESTS;20;Hier wird der Syntax der diversen Requests gespeichert. Alle Werte im String die mit cfxxx.feldname vorhanden sind, werden ersetzt. Alle cf001config.feldname durch das jeweilige Feld in der Tabelle. Alle cf000.timestamp durch spezielle Werte (z.B: eine
+CF012REQUEST_BODYS;65;Hier werden die Body-Tags eines Requests beschrieben
+CF020SEARCHRESPONSE;0;Hier wird die Antowrt auf den searchRequest gespeichert
+CF020SEARCHRESPONSE_DETAILS;0;Hier werden die Daten der abgerufenen Unternehmsinfo kompakt für die Kundenneuanlage gespeichert !
+CF022MAILBOXDIR;0;Hier wird der Imnhalt des letzten Mailboxanrufs gespeichert !
+CF030REPORTRESPONSE;0;Hier wird die Antowrt auf den reportRequest gespeichert
+CF035ADRN;0;Hier wird die Identificationno mit der Adressnummer aus der SHCWare verknüpft
+CF036PRODUCTAVAILABILITY;0;Hier wird gespeichert welche Auskunftstypen für eine Identificationno zur Verfügung stehen
+CF037ASSIGNEDREPORTS;24;Hier wird gespeichert welche Reporttypen in der SHCWare zur Verfügung stehen
+CF038ASSIGNEDUSERS;0;Hier wird gespeichert welche Benutezr berechtigt sind Anfragen an die Creditreform zu senden
+CF040MONITORINGSTATUS;0;
+CF080ERROR;0;Hier werden die Fehlermeldungen auf einen Request gespeichert !
+CF099REQPROT;0;Requestprotokollierungs-Tabelle. Hier steht der abgesendete Request und die dazugehörige Antowrt (response)
+CHRIST_ZEILEN;119;Zeilenzählertabelle für Christ-Reports 4mm Höhe pro Zeile für <TYP> Höhe
+CH007_KOPF;0;Druckaufbereitungskopftabelle für die Konsolidierungsliste der Fa. Christ.
+CH007_POS;0;Druckaufbereitungszeilentabelle für die Konsolidierungsliste der Fa. Christ.
+CPY_T046SSCH;14;
+CPY_T065SCH;4;
+CPY_T606ART;0;
+CPY_T606REF;0;
+CREATE$JAVA$LOB$TABLE;0;
+CREFO_IMP;0;Crefo - importierte Dateien
+CSV_ELART;0;
+CSV_ELMERK;0;
+C183KSLD;0;
+C851KOST;0;Kostenstellenstamm der Firma Christ (Sonderprogrammierung) SHC322-SWICTH: CHRIST:1
+DA_CHANGE_LOG;0;Merken der Artikelnummern für Stammdatenänderungen für Delphin-Qualipet-Abgleich
+DA_DROESSER_STG;0;
+DATEV_KOMPLETT_EXPORT_HEADER;0;Header er Export-Datei für Datev mit den gesamten Feldern aus der Schnittstelle DATEV-Format
+DATEV_KOMPLETT_EXPORT_POS;0;Export-Datei für Datev mit den gesamten Feldern aus der Schnittstelle DATEV-Format
+DATEV_KOMPLETT_LAUF;0;Dimensionsaufpreise VBE
+DATEV_KOMPLETT_PARAMETER;0;Parameterdatei für die DATEV-Schnittstelle
+DATEV_KOMPLETT_POSITIONEN;0;Positionen einer Buchung
+DATEV_KOMPLETT_PROTOKOLL;0;Protokolltabelle Datev-Komplettt-Übergabe
+DATEV_KOMPLETT_UMSETZUNG;0;Umsetzungstabelle Datev-Komplettt-Übergabe
+DATEV_PARAMETER;1;Parameterdatei für die DATEV-Schnittstelle
+DATEV_POSITIONEN;12719137;Positionentabelle der DATEV-Schnittstelle
+DATEV_SCHNITTSTELLEN;2187;Kopftabelle der DATEV-Schnittstellenformate (Buchungsstapel / Debitoren/Kreditoren-Stamm)
+DATEV_UMSETZUNGEN;60;Umsetztabelle für dieverse Datenbumsetzungen von SHCWare-Werten in DATEV-Werte (z.B.) Steuerschlüssel, Konten, etc.
+DBO_ARTIKELFS;0;
+DBO_POSCOUPON;0;
+DBO_POSCOUPONZEILEN;0;
+DBO_POSRABATTE;0;
+DOCUMENTS;246941;
+DOCUMENTSPART;0;
+DR$T692KIB_AMC_MATCHINDEX$I;;
+DR$T692KIB_AMC_MATCHINDEX$K;;
+DR$T692KIB_AMC_MATCHINDEX$N;;
+DR$T692KIB_AMC_MATCHINDEX$U;;
+DTIME;1558;
+D001CSV;2;Datenübernahme Kopfsätze der Datenübernahme
+D002UETAB;2;
+D003STRG;11;
+D004FORM;0;
+D010OPER;0;
+D011BED;0;
+D012REPL;0;
+D013SUB;0;
+D014MOD;0;
+D015CNT;0;
+D3_T042WKOM;0;Werbe/Kommunikationsdatei
+D3_T056AD;0;Adressstamm für Kunden, Lieferanten, Adressen und Anschriften
+D3_T058ASP;0;Ansprechpartner
+D3_T099FTXT;0;Zusatzinfotabelle z.B. für Personen
+D3_T313KBLZ;0;Kunden-/LieferantenbankenDie Bankverbindungen der Personenkonten (Kunden und Lieferanten) sind für: > die Lastschriften > das automatische Buchen der Bankauszügen > den automatischen Zahlungsausgang notwendig. Pro Konto ist es möglich, mehere Banken
+D3_T337INFP;0;Zusatzinfotabelle z.B. für Personen
+D3_T464PRST;0;Kunden-Preisstufenzuordnung
+EBE_KANBAN;0;
+EBE_KANBAN_BOX_ID;0;
+EOS_A_ADDRESS;0;Heißt bei EOS: Address Document oder A File (Knoten: Adress)
+EOS_A_ADDRESSFILE;0;Heißt bei EOS: Address Document oder A File (Knoten: AdressFile)
+EOS_A_SELLERS;0;Heißt bei EOS: Address Document oder A File (Knoten: Sellers)
+EOS_C_COMPANY;0;Heißt bei EOS: Company Document oder C File (Knoten: Company)
+EOS_C_COMPANYFILE;0;Heißt bei EOS: Company Document oder C File (Knoten: CompanyFile)
+EOS_D_COLLECTION;0;Heißt bei EOS: Collection Document oder D File (Knoten: Collection)
+EOS_D_COLLECTIONFILE;0;Heißt bei EOS: Collection Document oder D File (Knoten: CollectionFile)
+EOS_ER_AUSKUNFT;;EOS: Übersicht der erhaltenen Enhanced Reports (Temporär)
+EOS_ER_BANK;0;EOS: Enhanced Report (Knoten: Bank?)
+EOS_ER_BWINIS;0;
+EOS_ER_COLLECTIONSUMMARY;0;Heißt bei EOS: Enhanced Report File (Knoten: CollectionSummary / Summen pro Negativmerkmal (Collection Level))
+EOS_ER_COMPANYPROFILE;0;Heißt bei EOS: Enhanced Report File (Knoten: CompanyProfile / separat wegen mögl. weiterer Quellen)
+EOS_ER_DOC;0;Heißt bei EOS: Enhanced Report File (Knoten: DOC / CollectionData)
+EOS_ER_ERCOMPANY;0;Heißt bei EOS: Enhanced Report File (Knoten: Company / Daten pro CMS-Key)
+EOS_ER_ERROR;0;Heißt bei EOS: Feeback Document oder F File (Knoten: Error)
+EOS_ER_IS;0;Heißt bei EOS: Enhanced Report File (Knoten: IS / Industriesektor)
+EOS_ER_MD;0;Heißt bei EOS: Enhanced Report File (Knoten: MD / Managing Director)
+EOS_ER_NI;0;Heißt bei EOS: Enhanced Report oder ER File (Knoten: NI / Negativmerkmale)
+EOS_ER_OP_OVERDUES;0;EOS: Enhanced Report (Knoten: Documents : OP_ Overdues, Summen pro Lieferung und Meldedatum)
+EOS_ER_OP_PORT;0;EOS: Enhanced Report (Knoten: Documents : OP_ Overdues / OD_PORT, Summen pro Lieferung und Meldedatum)
+EOS_ER_PD_OVERDUES;0;EOS: Enhanced Report (Knoten: Documents : PD_ Overdues, Summen pro Lieferung und Meldedatum)
+EOS_ER_PD_PORT;0;EOS: Enhanced Report (Knoten: Documents : PD_ Overdues / OD_PORT, Summen pro Lieferung und Meldedatum)
+EOS_ER_PHONENUMBERS;0;Heißt bei EOS: Enhanced Report File (Knoten: PhoneNumbers, eMail und URL / Alle Typen können mehrfach vorkommen)
+EOS_ER_PRIMARY;0;Heißt bei EOS: Enhanced Report File (Knoten: Primary / Momentan nur Adressdaten von Bürgel oder Contributor)
+EOS_ERR;0;Fehlermeldungen aus der EOS-DDMonitor Schnittstelle
+EOS_ER_REASONS;0;"""Heißt bei EOS: Enhanced Report File (Knoten: Reasons)"
+EOS_ER_REPORTFILE;0;Heißt bei EOS: Enhanced Report oder ER File (Knoten: Reportfile)
+EOS_ER_SYNONYMNAME;0;Heißt bei EOS: Enhanced Report File (Knoten: SynonymName)
+EOS_ER_WARNLISTE;;EOS: Übersicht der erhaltenen Meldegründe für Enhancd Reports und Löschung in Feedback-Files und sonstigen Warnkriterien (Temporär)
+EOS_EXPORT;0;EOS: SHC-Verwaltungssatz pro Daten-Export
+EOS_F_DUPLICATES;0;Heißt bei EOS: Feeback Document oder F File (Knoten: Duplicates)
+EOS_F_ERROR;0;Heißt bei EOS: Feeback Document oder F File (Knoten: Error)
+EOS_F_FEEDBACK;0;Heißt bei EOS: Feeback Document oder F File (Knoten: Feedback)
+EOS_F_FEEDBACKFILE;0;Heißt bei EOS: Feeback Document oder F File (Knoten: FeedbackFile)
+EOS_F_INVESTIGATION;;EOS: Übersicht der erhaltenen Feedbackmeldungen und Fehlermeldungen aus ER-File (Temporär)
+EOS_IMPORT;0;EOS: SHC-Verwaltungssatz pro Daten-Import
+EOS_MD_CONTRIBUTOR;0;EOS: EOS-Vertrags-Lieferanten
+EOS_MD_KD;0;EOS: Tabelle mit Zusatzfeldern zum SHC-Kundenstamm
+EOS_MD_KDCLASS;0;EOS: Definition von Klassifizierungen, die beim Kunden eingetragen werden (eigene Definition des Contributors)
+EOS_MD_SELLER;0;EOS: Tabelle mit Zusatzfeldern zum SHC-Betriebsstamm
+EOS_MD_WORKFLOW;0;EOS: Definition von Codes aus vEOS_MD_Codes, die in den Workflow steuern
+EOS_OD_KDCHANGE;0;EOS: Änderungen an Kundendaten vermerken für die Meldung
+EOS_OD_KDCOL;0;EOS: Eigene Inkassoaufträge pro Kunde
+EOS_OD_POS;0;EOS: Einzelposten, die in die Berechnung der OpenOverdues eingeflossen sind
+EOS_O_OPENOVERDUES;0;Heißt bei EOS: Open Overdue Document oder O File (Knoten: Overdues)
+EOS_O_OPENOVERDUESFILE;0;Heißt bei EOS: Open Overdue Document oder O File (Knoten: OverduesFile)
+EOS_P_PAIDOVERDUES;0;Heißt bei EOS: Paid Overdues Document oder P File (Knoten: PaidOverdues)
+EOS_P_PAIDOVERDUESFILE;0;Heißt bei EOS: Paid Overdues Document oder P File (Knoten: PaidOverduesFile)
+EOS_PROT;0;Allgemeine Meldungen aus der EOS-DDMonitor Schnittstelle
+EOS_R_ERREQUEST;0;EOS: GetEnhanceReport (Anfrage Online Service)
+EOS_R_RESPONSEADDRESS;;EOS:Response auf Search (Rückmeldung Online Service) Temp. Tabelle für Headquarter
+EOS_R_RESPONSE_CTRLDATA;0;EOS: Response auf Search (Rückmeldung Online Service): Aktuelle Details zum Investigation Request
+EOS_R_RESPONSE_ERR;;EOS: Response auf Search (Rückmeldung Online Service) Temp. Tabelle für Fehlermeldungen
+EOS_R_SEARCH;0;EOS: Online Search (Abfrage/Suche Online Service)
+EOS_R_SEARCHBY;;EOS: Felder zum Bilden der SOAP-Anfragen
+EOS_TRANSFER;0;EOS: Statussatz für den den Datentransfer pro Betrieb
+ERR$_K051ART;0;"DML Error Logging table for ""K051ART"""
+ERR$_K080EAN;0;"DML Error Logging table for ""K080EAN"""
+EUL4_ACCESS_PRIVS;24;
+EUL4_APP_PARAMS;15;
+EUL4_ASMP_CONS;0;
+EUL4_ASMP_LOGS;0;
+EUL4_ASM_POLICIES;0;
+EUL4_BA_OBJ_LINKS;1536;
+EUL4_BAS;1;
+EUL4_BATCH_PARAMS;0;
+EUL4_BATCH_QUERIES;0;
+EUL4_BATCH_REPORTS;0;
+EUL4_BATCH_SHEETS;0;
+EUL4_BQ_DEPS;0;
+EUL4_BQ_TABLES;0;
+EUL4_BR_RUNS;0;
+EUL4_DBH_NODES;4;
+EUL4_DOCUMENTS;0;
+EUL4_DOMAINS;0;
+EUL4_ELEM_XREFS;0;
+EUL4_EUL_USERS;2;
+EUL4_EXP_DEPS;7640;
+EUL4_EXPRESSIONS;33409;
+EUL4_FREQ_UNITS;6;
+EUL4_FUN_ARGUMENTS;268;
+EUL4_FUN_CTGS;10;
+EUL4_FUNCTIONS;222;
+EUL4_FUN_FC_LINKS;213;
+EUL4_GATEWAYS;2;
+EUL4_HIERARCHIES;1412;
+EUL4_HI_NODES;7055;
+EUL4_HI_SEGMENTS;5647;
+EUL4_IG_EXP_LINKS;7055;
+EUL4_IHS_FK_LINKS;0;
+EUL4_KEY_CONS;597;
+EUL4_OBJ_DEPS;0;
+EUL4_OBJ_JOIN_USGS;0;
+EUL4_OBJS;1536;
+EUL4_PLAN_TABLE;0;
+EUL4_QPP_STATS;0;
+EUL4_SEGMENTS;1237;
+EUL4_SEQUENCES;1;
+EUL4_SQ_CRRLTNS;0;
+EUL4_SUB_QUERIES;0;
+EUL4_SUM_BITMAPS;0;
+EUL4_SUMMARY_OBJS;0;
+EUL4_SUMO_EXP_USGS;0;
+EUL4_SUM_RFSH_SETS;0;
+EUL4_VERSIONS;1;
+FAKT_VK_ADM;0;
+FAKT_VK_DRU;0;
+GADR_HBTR;0;
+GADR_UBTR;0;
+GDP_FELDER;0;
+GDP_FKEY;0;
+GDP_FKEYFELDER;0;
+GDP_TABELLEN;0;
+GRABONEP;0;Lieferantenbonus für Verbandslieferanten für Granzow - Bonus-Einzelposten
+GRABONJW;0;
+GRABONT1;;
+GRA_KV_001;0;
+GRA_KV_002;;
+GRANZOW01;0;Zwischen-Kopf-Tabelle für Package GRA_PROV Provisionsermittlung Granzow
+GRANZOW02;0;Zwischen-Positions-Tabelle für Package GRA_PROV Provisionsermittlung Granzow
+HTML_OBJ;52;
+IBERO_T628;0;
+IDS_ORDER;0;
+IDS_WK;0;iKibes - IDS-Schnittstelle: der von aussen übergebene Warenkorb wird hier gespeichert
+IMPORTSETTINGS;2;
+JAVA$CLASS$MD5$TABLE;6;
+JAVA$OPTIONS;6;
+KALKARTIKEL;0;
+KDBIND;4124;
+KER_KREDVERS_SALDO;0;Kerschgens Kreditversicherung - Nettosaldo pro versichertem Kunden / Tag
+K000MESSAGES;0;
+K000REPL;0;
+K000TSE;0;
+K001PROT;0;
+K001SAC;0;
+K002AEND;0;
+K002REPLINFO;0;
+K002TMP;0;
+K002UPDINFO;0;
+K002UPDPROT;0;
+K004BONAD;0;
+K004BONPF;0;
+K004DISP;0;
+K004DPOS;0;
+K004DRU;0;
+K004DSEQ;0;
+K004KONF;0;
+K004KONFSET;0;
+K004KONFZU;0;
+K005FUNKTION;28;
+K005LAYOUT;0;
+K005LAYOUTINFO;3;
+K005PANEL;10;
+K005ZFUNKTION;20;
+K005ZOOM;0;
+K007SAC;0;
+K010BON;0;
+K010MWST;0;
+K010POSITION;0;
+K010POSRAB;0;
+K010STAHLPOS;0;
+K010STO;0;
+K010ZA;0;
+K010ZBON;0;
+K020KAUSW;0;
+K020KFRAGE;0;
+K050MWST;0;
+K051ART;0;
+K055WG;0;
+K064WGTX;0;
+K068NOT;0;
+K080EAN;0;
+K110ANG;0;
+K117VORG;0;Kassen-Vorgangsarten
+K118ZART;0;Zahlungsarten an der Kasse
+K188AKT;0;
+K200TSE;0;
+K201TRANS;0;
+K301GRUP;0;
+K304USAC;0;
+K610KASSL;0;
+LAGERREFERENZ;0;
+LIEBL_FIL_FINKEP;;
+LIEBL_FIL_LIEFEP;;
+LIEBL_FIL_OP;;
+LOGIREKLA_BENUTZER;50;
+LOGIREKLA_DEFEKTTYPE;12;
+LOGIREKLA_ENTSORGER;8;
+LOGIREKLA_GRUNDRUECKHOLUNG;16;
+LOGIREKLA_KONTROLLEWB;7;
+LOGIREKLA_LIEFERSCHEIN;47608;
+LOGIREKLA_MITARBEITER;47;
+LOGIREKLA_REKLAMATION;28219;
+LOGIREKLA_REKLAMATIONSPOSITION;6137;
+LOGIREKLA_RPREFMITARBEITER;2897;
+LOGIREKLA_SPEDITION;8;
+LOGIREKLA_SPEDITIONSKOSTEN;2547;
+LOGIREKLA_XPOBJECTTYPE;20;
+LOTTER_KUNDEN_AUS_PERF_NNFU;0;Die Tabelle lotter_Kunden_aus_Perf_nnfu wird durch meine neue Schnittstelle aus Perfacto gefüllt. Aus allen Warenwirtschaften werden pro Kunde die noch nicht fakturierten Umsätze(also Auftragsbestände) ausgegeben. Perfacto konsolidiert diese und gibt pr
+L001OBJEKTE;0;Kopftabelle der Angebote im Baustahl. Über die Tabellennummer -1 werden die Defaultwerte für die Angebotserfassung hinterlegt. l001->l002->l004 - objektnummer -1, kunde -1 satzart K
+L002KUNDEN;0;Interessenten des Angebote im Baustahl.
+L003OBJDEF;0;Objekt-Beschreibungstabelle.
+L004POS;0;Angebotspositionen Allgemeine Positionen l001objekte -> l002tonagen -> l003objdef -> l004positionen
+L004VBE;0;Defaultwerterafssungstabelle für VBE. Mandant, Lagernummer, Preisystem, Kundengruppe, Kunde für Objekt -1
+L005TONNAGEN;0;Zu einem Objekt (Bauvorhaben) vorhandene Tonagen
+L006USERS;0;Benutzer die die Angebotserstellung nutzen
+L007ARCHIV;0;Archivtabelle - Für ein Bauvorhaben können hier beliebige Dateien angehängt werden.
+L010AUFTRAEGE;0;Zu einem Objekt (Bauvorhaben) vorhandene Tonagen
+L012AUSGABE;0;
+L012AUSGABE_KOPF;0;
+L012AUSGABE_MAIL;0;Mailinformationen für den Versand des Angebots
+L013VVERT;0;
+L014WETT;0;Wettbewerbertabelle - Für die Funktion Vergabe an Wettbewerb !
+L030DIMAUF;0;Dimensionsaufpreise VBE
+L031MENGSTAF;0;Dimensionsaufpreise VBE
+L032SFORMEN;0;Aufpreise und Rabbate für Sonderformen
+L032SFORMEN_LM;0;Aufpreise und Rabbate für Matten-Sonderformen
+L050AKG;0;Tonnage je Plan
+L050AKOPF;0;Aufbau von aus der SBH Biegesoftware erfassten Aufträgen
+L050APOS;0;Übergabetabelle SBH - SHC
+L060AKOPF;0;Aufbau von aus der HUHN PPS erfassten Aufträgen
+L060APOS;0;Übergabetabelle HUHN - SHC
+L060MAPPING;0;Mapping der Anarbeitungsarten zu einer SHC-Artikelnummer
+L060TEXT;0;
+L061UMS;0;
+L096STAT;0;
+L101AGTYPEN;0;Welche Angebotstypen exitieren
+L101BERECHT;0;Berechtigungssteuerung. Welches Feld der Tabelle l001objekte bei welchem Objektstatus zur Eingabe angezeitg wird. Ist kein Satz inder Tabelle vorhanden wird das Feld in jedem Fall angezeigt.
+L102AGTEXTE;0;Angebotstexte
+L103REQUIRED;0;Welche Tonnage Typen (z.B. Betonstahl, Lagermatten, ...) sind required und welche nicht !
+L103TONTYPEN;0;Tonage Typen (z.B. Betonstahl, Lagermatten, ...
+L104ARTIKEL;0;Artikelzuordnung zu den jeweiligen Pflegezeilen
+L104BERECHT;0;Berechtigungssteuerung. Abhängig von Objektstatus, Preissystem und Verlegen wird festgehalten ob das Feld angezeigt wird, an welcher Position, mit welcher Visual-Group und mit welchem Prompt.
+L104PREISSYS;0;Welche Preisysteme existieren für welche Angebotstypen ?
+L104TABCONFIG;0;
+L105ASHALTER;0;Abstandhalter
+L105BAZFORMEN;0;Welche Formnummer ist welcher Formtyp (nur für Preissystem BAZ)
+L105BSFORMEN;0;Welche Formnummer ist welcher Formtyp
+L105BSMATTEN;0;Lagermatteninformationen
+L105BSSONDER;0;Sonderformen
+L105FORMTYP;200;Welche Formtypen (Bügel, Segmente, Schubeisen, Elipse,...) gibt es ?
+L105LENTON;0;Lenton
+L105LISTMATT;0;Listenmatten / Bewehrungsteppeiche / BAMTEC
+L106AGTEXTE;0;Angebotstexte vor den Positionen und nach der Anrede !
+L107ANLAGE;0;Anlage am Ende des Angebots !
+L108KPZUSCH;0;Kleinpartienzuschlag
+L109ZAKO_TEXT;0;Angebotstext der Zahlungskonditionen
+L120PROSTAT;0;Tabelle der Bauvorhabden für die Produktionsstatistik !
+L120ZEITRAUM;;
+L121HIST;0;
+L130DIMAUF;0;Dimensionsaufpreise VBE
+L130DIMPOS;0;
+L130LAENG;0;
+L131MENGSTAF;0;Dimensionsaufpreise VBE
+L132SFORMEN;0;Aufpreise und Rabbate für Sonderformen
+L132SFORMEN_LM;0;Aufpreise und Rabbate für Sonderformen im Lagermattenbereich
+METHODEN;0;
+METHODEN_PARAM;0;
+MF_FPROT;0;
+MF_NEUE_ZUNR;0;
+MITEGRO_CEINFOS;0;Mitegro Bauprodukte
+MITEGRO_KATALOGPRODUKT_V3;0;Mitegro Produkte im KATALOG
+MITEGRO_KATALOG_V3;0;Mitegro KATALOG
+MITEGRO_KLASSIFIKATION_V3;0;Mappingtabelle von ETIM zu anderen Klassifikationssystemen
+MITEGRO_MEDIEN;0;Mitegro Medien
+MITEGRO_MEDIEN_V3;0;Mitegro Medien
+MITEGRO_NORM_V3;0;Mitegro Normen
+MITEGRO_PRODUKT;0;
+MITEGRO_PRODUKTMERKMAL;0;
+MITEGRO_PRODUKTMERKMAL_V3;0;Mitegro ETIM-Merkmale
+MITEGRO_PRODUKT_V3;0;Mitegro Artikelstamm
+MITEGRO_RELATIONEN;0;Mitegro Relationen
+MITEGRO_RELATIONEN_V3;0;Mitegro Relationen
+MITEGRO_STAFFEL_V3;0;Mitegro Staffelpreise
+MITEGRO_VERPACKUNGEN;0;Mitegro Verpackungen
+MITEGRO_VERPACKUNGEN_V3;0;Mitegro Verpackungen
+MITEGRO_ZUSCHLAG;0;
+MITEGRO_ZUSCHLAG_V3;0;Mitegro Zuschläge
+MWM_LV_AUSFBESCH;0;Ausführungsbeschreibung zu einer Gruppe oder Position
+MWM_LV_GRUPPEN;3;Gruppen die zu einem LV laut der HeaderID gehören
+MWM_LV_HEADER;3;Tabelle beinhaltet sämtliche Kopfdaten zu einem LV
+MWM_LV_HINWEIS;0;allgemeine Hinweise die irgendwo im LV vorkommen
+MWM_LV_LANGTEXT;6;Langtexte (in 4000 byte chunks)
+MWM_LV_OBJEKTE;13;Hier wird die Reihenfolge und Typ der eingelesenen GAEB-Informationen gespeichert
+MWM_LV_POS;7;Tabelle mit allen Positionen einer Gruppe eines LVs
+MWM_LV_TEXT;10;Texte zu Positionen, Gruppen usw...
+MWM_LV_UNTERBESCHREIBUNG;0;Unterbeschreibung zu einer LV-Position
+MWM_LV_VORBEMERKUNG;3;Tabelle umfasst die Vorbemerkungen sämtlicher LVs
+OBRISI_ARNR_T044;7155;
+OBRISI_ARNR_WERT;3343;
+OBRISI_ARNR_WERT_2;1694;
+OBRISIART;826;
+OBRISI_KDZUSATZ;338;
+OBRISI_T355;5975;
+OBRISI_T355VERT;5217;
+OBRISI_WB;6706;
+OBRISIX;149;
+OBRISIZ;27258;
+OBRISI313;4437;
+OBRISI52;24100;
+OBRISI75;826;
+PERFACTO_OPABGLEICH;0;XML-Datei Perfacto ausgelesen und in diese Tabelle überführt
+PERFACTO_PARAMETER;0;Parameterdatei für die PERFACTO-Schnittstelle
+PERFACTO_SCHNITTSTELLEN;0;PERFACTO-Schnittstellen (Buchungsstapel / Stammdaten)
+PERFACTO_UMSETZUNGEN;0;Umsetztabelle für dieverse Datenumsetzungen von SHCWare-Werten in PERFACTO-Werte (z.B.) Steuerschlüssel, Konten, etc.
+PERFACTO_UMSETZUNGEN_STFO;0;Umsetztabelle für die Steuerformeln von SHC zu Perfacto. Weiterhin werden hier Schnittstelleninfos wie Steuerart und Steuerkonten angelegt.
+PLSQL_PROFILER_DATA;24002;Accumulated data from all profiler runs
+PLSQL_PROFILER_RUNS;5;Run-specific information for the PL/SQL profiler
+PLSQL_PROFILER_UNITS;13;Information about each library unit in a run
+POLYNORM_FILES;0;
+POLYNORM81_10;0;
+POLYNORM81_20;0;
+POLYNORM81_30;0;
+POLYNORM81_90;0;Kontrollsatz für den Tagesabschluss
+PR_CHANGE_LOG;0;Merken der Recordnummern für Stammdatenänderungen für PROPOS Kasse
+PR_KUNDENRABATTE;0;
+PR_PLU_LOG;0;
+PR_RETAIL_CUSTOMER_LOG;0;
+RA_HD414057_T078;201821;
+RA_HD414057_T079;78671;
+RA_HD414057_T096;885087;
+RA_HD414057_T096_RAUS;284;
+REKLPOSREFDEFEKTTYPE;1672;
+REPORT_SERVICE_QUEUE_TAB;0;
+SAP_CHANGES;0;geänderte Personendatensätze
+SAP_KD_BGR00;0;Debitoren Kopfsätze
+SAP_KD_BKNA1;0;
+SAP_KD_BKNBK;0;
+SAP_KD_BKNB1;0;
+SAP_KD_BKNB5;0;
+SAP_KD_BKNKK;0;
+SAP_KD_BKN00;0;Debitoren Transaktionsdaten
+SAP_KD_BKN00P;0;
+SAP_KONTO;0;
+SAP_LI_BGR00;0;
+SAP_LI_BLFA1;0;
+SAP_LI_BLFBK;0;
+SAP_LI_BLFB1;0;
+SAP_LI_BLF00;0;
+SAP_NL;0;Steuerungen für WEG SAP Schnittstelle
+SAP_OP_BBKPF;0;
+SAP_OP_BBSEG;0;
+SAP_OP_BBTAX;0;
+SAP_OP_BGR00;0;
+SAP_TRANSFER;0;Transferköpfe für SAP Schnittstellen
+SAP_TRANSHIST;0;Festhalten der Personen - Meldungen pro SAP Buchungskreis
+SBH_AUFTRAG;0;
+SCHEDULER$_JOB_ARG;1;
+SHC_CADIS_TRANSPORT;0;
+SHC_FILES;387;Tabelle in der die Schnittstellendateien gespeichert werden
+SHC_FILES_UNZIPPED;0;Positions-Tabelle in der die ungezippten Schnittstellendatei gespeichert ist
+SHC_LIFE1;0;Anzahl Datensätze
+SHC_LIFE2;0;Blacklist
+SHC_LIFE3;0;In dieser Tabelle stehen alle Tabellen die durch Truncate oder Delete nicht gelöscht werden konnten (Verwedung: SHC_LIFESTART)
+SHC_LV_ANFRAGE;0;Für den GAEB D93-Datenexport. Diese Tabelle enthält die Positionsanfragen an die Lieferanten.
+SHC_LV_ARTIKEL;0;"Für den GAEB D93-Datenexport. Diese Tabelle enthält die internern Artikelnummern, die aufgrund des vom Lieferanten bearbeiteten LV""s den Positionen zugeordnet werden."
+SHC_LV_BLACKLIST;0;Tabelle mit Worten die beim Match unberücksichtigt bleiben sollen
+SHC_LV_DIR;0;Verzeichnisname, in dem die Exportdateien der exportierten Leistungsverzeichnisse abgelegt werden.
+SHC_LV_DUBLETTEN;0;"Alle Dubletten eines LV""s (Übereinstimmung 100%) bekommen die gleiche Dublettennummer"
+SHC_LV_KDPOSSET_KOPF;0;"Fr den GAEB D84-Datenexport eines Kunden. Kopftabelle eines Kunden-Positionssets. Ein Positionsset beinhaltet alle Positionen eines LV""s, die beim GAEB Eport des Kunden ausgegeben werden."
+SHC_LV_KDPOSSET_POS;0;Für den GAEB D84-Datenexport eines Kunden. Beim GAEB Export werden nur die in dem Positionsset vorhanden Positionen für den Kunden exportiert. Positionen eines Kunden-Positionssets.
+SHC_LV_KUNDENAUFTRAG;0;Für den GAEB D93-Datenexport. Gebildete Aufträge über ein vom Lieferanten bearbeitetes Positionsset.
+SHC_LV_KUNDENPOS;0;Positionen eines LV die einem Kunden zugeordnet sind
+SHC_LV_KUNDENTEIL;0;
+SHC_LV_LEISTPATE;0;ÖNorm: Hinterlegung von Paten für Leisungsgruppen. Die Paten bearbeiten die Leistungsgruppen im Programm SHC_LV_Leistpos
+SHC_LV_LEISTPOS;0;Für die OENORM. Diese Tabelle enthält Leistungspositionen, die zur automatischen Zuordnung von Artikeln zu oz-Positionen benutzt werden
+SHC_LV_LEISTPOSART;0;Für die OENORM. Diese Tabelle enthält Artikel zu Leistungspositionen
+SHC_LV_LIEFPOS;0;Für den GAEB D93-Datenexport. Zuordnung von Lieferantensets zu Positionssets.
+SHC_LV_LIEFSETKOPF;0;"Für den GAEB D93-Datenexport. Kopftabelle der Lieferantensets. Ein Lieferantenset besteht aus mehreren (oder auch nur einem) Lieferanten mit genau einem Hauptlieferanten, denen alle eine Teilmenge von Positionen eines LV""s zur Bearbeitung zugesendet wird"
+SHC_LV_LIEFSETPOS;0;Für den GAEB D93-Datenexport. Positionstabelle der Lieferantensets. Lieferanten eines Lieferantensets.
+SHC_LV_LIEFSTEU;0;Steuerung, wie die vom Lieferanten zurückerhaltenen Informationen zur Artikelsuche und Preisberechnung benutzt werden sollen.
+SHC_LV_LIEFTEXT;0;Für den GAEB D93-Datenexport. Lieferantenbezogene Textbausteine.
+SHC_LV_POSARTIKEL;0;Sammlung von Artikeln die zu einer LV-Position gehören.
+SHC_LV_POSSETKOPF;0;"Für den GAEB D93-Datenexport. Kopftabelle der Positionssets. Ein Positionsset besteht aus einer Menge Positionen, die eine Teilmenge von Positionen eines LV""s bilden."
+SHC_LV_POSSETPOS;0;Für den GAEB D93-Datenexport. Positionstabelle der Positionssets. Positionen eines Positionssets.
+SHC_LV_POSWORTE;0;
+SHC_LV_QUALIART;0;"Ausschreibungstexte qualifizieren. Es werden Ausschreibungstexte mit den hinterlegten Artikeln verknüpft. Die hinterlegten Artikel können dann bei 100%er Übereinstimmung der Ausschreibungstexte bei anderen LV""s ebenfalls hinterlegt werden."
+SHC_LV_SETTINGS;0;Einstellungen für das SHC_GaebLV-Programm
+SHC_LV_TEILE;0;
+SHC_LV_TEILPOS;0;
+SHC_LV_VARIANTE;1;Für die OENORM. Diese Tabelle enthält Varianten von Leistungspositionen.
+SHC_MWM_SIM;0;Kopftabelle zum Bestimmen ähnlicher Positionen bezogen auf den Ausschreibungstext im GAEB
+SHC_MWM_SIMPOS;0;Auflistung aller Positionen, die zu einer Position ähnlich sind
+SHC_OXID_ASP;0;Schnittstellentabelle für Anlage Ansprechpartner
+SHC_OXID01;0;
+SHC_OXID02;0;Schnittstellentabelle zum Anlegen der Lieferanschriften aus Oxid
+SHC_OXID03;0;Schnittstellentabelle für Anlage Kunden
+SHC_PDF;1224;
+SHC_RELEASETABLE;22820;
+SHC_SAP_GPARTNER_CTRL;0;Triggertabelle für die Übertragung der Kunden/Lieferanten aus SHC als Geschäftspartner für SAP
+SHC_SAP_GP_CTRL_BANKEN;0;Triggertabelle für die Banken Bergmann2SAP
+SHC_SAP_REVIEW;0;
+SHC_SAP_T079;0;
+SHC_SAP_VERWALTUNG;0;
+SHC_SICHERUNG;2496183;
+SICHER_T690TOURK;0;
+SIC_T142ZUKO_LSNR_AID88656;35058;
+SIC_T147ZUG_LSNR_AID88656;70459;
+SIC_T583FB;0;
+SIT_ELALS;0;
+SIT_ELART;0;
+SIT_ELLIF;0;
+SIT_ELLTX;0;
+SIT_ELMET;0;
+SIT_GHAIN;0;
+SIT_GHATR;0;
+SIT_GHEGR;0;
+SIT_GHHAK;0;
+SIT_GHHCI;0;
+SIT_GHHCK;0;
+SIT_GHHCM;0;
+SIT_GHHCW;0;
+SIT_GHHKM;0;
+SIT_GHREF;0;
+SIT_TIMESTAMPS;0;
+SPEDITIONSKOSTENEXCEL;0;
+STOPA_AUFTRAEGE;0;Schnittstellentabelle zum Lagerverwaltungssystem Fa. Stopa. Dient zur Übergaben von Ein- und Auslagerungsaufträgen
+SYS_IOT_OVER_1303684;0;
+T_BLOB;248868;
+T_BLOBREL;245285;
+T_CLOB;0;
+TEMP_INFORMATION_PLZ_ORT;;
+T_KASTO_RCV;0;
+T_KASTO_SND;0;
+TMP_ALTTEILE_MIN;;
+TMP_ARZ_STAHL;;
+TMP_BILDERIMPORT;7546;
+TMP_BLOCK_ITEMS;;Um in einem Forms-Programm die Items eines Blocks bei Bedarf deaktivierenund wieder aktivieren zu können, werden in diesen temporary Table dieGrundeinstellungen (Properties) gespeichert.
+TMP_BOPF;;Temporäre Tabelle für Bohrpfahl Monitor
+TMP_CLOB;;Temporäre Tabelle zum Zwischenspeichern von Dateiinhalten aus Dateien im cLob
+TMP_COUNT_SPKZ;;
+TMP_DRUCKVK_PARAMS;;
+TMP_DRUCKVK_SPLITT;;
+TMP_DTA_T051ART;;
+TMP_DTA_T052PR;;
+TMP_DTA_T052PRA;;
+TMP_DTA_T052PRDAT;;
+TMP_DTA_T052PRDAT_EK;;
+TMP_DTA_T052PRDAT_VK;;
+TMP_DTA_T060AT;;
+TMP_DTA_T060STL;;
+TMP_DTA_T072SKON;;
+TMP_DTA_T072WABE;;
+TMP_DTA_T072ZKON;;
+TMP_DTA_T075LAG;;
+TMP_DTA_T080EAN;;
+TMP_DTA_T080KUEAN;;
+TMP_DTA_T101MST;;
+TMP_DTA_T101ZMST;;
+TMP_DTA_T106KUAR;;
+TMP_DTA_T110ANG;;
+TMP_DTA_T125OBP;;
+TMP_DTA_T131ALI;;
+TMP_DTA_T137ARTK;;
+TMP_DTA_T177KATA;;
+TMP_DTA_T177PRA;;
+TMP_DTA_T178ARTV;;
+TMP_DTA_T188AKT;;
+TMP_DTA_T202MEZU;;
+TMP_DTA_T208MNP;;Metall-Sprung-Preise/individuelle Metallnotierungen
+TMP_DTA_T260CE;;
+TMP_DTA_T336INFA;;
+TMP_DTA_T389ANG;;
+TMP_DTA_T405SORTA;;
+TMP_DTA_T405SORTAK;;
+TMP_DTA_T405SORTK;;
+TMP_DTA_T405SORTL;;
+TMP_DTA_T405SORTLK;;
+TMP_DTA_T405SORTM;;
+TMP_DTA_T405SORTP;;
+TMP_DTA_T414SPE;;
+TMP_DTA_T474STPRK;;
+TMP_DTA_T474STPRP;;
+TMP_DTA_T613FARNR;;
+TMP_DTA_T634VPE;;
+TMP_DTA_T640PE;;
+TMP_DTA_T692KIB_LINK;;
+TMP_EK_IMPORT;346;
+TMP_ETIMERGEB;;
+TMP_ETIMSUCH;;
+TMP_FREIGABE;;
+TMP_GKM_KLIM;;Temporäre Tabelle für DATEV SALDENIMPORT
+TMP_IMP_ART;664;
+TMP_IMP_PREISE;170;
+TMP_IMP_1;1768;
+TMP_KAT_IMPORT;3340;
+TMP_KINFO3;;
+TMP_KINFO3K;;In dieser Tabelle werden die anzuzeigenden Daten für das Programm SHC_KInfo3K aufbereitet
+TMP_KINFO4;;
+TMP_LAGEROPTI;;
+TMP_L_BV;;
+TMP_LI_T072SKON;;
+TMPMAILANH;;
+TMP_MANR;;
+TMP_NFA_FEGIME;;
+TMP_PREISHERKUNFT;;
+TMP_PREISLISTE;;Gruppierung der Positionen in Zählmengen
+TMP_PREISMERKER;;Dienst zur temporären Speicherung von Positionspreisen für Schnittstellen welche alle Positionen neu aufbauen. (HPPS, LUP)
+TMP_PRHIST;;
+TMP_PRHIST_RAB;;
+TMP_PRHIST_WB;;
+TMPSBHPLAN;;
+TMP_SCANASCII;;
+TMP_SHC_LV_SUCHWORTE;;
+TMP_STAT;;Temporäre Statistiktabelle - Wird zur Aufbereitung der Statistiksätze aus den Statistikdateien verwendet. Dort stehen alle Statistikmonate in einer Zeile, Hier kann pro Monat ein einzelner Satz verwendet werden.
+TMP_STMT;;
+TMP_TECERR;;Temporäre Übergabetabelle bei technischen Störungen in externen Anfragen
+TMP_TERMIN;;Temporäre Tabelle für inividuelle Terminermittlung im Edifact ORDRSP Bereich
+TMP_T_REMOTEBLOB;;
+TMP_T023AUF;;Zwischentabelle für Package SHC_Sel023 analog DIAS AB023
+TMP_T028W;;Zwischentabelle für das positionsweise Wandeln
+TMP_T034ZZO;;Temporäre Tabelle der aktuelle Wareneingänge (T034/T036) - Wird im Stahl zur Zuordnung der aktuellen Wareneingänge (T034TRZU.FREI_3 = 1) zur vorliegenen Werkzeugnissen (T639DMSK) verwendet. Wird über FMB SHC639ZZO gefüllt.
+TMP_T036MENG;;
+TMP_T037APKL;;Temporäre Arbeitstabelle Kabellängen zur Auftragsposition
+TMP_T037APKL_S;;Artikelübersicht Kabelanlage
+TMP_T051LOE;;
+TMP_T053SATX;;
+TMP_T056AD_DUP;;
+TMP_T056AD_LIEF;0;
+TMP_T072K;;
+TMP_T072R;;
+TMP_T072SKON;;
+TMP_T072WABE;;
+TMP_T075BA;0;
+TMP_T075LAG;;Lagerstamm temporär
+TMP_T082_GEWI;;Tabelle zum Kumulieren des Gewichts bei Laufsplitting
+TMP_T082KOMM;;
+TMP_T082KSTAT;;Rowids der Sätze aus t082kstat, die in der laufenden Session angelegt wurden
+TMP_T082OLI;;
+TMP_T086ANARB;;
+TMP_T087HRL;;Temporäre Arbeitsdatei Lagerplatzdaten zu Lieferpositionen Hochregallager
+TMP_T087KANBAN;;Temporäre Arbeitsdatei zu Lieferpositionen Kanban
+TMP_T087LIFT;;Temporäre Arbeitsdatei Lagerplatzdaten zu Lieferpositionen Lagerlift
+TMP_T087SORT;;
+TMP_T088RUE;;
+TMP_T088RUESTORNO;;
+TMP_T088TR;0;Rückstandspositionen aus Kabelschnitt
+TMP_T093NR;;
+TMP_T096KU;;
+TMP_T106KUAR;;Temporäre Übergabetabelle bei abweichender Kundenartikelnummer
+TMP_T146BEPSTORNO;;Temporäre Tabelle für offene Bestellpositionen im SHC146STORNO
+TMP_T156KUST;;
+TMP_T158ARST;;
+TMP_T158GFK;;
+TMP_T161TECH;;
+TMP_T162TEMA;;
+TMP_T163TESO;;
+TMP_T306SESS;;
+TMP_T306STAR;;
+TMP_T322DKON;;
+TMP_T390DRU;;
+TMP_T398PP;;Positionsdaten für Pickpool SHC082PP
+TMP_T398PPT;;Positionsdaten für Pickpool SHC082PP mit Teilenummer
+TMP_T405KAGR_COPY;;
+TMP_T405KAGR_LOE;;
+TMP_T440ART;;
+TMP_T465WM;;
+TMP_T470REKL;;Suchtabelle für SHC470REKLS
+TMP_T470REKLP;;Reklamationsposition temporär - beinhaltet Retourliste zu einem Lieferanten
+TMP_T470REKLQ;;Artikelliste Reklamationen temporär - beinhaltet Daten für Quotenermittlung
+TMP_T471DFUSS;;
+TMP_T471DPOS;;
+TMP_T473ZUA;;
+TMP_T474STPR;;Aktuelle Staffelpreise zu einem Artikel zur Selection dynamischer Zusatzinfos im upkalk2.fmb
+TMP_T481CLASS;;Nach einer Artikelsuche im UP051 werden hier die Klassen der ersten 500 Artikel abgestellt, mit denen in die ETIM Suche verzweigt werden kann
+TMP_T481ERG;;
+TMP_T481SUCH;;
+TMP_T499ISEL;;Ergebnistabelle für die Darstellung der dynamischen LOVs
+TMP_T511MP;;Temporäre Tabelle für Auswahl Teammitglieder der Mailgruppe bei Mailversand
+TMP_T511PLV;;Suchtabelle für SHC511V Vertreterplanung Jahr
+TMP_T594V;;Rowids der Sätze aus t594v, die in der laufenden Session angelegt wurden
+TMP_T596SUCH;;
+TMP_T600KL;;
+TMP_T600ST;;
+TMP_T600ST1;;
+TMP_T600ST2;;
+TMP_T601AUF;;
+TMP_T602FAK;;
+TMP_T605KAS;;
+TMP_T611EO_LOG;;
+TMP_T611SUCH;;
+TMP_T620LVS_PP;;Temporäre Arbeitstabelle - Lagerverwaltung PP - Prozess-Positionstabelle
+TMP_T628ETIS;;
+TMP_T628PRUEF;;
+TMP_T645IU;;
+TMP_T645IV;;
+TMP_T646VOR;;
+TMP_T650MWST;;Tracetabelle zur Tabelle tmp_t650mwst (Mehrwertsteuerdrucksätze für Report \metzger\shc081ra_ad)
+TMP_T656LFDS;;
+TMP_T659TRAB;;
+TMP_T670GUTK;;Steuerung für autom. Gutschriftenbildung
+TMP_T671GUTP;;
+TMP_T677DIR;;
+TMP_T683FSTEU;;
+TMP_T861PLAN;;
+TMP_VERP;;Temporäre Übergabetabelle für Verpackungsmittel an SHC690VVG
+TMP_VID;;Temporäre Tabelle zum Zwischenspeichern von Datensätzen zu T414SPKV
+TMP_VKMON;;
+TMP_VKMON2;;
+TMPVORG;;Temporäre Übergabetabelle für zuweisen von Vorgänge an ein Auftrag
+TMP_V154WAST;;
+TMP036LNG;;
+TMP037APKL;;
+TMP051ART;;
+TMP_081SEARCH;;
+TMP082ASTT;;
+TMP082ASTT_C;;
+TMP083LAE;;
+TMP086MENG;;
+TMP_088RUE_VERFZU;;
+TMP154_ABSATZ;;
+TMP154_ABSMON;;
+TMP154_WGR;;Temporõre Tabelle f³r Schnell³bersicht warengruppenumsatz- und Rohertragsstatistik (SHC154AR)
+TMP155BWA;;
+TMP_260DRUCK;;In dieser Tabelle wird ein Datensatz für jedes zu druckende CE-Etikett abgestellt
+TMP_355KI;;
+TMP_470REP;;
+TMP_483AUFT;;
+TMP492_LFRLAG;;Preis-Mengenüberischt für Lieferant - Lager
+TMP511_LGART;;
+TMP511LVNK;;Leistungskennzahlen - Betriebsvergleich
+TMP583ELB;;
+TMP583_TOM;;
+TMP584AUFG_BEZ;;
+TMP638STL;;
+TMP643RWF5;;Neue WorkflowAktionen merken für Mailversand
+TRANSFER;0;Ass.Tec Transfer-Daten ASS_Mobile
+TRANSFER_EQUIPMENT;0;Ass.Tec Übergebene Transfer-Daten zu Equipment
+TRC_TMP036MENG;0;
+TRC_TMP037APKL;0;
+TRC_TMP082ASTT;0;
+TRC_TMP082ASTT_C;0;
+TRC_TMP083LAE;0;
+TRC_T023AUF;0;
+TRC_T034ZZO;0;
+TRC_T051LOE;546;
+TRC_T436TEMP;0;
+TRC_T439TKAT;0;
+TRC_T439TKIN;0;
+TRC_T487KOM7;0;TRACE-Tabelle für Array Operationen
+TRC_T600ST;48;
+TRC_T600ST1;2;
+TRC_T600ST2;44;
+TRC_T628ETIS;1;Tracetabelle für Etikettendruck aus dem Wareneingang Belegart ETIS
+TRC_T650MWST;0;
+TRC_T905PLAN;0;
+TVA_EXPORT;0;Export-Datei für TVA(GESALL) mit den gesamten Feldern aus der Schnittstellenbeschreibung
+TVA_LAUF;0;Kopfdaten des Prüfungslaufes für die Luxemburger Finanzprüfung (GESALL)
+TVA_MAPPING;0;Umsetzungstabelle Datev-Komplettt-Übergabe
+TVA_POSITIONEN;0;Positionen einer Buchung
+TVA_PROTOKOLL;0;Protokolltabelle TVA-Übergabe
+TVA_UMSETZUNG;0;Umsetzungstabelle Datev-Komplettt-Übergabe
+T000FILES;5991;bei der Release-Aufbereitung kopierte Dateien
+T000HIST;45647;Historie der Datenbank-Änderungen
+T000MOD;0;Registrierpflichtige Module in SHCware
+T000QUERY;0;Abfragen zur Systemumgebung der SHCware
+T000QUERY_RESULT;0;Ergebnisse und rückgemeldete Daten der Abfragen aus T000query
+T000RDATA;345;Tabelle in der die Releasedateien als BLOB zum Ausrollen auf die Zielserver zwischengespeichert werden
+T000REG;2;Systemtabelle - bitte auf keinen Fall löschen
+T000REINGABEN;102;bei der Release-Aufbereitung eingegebene Quell- und Zielverzeichnisse
+T000RELEASE_REWORK_HIST;1134;Historie der Ausfuehrungen in Package SHC_RELEASE_REWORK
+T000RELK;21;Kopf der Release-Aufbereitung
+T000RFEHL;2676;Fehler oder Warnung bei der Release-Aufbereitung
+T000RMOUNT;2;Tabelle zum Pflegen der hinterlegten Mountpunkte der Zielserver für das SHC002
+T000SER;25;Systemtabelle der SHCware - bitte auf keinen Fall löschen!
+T000UMS;1;
+T000UPD;0;Update Benachrichtigung
+T001CS_API;0;enthält zu einem DB-Objekten in der Tabelle R007sm_apos die zugehörige Api
+T001CS_DBUPD;0;enthält zu einem DB-Objekt in der Tabelle R007sm_src die analysierten differierenden Zeilen
+T001CS_DIFF;0;enthält zu einem DB-Objekt in der Tabelle R007sm_src die analysierten differierenden Zeilen
+T001CS_HEAD;0;Change-Sets Kopftabelle
+T001CS_INVOBJ;0;Invalide Objekte vor Ausführung
+T001CS_SRC;0;enthält die einzelnen Objecte/Sourcen zu Tabelle T001CS_HEAD
+T002SYS;56;Systemsteuerungsdatei / Arbeitsplatz
+T003MEN;76;Menüdatei des Systems
+T004MTXT;398;Menue-Texte
+T005JSEL;1336;Selektionsdatei
+T006BER;128;Berechtigungstabelle
+T007SAC;169;Sachbearbeiterdatei
+T008APL;0;Arbeitplatzdatei
+T009BELA;37;Belegartendatei DIAS
+T010MWST;6;Mehrwertsteuertabelle
+T011PAR;766;Anwenderparameter
+T012AART;33;Auftragsarten
+T013BELN;82;Zaehlerdatei
+T014DEV;103;Druckerzuordnungsdatei pro Belegart/APL
+T015BART;15;Bestellarten
+T016WAET;2;Waehrungstabelle
+T017STAT;0;Druckstatusdatei
+T018DRD;53;Druckerdefinition pro Arbeitsplatz
+T019FORM;0;Formularsteuerungsdatei
+T020ZUBE;0;Zusätzliche Berechtigungen pro Sachb.
+T021PO;1;Portotabelle
+T022ZPAW;0;Zeit- und Projektaufwand
+T023RKAW;1319;Reisekosten-Aufwendungen
+T024ISO;0;
+T025PROJ;215;Projekte
+T026WV;72;Aktionen
+T027BANK;0;Bankentabelle für F14-Beleg
+T028EXKT;53;Externe Konten
+T029OBJ;13;Objektendatei
+T029OBJZ;0;Zusatztabelle für die Objektverwaltung
+T030KGWG;1428;Kalkgr. pro Warenbereich und Lieferant
+T030KGZ;0;
+T031OBJ;0;Objektnummerndatei für HDG
+T032MIET;0;Trommelmieten/-pfänder
+T033MAHN;0;Mahndatei für Trommeln
+T034REF;0;Chargen Referenzen nach Umbungen/Restebildungen
+T034TRZU;0;Kabeltrommel Zugänge
+T035KTG_KOPF;0;
+T035KTG_POS;0;
+T035TRAB;0;Kabeltrommel Abgänge
+T036DIFFP;0;Auftragszuordnung Fehlmengen
+T036GEST;0;Stammdaten zu Gestellen für Kabelschneidanlage
+T036HIST;2;Protokollierung der Mengenänderungen
+T036KATR;0;Änderungsprotokoll Trommelkennzeichen
+T036LGORT;0;Definierte Lagerorte zum (Kabel)Artikel (Kabelanlage,Hochregallager)
+T036MENG;0;Mengendatei (Kabellängen)
+T036MENG_ZUSI;0;Zusatzinformationen zur T036MENG (Wird im LVS-Bereich genutzt)
+T036OZO;0;Fakturierte Lieferungen ohne zugeordnete Unterlängen
+T036RLV;0;Historien und Bearbeitungstabelle für die Restlaengenverschrottung über das SHC036
+T036SN;13968;Verwaltung von Geräten / Seriennummern
+T036UMTR;0;Umtrommelungen
+T036WM;0;Wickelmaschinen (für Kabelanlage)
+T036ZUSI;0;Zusatzinformationen zu Mengendatei (Kabellängen) T036MENG
+T037APKL;0;Kabellängen zur Auftragsposition
+T037APKL_SIM;0;
+T037APTR;0;Trommelangaben zur Auftragsposition (22.12.2010)
+T038MAU;0;Tabelle für Monatspauschalaufträge (SEL038)) Steuerung SHC519 APP = MONATSPAUSCHALE
+T038MPK;0;Monatspauschale pro Kunde
+T038MPKA;0;Monatspauschale pro Kunde Artikel
+T038RVG;0;Datei mit Rechnungsverteilungsgebuehr
+T039LAPS;0;Lagerplatzsteuerungsdatei
+T040IKD;0;Kunden fuer DATANORM /Info-System
+T041KART;0;Preis-Lookup-Datei für lokale Kasse
+T042IN;4;Eingehende Telefonanrufe
+T042WKOM;71639;Werbe/Kommunikationsdatei
+T042WKOM_20170904;41029;
+T042WKOM_20210304;52733;
+T043KANT;0;Adresskante
+T044IMG;16669;Bilddatei
+T044IMG_20150925;11872;
+T044IMG_20151113;14092;
+T044IMG_20170819;4486;
+T044IMG_20170819_B;12784;
+T044IMG_20200515;13317;
+T044IMG_20210427;14964;
+T044IMG_20220721;15411;
+T044IMG_20230427;13334;
+T044IMG_20240512;14395;
+T045DEF;12594;Dateidefinitionen
+T046SSCH;324;Steuerung Textschlüsselpflege
+T047ZT;0;
+T050KABH;0;Artikel-Abhängigkeiten für Produktkonfiguration
+T050KART;0;Konfigurations-Artikel (Produkt-Konfiguration)
+T050KERG;0;Ergebnis der Produkt-Konfiguration
+T050KONF;0;Produkt-Konfiguration
+T050NODE;0;Baum-Knoten (Produkt-Konfiguration)
+T050PROT;0;
+T050SESS;0;Session-Daten (Produkt-Konfiguration)
+T051ART;60130;Artikelstamm
+T051ART_EVENTS;38292;Tabelle mit Änderungsprotokollierungen für Artikelmatch
+T051ART_20210111;47998;
+T051ART_20210516;48734;
+T051ART_20220315;50385;
+T051ART_20220419;50528;
+T051ART_20221208;51740;
+T051BEWC;0;In der T051BEWC werden zukünftige Änderungen des Bewirtschaftungscodes (BEWC) in Abhängigkeit von Betrieb (MANR) und optional Lager (LANR) gepflegt.
+T051COPY;0;Beim Kopieren von Artikeln können bestimmte Felder ausgewählt werden, die nicht kopiert werden.
+T051KALK;3541;Pflege zukünftiger und vergangener Kalkulationsschalter
+T051PROT;18513;Artikelprotokoll
+T051PR_20220419;100016;
+T051SCHUETT;0;Schüttgutartikel je Kunde
+T051ZOT;522;Zolltarfinummer für Reverse Charge
+T051ZOTNR_X_CODIERUNG;0;Zuordnung Zolltarifnummer zu Unterlagentypen
+T052HIST;463047;Preisdatei History
+T052PA;0;Preisarten zu T052PRA Okt.2010
+T052PASB;0;Preisarten Sachbearbeiterberechtigungen
+T052PRA;1;Preisdatei Artikelstamm neu Okt.2010
+T052PR_AID90327;112062;Preisdatei
+T052PRDAT;113345;Preistabelle
+T052PRDAT_EK;601;Artikelpreise Einkauf mit Datumsabgrenzung
+T052PRDAT_VK;0;Artikelpreise Verkauf mit Datumsabgrenzung
+T052PR_LOG;0;Protokollierung für die Einkaufskalkulation
+T052PR_MW;4;
+T052PR_17012022_MW;101265;
+T052PR_20190304;81411;
+T052PR_20200409;85212;
+T052PR_20210516;143043;
+T052PR_20210901;134020;
+T052PR_20220115;99320;
+T052PR_20220419;100016;
+T052PR_20220831;101726;
+T053SATX;10;Fremdsprachentext
+T054AMC;673901;Artikel-Matchcode Datei
+T055KWG;0;
+T055WG;1460;Warengruppen
+T055WGM;0;Umsetzungstabelle Mitegro-Warengruppen
+T056AD;15464;Adressstamm für Kunden, Lieferanten, Adressen und Anschriften
+T056AD_BAK_20260824;1055;
+T056AD_SIC20210126;1;
+T056AD_20180914;12142;
+T056AD_20190624;12466;
+T056BK;0;Berechtigung für Bankeinzug pro Kunde und Auftrag
+T056GPS;0;Tabelle zur Speicherung von Geoinformationen zu beliebigen Eingabeadressen
+T056KK;0;
+T056KREF;6;Kundenreferenztabelle
+T056LZ;0;
+T056LZA;0;Liefer-Zeit-Aufschlag. Hier können zeitliche Aufschläge auf einen Liefertermin angegeben werden. Satzart - L : der zeitliche Aufschlag berücksichtigt einen Lieferzeitaufschlag des Lieferanten und die zeitliche Verzögerung aufgrund der internen Logistik
+T056MAILA;0;
+T056MAILK;0;
+T056MAILL;0;
+T056MAILO;0;
+T056MAILS;0;
+T056MAILV;0;
+T056VER;0;Pflege Verrechnungsadressen laut Bestellart
+T057ANR;7;Anredeschluessel
+T058ASP;19313;Ansprechpartner
+T058KAT;0;
+T058TAB;0;
+T058VERT;0;Tabelle für Verteiler für Ansprechpartner
+T059ZABE;85;Zahlungskonditionen
+T060AT;0;
+T060ATK;0;
+T060HISTK;0;Die Tabelle T060HISTK wird benötigt um die in der Vergangenheit produzierten Bildungsnummern ggf. Rückbilden zu können.
+T060HISTP;0;Die Tabelle T060HISTP wird benötigt um die in der Vergangenheit produzierten Bildungsnummern ggf. Rückbilden zu können.
+T060KABEL;0;Die Tabelle T060KABEL wird benötigt um die Kabel der in der Vergangenheit produzierten Bildungsnummern einer Kabeltrommel zuordnen zu können.
+T060KONFK;0;Die Tabelle T060KONFK wird benötigt um bei der Produktion die angelegten Schaltschränken und deren Hauptartikel(HARNR), MANR(Betriebsnummer) und die Menge(benötigte Menge jedes Artikels) zu speichern
+T060KONFP;0;"Die Tabelle T060KONFP wird benötigt um bei den ""Bauplan"" des angelegten Schaltschranks zu Speichern ohne Mengen zu beeinflussen"
+T060META;0;Hier werden die Metalldurchschnittpreise bei Bildung des Schaltschrankes festgehalten und im falle des Rückbildens in der SHC_SHC060KONF.pls gelesen
+T060SERIE;0;Hier werden die verbauten Serienummern sowie deren Unterkomponente und Bildungsnummern gespeichert
+T060STL;302;Stuecklistenstruktur
+T061NLP;2;Nachlassprozentsaetze
+T062KGR;0;Kalkulationsgruppen
+T063REFO;0;Rechenformeldatei - fuer Vk-Preise
+T064WGTX;2139;Warengruppentexte
+T065SCH;7196;Schluesseldatei
+T066VTR;77;Vertreterstamm
+T067ARNR;0;
+T067KA;0;
+T067KZA;0;abweichende Kunden- Metallzuschlagswerte
+T067ZA;25;Zu- und Abschlagstabelle
+T068MNOT;0;Mandantenabhängige Metallnotierungen
+T068NOT;0;Metallnotierungen
+T069BLAG;10;Lagersteuerungsdatei
+T069BLAG_AID87288;10;
+T069KOMM;0;Lager-Kommissionierbereiche
+T069LGORT;0;Lagerortsteuerungsdatei
+T069LGTYP;0;Lagerorttyp-Staplerzuordnung
+T070BETR;1;Betriebstamm
+T070COPY;0;
+T071DEF;0;Defaultreihenfolge für Bestellanschriften
+T071LBAN;1075;Lieferanschriften
+T071NSPK;0;Pflege der Kundensteuerung für Nachtsprung
+T071NSPS;0;Pflege der Ausnahmen für Nachtsprung
+T071NSPZ;0;Pflege der Zeitensteuerung für Nachtsprung
+T072EW;0;
+T072EWDK;0;
+T072EWDP;0;
+T072EWG;0;Bewilligungsgruppe
+T072EWGS;0;Bewilligungsgruppe Zuordnung zum Sachbearbeiter
+T072EWOBJ;0;Tabelle für Wünsche von Objektzuordnungen
+T072EWPROT;0;Protokolltabelle zur T072EW
+T072_PROT;0;
+T072SKON;6482;Konditionsdatei Kunden
+T072STAT;0;Zur Prüfung Kundensonderkonditionen gegen Statistik letzte 12 Monate
+T072STAT1;0;Temporäre Tabelle für Ermittlung Musterkundenspannen
+T072WABE;1;
+T072ZKON;0;Zukünftige Konditionen Kunde
+T073MLAG;0;Bestandslager, die zur Ermittlung des verfügbaren Bestands bei einer Anfrage aus dem Mercateo-Shop heraus benutzt werden.
+T073SY;0;Lieferantensysteme
+T074SK;246;Systemkunden
+T074SKA;0;Systemkunden
+T075EE_STEU;0;Steuerung für die Übergabe der Bestandszahlen an die Fegime(SEL075EE) / virtuelles Lager.
+T075HIST;172592;Bestandshistorie
+T075LAG;58088;Lagerstamm
+T075LAG_AID86689;53295;
+T075LAG_L;;
+T075LAGUSR;0;SHC075t - Lagerordnung fuer User/Betriebe
+T075LAG_0910;55828;
+T075LAG_20160113;24317;
+T075LAG_20160930;26649;
+T075LAG_20161003;30002;
+T075LAG_20161127;30701;
+T075LAG_20181212;41275;
+T075LAG_20190120;41908;
+T075LAG_20190210;42339;
+T075LAG_20230902;51949;
+T075LAG_24092021;48389;
+T075LANRA;0;
+T075LANRB;0;
+T075SEL;0;
+T075STAT;0;Statistiktabelle für Bestandsauswertungen
+T075STATW;0;Statistiktabelle für Bestandsauswertungen
+T075UMA;0;
+T075UMK;0;
+T075UMP;0;
+T076WERB;12;Werbetexte - Rechnung
+T077DBET;1;Defaults und Konten Betrieb
+T077RC;0;Steuerungstabelle für die Reverse Charge Abhandlung
+T078ERL;530620;Erloese
+T079SOLL;206232;Rechnungs-Sollstellung
+T080EAN;8456;EAN-Codes
+T080KUEAN;0;Kunden EAN-Codes
+T081AUK;575023;Auftragsdatei Kopfsatz
+T081AUK_SIM;0;
+T081SIMU;0;Protokollierung der simulierten Aufträge
+T082ASUM;0;Detailtabelle mit den Aufträgen aus t082sum
+T082AULI;594557;Lieferscheinkoepfe
+T082AULI_SIM;0;
+T082DOKA;0;
+T082KOMM;140536;
+T082KOMM_SIM;0;
+T082KSTAT;0;Kommissionierstatustabelle
+T082MSCAN;0;Mengenrückmeldung - Scanpflichtige Artikel
+T082OLI;2549;Offene Lieferungen
+T082SUM;0;Offene Lieferungen Belegübersicht
+T083LAE;0;Schnittlängen für Stahlartikel
+T083LAE_SIM;0;
+T084RESU;475109;Rechnungssummen
+T084SKB;241891;Skontowerte zur Rechnung
+T086AUP;1075988;Auftrags-Positionen
+T086AUP_SIM;0;
+T086AUP_TAUSCH;0;Protokollierung zu Artikeltausch im Auftrag
+T086AWERT_SIM;0;Auftragswerte der einzelnen Positionen eines simulierten Auftrags
+T086DYN;0;
+T086DYNLV;0;In dieser Tabelle können Artikel hinterlegt werden, die zu einer Leistungsverzeichnisposition dem Sachbearbeiter zur Auswahl angezeigt werden.
+T086LAGO;196237;
+T086REV;0;Auftrags-Review Tabelle. Zur Anzeige von Hinweisen und Fehlern in Auftragskopf, Lieferscheinkopf oder Auftragspositionen
+T086ZUAB;0;Hier stehen die Zuschläge und Metallnotierungen bei der Auftragserstellung
+T087HRL;0;Lieferungspositionen Hochregallagerdaten
+T087KANBAN;0;Lieferungspositionen Kanban
+T087LIFT;0;Lieferungspositionen Lagerlift
+T087POLI;1092548;Lieferungspositionen
+T087POLI_SIM;0;
+T087ZUAB;0;In dieser Tabelle stehendie Zuschläge und die Metallnotierungen. Die Tabelle übersteuert die entsprechenden Spalten aus der T086aup
+T088KL;0;Kabel Wunschlängen. Gilt als Vorschlag für das Bestellwesen.
+T088RUE;3664;Rückstandspositionen
+T088RUE_SIM;0;
+T089KTXT;30385;Auftrags-Kurztexte
+T090INV;9890;Inventurerfassung
+T091ISEL;6;Inventur-Selektionsdatei
+T092EP;1112749;Lager- Einzelposten
+T093DB;0;Inhalte des Datenblatts
+T093DBT;0;Tabelle zur Pflege der Datenblatt-Typen
+T093DBTA;0;Tabelle für den Aufbau der Datenblatt-Typen. Korrespondiert mit der Tabelle T093DBT
+T093DBV;0;Datenblatt Verwaltung
+T093NR;324936;Seriennr. Datei (Geraetenummern)
+T093TEILEN;0;
+T094VPRO;0;Vertreterprovision
+T095PPOS;588840;Provisionstabelle pro Auftragsposition
+T095PROV;455343;Provisionsdatei
+T095PROV1;120;
+T096ABC;0;Historie Kundenauswertung
+T096AKT;0;Online-Aktionen
+T096AKTKD;0;Online-Aktionen - zugeordnete Kunden
+T096AKTST;0;Online-Aktionen - erfasste Statistiksätze
+T096BDSA;0;BDS - Absatzmeldug
+T096STAT;1206193;Es gibt grundsätzlich zwei verschiedene Satzarten zu beachten in der T096STAT. SART = V für VERKAUF und SART= E für EINKAUF. SART= R für Statistiksatz aus Reparatur. In Abhängigkeit der SATZART müssen bestimmte Felder befüllt werden.
+T097ISAM;16;Inventur
+T098IERF;2359;Inventurerfassungsprotokoll
+T099BELSTEU;5200440;Textbausteine
+T099FTXT;758233;Text - Führungsdatei
+T099SACT;0;
+T099STEU;0;Steuerung der Textbausteine
+T099TXT;765984;Textbausteine
+T099TXT_SIC_20231212;660163;
+T099TXT_SIC_20240216;666436;
+T100TXT;0;Textdatei
+T101MST;48;Mengenstaffel
+T101ZMST;0;Mengenstaffel Einkauf zukünftig (Identisch zu T101MST)
+T102ARTL;11830;Gelöschte Artikel
+T103EGRL;0;EGR- Lieferantendatei
+T104EXKU;8378;Exclusivkunden (Zuordnung zu Normalkd.)
+T105OPSA;12436;Saldendatei (OP, AUBSAL)
+T105OPSA_EXT;0;
+T105OPSA_VERB;0;Saldendatei Verband (OP, AUBSAL)
+T105_PROT;33630744;Protokolltabelle zur Protokollierung des AB Saldos
+T106KUAR;1270;Kundenartikeldatei
+T106SKUAR;0;Kundenartikeldatei für Schattenartikel
+T107BONU;0;Lieferantenbonus - Überwachung
+T108STG;9301;Staffelpreise
+T108STG_20190715;7719;
+T109LSUM;0;Summendatei - Hitlisten
+T110ANG;5315;Angebotspreise
+T111CVS;0;Versanddatei
+T112PCVS;93;Protkolldatei für ZAD
+T113BONF;0;Bonusfortschreibung
+T114ZADP;0;teilweise Übernahme Datensätze
+T115TEL;3384;
+T116IUEB;0;Übernahmedatei Inventursätze (CStore)
+T117VORG;0;Kassen-Vorgangsarten
+T118ZART;0;Zahlungsarten an der Kasse
+T119KBEW;0;Kassenbewegungssatz
+T120KASS;0;Kassenbestandsdatei
+T121AUK;0;
+T122AULI;0;
+T123LAD;616;Ladelisten
+T124RESU;0;
+T125LOBK;1;Kopftabelle Lieferantenobjektbezogene Artikelpreise
+T125LOKK;0;Kopftabelle Objektkonditionen
+T125LOKP;0;Positionstabelle Objektkonditionen
+T125MST;0;Tabelle Mengenstaffel
+T125MUOB;0;Mandantenunabhängige Einkaufsobjekte
+T125OBML;0;Tabelle für mandantenübergreifende Einkaufsobjekte (Lagerpflege)
+T125OBMU;0;Tabelle zur mandantenübergreifenden Einkaufsobjekte (Betriebspflege)
+T125OBP;0;Objektpreis Bestellwesen
+T125OBZU;0;Tabelle für Zuordung Verkaufs- und Einkaufsobjekte
+T126AUP;0;
+T127POLI;0;
+T128FORT;0;Fortsetzungen Kunden
+T129KTXT;0;
+T130BEVO;686;Bestellvorschläge
+T130BEVO_EXTERN;0;Eindeutige ReciveID pro Artikel bzw. Eingliederungslauf (T401HttpRec.receiveID)
+T130DISP;0;Dispositionssätze für die Druckausgabe
+T130DISPL;0;Bestellvorschlag Längenaufteilung
+T130DISP_STAT;0;Dispositions Zusatztabelle. Speichert zusätzlich die Statistikzahlen ab.
+T130PROG_KOPF;;Kopftabelle für die Dispositionsprognose
+T130PROG_POS;;Detailtabelle mit den Zugängen und Abgängen für den Prognose-Kopfsatz
+T131ALI;1026;Artikellieferanten
+T131MEZU;0;
+T132TERM;297;Terminselektionsdatei
+T132WIZE;0;Über die Daten dieser Tabelle kann die Standardermittlung der Wiederbeschaffungszeiten (Disposition) übersteuert werden
+T133ABTT;0;Abteilungstexte
+T134DISP;9;Dispositionssteuerungsdatei
+T134DISP_SA;3;
+T134DISS;0;Disposteuerung auf Gruppenebene (Analog shc134)
+T134MIME;0;
+T135GHST;4649;Steuerdatei Gerätehistory
+T136GHEP;7624;Einzelposten zur Gerätehistory
+T137ARTK;7;Artikel-Sonderkonditionen
+T137ARTK_ES;0;Konditionstabelle für Preisfindung Stahl Fa. Eisen-Schmitt, Karlsruhe
+T137KUGR;0;Kundengruppentabelle für Preisfindung Stahl Sonder
+T137MS_ES;0;Mengenstaffel für die Fa. Eisen-Schmitt Preisfindung
+T138EPTX;18385;Zusatztexte zu den EP¿s
+T139PAKS;0;Paketsteuerung Versandabwicklung
+T140AMC;164564;Matchcode f. Adressen (Kunde,Lieferant)
+T141BARC;0;
+T141BEK;103060;Bestell-Kopf
+T141BEK_ZUSI;87913;Zusatztabelle für die Tabelle T141BEK (Bestellkopf)
+T141DMS;0;Barcodes zur Auftragsbestätigung von Bestellungen
+T141DOKA;0;
+T141KOP;31;Kopftabelle für die Kopierfunktion von Bestellpositionen
+T141META;0;Bestellkopf-Zusatztabelle zum Speichern der Metallzuschläge
+T141TMETA;;Temporäre Tabelle für Abhandlung Bestellkopf-Metallzuschläge - T141META
+T142ZUKO;109143;Lieferscheinköpfe - WE
+T143HUEL;0;Haushaltsüberwachungsliste - Datei
+T144RESU;69060;Rechnungssummen fuer Eingangsrechn.
+T144SQL;0;In dieser Tabelle kann der Benutzer eigene SQL abspeichern
+T145AUFL;0;Auffüll-Liste (Schafferer)
+T146BEP;226702;Bestellpositionen
+T146BEP_GR0810;24520;
+T146BEP_ZUSI;218135;Zusatzinformationen für Bestellpositionen
+T146KL;0;Kabel Wunschlängen.
+T146KOP;104;Positionstabelle für die Kopierfunktion von Bestellpositionen
+T146PR_AEND;0;Preisänderung Bestellpreise incl. Verkaufspreise
+T146REV;0;Bestell-Review Tabelle. Zur Anzeige von Hinweisen und Fehlern in Bestellkopf oder Bestellpositionen
+T146SN;334;Zusatztabelle zur Bestellposition. Angabe der verwendeten Geräte-Seriennummern bei Retouren.
+T146STORNO;0;
+T147ZUG;212509;Warenzugaenge - Teillieferungen
+T148RAB;1693;Lieferantenkonditionen (Rabatte)
+T149KTXT;216573;Bestell-Kurztexte
+T150FOST;10;Stammdaten Statistikfortschreibung
+T151RZP;2888;Rueckstandszuteilungsprotokoll
+T152KUAR;267208;Kunden-Artikel-Statistik
+T153VEST;232468;Vertreter Produktgruppen-Statistik
+T154WAST;50422;Produktgruppenstatistik
+T155PRGR;374737;Kunden-Produkt-Gruppe
+T156KUST;73148;Kunden-Statistik
+T157KUKK;208453;Kundengruppenstatistik Kalkulationsgruppen/Preisgruppen Kopf
+T157KUKP;4439892;Kundengruppenstatistik Kalkulationsgruppen/Preisgruppen Position/Stichtag
+T157KULI;124207;Kunden-Lieferanten-Statistik
+T158ARST;224315;Artikelstatistik
+T159LIKA;52909;Lieferanten- Kalkulationsgruppen- Stat.
+T160KUMS;23332;Umsaetze pro Kunde (Bonus)
+T161TECH;0;Technikerstatistik- Führung+ Lohn
+T162TEMA;0;Technikerstatistik Material
+T163TESO;0;Technikerstatistik Sonstiges
+T164HERS;0;Herstellerstatistik Führung+ Lohn
+T165HEMA;0;Herstellerstatistik Material
+T166HESO;0;Herstellerstatistik Sonstiges
+T167ART;0;Artikelzuordnung zum Fachhandelsprogramm
+T167AUSK;0;Ausgabeköpfe für Fachhandelsprogramme
+T167AUSP;0;
+T167FART;0;Schlüssel für Ausgabeformate
+T167FFELD;0;Feldbeschreibungstatelle für Ausgabe Fachhandelsprogramme
+T167FH;0;Fachhandelsprogramme
+T167FSART;0;Satzarten für Ausgabe
+T167KD;0;Kundenzuordnung zum Fachhandelsprogramm
+T167ROW;0;Rowenta-Kunden/Artikel
+T168UMSK;0;Kassenstatistik nach Warengr. + Tag
+T169LIEK;5842;Lieferscheinkontrolle
+T170MAHK;5;Mahnungen Stammdaten
+T171MAHN;148;Mahnprotokoll
+T172KU;4559;
+T173ZI;1;
+T174SORT;13405;
+T175MAT;1;
+T176SOST;0;
+T177GK;0;Gefahrenklassen zu Schattenstammartikeln
+T177GKUN;0;Gefahrenklassentexte zu GefahrenStoffen UN-Nr. T177GK
+T177KATA;0;Artikel-Katalog
+T177KATA_EVENTS;0;Tabelle mit Änderungsprotokollierungen für Katalogmatch
+T177KATAZ;0;Artikel-Katalog Zukunft
+T177PRA;0;Preisdatei Katalogstamm neu Okt.2010
+T177SP;0;Spannenvorgabe für Kalkulationsgruppenfindung bei Schattenstammübernahme
+T178ARTV;20;Artikel-Verweise
+T179ETI;1;
+T180TOUR;0;Tourendatei (Ladelisten)
+T181FERT;0;Fertigungsauftrag - Kopf
+T181KONP;0;
+T182FPOS;0;Fertigungspositionen (Rezepturpos.)
+T183WEWA;0;Lagerorte Wareneingang / Warenausgang
+T184UMF;0;Verkaufsinfo-Datei (STR/SRH)
+T185RELA;0;Reservelagerplatzdatei (Eberhard)
+T186ANH;0;Ablagesystem (intern)
+T187KAST;0;Kassenfrequenzstatistik
+T188AKT;6232;Aktionspreisdatei
+T188AKT_VW;0;Aktionspreisverweisdatei für Delphin-Amazonia
+T188AKT_20220829;2942;
+T189WAR;0;Wartungsdatei
+T190STRU;0;Strukturdatei - Installierte Basis
+T191INDE;0;Detailsatz Installierte Basis
+T192INVO;0;Vorgangssatz Installierte Basis
+T193LIFO;0;
+T194BONP;0;Bonus-Punktedatei
+T194LIRE;0;
+T195TSTA;0;Tagesstatistik für Meldung
+T196ZUST;0;Zusatzstatistik/Provision - Teutsch
+T197MASK;0;
+T198FEHL;520;
+T199PROT;0;Fehlerprotokolldatei
+T200SDEF;0;
+T201EDI;0;Liefer-/Rechnungs-Avise
+T202ENVENTA_KOPF;0;Kopftabelle der Enventa-Schnittstellenformate (Buchungsstapel / Debitoren/Kreditoren-Stamm)
+T202ENVENTA_POSITIONEN;0;Positionentabelle der Enventa-Schnittstelle
+T202ENVENTA_UMSETZUNGEN;0;Umsetztabelle für diverse Datenbumsetzungen von SHCWare-Werten in Enventa-Werte (z.B.) Steuerschlüssel, Konten, etc.
+T202KN;0;Kundenmetallfestschreibung zur T202mezu
+T202LSP;0;Sperren von Metallzuschlägen pro Lieferant
+T202MEST;0;Steuerung für Metallzuschläge
+T202MEZU;0;
+T202STK;0;Sprungtabellenköpfe
+T202STP;0;Sprungtabellen-Positionen
+T202ZAKO;0;Kunden-Zahlungskonditionen je Metallcode
+T205ZGEW;0;
+T206INV;0;Inventurzusatzdatei Schafferer
+T207KALK;0;Kalkulationsdatei - HERO
+T208MNP;0;Metall-Sprung-Preise/individuelle Metallnotierungen
+T209HILF;0;Hilfsdatei
+T210UEB;10;Steuerdatei Artikelübernahme
+T211DATF;65;Beschreibungsdatei Übernahmeformate
+T212UMW;0;Umwandlungstabelle f. Schlüsseldaten
+T213KST;0;Katalogsteuerung
+T214BEDG;0;Bedarfsgruppen
+T215BGST;0;
+T216PLAN;0;
+T217STRU;0;Strukturen (Drösser)
+T218KSTR;0;Kundenstrukturen Drösser
+T219FIFU;0;Filial-Fussionen
+T221HRL1;0;
+T222HRL2;0;
+T224STA;10527;Ergebnisstatistik
+T225STAHL;0;Statistiktabelle für Stahlwerte
+T247PAR;0;Parameter für Übernahme Preise => CADBAS
+T248TMP;0;
+T249PROT;0;
+T260CE;0;CE-Zertifikate / Informationen
+T260CPR;1;
+T260CPRAA;0;Steuerung Bauprodukte je Auftragsart
+T260DRUCKK;29;
+T260DRUCKP;0;
+T260HRST;0;CE Zertifikat / Hersteller Präferenzen
+T300MENU;3446;Menütabelle dieser Tabelle ist die Menüstruktur definiert
+T300TREE;0;
+T301GRUP;13;SachbearbeitergruppenIn dieser Tabelle werden die Menü-Gruppen definiert. Jeder Sachbearbeiter ist über die Tabelle T304USAC einer solchen Gruppe zugeordnet. Auch jede Menüstruktur (T300MENU) ist einer sochen Gruppe zugeordnet
+T302UMEN;1415;Programmfavoriten dieser Tabelle stehen die Programme, welcher der Sachbearbeiter am häufigsten benötigt. Diese werden im Menüsystem separat dargestellt.
+T303MBER;2237;gesperrte Menüeinträge pro Sachbearbeiter. Die gesperrten Menüstufen sind im Menü für den Sachbearbeiter nicht sichtbar.
+T304USAC;169;Sachbearbeiter - Menügruppenzuordnung
+T305LOG;3004379;Logging aller Fehlermeldungen, Warnungen und Hinweise über SHC_UTL_LOGGING
+T305LOGPARA;86501;Logging der Parameter über SHC_UTL_LOGGING
+T305LOGPROCESS;1246572;Protokolltabelle der Vorgangsinformationen bei Einträgen während einem Vorgang wie zB Auftrages,Bestellung,Rechnung,...
+T305MPROT;6581;Mail Protokolltabelle
+T305MSGTEXT;1156;SHC-Meldungstexte
+T305NETPROT;0;
+T305PWR_PROT;27;Potokollierung von Passwort-Resets
+T305RUN;68;Kopf der Logging-Läufe
+T305TXT;24;
+T305UIDPROT;0;Protokolllierung der Prüfung ausl. UST-ID-Nummern
+T305ZPROT;0;Protokollierung vom Zeitverhalten in der SHCware
+T306CLIENTINFO;116724;Hier werden die Applikations-Eigenschaften jeden Clients gespeichert, der sich in der SHCWare anmeldet !
+T306STAR;542296;Programmstarttabelle Wenn ein Formsprogramm gestartet wird, so wird in diese Tabelle ein Eintrag gemacht, wer und wann das Programm gestartet hat. Beim Verlassen des Programmes wird der Datensatz mit dem Zeitstempel versehen,
+T307FLABL;0;Fremdsprachen-Labels
+T307FLOV;20;ListOfValues: Möglichkeit alternative oder fremdsprachige ListLabels anzulegen
+T307FMACO;0;Fremdsprachen: Labels, für die eine Matchcode-Übersetzung vorhanden ist
+T307FMELD;0;Fremdsprachen-Meldungen
+T307FSPR;0;Fremdsprachen-Schlüssel
+T307ITEM;5;
+T307NOS;1;
+T307_SHCSICH;0;
+T308WAKO;2;
+T309MSAC;205;Mandanten Sachbearbeiterzuordnung Über die View V070BETR wird eine sachbeaberabhängige Mandantenberechtigung realisiert. Alle Programme verwenden die View V070BETR und nicht die Tabelle T070BETR. In der View wird die Tabelle T309MSAC interpretiert, um fe
+T310AUDI;0;22
+T310CP1;10833188;Änderungsköpfe für Stammdatenänderungen
+T310CP3;68619810;Feldänderungsprotokoll
+T311ART;0;Positionstabelle (Artikel) Flyerplanung Disposition DA
+T311DVOR;555;Zwischentabelle für das Programm (SHC311 Dispoübersicht) dieser Tabelle werden pro Lieferant die Werte aus Dispovorschlägen T130BEVO und Rückstandstabelle T088RUE errechnet und abgestellt.
+T311HTXT;0;Dispositions Hinweistext
+T311LANR;0;Mengentabelle je Lager (Artikel) Flyerplanung Disposition DA
+T311PLAN;0;Kopftabelle Flyerplanung Disposition DA
+T311WABE;0;Tabelle Warenbereiche mit Wertigkeit für Disposition DA
+T312BONU;0;Versteckte Boni (nur im Einsatz bei der Lichtzentrale) Wird in einem recht komplizierten Vorgang in die Tabelle T312RPOS fortgeschrieben bzw. berücksichtigt.
+T312RPOS;0;Statistikdetail-Datei (nur im Einsatz bei der Lichtzentrale). Wird fortgeschreiben durch einen on_insert Trigger auf der T096Stat. Procedure zum Fortschreiben im SHC_Rpos.Pls Die meisten Felder kommen direkt aus der Tabelle T096Stat
+T313KBLZ;7485;Kunden-/LieferantenbankenDie Bankverbindungen der Personenkonten (Kunden und Lieferanten) sind für: > die Lastschriften > das automatische Buchen der Bankauszügen > den automatischen Zahlungsausgang notwendig. Pro Konto ist es möglich, mehere Banken
+T314SSKON;0;Sonderskontotabelle pro Kunde Lieferant und Preisguppe
+T314ZAKO;77;
+T315ZASP;151;
+T316MPAR;365;
+T317KUPD;0;Über die Aktion Stapeländerung im Standard-Actionbar der SHCWare-Programme kann die Stapeländerungsfunktion gestartet werden. Diese Änderungen werden pro Programm und Block (Tabelle) gespeichert, damit Diese im Wiederholfall zur Verfügung stehen. In dies
+T318PUPD;0;Stapeländerungspositionen In dieser Tabelle werden sie Zielfelder und Werte für die Stapeländerungen gespeichert. Aus diesen Informationen wird ein SQL Statement gebildet (Update Tabelle Set Feld1= Inhalt1, Feld2= Inhalt2, Where letzte Bedin
+T319ZAPO;122;22
+T320WCOD;11;
+T321REORG;91;Reorganisations Steuerung Diese Tabelle steuert in welchen Abständen und welche Tabellen reorganisiert werden. Die möglichen Reorganisationsarten sind in der View V321Reorg enthalten
+T321REORG_LVS_DETAIL;0;Master-Tabelle zur Steuerung der Reorganisation der allgemeinen LVS-Schnittstelle
+T321REORG_LVS_MASTER;8;Master-Tabelle zur Steuerung der Reorganisation der allgemeinen LVS-Schnittstelle
+T322DKON;2848;Funktionsparameter Beschreibungstabelle In dieser Tabelle werden alle Funktionsparameter dokumentiert. Der Inhalt der Tabelle wird zu jedem Release geleert und dann neu gefüllt.
+T322FILE;0;Pflegetabelle Sourcefiles
+T322GRP;0;Pflegetabelle Gruppen/Module für die Funktionskonstanten
+T322KFILE;0;Zuordnung Sourcefiles zu Konstante
+T322KGRP;0;Pflegetabelle Gruppen/Module für die Funktionskonstanten
+T323FKON;192;In dieser Tabelle stehen die aktiven FunktionskonstantenDie Konstanten werden immer mit SHC_Get_Konstante gelesen.Der Zugriff erfolgt gestaffelt nach:1. mit Kennung und Mandant2. mit Kennung = Null und Mandant3. mit Kennung und Mandant = Null4. mit Kennun
+T324KORB;0;22
+T325MSTK;9;Steuerung der Matchcode-Anzeige Die Tabelle wird falls leer beim ersten Start des Matchprogrammes gefüllt.
+T326MSTP;53;Steuerung der Matchcode-Anzeige Die Tabelle wird falls leer beim ersten Start des Matchprogrammes gefüllt.
+T327MAC;2;Steuerkopftabelle für den Matchcodeaufbau
+T328MAC1;3;Steuerkopftabelle für den Matchcodeaufbau
+T329MAC2;4;Steuerkopftabelle für den Matchcodeaufbau
+T330MAC3;14;Steuerkopftabelle für den Matchcodeaufbau
+T331MAC4;2;Steuerkopftabelle für den Matchcodeaufbau
+T332MTXT;0;Matchtbegrifftabelle für Artikelstamm Diese Begriffe werden der T054AMC zugefügt. Der Schlüssel wird im T051ART.FRA21 eingetragen
+T332SYN;0;
+T333AMC;61336;Artikelmatchtabelle für Volltextsuche
+T333AMC1;0;
+T333AMC2;0;
+T333AMC3;0;
+T333AMC4;0;
+T333COUNT;0;Trefferanzahl pro Begriff
+T333MFILE;0;Verteilung der Match-Codes
+T333MHIST;6998;Artikel- Historietabelle für Matchfolge
+T333PROT;0;Protokollierung der Unsinnigen Matchversuche
+T334INFK;10;Steuertabelle für Zusatzinformationen Zu einigen Tabellen (siehe Satzart) können Zusatzinformationen hinterlegt werden. Damit kann z.B. indirekt der Kundenstamm oder Artikelstamm mit zusätzlichen Feldern erweitert werden.
+T335INFO;175;
+T335MAND;61;Mandantenspezifische Einstellungen zu InfoKz aus T335INFO
+T335WERT;203;Diese Tabelle enthält die erlaubten Werte von selbstdefinierten Feldern
+T336INFA;219859;Zusatzinfodetailtabelle z.B. für Artikel
+T336INFALI;0;Zusatzinfodetailtabelle für Artikellieferanten
+T336INFA_20220419;156861;
+T336INFL;0;Zusatzinfodetailtabelle für Artikel / Lager
+T337INFP;78862;Zusatzinfotabelle z.B. für Personen
+T337INFP_20190718;23798;
+T337INFP_20210215;42654;
+T337INFP_20230508;53610;
+T338INFV;2641117;Zusatzinfotabelle für Vorgänge
+T339BELT;0;belegartenabhängige Kundentexte
+T339LHW;27;Lieferhinweise für die Auftragserfassung
+T339TERM;0;Zustelltermine Kunden/Lieferadressen
+T340SEL;39;Tabelle für Abfragedefinition (Verkauf / Einkauf)
+T341SELS;16;
+T342TMP;;Arbeitstabelle für die Auftrags / Bestellabfrage Diese Tabelle wird über die DB Procedure SHC_Fill_T342 gefüllt. Bedeutung der Felder siehe T340SEL
+T343PKON;;temporäre Tabelle geladene Programmkonstanten pro Programm
+T344BSAC;;wirksame Zusatzberechtigungen für einen Sachb.
+T344DBER;0;Berechtigungen pro Sachbearbeiter und Lager
+T344DBERA;0;DEK Anzeigesperre für Warenbereiche
+T344DBERW;0;DEK Anzeigesperre für Warenbereiche
+T344GBER;116;Gruppenabhängige Berechtigungen
+T344ZBER;742;Sachbearbeiterabhängige Zusatzberechtigungen
+T344ZBER1;0;Zusätliche Tabelle zur Berechtigungsverwaltung. (Individuelle Berechtigungen)
+T345AD;0;Admin Lagerzuordnung
+T345KL;30;Kreditlimitgruppen Es werden Gruppen gebildet, für die ein Sachbearbeiter zuständig ist
+T346KLS;26;Sachbearbeiterzuordnung zur Kreditlimitgruppe
+T347KLA;6;Kreditlimitanfrage Tabelle
+T347KLA_PROT;386852;Kreditlimitanfrage-Protokoll
+T347KZ;0;Kunden Zusammenführungstabelle für Kreditlimitprüfung
+T347LES;6;Gesperrte LE-Belege aus der Rückstandszuteilung
+T348KNP;0;
+T348PK;0;
+T348PP;0;PreisProtokollÜber einen Trigger werden Änderungen des Einstands-Preises in dieser Tabelle protokolliert.
+T348SAC;0;
+T349AAP;134;AdressenÄnderungsProtokollWird eine Adresse (Kunde / Lieferant) gelöscht, bzw. geändert, erfolgt in dieser Tabelle ein Eintrag.
+T349UMS;0;Umsetztabelle alte neue Adressnummer
+T350SBER;38;Berechtigungstabelle für Programm-Funktionalität z.B. das Infosystem darf zwar von einem Sachbearbeiter aufgerufen werden, aber innerhalb des Programmes dürfen nicht alle Funktionalitäten genutzt werden. Die einzelnen Funktionssperren sind mit Namen im
+T351GBER;29;Berechtigungstabelle für Programm-Funktionalität z.B. das Infosystem darf zwar von einem Sachbearbeiter aufgerufen werden, aber innerhalb des Programmes dürfen nicht alle Funktionen genutzt werden. Die einzelnen Funktionssperren sind mit Namen im entspr
+T352DET;6;Personen - Anzeigedetails fürs Infosystem In dieser Tabelle werden die parametrierbaren Anzeigefelder hinterlegt
+T353UGL_REQLOG;0;Protokolltabelle für eingehende UGL Requests (bspw. UXS)
+T353UGL1;0;Steuerung für UGL Kundensteuerung
+T353UGL1_FTP;0;FTP Steuerung für die UGL Kundensteuerung
+T353UGL1_UXS;0;Steuerung für die UXS / UGL Verarbeitung
+T353UGL10;0;UGL Rechnungssatz
+T353UGL2;0;UGL Empfangstabelle
+T353UGL3;0;UGL inTabelle für Satzart KOP
+T353UGL4;0;UGL Tabelle Satzart ADR
+T353UGL5;0;UGL Positionsdaten Artikel Satzart POA
+T353UGL6;0;UGL Empfangstabelle Satzart POZ
+T353UGL7;0;UGL Empfangstabelle Satzart POT
+T353UGL8;0;
+T353UGL9;0;
+T354LAV;0;Tabelle für die Versendung von Lieferavis
+T355BESUCH;4710;
+T355TMP;0;
+T355VERT;18243;Vertreterzuordnung für Kunden Zu einem Kunden können beliebig viele Vertreter hinterlegt werden. Diese stehen in der Tabelle
+T355VERT_20161015;13029;
+T355VERT_20180331;14369;
+T355VERT_20191005;15058;
+T355VERT_20200805;15440;
+T355VERT_20210107;15589;
+T355VERT_20210131;15955;
+T355VERT_20220519;16299;
+T355VERT_20220817;16389;
+T356INFO;3664;Artikelauskünfte pro Kunde und Artikel
+T356KSTXT;0;Sonder-Kundentexte pro Kunde
+T356KTXT;0;Artikelinfotext pro Kunde
+T356ONSAC;0;Sachb., die die Online-Erfassung des WK vornehmen dürfen
+T356ONSESS;0;Sessiontabelle für die Online-Warenkorberfassung (Drösser)
+T356WAKO;134;"Warenkorb; Aufruf u.a. in UP012"
+T357LAD;0;Tabelle zur Übernahme von Lieferungen in die Ladeliste per MDE
+T357SCAN;0;Scanntabelle Wickert, Übernahme von MHD Charge und Auftragspositionen
+T357SERIE;0;Eventuell erfasste Serien und Chargennummern
+T357VVG;0;Tabelle zur Übernahme von Lieferungen in einen Versandvorgang per MDE
+T357WAPO;131;Positionen des Warenkorbes
+T358BAND;0;Nettopreisband
+T358CDM;0;
+T358GS;0;Zuordnung der Kundengruppen zu Preisgruppen
+T358KDG;0;Kundengruppen Definition
+T358KDST;0;Zuordnung eines Kunden zu Preisstufen für Konditionsgruppen
+T358KGR;1;Konditionsgruppen
+T358KOM;4;Kommissionstabelle
+T358KRGBAND;0;Zuordnungstabelle Kundengruppe zu Band
+T358PZ;0;Preisfindungszugriffe
+T358SKON;0;Kundensonderkonditionen (analog T072skon)
+T358SNP;0;Staffelnettopreuse
+T359PFAEN;0;
+T359PFEK;0;WEG PFEK Tabelle
+T359PFKA;0;
+T360EK;3;Lieferanten - Einkaugskonditionen - Kopftabelle In dieser Tabelle steht ein Kopfsatz pro Lieferant und Gültigkeitskennzeichen
+T360EK_AID88487;3;Lieferanten - Einkaugskonditionen - Kopftabelle In dieser Tabelle steht ein Kopfsatz pro Lieferant und Gültigkeitskennzeichen
+T360EK_VERBAND;0;Lieferanten - Einkaufskonditionen - Kopftabelle. In dieser Tabelle steht ein Kopfsatz pro Lieferant und Gültigkeitskennzeichen für die Verbandskalkulationsgruppen.
+T360KOKG;0;Kalkulationsgruppen von Kollegenlagern
+T360PZ;0;Lieferanten-Preiszuordnungen
+T361NLP;0;Lieferanten-Standardnachlässe
+T361NLP_AID88487;0;Lieferanten-Standardnachlässe
+T362KGR;1;Lieferanten Kalkulationsgruppentabelle
+T362KGR_AID88487;1;Lieferanten Kalkulationsgruppentabelle
+T362KGR_VERBAND;0;Lieferanten Kalkulationsgruppentabelle Verband
+T362SKGR;0;Kalkulationsgruppenswitchtabelle
+T363KGRP;0;Nachlässe pro Kalkulationsgruppe Kopftabelle ist T362KGR
+T363KGRP_AID88487;0;Nachlässe pro Kalkulationsgruppe Kopftabelle ist T362KGR
+T363KGRP_VERBAND;0;Nachlässe pro Kalkulationsgruppe. Kopftabelle ist T362KGR. Verbandslogik
+T364DPEK;0;EK-Tabelle für Dynamische Preisfindung Fa. SADI
+T364DPSP;0;Spannen-Tabelle für Dynamische Preisfindung Fa. SADI
+T364REFO;1;Rechenformel-Kopf-Tabelle
+T364REFO_AID88487;1;Rechenformel-Kopf-Tabelle
+T365RUFOK;2;Rundungsformel-Kopf-Tabelle
+T366RUFOP;2;Rundungsformel-Positionen
+T367WARU;1;Überdefinition der Rundungsformel pro Warengruppe
+T368REFP;0;Rechenformelpositionen In dieser Tabelle gibt es pro Rechenformel max. 8 Datensätze (je einen pro Preisstufe) Kopftabelle ist T364Refo
+T368REFP_AID88487;0;Rechenformelpositionen In dieser Tabelle gibt es pro Rechenformel max. 8 Datensätze (je einen pro Preisstufe) Kopftabelle ist T364Refo
+T368REFP_SIC;0;Rechenformelpositionen Sicherungstabelle zu t368refp
+T369ALAG;15;
+T369BLAG;96;Lagerberechtigungen fürs Infosystem
+T369DA;0;pro Lager kann man jeden Tag festlegen ab wann alle Lieferscheine das datum des Folgetages bekommen soll
+T370TKAT;0;Tabelle mit zur Übernahme selektierten Katalognummern - hier befinden sich alle Katalognummern die aus dem Schattenartikelstamm in den regulären Artikelstamm übernommen werden sollen.
+T371KSEL;0;Übernahmesteuerung für Katalogübernahme. In dieser Tabelle werden die Steuerungen gespeichert, wie eine Übernahme aus T177kata in T051art erfolgen soll.
+T372OLEI;0;
+T373BLOB;0;
+T374KATE;0;
+T375AFLK;0;Auffüllliste
+T375AFLP;0;
+T375AFV;0;Auffüllvorgang
+T375AUFV;0;
+T375LATR;0;
+T376MUKU;0;
+T376PRGR;10;Lieferanten - Preisgruppen für Zugriff auf die T072SKON
+T377AMC1;0;Matchcode Tabelle für den Katalogstamm
+T378DEF;117;Default Vorbelegung für Felder
+T378DEF1;0;Zusätliche Tabelle zur Eingabevorbelegung. (Individuelle Eingabevorbelegungen)
+T379SWL;7362;Schwebelagertabelle
+T379SWLP;2118;Schwebelagerzugänge
+T380JBLOB;0;Eingelesene Dateien zu Verarbeitungsjobs
+T380JSEL;975;Diese Datei enthält die Selektionsangaben, die für Stapelprogramme (Druck- oder sonstige Verarbeitungsprogramme) notwendig sind.Pro Programm und Sachbearbeiter können mehrere Selektionssätze/Jobs erfasst werden.Auf den Sachbearbeiter bezogen gibt es zwe
+T380PROG;0;
+T380PSEL;0;
+T380RSEL;0;Selektion für die Rückstandsliste im Programm SEL088
+T381ABR;0;"Tabelle für abweichende Auftragskopfdaten bei Stahlabrufen; die Felder entsprechen den Feldern der T081AUK bzw. T082AULI"
+T381ANGK;0;
+T381ANGL;0;
+T381AUFK;0;
+T381AUFP;0;
+T381FS;1;Fremdsprachen-Kopftexte
+T381KET;23;
+T381PL;0;
+T381PPSK;0;
+T381PPSP;0;
+T381SABR;0;Führungstabelle für Stahlabrufe (Rahmenaufträge)
+T381SABRA;0;Abrufaufträge für Rahmenaufträge (Stahl)
+T381SABR_ART;0;Auswahlartikel für Rahmenaufträge (Stahl)
+T381STB;0;
+T381ZUSA;465178;
+T381ZUSA_SIM;0;
+T382ASTT;0;
+T382AULI;414212;Zusatztabelle zur T082AULI
+T382AULI_SIM;0;
+T382KETP;35;
+T383RTEXT;1;Rechnungstexte Informationen aus der FIBU
+T384WFA;0;Workflowarten
+T384WFK;0;Workflowköpfe
+T384WFP;0;Parameter für den Programmstart der angehangenen Vorgänge
+T384WFV;0;Angehangene Vorgänge zum Workflow
+T385AUV;9219;Angebotskalkulation - Zwischentabellen
+T385AUV2;0;
+T385GRV;0;Gruppenversionen für neue Angebotskalkulation
+T385UEBK;0;
+T385UEBP;0;
+T386ABRP;0;
+T386AUP;19835;Versionen von AuftragspositionenBitte beachten: ab dem Feld Manr entsprechen die Felder den aus Tabelle T086aup. Für Feldbeschreibung bitte dort nachschauen.
+T386AUP2;0;Versionen von Auftragspositionen. Bitte beachten: ab dem Feld Manr entsprechen die Felder den aus Tabelle T086aup. Für Feldbeschreibung bitte dort nachschauen.
+T386CP;25;Tabelle zum vormerken von Positionen zum kopieren im UP028
+T386FS;0;
+T386GRP;0;Individuelle Gruppierung nach Positionen im Auftrag
+T386PA;0;Preisabweichungsstatistik
+T386POSBG;0;Berechtigungsgruppen für Positionsprüfungen
+T386POSBGS;0;Sachbearbeiterzuordnung für Positionsprüfung
+T386POSF;0;Positionsfehler für LE-Sperren
+T386POSP;0;Positionsprüfungen, die Zur Sperre des LE-Druckes führen
+T386POSPA;0;zulässege Auftragsarten für Positionsprüfungen
+T386POS_ZUSI;891577;Zusatztabelle für die Tabelle T087Poli (Lieferungspositionen)
+T386POS_ZUSI_SIM;0;
+T386PRHIST;0;Protokolldatei für die Übernahme des Preises aus der Historie
+T386VART;0;
+T386WUN;0;Tabelle mit zu verarbeitenden Wunschlistenaufträgen
+T387ANARB;222;
+T387ANARZ;88;Tabelle für Anarbeitungszeiten
+T387CHK;0;Auftragsbearbeitungs-Prüfungsergebnisse
+T387KMA;0;
+T387POLI_KALK;185212;
+T387POLI_KALK_SIM;0;
+T387POLI_ZUSI;733275;Zusatztabelle für die Tabelle T087Poli (Lieferungspositionen)
+T387POLI_ZUSI_SIM;0;
+T387RRK;0;Rückstandsreservierungen Kopfdatei
+T387RRP;0;Rückstandsreservierungen Positionen
+T387TEIL;1188;Zwischentabelle für Teiledruck
+T388PROT;0;Protokolltabelle für Rückstandsänderungen
+T389ANG;78;
+T390DART;0;Tabelle für Druckerarten Die Druckerart kann in der Tabelle T390DRU Feld DART referenziert werden. Über die Druckerart kann ein Reportfile Switch vorgenommen werden.
+T390DRU;39;In dieser Datei werden alle im System verwendeten Drucker definiert.
+T390LOGO;0;Verzeichnisse oder BLOB-Ids zu den Logos
+T390PRINTGRP;8532;
+T390PRINTJOB;3967;
+T390PRINTPARA;147436;Parameter eines Druckauftrages
+T390REPS;26;URL-Parameter für Aufruf Reportserver 10g
+T390REPS_ALTERNATIVE;0;Reportserver-Alternative zum eigentlichen zur Lastverteilung
+T390RS;0;Tabelle zur Referenzierung eines Reportfiles zu einer anderen ReportID
+T391BELG;12;Über die Belegartengruppe erfolgt die Zuordnung der Drucker zu den einzelnen Belegarten. Eine Belegartengruppe ist ein Überbegriff für alle Belegarten die überwiegend auf dem gleichen Drucker gedruckt werden sollen. Beispiel: LIST Allgemeine Listen
+T392BELA;45;
+T392STEU;0;Steuerung von Texten auf Reports
+T392VERZ;24;
+T393AKT;0;
+T393APL;188;
+T393CID;0;
+T393DID;0;
+T393KDEF;0;
+T393PARK;14;
+T393PARKB;0;Tabelle zum Parken von Bestellungen
+T393PARKE;0;Steuerung automatisches Parken von Edifact-Bestellungen
+T393SEQ;0;
+T394BEZU;170;
+T395REZU;21;
+T396PARA;;
+T397REPS;19;
+T397RP;20323;Protokolldatei für Reports
+T398DRZA;0;bevorzugte Zonen- und Splittingdrucker mit Lager und Auftragsart
+T398DRZO;3;Pflege der Zonen und Splittingdrucker (notwendig bei Drucksplitting)
+T398MLAGO;0;Mengenabhängige Lagerorte
+T398PPL;0;Pickpool Lagerortzuordnung - Steuerung Druck Lagerentnahmescheine über Pickpool
+T398PPS;0;Pickpool Steuerung - Steuerung Druck Lagerentnahmescheine über Pickpool
+T398SLAGO;0;Sortierung für Anzeige im Areneingang
+T399CDRU;0;
+T400PROG;717;Liste von Programmen der SHCware. Wird automatisch in Init_Default_Form gesetzt. In dieser Tabelle befinden sich alle Programme der SHCware (Forms Programme) die mindestens 1 mal gestartet wurden. Eine Prozedur in Init_Default_Form (im shcall.pll) se
+T401ACCOUNTS;0;Mailaccounts
+T401ATTACH;1298;
+T401ATTACHREL;1297;
+T401EMAILT;18;
+T401HTTPREC;0;Log der eingehenden Http-Requests über SHC_UTL_HTTP.pRest_POST_ReceiveData
+T401HTTPREQ;16;Log der Http-Requests über SHC_UTL_HTTP.fRequest
+T401QUEUE;3717;
+T401SM;0;Konfiguration für den Service-Monitor
+T401SMTP;2;SMTP Konfiguration für das Versenden von eMails aus der DAtenbank
+T401SWITCH;0;
+T401UAUTH;0;
+T401WMAILT;0;Tabelle zur Steuerung von Werbemails
+T402SERVICE;1;Tabelle für die Definition der .NET Services
+T402SERVICECONFIG;11;In dieser Tabelle werden die Config-Einstellungen von einzelnen Services gespeichert
+T402SERVICELOG;5432;In dieser Tabelle werden die Log-Einträge von einzelnen Services gespeichert
+T402SERVICEMANAGER;1;Tabelle für die Definition der .NET Servicemanager
+T404DBD;0;Datenbankdruck - Umleitungstabelle
+T404PARA;0;Parameter zum Druckauftrag
+T404QUEUE;0;eigene Abhandlung einer Command-Queue in SHC_UTL_AQ
+T405FPU;0;Tabellen für Fegime-Preis-Uploads für den Fegime Shop
+T405FPUA;0;Sortimentsartikel für Preisupdate
+T405SORTA;0;Artikeltabelle Sortimentskonditionen
+T405SORTAK;0;Artikeltabelle Sortimentskonditionen (Katalog)
+T405SORTK;0;Kopftabelle für Sortimentskonditionen
+T405SORTL;0;Sortimentskonditionen Gruppen nach Lieferant
+T405SORTLK;0;Sortimentskonditionen Gruppen nach Lieferant (Schattenstamm)
+T405SORTM;0;Metallzuschlagstabelle Sortimentskonditionen
+T405SORTP;0;Positionstabelle Sortimentskonditionen
+T405SORT_PROT;0;Protokolltabelle gelöschter Kalkulationsgruppen in SHC405S
+T405SORTS;0;In dieser Tabelle stehen die Statistikgruppen, die für ein Sortiment ausgeschlossen werden.
+T405TMP;;
+T406AGR;5;Auftragskopfsteuerung Kopftabelle dieser Tabelle werden die Gruppen definiert
+T406BGR;1;Bestellkopfsteuerung Kopftabelle dieser Tabelle werden die Gruppen definiert
+T407AZU;21;Auftragsarten Zuordnungstabelle dieser Tabelle werden die Auftragsarten den Gruppen zugeordnet
+T407BZU;11;Bestellarten Zuordnungstabelle dieser Tabelle werden die Bestellarten den Gruppen zugeordnet
+T408DES;81;Auftragskopf - Designinformationen dieser Tabelle stehen die Informationen bezüglich der Auftragskopfgestaltung
+T408DESB;16;Bestellkopf - Designinformationen dieser Tabelle stehen die Informationen bezüglich der Bestellkopfgestaltung
+T409BGR;7;
+T409BGRB;0;
+T409KBER;1;Tabelle mit Zwangsfeldern für Auftragskopf für ausgewählte Kunden
+T410BER;83;Abweichende Berechtigungsinformationen für die Auftragskopferfassung.
+T410BERB;0;
+T411MZU;0;
+T411SZU;59;Sachbearbeiter - Berechtigungsgruppenzuordnungstabelle In dieser Tabelle werden die Sachbearbeiter der Berechtigungsgruppe für die Auftragskopferfassung zugeordnet
+T411SZUB;0;Sachbearbeiter - Berechtigungsgruppenzuordnungstabelle In dieser Tabelle werden die Sachbearbeiter der Berechtigungsgruppe für die Bestellkopferfassung zugeordnet
+T412DES;;Diese Tabelle beinhaltet zur Laufzeit die Informationen für die Gestaltung des Auftragskopfes. Über die Procedure SHC_Fill_T412des ( inManr in Number, inAart in Varchar2, inSac in Varchar2)
+T412DESB;;Diese Tabelle beinhaltet zur Laufzeit die Informationen für die Gestaltung des Bestellkopfes. Über die Procedure SHC_Fill_T412desB ( inManr in Number, inBart in Varchar2, inSac in Varchar2)
+T413ARDET;771;Sachbearbeiter / Artikelinfodetails Reihenfolge
+T414HIST;0;Protokolltabelle DEK-Korrekturen
+T414LA;0;Tabelle für Lagerausgleichskopf
+T414LAJ;0;"Tabelle zur Steuerung der Funktion ""Lagerausgleich"" über einen Job"
+T414LAP;0;Tabelle für Lagerausgleichspositionen
+T414LAV;0;Zwischentabelle für den Verteilungsvorschlag
+T414SPE;0;Einstellungen für die automatische Spannenkorrektur
+T414SPG;0;Spannenkorrekturgruppen
+T414SPK;0;Spannenkorrekturen
+T414SPKV;0;Vorgangskopf für Spannenkorrkturen
+T414SPM;0;Musterkundenzuordnung
+T415HIST;2123;Auftragsänderungsprotokoll-KonfigurationstabelleBestimmte oder alle Felder der Auftragstabellen können bezüglich Ihrer Änderungen überwacht werden. In dieser Tabelle stehen die Felder mit Feldnamesbezeichnug, welche überwacht werden sollen. Pro Tabelle wi
+T415MGR;1;Mailgruppenköpfe für die Änderungsprotokollierung der Tabelle T416Hipo
+T415MPOS;1;Mailadressen zur zugehörigen Mailgruppe
+T416HIPO;480198;Auftragsänderungsprotokoll-Tabelle
+T417AGR;0;Gesperrte Menügruppen für Auftragsarten
+T417ASAC;6;Sachbearbeiterabhängige Auftragsartensperren/ Bestellartensperren
+T417AW;14;Tabelle zur Definition von Wandlungen von Auftragsarten
+T417BW;2;Tabelle zur Definition von Wandlungen von Bestellarten
+T418ALAG;0;Lagerabhängige Sperre für Auftragsarten/Bestellarten
+T419AKUN;44;Kundenabhängige Auftragsartensperre/Bestellartensperre
+T420ASEL;7;
+T421PROG;9;Zusatzprogramme - Definition In jedem Formsprogramm können über den Action-Bar Zusatzprogramme aufgerufen werden. Diese Zusatzprogramme werden in dieser Tabelle pro Formsprogramm definiert
+T422PAR;26;Folgetabelle zu T421PROG. In dieser Tabelle werden die Übergabeparameter definiert, die an das aufgerufene Programm übergeben werden. Als Übergabeparameter kann der Inhalt jedes Items aus dem aufrufenden Programm , oder feste Werte verwendet werden.
+T423PRSP;0;Programmsperren für Zusatzprogramme
+T424COUNT;9;Anzahl der gestrteten Menüs (SHC000) pro Sachbearbeiter
+T425TRC;0;Traceköpfe
+T427GF;60;Grussformel für Texte
+T427PDF;0;
+T427TMP;19;
+T427TXA;5;Textarten
+T427TXT;65;Texte für den Schriftverkehr
+T428AB1;0;Definition der Ablagearten
+T428AB2;0;Verwaltungsgruppen für Ablage. Mehrere Läger müssen zu einer Verwaltungsgruppe zusammengefasst werden, damit diese Belege in gleiche Ordner sortieren können
+T428AB3;0;Zuordnung von Lagernummern zur Verwaltungsgruppe
+T428AB4;0;Ordnerdefinition
+T428AB5;0;Belegzuordnung zum Ordner
+T428AB6;0;Zuordnung der Ablagearten zu den Ordnern
+T429IMPO;0;Importsteuerung für Scannerschnittstelle
+T430KATE;0;Kategorien-Tabelle. Hier werden alle möglichen Kategorien für das Datenblatt gespeichert
+T431KINH;0;Mögliche Inhalte für Kategorien mit festen alphanumerischen Inhalten
+T432KKAT;0;Kategorien, die dem Kunden zugeordnet sind.
+T432KKAT_TREE;0;Baumstruktur zur Anzeige in der Außendienst-App.Wird im Außendienst-App-Package aufgebaut.
+T433KUIN;0;Hier sind die eigentlichen Inhalte der Kundendatenblätter gespeichert.
+T434STRU;0;Strukturen für Datenblatt
+T435SKAT;0;Strukturkategorien
+T436KUST;0;Kundendatenblatt Struktur-Kopftabelle. Eine Struktur kann einer Adresse mehrfach zugeordnet werden. Identifizierung über diese Tabelle
+T436TEMP;0;
+T437LAYK;0;Kundendatenblatt Kopftabelle für das Report-Layout.
+T437REST;0;Stahlreste zur Umbuchung
+T438LAYP;0;Hier wird geregelt welche Inhalte aus der t433kuin wie gedruckt werden.
+T439TKAT;;Nimmt die aufbereiteten Kategorieinhalte für die Reports auf
+T439TKIN;;Nimmt die aufbereiteten Kategorieinhalte für die Reports auf
+T440DTN;0;Datanormsteuerung für Kunden
+T440DTN_AID71854;0;
+T441DTNB;0;Bereichsdefinition für die Artikel Alle Bedingungen werden an den Select Befehl mit AND angehangen
+T442ANF;0;Anfragedatei für Datanorm Aufbereitung Die Programme iKIBES oder SEL440 stellen einen Satz pro Kunde in die Tabelle ab. Das Package SHC_DAtanorm arbeitet diese Anfragen asynchron ab.
+T442DL;0;gezipptes Blob-File der Datanormanforderungen per Download
+T442DLPOS;0;einzelne Blob-Files der Datanormanforderungen per Download
+T443QMAIL;0;Queue Tabelle der Datanormaufbereitung zum Verschicken der eMails
+T443STAT;244;Statustabelle für Verarbeitungen asynchroner Art wie z.B. Datanormaufbereitung
+T444WG;;Zwischendatei für Datanormaufbereitung Warenbereiche
+T445RAB;;Zwischendatei für Datanormaufbereitung Rabattgruppen
+T445REH;0;Sonderrabattgruppen für Thomas Flottman Special-Kunden
+T446ME;0;Mengeneinheiten für Datanorm Version 5.0
+T447DTA;4;Definition der Normen des Datenträgeraustauschs
+T448UEBF;48;Definition der Übernahme der Felder der Datenträgerdatei
+T449REPL;19;Datenträgeraustausch: Definition der Ersetzung von Feldern in der Datenträgerdatei
+T450HLP;13495;SHC-Hilfe Tabelle
+T451HLPI;5439;Mögliche Feldinhalte
+T452HLPV;1383;
+T453HLPK;0;Kundenindividuelle Feldhilfe (Mandant + Sachbearbeiterbezogen)
+T454BONUS_PARAMETER;0;
+T454BONUS_UMSATZ;0;
+T454KDA;0;Kunden-Analyse Kennzahlen
+T454KDAD;0;Kundenanalyse Dimensionen
+T454KDAK;0;Kennzahlen
+T454REFKUNDE;0;Refkunden für Bonusvereinbarungen
+T455ART;0;
+T455DEF;0;
+T455GRP;0;
+T456AFORM;0;Zuordnung Artikel zu möglichen Schnittformen
+T456AKOK;0;
+T456AKOP;0;
+T456AKOP_ARNR;0;Auftragskosten auf Artikelebene
+T456ANK;0;Anarbeitungswege - Textvariante
+T456ANP;0;Anarbeitungswege - Textvariante
+T456ASTA;0;Anarbeitungslisten im Auftrag
+T456ASTA_AID85796;0;
+T456ASTAR;0;
+T456ASTL;0;Kopfdaten der Anarbeitungsbelege
+T456KOSA;125;
+T456KOSP;14;Positionen der Auftragskosten. Unterlaengen werden nur im Feld Kosten berücksicht.
+T456LAE;0;
+T457AUF;0;Übergabetabelle für Aufträge zum Zentrallager
+T457AUF_2;0;Uebergabetabelle Auftraege zum Zentrallager
+T457BAHN;0;Bahnhoftabelle für Gebhardt Fördertechnik
+T457BEH;0;Tabelle zur Verwaltung der Behälter im WE
+T457IP;0;Infopunkte
+T457KARDEXART;0;Übergabetabelle für Artikeldaten an Kardex
+T457KARDEXIN;0;Übergabetabelle für Auftragspositionen an Kardex
+T457KARDEXOUT;0;Rückmeldetabelle für Auftragspositionen von Kardex
+T457MELD;0;Meldungstabelle für WEG Zentrallager
+T457PFTIN;0;Protokolltabelle Input WEG Palettenfoerdertechnik
+T457PFTOUT;0;Protokolltabelle Output WEG Palettenfoerdertechnik
+T457SPE;0;Sperren für Lagerkommissionierung aus der Rückstandszuteilung
+T457SPSIN;0;Protokolltabelle Input WEG Wickelmaschinensteuerung
+T457SPSOUT;0;Protokolltabelle Output WEG Wickelmaschinensteuerung
+T457VOR;0;
+T457VOR_2;0;
+T458BLKI;0;Um in einem Forms-Programm die Items eines Blocks bei Bedarf deaktivieren oder aktivieren zu können, werden in diesen Table die Grundeinstellungen (Properties) gespeichert.
+T458BLKK;0;Für ein Stammdatenprogramm kann hier eine Steuerung zur Aktivierung und Deaktivierung von Feldern hinterlegt werden. Die Felder stehen in der Tabelle T458BLKP.
+T458BLKP;0;Hier werden die Items hinterlegt, die - abweichend von der Default Einstellung in T458BLKK - aktiviert oder deaktiviert werden sollen.
+T459ASP;0;Kunden - Artikel Verkaufssperren
+T459BESP;0;Bestellsperre für Lager, Lieferant oder Sachbearbeiter
+T459BLSP;0;Kundenbranchen->Lieferant->Lieferantenkalkulationsgruppe Verkaufssperren
+T459BSP;0;Kundenbranchen - Artikel Verkaufssperren
+T459LSP;0;Kunden - Lieferanten Verkaufssperren
+T460AERG;0;Ergebnistabelle für Recherchen aus dem Verteiler für Ansprechpartner Die Tabelle beinhaltet die ermittelten Adressen
+T460AP;0;Recherchepositionen für Verteiler Ansprechpartner
+T460ERG;0;Tabelle für Zwischenergebnis der Abfragen aus dem Kundendatenblatt
+T460KERG;0;Ergebnistabelle für Recherchen aus dem Kundendatenblatt Die Tabelle beinhaltet die ermittelten Adressen
+T460RK;0;Rechercheköpfe für Recherchen aus dem Kundendatenblatt bzw. der Zielgruppenbearbeitung
+T460RP;0;Recherchepositionen für Kundendatenblatt
+T460SERG;0;
+T460TMP;;
+T460TMPA;;Temporäre Tabelle für Ergebnisse aus Ansprechpartner Selektion
+T461ASP;0;Zuordnungstabelle zu einer Recherche ID aus dem Verteiler für Ansprechpartner. Eine Selektionsgruppe für die Zielgruppenbearbeitung darf als weitere Einschränkung das Ergebnis einer Recherche aus dem Verteiler für Ansprechpartner beinhalten.
+T461ERG;0;
+T461SP;0;Steuerung der Zeilgruppenselektion. In dieser Tabelle werden die Informationen zum Bilden des Select Statements abgehandelt.
+T461SPK;0;Zuordnungstabelle zu einer Recherche ID aus dem Kundendatenblatt. Eine Selektionsgruppe für die Zielgruppenbearbeitung darf als weitere Einschränkung das Ergebnis einer Recherche aus dem Kundendatenblatt beinhalten.
+T462ERG;0;Ergebnistabelle für die Zielgruppenbearbeitung
+T462SEL;0;Zordnung des Selektionsbereiches zur Zielgruppe
+T462VER;0;Empfängerzuordnung der Zielgruppe In der Zielgruppe werden Adressen selektiert diese Adressen können verschiedenen Verteilern versendet werden
+T462ZG;0;Zielgruppenköpfe.
+T463ERG;0;Ergebnistabelle für NewsLetterAlle Empfänger, welche den NewsLetter empfangen, sind in dieser Tabelle enthalten. Der Aaufbau entspricht der T462ERG aus der Zielgruppenbearbeitung.
+T463ERGA;0;Anhänge für NewsLetter. Diese Tabelle ist eine Arbeitstabelle und wird Intern zum Versenden der eMails verwendet
+T463ERGT;0;Ergebnistabelle für Newsletter. Pro Empfänger sind hier die Topics eingetragen
+T463NLK;0;Newsletter Definitionstabelle
+T463NT;0;Topic - Definition
+T463NTA;0;Anhänge pro Topic
+T463NTZ;0;Zuordnung der Topics zum NewsLetter
+T463SEL;0;Queue Tabelle für die zu veresendenden Newsletter
+T464KDGR;0;Konditions-Kundengruppen (pro Kunde beliebige Anzahl von Musterkunden)
+T464PRST;2472;Kunden-Preisstufenzuordnung
+T465WART;0;Artikelzuordnung zu den Werbemitteln. Jedem Werbemittel können mehrere Artikel zugeordnet werden. Z.B. Kataloge. Jedes Jahr wird der Neue Katalog als neuer Artikel angelegt. Dieser wird dann dem Werbemittel zugeordnet.
+T465WM;0;Werbemitteltabelle In dieser Tabelle werden die Werbemittel definiert
+T465WME;0;Ergebnistabelle für die Werbemittelverwaltung. Immer wenn in der Auftragserfassung ein Werbemittelartikel verkauft wurde, wird ein Eintrag in dieser Tabelle vorgenommen. Damit kann geprüft werden, welche Werbemittel für den Kunden noch geliefert werden
+T465WMZ;0;
+T465WWZ;0;
+T466SPBF;153;Führungstabelle für fremdsprachliche Begriffe
+T466SPBU;112;Die sprachlichen Texte verknüpft mit t466spbf über numid
+T466SPTF;1;Führungstabelle für sprachlichhe Texte mit Templates derzeit genutzt Zahlungskonditionen. In dem Templates sind Paltzhalter enthalten wie z.B.
+T466SPTU;1;Untertaeblle zu t466sptf in dem sich die konkreten sprachlichen Texte in Sprachenanhängigkeit befinden.
+T467NEWS;3;Tabelle für Interne News
+T467NEWS1;0;Diese Informationen aus der T467News werden nur diesen Gruppen angezeigt
+T467NEWS2;29;Letzter Aufruf durch den Sachbearbeiter
+T467NEWS3;38;Lesebestätigung pro Sachbearbeiter und Infokey
+T468NVK;4599;Nichtverkäufe eines Artikels
+T469DATEV1;1734;Importschnittstelle OP aus Datev
+T469DATEV2;14134;Adressnummernänderung Führungsfile für Personenexport
+T470ANTW;177;Antworten einer Position zu einer best. Frage aus dem Fragenkatalog
+T470DOKA;0;Dokumente Archiv zur Reklamation
+T470FKAT;19;Fragenkatalog für Reparaturaufträge
+T470FRAG;15;Fragen zu Reparaturaufträgen
+T470KATB;6;Belegsteuerung zu Katalogrfagen
+T470KFRA;21;Katalogfragen
+T470KRVW;0;Reklamation Kreditorenverweise
+T470MANT;40;Mögliche Antworten zu einer Frage aus T470FRAG
+T470PROT;49121;Reklamation Protokoll Belegversand
+T470PROTB;0;Reklamation Protokoll Belegposition
+T470REKLB;16;Definition zulässige Belegarten bei Reklamation
+T470REKLI;0;Reklamationsinfo - beinhaltet Informationen zur Reklamationsposition
+T470REKLIA;0;Reklamationsinfo Adresse - beinhaltet Informationen zu Kunde / Lieferant
+T470REKLK;27981;Reklamationskopf
+T470REKLP;33627;Reklamationsposition - beinhaltet die Basislieferungen/Basisartikel
+T470REKLQ;0;Artikelliste Reklamationen temporär - beinhaltet Daten für Quotenermittlung
+T470REKLV;63441;Reklamationsvorgang - beinhaltet die der Reklamation zugeordneten Vorgänge (Gutschrift/Auftrag/Werksretoure/..)
+T470REKLW;0;Zuordnung Auftragsart zu Retoureart für Wandlung von Gutschriften nach Wareneingang
+T470REPI;20989;Informationen zum Reparaturgerät
+T470REST;95490;Reparaturstatus
+T471DFUSS;0;
+T471DKOPF;0;
+T471DPOS;0;
+T471DYNC;34;Tabelle mit dynamischen Content
+T471UEXIT;11;Userexits für individuelle Funktionsgestaltung
+T472ASTK;1;Anarbeitungslisten.
+T472ASTP;0;Einzelne Arbeitschritte für Anarbeitungslisten
+T472ASTS;0;Steuerungsinformationen für Anarbeitungsstücklisten
+T472DA;0;Displaartikel
+T472GFK;0;Gössen und Farben Strukturköpfe
+T472GFP;0;Grössen Farben Untertabelle für Zuordnung der Artikel
+T472SOP;11007;Artikel-Serviceoptionen
+T472UAS;0;
+T472UREF;0;Artikelreferenzen für Umbuchungen
+T473KZ;0;
+T473KZAA;0;
+T473KZWG;0;
+T473ZUAA;0;Sperren für Auftragsarten
+T473ZUAK;0;Zugabeaktionsköpfe
+T473ZUAP;0;Zugabepositionen
+T473ZUAS;0;gesperrte Kunden für Aktionszugaben
+T474EAN;0;
+T474STPRK;0;Staffelpreise EK - Kopftabelle
+T474STPRP;0;Staffelpreise EK - Positionstabelle
+T475DHL;0;Rückinformation der DHL
+T475ENORM;4;Exportnormen für externe Schnittstellen WANKO / DHL
+T475ENORM1;4;Steuerung für Exportnormen
+T475ENORM2;6;Satzarten zur Norm
+T475ENORM3;138;Spaltendefinition zur Ausgabe
+T475ENORM4;1588;Verarbeitungsqueue für Export, wird auagegeben durch Trigger auf der T082
+T475ENORM5;0;Verarbeitungsqueue für Adressen
+T475ENORM6;1588;Ausgabedaten Kopf
+T475ENORM7;3176;Ausgabezeile für Export
+T475ENORM8;0;Kunden - Normenzuordnung
+T475ENORM9;0;Lieferanten - Normenzuordnung
+T475KL_KOPF;0;
+T475KL_POS;0;
+T475NOT;0;
+T475NOT_AUSART;0;
+T475NOT_DEVICE;0;
+T475NOT_EVENT;0;Tabelle für alle Ereignisse innerhalb der SHCware, die zu Push-Notifications führen
+T475NOT_EVENTREF;0;Tabelle zur für Verknüpfung aller Ergeinisse mit den daraus resultierenden Push-Notifications
+T475NOT_KDKON;0;
+T475NOT_KDREF;0;
+T475NOT_NOTIFICATION;0;Tabelle für alle Push-Notifications
+T475NOT_ORDEROBSERVATION;0;Tabelle für Aufträge, die von KIBES-Profilen beobachtet werden
+T475NOT_TRANSMISSION;0;Tabelle für Ausgabesätze aller Push-Notifications und eventuell vorzunehmende Nachladeversuche im Fehlerfall
+T475ORDERX;0;Tabelle für alle OrderX Aufbereitungen
+T475SCIAF;0;SCIA-Schnittstelle fReservierungen
+T475SCIAK;0;SCIA-Schnittstelle Kopf-Tabelle
+T475SCIAP;0;SCIA-Schnittstelle Positions-Tabelle
+T475SCIAR;0;SCIA-Schnittstelle Reservierungen
+T475WANKO;0;Schnittstellendatei für Tourenschnittstelle WANKO
+T475WANKO_LADEMITTEL;0;Dient zum Vorhalten vom Wanko Lademittel Telegrammen (1300, 1290)
+T475ZW;0;Zwischendatei für das eVersand-Modul. Alle Sätze mit Status 0 werden verarbeitet
+T476AKTA;0;Auftragspositionen zur gewährten Aktion
+T476AKTG;2;Aktionsgruppensteuerung
+T477AKTD;0;
+T477AKTK;0;
+T477AKTU;0;
+T478HINT;0;
+T479AEND;0;Stapeltabelle für Artikelabgleich im Kollegenverband
+T479ART;0;Artikel-Verweistabelle für Kollegenlager. (wenn Kommunikation über EGRA nicht möglich ist)
+T479BEL;0;Steuerung abw. Belegdruck im Kollegenlagerverfahren
+T479HBG_ARTICLELIST;0;Tabelle für angefragte Artikel (Sortimentsanfrage) inkl. der Antwort des Unternehmens des Gesellschafters (falls vorhanden)
+T479HBG_LOCATION;0;Antworttabelle für Standorte eines Gesellschafters
+T479HBG_REQUEST;0;Anfragetabelle für ausgehende Anfragen an ITEK (Liefergebiets-, Standort- und Sortimentsanfragen)
+T479HBG_SHAREHOLDER;0;Antworttabelle für Gesellschafter
+T479HBG_STORAGE;0;Antworttabelle für Lager eines Unternehmens eines Gesellschafters
+T479HBG_SUPPLIER;0;Antworttabelle für Unternehmen eines Gesellschafters
+T479KDBEL;0;Kundentabelle für abweichenden Belegdruck im Kollegenlagerverfahren
+T479KOL1;0;Kommunikationstabelle für Bestandsabfragen zwischen Kollegen
+T479KOL2;0;Kollegenkonfiguration für eingehende Bestandsabfragen
+T479KOL3;0;erlaubte Lager für Kollegenabfragen
+T479KOL4;0;Sperren für bestimmte Bereiche für Bestandsauskünfte
+T479KOL7;0;Steuerung für die Übergabe der Bestandszahlen an einen Kollegen.
+T479KOL8;0;Geschäftsarten-Bestellarten-Zurodnung zu Kollegenlagervorgängen
+T479MAP;0;Dient zum Mapping für z.B. Schneideformen bei Kollegen.
+T479TMP;;Requesttabelle für Kollegenanfragen
+T479TRANSFER;0;Datenaustausch im Kollegenlager
+T480RLEP;0;Positionstabelle für unfertige Komplettlieferungen
+T480RLES;0;Rückstandslieferungen / Komplett-Lieferungen Arbeitstabelle
+T480RLEV;0;Rückstands LE Vorgänge
+T480SD;0;Stapeldruckanforderung Über das Programm SHC082K werden in dieser Tabelle die Lieferungen abgestellt, die später im Stapel gedruckt werden sollen.
+T480SL;0;Köpfe für Sammellieferscheine
+T480SLSP;0;Zuordnung der Lieferungen zum Sammellieferschein
+T481AFMAP;0;
+T481AFVAL;0;
+T481AID;0;
+T481AMAP;0;
+T481ART;0;
+T481CFMAP;0;
+T481CFVMAP;0;
+T481CLASS;0;
+T481FEAT;0;
+T481GROUP;0;
+T481SYN;0;
+T481UNIT;0;
+T481VAL;0;
+T481ZUS;0;ETIM Zusatztabelle
+T482PAK;0;Periodenabgrenzungsköpfe
+T482PAP;0;Periodenabgrenzungspoaitionen
+T483AEK;6827;Auftragseingangsanalyse
+T483AEP;743327;Auftragseingangspositionen
+T483APEX;;Variable tabelle für APEX-Charts
+T483ASAC;15;Aufträge pro Sachbearbeiter
+T483AUL;1744;Aufragsköpfe pro Sachbearbeiter
+T483AW;1;Tabelle offener Auftragswerte Kopftabelle
+T483AWD;20;Auftragsbestand Analyseschlüssel
+T483AWP;371;Positionen zum Auftragswert
+T483GAA;;
+T483GAATMP;;
+T483GAK;5;
+T483GAP;;
+T483M;0;Steuerungstabelle Mailversand Kunde je Konfliktstatus
+T483MPOS;0;Lieferpositionen für Mailversand bei Konflikten
+T483POLI;4577;Liferpositionen zur Analyse
+T484BOX;0;Behältertabelle
+T484BOXLOC;0;Behälterposition zum Zeitpunkt in der jeweiligen Kommissionierroute
+T484DEND;0;Dynamische Endkommissionierpunkte
+T484DYEND;0;Dynamische Endkommissionierplätze
+T484DYGR;0;Kommissioniergruppen
+T484KDEND;0;Endkommissionierpunkte für Kunden
+T484KKOPF;0;Kommissionierauftrags Kopf
+T484KPOS;0;Kommissionierpositionen
+T484KPOSE;0;Entleeren der Box am Endkommissionierplatz
+T484KPOSM;0;Mengen entnommen am Lagerplatz pro Kommissionierposition
+T484KROUTE;0;Kommissionier-Route eines Behälters
+T484LPUNKT;0;Logistikpunkte innerhalb eines Lagers
+T484ROUTE;0;Kommissionier-Routenkopf
+T484ROUTPUNKT;0;Kommissionierroutenpunkte innerhalb einer Route
+T484SACPUNKTK;0;Sachbearbeiter Startpunktzuordnung
+T484SACPUNKTP;0;Zuordnung der Sachbearbeiter zum Startpunkt
+T484SDEF;0;Definitionstabelle für Kommstart
+T484START;0;Definition der Startpunkte laut Lagerort
+T485KOMB;0;
+T486TOPF;0;
+T487KOM1;143033;Kopftabelle für Kommissionierung
+T487KOM2;142589;Kommissionierte Aufträge
+T487KOM3;254727;Kommissionierte Positionen pro Auftrag
+T487KOM3HIST;0;
+T487KOM4;182531;Seriennummern der kommissionierten Positionen pro Auftrag
+T487KOM5;0;Lagerort der kommissionierten Positionen pro Auftrag
+T487KOM6;0;Resservierte Mengen in Kommissionierung
+T487KOM7;0;Kummulierte Positionen pro Kommissioniervorgang
+T487RPOS;0;
+T487TPOS;0;
+T487WE;0;Locking MDE LE-Druck
+T488SESS;0;
+T488SRES;0;
+T488WWW;3;Tabelle fÿr CSS, JS und sonstige WEBSCRIPTs etc. zu nutzen. z.B. ind MDE-Packages
+T489AUAB;0;
+T490WESE;7996;
+T491VFAKT;0;Verarbeitungstabelle der Faktura
+T491VKKP;0;Vorkasse Kopfdaten pro Kunde und Vertrag
+T491VKPO;0;Vorkasse Positionsdaten pro Kunde und Vertrag
+T491VKVW;0;Vorkasse Verwaltungsdatendaten
+T492AUPK;0;Kopftabelle für Aufpreislisten für Kontingentverwaltung
+T492AUPP;0;Aufpreislisten-Positionen
+T492KFAKT;0;Verarbeitungstabelle der Faktura
+T492KONTABK;0;Metallkontingente - Aufträge und Bestellungen - Kopf-Vorbelegung
+T492KONTABP;0;Metallkontingente - Aufträge und Bestellungen - Positionen
+T492KONTV;0;Metallkontingente - Verwaltungstabelle
+T492LAEK;0;Kopftabelle für Längenaufpreislisten für Kontingentverwaltung
+T492LAEP;0;Längenaufpreise-Positionen
+T492VAINR;0;
+T492VDOK;0;Dokumententabelle für Vereinbarungen
+T492VGRPA;0;
+T492VKOPF;0;
+T492VPOS;0;
+T493AREF;46954;Angebotsverfolgung - Übersicht der Angebotsreferenzen
+T493BREF;0;Bestellreferenzierung - Alte Bestellung - Neue Bestellung
+T493PAREF;104233;Positionsreferenzierung
+T494BETR;0;Landzuordnung Betrieb
+T494CONF;0;Konfigurationstabelle Betriebstage
+T494LAG;0;Regionszuordnung Lager
+T494LAND;4;Ländertabelle für Feiertage
+T494RST;52;Regionsstamm
+T494STAG;0;Standard Schließungstage
+T494VTAG;0;Schließungstage
+T495MESSE;0;Tabelle zum Erfassen der Messebesucher
+T496AART;0;Zuordnung Zusatzkosten / Auftragsarten
+T496SOND;0;Pflege Sonderleistungen
+T496VART;0;Zuordnung Zusatzkosten / Versandarten
+T496ZUKO;0;Pflege Zusatzkosten (z.B.: Versandkosten), zur Übernahme in den Auftrag
+T496ZUKO_LIEF;0;Zuordnungstabelle Lieferant Versandkosten für das Auftragswesen
+T496ZUKO_LIEF_TEMP;0;Für welchen lieferanten wurde wann zuletzt versandkosten berechnet.
+T497COT;0;CutOff-Zeiten für Lieferungen
+T497COTB;0;Bereitstellungszeiten für Lieferungen
+T497PLATZ;0;Tourenplatz Kunde je PLZ
+T497PLZ;16357;PLZ Orte Tabelle
+T497TOUR;0;Tourenzuordnung zu PLZ
+T497TTAG;0;
+T498PAKT;2;Folge-Aktionen (parametrierbare Pflege)
+T498PBER;0;Aufruf-Berechtigungen (parametrierbare Pflege)
+T498PFELD;34;Felddefinitionen (parametrierbare Pflege)
+T498PFILT;3;Filter für Query (parametrierbare Pflege)
+T498PJOIN;8;Relationen (parametrierbare Pflege)
+T498PKOPF;2;Kopfdaten (parametrierbare Pflege)
+T498PLES;0;Definitionen der Nachlese-Felder (parametrierbare Pflege)
+T498PLOV;0;feste LOV-Werte (parametrierbare Pflege)
+T498PORD;0;Order-By-Definitionen (parametrierbare Pflege)
+T498PRDB;0;Sonderpreisfindung Drösser - Basispreise je Produktgruppe
+T498PRDS;0;Sonderpreisfindung Zuorndung Staffel zu Kundengruppe
+T498PROT;52777;Sessionprotokoll (parametrierbare Pflege)
+T498PRPL;0;Basispreis für Preislisten
+T498PRZU;0;Zuschläge, die zur Berechnung des Basispreis bei Preislisten in die Berechnung eingehen
+T498PTAB;6;DML-Definitionen der Tabellen (parametrierbare Pflege)
+T498SFELD;;Werte und Status der Datensätze einer Session (parametrierbare Pflege)
+T498SLOV;;Lov-Werte zur Laufzeit (parametrierbare Pflege)
+T498SREC;;Datensätze einer Session (parametrierbare Pflege)
+T498SRID;;Rowids der Datensätze einer Session (parametrierbare Pflege)
+T498STPK;0;Stapelpflegemasken
+T498STPP;0;Stapelpflege Positionen
+T499EXP_CONDITION;0;
+T499EXP_EXPORTWAY;1;
+T499EXP_HEAD;1;Datenexport Kopftabelle
+T499EXP_RUN;0;Verlauf der Exporte
+T499ISEL1;16;Individuelle Selektionsprogrammköpfe
+T499ISEL2;48;Eingabeparameter für individuelle Selektionen
+T499ISEL3;46;"Tabelle für feste Inhalte in den LOV""s"
+T499ISEL4;785;Selektionseingaben im Formsprogramm
+T499ISEL5;0;Unterabfragen für dynamische SQLs
+T499ISEL6;0;Arbeitstabelle für Parameter,
+T499ISEL7;203;Automatischer Datenversand aus der Datenbank als Mail
+T499ISEL8;0;
+T500SESS;121848;iKibes: Session-Id
+T500SSO;0;iKibes: Single sign on (Einmaliges Anmelden)
+T501AKT;102753;iKibes: Protokollierung der Seitenaufrufe
+T501EOLOG;2833399;Elektro-Online Logtabelle
+T502KIKD;324;iKibes: Liste der KIbesKunDen
+T502KIKD_20210520;324;
+T503LIEF;160;iKibes: Lieferanten
+T504KGR;0;iKibes: Kreditorenkalkulationsgruppen
+T505KGRP;0;iKibes: Kreditorenkalkulationsgruppen intern
+T506WA;34;iKibes: Warengruppen des Kreditoren
+T507DOK;0;Dokumentendefinition Yacom Clearing Center Allgemein
+T507LAK;0;Kopfdaten DESADV (Liefermeldung) Yacom Clearing Center
+T507LAP;0;Positionsdaten DESADV (Liefermeldung) Yacom Clearing Center
+T507LDOK;0;Dokumentendefinition Yacom Clearing Center Lieferantenspezifikas
+T507LI;0;Lieferantenstammdaten zu Yacom Clearing Center
+T507LLI;0;Lieferantenstammdaten je Lager/Dokument zu Yacom Clearing Center
+T507ORK;0;Kopfdaten ORDRSP (Bestellbestaetigung) Yacom Clearing Center
+T507ORKT;0;Texte zu Kopfdaten ORDRSP (Bestellbestaetigung) Yacom Clearing Center
+T507ORP;0;Positionsdaten ORDRSP (Bestellbestaetigung) Yacom Clearing Center
+T507ORPT;0;Texte zu Positionsdaten ORDRSP (Bestellbestaetigung) Yacom Clearing Center
+T508STRU;1682;iKibes: Struktur
+T509WSTR;464;iKibes: Warengruppenstruktur
+T510HELP;0;Hilfstexte der einzelnen Portlets im iKibes oder iShop
+T511AWGR;0;SHC511AW - Auswertungsgruppen
+T511AWGZ;0;SHC511AW - Auswertungsgruppenzuordnung
+T511AWTY;0;SHC511AW - Auswertungstypen
+T511AWTZ;0;SHC511AW - Auswertungstypenzuordnung
+T511BLGR;0;SHC511LG - Lager-Auswertungsgruppen
+T511BLGZ;0;SHC511LG - Lager-Auswertungsgruppenzuordnung
+T511BLTY;0;SHC511LG - Lager-Auswertungstypen
+T511BLTZ;0;SHC511LG - Lager-Auswertungstypenzuordnung
+T511BVGR;0;SHC511BV - Betriebsvergleichsgruppen
+T511BVGZ;0;SHC511BV - Betriebsvergleichsgruppenzuordnung
+T511BVTY;0;SHC511BV - Betriebsvergleichstypen
+T511BVTZ;0;SHC511BV - Betriebsvergleichstypenzuordnung
+T511KDGR;1;Kundengruppenbezeichnungen
+T511KDGZ;2;Kundengruppenzuordnung zu Kundennummer
+T511LVBV;0;Leistungskennzahlen - Betriebsvergleich
+T511LVBV_PER;0;
+T511MK;11;Mailgruppen
+T511MP;129;Teammitglieder der Mailgruppe
+T511PLAN;0;Vorgabe Plananteile Monat
+T511PLGR;0;Plangruppenbezeichnungen für Budgetplanung
+T511PLGZ;0;Plangruppenzuordnung zu Warengruppen
+T511PLSB;0;Planzahlen Statistik - Verdichtung Betrieb/Mandant
+T511PLSP;0;Vorgabe Planspanne Jahr
+T511PLST;0;Planzahlen Statistik - werden den tatsächlichen Werten gegenübergestellt
+T511PLVJ;0;Planzahlenvorgaben Jahr
+T511PLVM;0;Planzahlenvorgaben Monat
+T511VKK;0;Verkäuferteams
+T511VKP;0;Mitglieder der Verkäufergruppe
+T511VLABR;0;Betonstahl - Verlegeabrechnung
+T511VLFP;0;Fehlerprotokoll zur Verlegeabrechnung
+T511VLK;0;Verlegeabrechung - Konfigurationseinstellungen
+T511VLPONR;0;Positionsinformationen zur Verlegeabrechnung
+T511VTK;17;Vertretergruppen
+T511VTKS;0;Vertretergruppen SCHRADE
+T511VTP;69;Mitglieder der Vertretergruppe
+T511VTPS;0;Mitglieder der Vertretergruppe SCHRADE
+T512PORT;2;Definition der Portlets im iKibes oder iShop
+T513INFO;2;iKibes: Anzeige der News
+T514NEWS;11;iKibes: Anzeige der News
+T515SEL;15712;iKibes: Selektionsdaten
+T516SQL;15979;iKibes: speichern der letzten where-Bedingung der Artikelsuche
+T517FAVO;159;iKibes Favoritenliste pro Profil
+T518WK;2190;iKibes: Warenkorb: alle Positionen, die im Kibes in den Warenkorb abgelegt werden, werden hier gespeichert
+T519ASTEU;0;Funktionsparameter Adressbezogen
+T519GSTEU;0;Funktionsparameter Gruppenbezogen
+T519ONL;9;Tabelle für SHC Online-Programme
+T519PSTEU;0;Funktionsparameter ArbeitsPlatzbezogen
+T519SSTEU;0;Funktionsparameter Sachbearbeiterbezogen
+T519STEU;63;iKibes, iShop: Funktionsparameter von Kibes, iShop
+T520VOR;2065;"iKibes: Kibes Vorgänge; beim Absenden des Warenkorbes wird ein Vorgang erzeugt"
+T521PROF;298;iKibes: Kundenprofile
+T522DATA;0;"Datanorm; wann wurde die Datanorm Datei erstellt"
+T523BILD;240251;iKibes: Anzeige von Artikelbildern in den Artikeldetails
+T524LAG;4;iKibes: Bestandslager
+T524LAGR;0;Priorität für Rückstandsbildung des Positionslagers
+T525LAE;0;"iKibes: Längen für Stahlartikel; wird beim Bestellen der Artikel gefüllt"
+T526PART;1;iKibes, iShop: Portletarten
+T527PARTP;0;iKibes, iShop
+T528DET;4239;iKibes, iShop: iKibes: Anzeige von externen Links in der ArtikellisteDie Tabelle kann nicht erweitert, oder geändert werden, weil die Tabellenverwaltung von der Firma: Trivadis/VoltiLink übernommen wird.Für die SHCware werden die Felder Manr, Arnr
+T528DET_20171114;1776;
+T528PRODAL;0;iKibes: gesperrte Lieferanten der Anzeige des Links Prodanet in der Artikelliste. Siehe Feld T502Kikd.lnkproda
+T528PRODAW;0;iKibes: gesperrte Warenbereiche der Anzeige des Links Prodanet in der Artikelliste. Siehe Feld T502Kikd.lnkproda
+T529KATA;0;iKibes: Liste der gesperrten Katalogartikel
+T529LART;0;
+T529SART;30;iKibes: Liste der Sonderartikel
+T530KOLI;0;iKibes: Zuordnung von Lieferanschriften zu Kostenstellen
+T531PRKO;0;"iKibes: Zuordnung von Kostenstellen zu Profilen; d.h. Profile dürfen nur auf diese Kostenstellen Artikel bestellen"
+T532WAKO;0;iKibes: Warenkörbe pro Profil (Mitarbeiter)
+T533SORT;0;iKibes: Artikelsortimente
+T534SOAR;0;Artikel eines Sortiments
+T535KDSO;0;"iKibes: berechtigte Sortimente eines Kunden; d.h. Kunde darf nur Artikel aus seinen berechtigten Sortimenten bestellen"
+T536PRSO;0;berechtigte Sortimente des Profils
+T537BUDG;0;iKibes: Budgets
+T538RESTB;0;iKibes: Restbudget
+T539PRLA;0;
+T540AGR;0;
+T540AGRZ;0;
+T541AARTL;0;Tabelle dient als Legende der Auftragsarten
+T542ARTB;0;Tabelle dient zur Festlegung von Artikelbereichen, die im Kibes pro Mandant angezeigt werden
+T543KPROT;0;Kibes - Protokollierung zum Zeitverhalten des Seitenaufbaus der Artikelliste
+T544KBK;0;Kanban Köpfe
+T544KBP;0;Kanban Positionen
+T544KWORK;0;Arbeitstabelle zur Bildung von Kanban-Aufträgen
+T550TEMP;1;Diese Tabelle beschreibt die Ordnerstruktur für die SHCware-Application SHC-Ablage
+T551BZUO;0;In dieser Tabelle stehen Zuordnungen von Ordnern und Belegen. Jeder Beleg, der in DIAS oder SHCware ausgedruckt wird, kann automatisch im Ablagesystem archiviert werden. Dazu muss diese Belegart einem Ordner zugewiesen werden. Ist eine solche Zuweisung
+T552BELG;440;Belege - hier werden alle Belege gespeichert - egal, ob automatisch oder manuell hinzugefügt. Bei automatischen Belegen sind die Spalten AuftragsNr,LaufNr,RechnungsNr,BelegArt,BelegDatum ausgefüllt. Sonst sind diese Spalten uninteressant.
+T553DBEL;1058;Eine Zuordnung von Belegen und Dateien. Bei manuellen Belegen können für einen Betreff (BID) mehrere Dokumente existieren, daher diese Zwischendatei.
+T554DOCS;1071;BLOB-Inhalte eines Beleg-Dokumentes
+T555EXPO;0;Diese Datei enthällt Informationen, zu den exportierten Dokumenten.
+T556AUFG;0;Aufgaben für Ablagesystem
+T557VORL;1;Enthält Bezeichnung und Pfad von Wordvorlagen zum Starten aus Forms
+T558BOOK;8;Enthält die Verknüpfungen der Textmarken im Worddokument mit den Textfeldern aus Forms
+T558BOOK_VALUES;;Tabelle zur Übergabe der Bookmark-Values. Wird nur unter F12 benötigt.
+T559WIND;29;Speichert die Fenstereinstellungen eines Programms (z.Zt. in AB001POS und EK001 verwendet). Diese können pro Programm, Fenster und Sachbearbeiter unterschiedlich gespeichert werden
+T560SER;0;
+T561RAFK;0;Raffgruppenköpfe (Ishop-Tabelle)
+T562RAFP;0;Raffgruppenpositionen (Ishop-Tabelle)
+T563ART;0;Artikelzuordnungstabelle (Ishop-Tabelle)
+T564BER;0;Shop-Sortiments-Bereiche (Ishop-Tabelle)
+T565UBER;0;Shop-SortimentsUnterbereiche (Ishop-Tabelle)
+T566GG;0;Geschenkkopftabelle (Ishop-Tabelle)
+T567GGP;0;Geschenkpositionstabelle (Ishop-Tabelle)
+T568FART;0;Feste Artikel (Ishop-Tabelle)
+T569SK;0;
+T570SESS;0;
+T571VADR;0;
+T572WK;0;
+T573VORK;0;
+T574AKT;0;
+T575HP;0;Hochzeitsliste (Wunschliste) (Ishop-Tabelle) dieser Tabelle werden neben der Auftragsnummer noch die Angaben der Hochzeits-/Geburtstagspersonen gespeichert.
+T576VP;0;Verpakungsdatei (Ishop-Tabelle) dieser Tabelle werden die Möglichen Verpackungsartikel angelegt.
+T577SQL;0;
+T578GUT1;0;
+T579GUT2;0;
+T580OBJ;0;
+T580ODETP;0;
+T580PROJ;10;Enthält die Definition der Projekte in der Vorgangsbearbeitung.
+T581VGA;5;Definition von Vorgangsgruppen in der Vorgangsbearbeitung
+T582VSCH;6;Hier werden Vorschläge für Vorgangsgruppe, Projekt und Betrefftext erfaßt, um sie später einem Vorgang zuzuordnen (können dort aber abgeändert werden)
+T583AUFT;0;Zugeordnete Aufträge an Besuchsberichte
+T583AUSLAGEN;0;Reise-Auslagen
+T583BBMAIL;46782;
+T583DES;0;
+T583DESA;0;
+T583ELB;0;
+T583ELBK;0;
+T583FB;0;
+T583FB_AUSL;0;Auslagen pro Besuchsbericht cq. Fahrt
+T583FB_TMP;;
+T583LES;315;Tabelle für Gelesen-Status (pro Sachbearbeiter) der Besuchsberichte
+T583MAIL;15800;
+T583MG1;1;Mahntabelle für Betrieb
+T583MG2;0;Mahntabelle für Mahngruppe
+T583MG3;0;Mahntabelle für Betrieb/Kunde
+T583PROT;0;Protokolltabelle für Vorgänge, Aufgaben, Emails, Briefe, Angebote, Rechnungen, u.s.w
+T583RK;0;Reisekosten
+T583TOM;0;Daten aus TOMTOM-Gerät, eingelesen in UP583TOM
+T583VORG;66305;Enthält die Vorgänge der Vorgangsbearbeitung
+T583ZVL;1;
+T584AUFG;28608;Enthält die Aufgaben zu den Vorgängen der Vorgangsbearbeitung.
+T584INFO;1044;Protokoll über VOB-Infomails
+T584VTK;2;
+T584VTP;0;
+T584ZPROT;0;Protokolldatei für Zahlungsverfolgung
+T585SCHR;2;Enthält die Schritte zu den Aufgaben der Vorgangsbearbeitung.
+T586ANHV;425;Verwaltung der Dokumente aus der Vorgangsbearbeitung, die in der DB archiviert werden
+T587BEZU;182;Tabelle für die Belegzuordnung (Auftrag/Bestellung) zu einem VOB - Vorgang.
+T588BUBEL;0;die Tab. enthält die Daten der Buchungsbelege im tif Format
+T588EDIK;0;Filetabelle für Edifakt Mitegro - Kopf - In dieser Tabelle werden die erstellten/übernommenen Files verwaltet.
+T588EDIP;0;Edifakt Schnittstellentabelle für Mitegro - Positionen - In diese Tabelle werden alle Felder aus der ASCII Datei eingelesen
+T588ETRIS_BVS;0;ETRIS Bank - BVS-Daten in der Mitegro ZR
+T588ETRIS_KOPF;0;ETRIS BANK - Kopftabelle die Tabelle enthält die Einlesedaten
+T588ETRIS_LIEFERANTZU;0;ETRIS Bank - Lieferantenzuordnung
+T588ETRIS_REKLAMATION;0;ETRIS Bank - Reklamationen/Belastungen
+T588ZENB;0;Belastungsanzeigen für Mitegro Zentralregulierung
+T588ZENTK;0;Zentralregulierung Kopftabelledie Tabelle enthält die Einlesedaten
+T588ZENTL;0;Zentralregulierung Lieferantenzuordnung
+T588ZENTR;0;Zentralregulierung Rechnungseingang (Kennz = R)die Tab. wird mit den Daten der von der ISG kommenden Dateien xxx_JJJJ_MM_TT_b.bvs (xxx=Gesellschafternr.) gefüllt
+T588ZENTZ;0;Zentralregulierung Zahlungsausgang (Kennz = Z)die Tab. wird mit den Daten der von der ISG kommenden Dateien xxx_JJJJ_MM_TT_z.bvs (xxx=Gesellschafternr.) gefüllt
+T589RB;0;Bezugsnebenkosten
+T589RK;0;Rechnungsköpfe
+T589RP;0;Rechnungspositionen
+T589RS;0;Rechnungsstapel Eingangsrechnungen
+T589RV;0;Rechnungsvorsteuerbeträge
+T590MAHNK;2;Mahnteuerungsköpfe In dieser Tabelle wird die Grundsteuerung für die Lieferantenmahnung hinterlegt. Diese Steuerung kann einem oder mehreren Lieferanten über die Tabelle T592Mlief zugeordnet werden.
+T591MAHNP;3;Mahnstufen pro Mahnsteuerungskopf
+T592BLIEF;2;Anbindung bestellart an Mahn-Id Bestellungen
+T592MLIEF;68;Zuordnung der Mahnsteuerung zum Lieferanten. Die Suche erfolgt in mehreren Schritten 1. Manr,Lanr,Krnr 2. Manr,0,Krnr 3. Manr,Lanr,Defl 4. Manr,0,Defl
+T593ABGR1;0;Abgrenzungsauswertung
+T593ABGR2;0;Abgrenzungssummen
+T593ABGR3;0;Abgrenzungsvorgänge
+T594MKO;69;Mahnköpfe Pro Mahnung wird ein Kopfsatz ausgegeben
+T594MPO;1249;Mahnpositionen
+T594V;0;
+T595ANF;0;
+T595ANFK;0;Pflege Zusatzkosten, die in der Faktura angehängt werden
+T595ANFK_M;0;Steuerung Anfuhrkosten über Gewichtsgrenzen
+T595ANFK1;0;Zusatzkostensperre pro Auftragsart
+T595ANFK2;0;Zusatzkostensperre pro Versandart
+T595ANFK2_M;0;
+T595ANFK3;0;Verlaufstabelle für bereits angehängte Zusatzkosten
+T595ANFK3_M;0;Versandartengruppierung für die gemeinsame Verrechnung der RVG Gebühr
+T595ANFS;0;Anfuhr- bzw. Zeitzonen
+T595ANFS_PROT;0;Anfuhrkosten-Protokoll
+T595ANF1;0;
+T595ANF2;0;RVG Stammdaten Drösser RVGBetrag nach Versandart und WABE
+T595ANF3;0;RVG Stammdaten - RVGBetrag nach Tour und WABE
+T595FRA;0;
+T595STAF;0;
+T595VER;0;Verpackungszuschläge - fürhren zur Ermittlung des RVG Betrages
+T596A;0;Leistungsverzeichnis ---NEU--- Abteilungen
+T596D;0;Leistungsverzeichnis ---NEU--- Dokumente
+T596DRUD;0;Leistungsverzeichnis ---NEU--- Druck-Zwischentabelle für Dokumente
+T596DRUK;0;Leistungsverzeichnis ---NEU--- Druck-Zwischentabelle für Kunden
+T596DRUL;0;Leistungsverzeichnis ---NEU--- Druck-Zwischentabelle für Lieferanten
+T596DRUWV;0;Leistungsverzeichnis ---NEU--- Druck-Zwischentabelle für Kopf Wiedervorlage-Liste
+T596DRUWVK;0;Leistungsverzeichnis ---NEU--- Druck-Zwischentabelle für Kunden der Wiedervorlage-Liste
+T596DRUWVL;0;Leistungsverzeichnis ---NEU--- Druck-Zwischentabelle für Lieferanten der Wiedervorlage-Liste
+T596K;0;Leistungsverzeichnis ---NEU--- Kunden
+T596KAINR;0;Leistungsverzeichnis ---NEU--- Aufträge der Kunden
+T596KN;0;Leistungsverzeichnis ---NEU--- Knoten
+T596L;0;Leistungsverzeichnis ---NEU--- Lieferanten
+T596LOCK;0;
+T596LVO;0;Leistungsverzeichnis Objekte (Kopftabelle)
+T596O;0;Leistungsverzeichnis ---NEU--- Ordner
+T596P;0;Leistungsverzeichnis ---NEU--- Projekte
+T596REF;0;Leistungsverzeichnis ---NEU--- Referenzierte Knoten
+T596REP;0;Leistungsverzeichnis ---NEU--- Report-Steuerung
+T596VK;0;Leistungsverzeichnis ---NEU--- Versand an Kunden
+T596VL;0;Leistungsverzeichnis ---NEU--- Versand an Lieferanten
+T596X;0;Leistungsverzeichnis ---NEU--- Aktionen
+T597LVA;0;Leistungsverzeichnis - Detail-Tabelle Zuordnung der Kunden oder Lieferaten zu einem Objekt/Bauvorhaben
+T597LVK;0;Steuerung für das Kopieren eines LV-Angebots eines Objektkunden auf die dem Objekt zugeordneten Kunden.
+T597LVM;0;
+T598LVT;0;LV-Titel zu einem Objekt laut T596LVO
+T598LVV;0;LV-Vorgänge (Aufträge und Bestellungen)
+T599LVP;0;LV-Vorgangspositionen
+T600JSEL;0;Diese Datei enthält eine Sicherung der Selektionsangaben aus T380JSEL, die zu den Ergebnissen in den Tabellen T600ST und T600ST1 geführt hat
+T600KLK;0;Konditionslistenköpfe
+T600KLP;0;Konditionslistenpositionen
+T600KUKA;0;
+T600ST;0;Verdichtete Statistikdaten Monat letzte Aufbereitung je Programm und Jobnummer
+T600ST1;0;Verdichtete Statistikdaten letzte Aufbereitung je Programm und Jobnummer
+T601VOR;0;
+T602VORP;0;
+T604CARLA_VORGANG;0;Vorgangslogtabelle für carla-webservice (shc_carla)
+T604CARLA_XSD;0;Speichert die XML-Schematas zur Validierung der eingehenden XMLs
+T604CTK;0;ComTech Kunden (Kundenverweis und Steuerungsparameter)
+T604CTV;0;ComTech Vorgänge (XML-Meldung und -Rückmeldung)
+T604GKSD;0;Großkundenmanagement Stapeldruck
+T604GKV;0;Großkundenmanagement Vorgang
+T604GKVP;0;Großkundenmanagement Vorgangsposition
+T604HIST;0;Historietabelle über externe Verbandsanfragen
+T604IMA;0;Die Tabelle beinhaltet die Felder die im SHC604IMA benötigt werden. Gefüllt wird diese Tabelle über einen Job. Alte Daten werden dabei aus der Tabelle gelöscht
+T604IMA_KONFIG;0;
+T604IMA_L;0;Diese Tabelle wird genutzt, um gelöschte Sätze aus T604IMA zu reaktivieren.
+T604IMKS;0;
+T604IMP;0;Importtabelle eingehender Rechnungen
+T604MAGENTO_U;0;
+T604MAGENTO_V;0;
+T604PREIS;0;Preisprotokolltabelle
+T604REF;0;Referenztabelle für Vorgänge, nur auf Verbandsseite gefüllt
+T604RKEY;0;Requestkeys für Internetpreisanfragen
+T604ZFK;0;Zentralfaktura Kunden
+T604ZFK_ABTN;0;Zentralfaktura Kunden - Einstellungen zu Abteilung
+T604ZFV;0;Steuerung für Zentralfaktura - Verband
+T605AMC;24237;Aus dieser Tabelle werden alle Artikel fuer die Lucenesuche geholt und der Matchcode fuer die Suche verwendet
+T605REPB;0;
+T605REPL;0;
+T605REPR;0;
+T605SCFG;2;Konfiguration für SOLR
+T605SOLR;9794;Aus dieser Tabelle werden alle Artikel fuer die Solr geholt und der Matchcode fuer die Suche verwendet
+T605SOLR_ARTIKEL;0;
+T605SOLR_EFGRP;825;Etim-Merkmale zu Facettengruppen Zuordnung
+T605SOLR_ETIM;0;
+T605SOLR_FIELDS;352;Felddefinitionen für SOLR
+T605SYNB;0;iKibes: Kopftabelle der Synonyme. Einem Begriff können Synonyme hinterlegt werden. Wird bei der Suche ein Synonym eingegeben, dann wird im Suchbergriff das Synonym durch den Begriff ersetzt.
+T605SYNS;0;iKibes: Die Tabelle enthält die den Begriffen hinterlegten Synonyme.
+T606ART;0;Tabelle für Kommissionsartikel
+T606KUND;0;
+T606REF;0;Kopftabelle für Kommissionsreferenz
+T606SPLI;0;Zwischentabelle zum Splitten der Kommisionsaufträge
+T607RSS_ABO;0;eingehende RSS-Feeds. von Sachb. nicht abonnierte RSS-Feeds
+T607RSS_BER;0;eingehende RSS-Feeds. Berechtigung für Menügruppen und Sachb.
+T607RSS_IN;0;eingehende RSS-Feeds
+T607RSS_LES;0;eingehende RSS-Feeds. von Sachb. gelesene RSS-Feeds
+T607RSS_REQ;0;eingehende RSS-Feeds. durchgeführte Requests
+T607RSS1;0;Ausgehende RSS Feed Channels
+T607RSS2;0;Feed Items
+T608PIM1;0;Tabelle der Katalogpublikationen
+T608PIM2;0;Kapitel innerhalb einer Publikation
+T608PIM3;0;Unterkapitel zur Publikation
+T608PIM4;0;Zuordnung Publikation - Produkt
+T608PUBART;0;Publishing Artikel
+T608PUBARTZ;0;Publishing Artikelzuordnung
+T608PUBPROD;0;Publishing Produkte
+T608PUBTABZS;0;Publishing Zeilen- und Spaltentexte
+T608PUBTK;0;Publishing Tabellenkopf
+T609ST;0;Vorschlag für Streckenaufträge
+T609ST_AID85796;0;
+T609STPOS;0;Streckenpositionen
+T609STPOS_AID85796;0;
+T610ABRD;0;Differenzen pro Kassenabrechnung In diese Tabelle werden nur Datensätze für die Zahlungsarten und Währungen abgestellt, für die auch eine Sortenzählung vorgenommen wird !!
+T610ABRK;0;Kassenabrechnungsköpfe Pro Schublade und Abrechnungsnummer wird ein Satz ausgegeben
+T610ABRP;0;Abrechnungspositionen Für das Kas009.REP werden die zu druckenden Inhalte aus dieser Tabelle entnommen.
+T610ABRZ;0;Ergebnis der Sortenzählung pro Abrechnung Die Inhalte aus der T610Zaehl werden in diese Tabelle zur entsprechenden Abrechnungsnummer abgestellt, damit bei einer Druckwiederholung die gezählten Sorten ausgegeben werden können.
+T610AKART;0;(Rahmen-)Auftragskarten
+T610BER;0;Kassenberechtigungen und Kassenvorbelegungen
+T610BUEB;0;Zuordnung Übertragsbons zu den Kassierbons
+T610KASSL;0;Kassenschublade
+T610KKART;0;Kundenkartentabelle
+T610KPOS;0;Kartenpositionen
+T610SORT;0;Sortenzählung pro Währung und Zahlungsart
+T610UEB;0;Überträge pro Schublade. Wenn im Zahlungsfenser ein Übertrag gebildet wird, werde die Beträge hier vermerkt.
+T610WG;0;Tabelle für Wechselgeld pro Kasse und Währung
+T610ZAEHL;0;In dieser Tabelle wird die Sortenzählung für die Kassenabrechnung zwischengespeichert Feldbeschreibung analog T610SORT
+T611AERA_KNDVERW;0;Kundenverweise für Webservice AERA Dentalmaterial
+T611AERALOG;0;Logdatei Datenaustausch AERA Webservice
+T611DVSE_BASKET;0;Typendefinition des Warenkorbinhaltes
+T611DVSELOG;0;Log Tabelle für abgehende Requests der WebServices
+T611EBINTERFACELOG;0;Protokolldaten zu ebInterface - Rechnung an den Bund
+T611EO_ART;392116638;Protokollierung der angefragten Artikel im Elektro Online Shop
+T611EO_LOG;139175;Protokollierung der Anfragen im Elektro Online Shop
+T611EOL1;0;Logtabelle aus Elektro Online
+T611EOL2;0;Logtabelle Key - Value
+T611FTP;12;Konfiguration für Webservices
+T611SESS;0;Tabelle für erzeugte SHC-Sessions, die im OXOMI Portal verwendet werden
+T611SPOS;0;
+T611TCPLOG;0;
+T611TECC_DESADV_HEADER;0;Teccom Lieferavis Kopf
+T611TECC_DESADV_PKG;0;Teccom Lieferavis Packmitteldaten
+T611TECC_DESADV_PKGITEM;0;Teccom Lieferavis Artikeldaten
+T611TECC_INVOIC_ALLOW;0;Teccom Rechnung Rabatte Zu/Abschlaege
+T611TECC_INVOIC_DETAIL;0;Teccom Rechnung Detaildaten
+T611TECC_INVOIC_HEADER;0;Teccom Rechnung Kopf
+T611TECC_INVOIC_HEADER_ZF;0;Teccom Rechnung Kopf Zentralfakturierung
+T611TECC_INVOIC_SUMMARY;0;Teccom Rechnung Summendaten
+T611TECC_INVOIC_TAX;0;Teccom Rechnung Steuern
+T611TECCOMLOG;0;Protokolltabelle TecCom Daten Import/Export
+T611TECC_ORDRSP_HEADER;0;Teccom Auftragsbestaetigung Kopf
+T611TECC_ORDRSP_ITEM;0;Teccom Auftragsbestaetigung Artikeldaten
+T611TECC_ORDRSP_ITEMDELINFO;0;Teccom Auftragsbestaetigung Artikel Lieferinformationen
+T611TECC_PARA;0;TecCom Parameter Lieferant/Kunde
+T611TTO_DIR_MAPPINGS;0;Mappingtabelle - DOKART, DIRECTORY, USER für TTO Transfer
+T611TTOLOG;0;Logdatei Datenaustausch TTO Xml
+T611TTO_TEILE;0;Tabelle für temporäre Bereitstellung von TTO-Teilnachrichten
+T611WSDL;0;Konfiguration für Webservices
+T611WSWK;;Temporäre Warenkorbtabelle
+T612DATA;0;
+T612DPOS;0;
+T612MCL;0;Master CangeLog Tabelle für Replikation
+T612PROT;0;Protokolltabelle für Replikation
+T612SCL;0;Slave ChangeLog Tabelle
+T612SLAVE;0;
+T613ALI;0;Alternative Lieferanten Kopfsätze
+T613ALIL;0;Lieferantenmapping Externe Datenquelle zu internem Lieferant
+T613ANF;0;Anfragearten derLieferantenanfragen
+T613FAHRZEUGE;0;
+T613FARNR;0;Fremdartikelnummern
+T613FLINK;0;"In dieser Tabelle werden dynamische SQL""s hinterlegt, um die Artikelverknüpfungen in der T613Farnr herzustellen"
+T613IMP;0;Zuordnung Hersteller
+T613OENR;0;Original-Teilenummern
+T614ZKIN;54;Individuelle Zahlungsbedingungen
+T615LAE;0;
+T615ZSIN;54;Individuelle Zahlungsbedingungen
+T616TECCAT_USER;0;
+T616TECCAT_VOR;0;
+T616TECCAT_WK;0;
+T618GUTSCHEIN;0;Online-Gutscheincodes
+T618GUTSCHEIN_AINR;0;Zuordnung Gutscheincode-Kunde -> Auftrag
+T618GUTSCHEIN_KDNR;0;Zuordnung Gutscheincode -> Kunde
+T618KD_RAB;0;Pflege von Rabatten auf den Wert eines Warenkorbs im Fegime Shop (Kopftabelle)
+T618WK_RAB;0;Pflege von Rabatten auf den Wert eines Warenkorbs im Fegime Shop (Positionstabelle)
+T619ZPIN;84;Individuelle Zahlungsbedingungen
+T620ASCARA_KOPF;0;Ascara-Shop - Kopftabelle der zu bildenden Aufträge. Die Tab. wird vom Shop direkt gefüllt
+T620ASCARA_POS;0;Ascara-Shop - Positionstabelle der zu bildenden Aufträge. Die Tab. wird vom Shop direkt gefüllt
+T620ATP_ARTICLES;0;ATP Stammdaten-Synchronisationstabelle für Artikelübertragungen
+T620ATP_CUSTOMERS;0;ATP Stammdaten-Synchronisationstabelle für Kundenübertragungen
+T620ATP_CUSTOMERTOURS;0;ATP Stammdaten-Synchronisationstabelle für Kundentourenübertragungen
+T620ATP_TOURS;0;ATP Stammdaten-Synchronisationstabelle für Tourendatenübertragungen
+T620BEHRK;0;Kopftabelle für die Schnittstelle zur Sägeanlage von Behringer
+T620BEHRP;0;Positionstabelle für die Schnittstelle zur Sägeanlage von Behringer
+T620BOCADF;0;Positionstabelle (Fertigmeldung) für die Schnittstelle zur Planungssoftware von Bocad
+T620BOCADH;0;Protokollierung der Html-Requests für Schnittstelle zu Bocad
+T620BOCADK;0;Kopftabelle für die Schnittstelle zur Planungssoftware von Bocad
+T620BOCADP;0;Positionstabelle für die Schnittstelle zur Planungssoftware von Bocad
+T620BOCADR;0;Material-Reservierungstabelle Bocad-Schnittstelle
+T620BRAUN_SHOP_KOPF;0;Braun-Shop - Kopftabelle der zu bildenden Aufträge. Die Tab. wird vom Shop direkt gefüllt
+T620BRAUN_SHOP_POS;0;Braun-Shop - Positionstabelle der zu bildenden Aufträge. Die Tabelle wird vom Shop direkt gefüllt
+T620CARK;;
+T620DBLINK;0;DBLink-Tabelle. Gibt an, welche Datenbanken bei einem ZAD abgleich angesprochen werden.
+T620DPD;0;
+T620ERZ;0;Externe Rückstandszuteilungsvorschläge
+T620EUP_CROSS;0;Crossdockingtabelle für EuP-Schnittstelle.
+T620EUP_PROT;0;Protokolltabelle für EuP-Schnittstelle. Protokolliert alle Aufrufe von Stored-Proceduren
+T620EUP_VART;0;"Umsetztabelle zum Ermitteln der EuP-Versandart (EuP-Schnittstelle). Der Zugriff erfolgt 1. t082auli.manr, t086aup.lanr, t082auli.vart, t082auli.tour. 2. t082auli.manr, t086aup.lanr, t082auli.vart, ""??"". 3. t082auli.manr, t086au"
+T620FICEP;0;Austauschtabelle für die Schnittstelle zur Planungssoftware von Steelprojects Ficep
+T620FMGK;0;Kopftabelle für die Schnittstelle zur Blechvereinzellungsanlage von FMG
+T620FMGP;0;Positionstabelle für die Schnittstelle zur Blechvereinzellungsanlage von FMG
+T620FMGX;0;Tabelle zum Speichern der FMG-Rückmeldungen. (FMG-Schnittstelle)
+T620FMGXK;0;
+T620KASTA;0;Steuerung eines Artikels pro Kasto
+T620KASTD;0;Kasto-Protokolltabelle / Differenzentabelle
+T620KASTE;0;Einlagerungsvorschläge für Kastoanlage
+T620KASTK;0;Staffelzuschläge für Kasto-Aufträge. Kopftabelle. Lt. dem Prozentsatz wird die Menge aus der Kasto-Anlage erhöht
+T620KASTL;0;Kasto - Längensätze nach Bestandsanfrage
+T620KASTM;0;Kasto - Aufträge pro Charge - Ein-/Auslagerungen
+T620KASTO;0;KASTO-Schnittstelle - Zentrale Kommunikationstabelle (Send und Receive)
+T620KASTP;0;Staffelzuschläge für Kasto-Aufträge. Positionstabelle. Lt. dem Prozentsatz wird die Menge aus der Kasto-Anlage erhöht
+T620KASTS;0;Tabelle zur Stationsermittlung lt. PLZ
+T620KASTT1;0;Kasto - Telegrammbeschreibung (Kopf-Satz)
+T620KASTT2;0;Kasto - Telegrammbeschreibung (Position/Felder)
+T620KOM;0;Schnittstellentabelle zu MKS (Liebl)
+T620LP;3;Schnittstellendatei für Biegereiauträge aus Lennerts und Partner System (LP)
+T620LP_BLOB;0;Zusätzliche Schnittstellentabelle für die Logical-Schnittstelle. Pro Auftrags-Position können Bilder gespeichert werden.
+T620LVS_ADRESSEN;0;Tabelle zur Übergabe von Stammdaten (Kunden, Ansprechpartner, Lieferanten)
+T620LVS_ARTIKEL;0;
+T620LVS_ARTIKELZUWEISUNG;0;Steuerung eines Artikels pro LVS(LVSnummer)
+T620LVS_DATENABO;0;Welche Aufgabentypen und Daten sollen an ein LVS übergeben werden?
+T620LVS_DISABLEAUFGABE;0;Parameter-Tabelle für die allgemeine LVS-Schnittstelle
+T620LVS_DIWA_TRANSFER;0;LVS Transfertabelle
+T620LVS_EXTERNE_INFOS;0;Speicherung von zusätzlichen Auftragsinformationen welche auf dem LVS-Server gespeichert und z.B. per Link erreichbar sind. (z.B. Fotos von Paket-Ablageorten)
+T620LVS_FEHR_RECEIVE;0;
+T620LVS_FEHR_SEND;0;
+T620LVS_KASTO;0;allgemeine LVS-Schnittstelle Modul Kasto - Zentrale Kommunikationstabelle (Send und Receive)
+T620LVS_KOPF;0;Aufgaben und Kopfdaten der LVS-Schnittstelle
+T620LVS_MAPPING;0;Eine allgemeine Mapping-Tabelle um Werte aus einem LVS in SHC-Werte zu übertragen
+T620LVS_MARC_TRANSACTIONS;0;Transaktionstabelle zum XML-Datenaustausch zwischen MARC-LVS und der allgemeinen LVS-Schnittstelle
+T620LVS_PARAMETER;0;Parameter-Tabelle für die allgemeine LVS-Schnittstelle
+T620LVS_PK;0;Lagerverwaltung PK - Prozess-Kopftabelle
+T620LVS_POSITION;0;
+T620LVS_PP;0;Lagerverwaltung PP - Prozess-Positionstabelle
+T620LVS_SCHRAML_TRANSFER;0;LVS Transfertabelle
+T620LVS_STAMMDATEN;0;Liste von Stammdaten (Artikel, Kunden, etc), die an eine LVS-Schnittstelle übergeben werden müssen
+T620LVS_SUP_RECEIVE;0;
+T620LVS_SUP_SEND;0;
+T620LVS_TOURDATEN;0;Tabelle zum speichern von Tourdaten welche von einem LVS vorgeschlagen werden.
+T620LVS_WEBREQUESTS;0;Datenübergabe- und Protokoll-Tabelle für Webrequests der allgemeinen LVS-Schnittstelle
+T620MERCATEO_KOPF;0;Mercateo-Shop - Kopftabelle der zu bildenden Aufträge. Die Tab. wird vor der T623Kopf gefüllt
+T620MERCATEO_POS;0;Mercateo-Shop - Positionstabelle der zu bildenden Aufträge. Die Tab. wird vor der T624Pos gefüllt
+T620OXID_GUT;0;Positionentabelle für die eingelösten Gutscheine
+T620OXID_KOPF;0;Kopftabelle für Shopaufträge
+T620OXID_POS;0;Positionstabelle
+T620PRINS1;0;Kopftabelle für Prins Aufträge Knoll
+T620PRINS2;0;Positionstabelle zu T620Prins1
+T620PROFILE_LOG;0;
+T620SIGMANESTCSV;0;Austauschtabelle für die Schnittstelle SigmaNest zur Aufnahme von CSV-Inhalten
+T620SPR;0;Springer Auftragstabelle für interne Umbuchungen
+T620TRANSA;0;Umsetztabelle für Artikelnummern für die Statistik abhängig von Profil-E-Sachkonten in t620transu
+T620TRANSK;0;Allgemeine Schnittstellentabelle / Transfertabelle. Kopfsatz. Kann für verschiedene Schnittstellen genutzt werden. Erstanlage für Projekt Profil-E
+T620TRANSM;0;Stammdaten für die Verknüfung von Mitglied mit Mandant und EE-Nr.
+T620TRANSP;0;Allgemeine Schnittstellentabelle / Transfertabelle. Positionssatz. Kann für verschiedene Schnittstellen genutzt werden. Erstanlage für Projekt Profil-E
+T620TRANSU;0;Umsetztabelle für Artikelnummern für die Statistik abhängig von Profil-E-Sachkonten in t620transu
+T620WEB;0;
+T621CARV;;
+T622CARA;;
+T623KOPF;31454;Zwischentabelle zum Aufbau eines Verkaufsauftrag. (Kopftabelle)Die Tabelle kann von verschiedenen Programmen gefüllt werden (Kibes,Ishop,EK001, usw.). Um einen Auftrag in der SHCware zu bilden wird anschließend das Package SHC027 verwendet.
+T623PROT;5974;In dieser Tabelle werden alle fehlerhaften Uebernahmen aus SHC027 protokolliert
+T623STEU;0;Steuerungstabelle Kunde - Prüfungen bei Auftragseingliederungen
+T623STEUP;0;Steuerungstabelle Kunde - Prüfungsarten bei Auftragseingliederungen
+T624LAE;0;Schnittstellendatei für Stahllängen (wird im Zusammenhang mit der T623kopf u. T624pos verwendet). Der Aufbau ist analog der T083lae.
+T624MENG;0;Schnittstellendatei für Kabellängen (wird im Zusammenhang mit der T623kopf u. T624pos verwendet). Der Aufbau ist analog der TMP_T036Meng.
+T624POS;36660;
+T625ER;;
+T625WEK;84887;Wareneingang Vorgangsköpfe Jeder Wareneing wird einem eindeutigen Vorgang zugeordnet
+T626BENR;104268;
+T627LSNR;85477;Lieferscheinzuordnung zum Vorgang
+T628ELG_AVAIL;0;
+T628ELG_ERR;0;
+T628ELG_ME;0;
+T628ELG_ORDER;0;
+T628ELG_ORDERPOS;0;
+T628ELG_PRICE;0;
+T628ELG_STEU;0;Steuerungstabelle Elgate Webservice
+T628ELG_USER;0;Usertabelle Elgate Webservice
+T628ETIS;1;Druckaufträge für Stahl-Wareneingangsetiketten mit Etikett je Unterlänge
+T628LAE;0;T083LAE-Schnittlängen pro Wareneingangsposition - entspricht 1 : 1 der T083LAE
+T628LAK;0;Lieferavis Kopfdaten - Nimmt die geprüften EDI-Daten aus T680EDI auf
+T628LAP;0;Lieferavis Positionsdaten - Nimmt die geprüften EDI-Daten aus T680EDI (LINE) auf
+T628LAU;0;Monitoring Tabelle von Unterartikeln beim Einlesen von DESADVs
+T628LN;0;
+T628MG;0;Mängelgrund
+T628ORA;0;Orderresponse Adressdaten - Nimmt die geprüften EDI-Daten aus T680EDI (ADDR) auf
+T628ORF;0;Orderresponse Fehlermeldungen
+T628ORK;16;Orderresponse Kopfdaten - Nimmt die geprüften EDI-Daten aus T680EDI auf
+T628ORP;20;Orderresponse Positionsdaten - Nimmt die geprüften EDI-Daten aus T680EDI (LINE) auf
+T628ORT;0;Orderresponse Texte - Nimmt die geprüften EDI-Daten aus T680EDI (HCOM/LCOM) auf
+T628ORZ;0;Orderresponse ZuAbschläge - Nimmt die geprüften EDI-Daten aus T680EDI (HALC/LALC) auf
+T628RZV;63;Rückstandszuteilung Vorschläge
+T628RZVL;0;Rückstandszuteilung Vorschläge Unerlängen
+T628RZVP;62;Rückstandszuteilung Protokoll für nichtzugeteilte Vorschläge
+T628SESS;0;
+T628SN;2989;
+T628SSORT;1;Sachbearbeitersortierung
+T628UML;0;
+T628WEMDE_DIFFERENZEN;0;Differenzen für MDE-Wareneingang
+T628WEPO;305038;Wareneingangspositionen Laut dieser Tabelle wird das Verbuchen des Wareneinganges vorgenommen
+T628WEPOM;0;Mängelposition
+T628ZWEPO;0;Zwischentabelle für die Erfassung des Wareneingang über MDE-Geräte.
+T629BKRAB;0;Tabelle für die Bestellkopfrabatte
+T629BKRABM;0;Tabelle für die Bestellkopfrabatte (Zu-Abschläge) / korrespondiert mit T629brabm
+T629BRAB;6227;
+T629BRABM;0;Zu-Abschläge Bestellposition
+T629RAB;21914;Rabatte pro Vorgangsposition löst die Tabelle T148Rab ab
+T629RABM;1;Metallzuschläge EK pro Vorgangsposition
+T629TRAB;;
+T629TRABM;;Temporäre Tabelle für Metallzuschläge EK
+T630TVOR;;Temporäre Tabelle, dient zur Anzeige der verbuchten Vorgänge in einer Session
+T631RZ;1049;Rückstandszuteilungs Anforderung Aus dem Wareneingang und der automatischen Rückstandszuteilung wird in diese Tabelle ein Satz abgestellt, der vom Package EK010_4 verarbeitet wird. Das Ergebnis steht in der Tabelle T632RZP
+T631RZMT;0;Rückstandszuteilung Mindesttage Reichweite
+T632RZP;461;Ergebnisse der Rückstandszuteilung wird verwendet im Protokoll RZ001 , RZ002
+T633BL;0;Blacklist nicht anzudruckender Artikel
+T633RLD;0;Anforderungsdatei für den LE-Druck Die Rückstandszuteilung gibt in die Tabelle Sätze aus, welche LE Scheine gedruckt werden müssen. Nach der Zuteilung wird die Tabelle abgearbeitet und die Sätze aus der Datei gelöscht
+T633RLD_20210518;63;
+T633RLP;73;Position für Rückstandsteildruck
+T633STL;0;Stückliste KLerschgens
+T633ZP;2497;Zwischenparklätze aus dem Wareneingang
+T633ZPP;0;Zuteilungspositionen für Zwischenparkplätze
+T634VPE;10396;Tabelle für Verpackungseinheitenkann im Artikelpflegeprogramm (shc051) im Zusammenhang mit der Verpackungseinheit gepflegt werden.
+T635AZK;0;Shop Anzahlungen Kopf-Tabelle
+T635AZP;0;Shop Anzahlungen Positions-Tabelle
+T636CHV;0;
+T636DRU;0;
+T636MENG;0;Ergänzungstabelle für Untermengenverwaltung T036MENG mit Werten für Breite und Dicke (Stahl)
+T636TMP;;für T636tmp
+T636ZN;0;
+T636ZNP;0;
+T637APKL;0;
+T637APKL2;0;Zusätzliche Informationen für Chargenentnahmen
+T637ST;0;
+T637STHIST;0;
+T638LART;0;
+T638STL;0;
+T639DMSK;0;
+T639DMSK1;0;
+T639DMSV;0;Zeugnisversionen
+T639SZK;0;Kopf-Tabelle für Stahlzeugnisse
+T639SZP;0;Tabelle mit Labels, Einheiten und Werten für Stahlzeugnisse
+T640PE;51;Tabelle für die Änderung der Preiseinheiten im Artikelstamm
+T640PE1;87;Tabellen, in welcher die Preiseinheit nicht geändert werden soll
+T642BE;1;Hier stehen die einer Bestellung zugeordneten Kostenarten.
+T642FART;2;Kostenartenzur Zeit nur Frachtkosten
+T642FRST;1;Kostensätze für Kostenartenzur Zeit nur Frachten
+T642LVA;0;Zuordnung Kreditor zu Kostenarten --- wird noch nich verwendet ---
+T642VTYP;1;Kostengruppenzur Zeit nur Frachten
+T642WE;0;Verknüpfung einer Warenposition mit der dazugehörigen Frachtposition
+T642WEK;0;Wareneingang mit Kosten
+T643RWF1;15;Rechnungsprüfungsworkflow Kopftabelle
+T643RWF2;0;Workflowarten für Rechnungsprüfung
+T643RWF3;0;Aktionen pro Workglowart
+T643RWF4;0;Fehlerpositionen pro eingangsrechnung
+T643RWF5;0;WorkflowAktionen
+T643RWF6;0;Abteilungen für Bearbeitung
+T643RWF7;0;zugeordnete Sachbeabeiter zur Abteilung
+T643RWF8;0;Belastungsstapel
+T644DSET;0;Sachbearbeiter Dispo - Set
+T644DSETL;0;Lieferanten pro Disposet
+T645ABS;2;Tabelle für Autobuchstapel
+T645AHI;11257;Auftragsänderungshistorie für das rückschreiben der Preise
+T645BEW;796963;Bewertungstabelle für Metallzuschläge und Warenwerte pro Auftragsposition
+T645BEWM;0;Metallzuschlagswerte pro Lieferposition
+T645BKORR;0;Einlagerungsvorschläge für Kastoanlage
+T645BU;228776;
+T645DEK;201137;
+T645DEKH;350088;
+T645DEKW;255418;
+T645DWH;0;DekIds zum NAchbewerten des DWH bei Änderungen des DEK
+T645IB;0;Interne Bezugskette für Filialbestellungen
+T645ILKD;0;Zuordnungstabelle Kundennummern laut Kopfabgriffslager
+T645IU;0;Steuerung für interne Umbuchungsaufträge. Zuordnung von Kundennummer und Auftragsart.
+T645IV;0;Tabelle für Innerbetriebliche Belastungen
+T645IVK;0;Vorgangsköpfe
+T645IVP;0;Positionen für innerbetriebliche Verrechnung
+T645IVPK;0;nachträgliche Korrekturen aus Spannenänderungen durch DEK-Änderungen aus der Rechnungsprüfung
+T645KONT;0;Kontenswitch bei Jahres-Abgrenzung
+T645MDEK;10;
+T645MDEKH;21;
+T645MDEKW;1;
+T645MENG;0;Bestandskorekturen pro DekId bzgl des Verfügbaren Bestandes
+T645PRFI;66283;Prüfung zur Abstimmung zur FIBU. Bei jeder Verbuchung wird ein Satz ausgegeben
+T645RECH;2193;Rechenqueu für die Nachberechnung der DEKs im Stapel
+T645RETK;162;Retourenköpfe für Verlustermittlung
+T645RETP;90;Retourenpositionen / Aktionen
+T645SKOR;65813;
+T645SKORP;197481;
+T645SKORP1;219401;
+T645SONP;0;Sondernettopreise für die Wareneinsatzbewertung
+T645STEU;1;
+T645VL;0;Tabelle der Aufträge pro Verarbeitungslauf
+T645WE;0;
+T645WEK;0;
+T645WET;;
+T645WEW;0;
+T646_PROT;8447;
+T646VOR;1112;Neue Bestellvorschlagstabelle. In dieser Tabelle werden die Bestellvorschläge aus den Dateien T088rue,T130disp,T146bep u. T086aup gesammelt (über Selektionsprogramm EK001V). Zum automatischen Aufbau der Bestellungen wird nur noch diese Datei verwendet.
+T647ABRK;0;Bestellabrufe - Kopftabelle
+T647ABRP;0;Bestellabrufe - Positionstabelle/Abrufe
+T647ANFK;0;Anfragekopftabelle
+T648TZUG;;
+T649EDIL;0;Zwischentabelle für EDI Lieferscheine
+T649EDIP;0;EDI Zwischentabelle für Positionen
+T649EDIR;0;Zwischentabelle für EDI Eingangsrechnungen
+T649EVR;0;Steuertabelle für Verrechnung der Eingangsrechnungen zwischen Mandanten (BEWO)
+T649FEHL;0;
+T649RESU;81213;Erweiterungstabelle für die Rechnungsprüfung T144Resu
+T649RES2;65437;Erweiterungstabelle für die Rechnungskopftabelle T144resu
+T649RES3;67262;Einkaufsrechnungs Zusatztabelle 3
+T649RES4;0;Zusatztabelle zum Seichern der Zahlungskonditionen für die automatische Verbuchungsfunktion
+T650BELD;17062;
+T650KSTE;2;Kunden - Belegsteuerungsdatei
+T650MWST;8697;temporäre Tabelle zum Zwischenspeichern der diversen Mehrwertsteuerbeträge, da unter Umständen das Zeitproblem bei manchen Kunden beim Rechnungsdruck damit im Zusammenhang steht, dass die Zwischenbeträge aus der VIEW v084resu stammen.Wird genutzt imRA-Dru
+T650SPPROT;0;Protokollierungen aller Veränderungen von Lauf - Teilenummer aufgrund von Splitting/Terminsplitting
+T650ZLEK;9046;Kopftabelle für Druck von - Angebot - Auftragsbestätigung - Kontrollzettel - Lagerentnahmeschein - Lieferschein
+T650ZTDR;0;Zwischentabelle für Teiledruck
+T651ZLEP;20829;Zwischentabelle zum Andruck der Lagerentnahmescheine (Belegart LE) auf Positionsebene
+T652DRST;15446;"Diese Tabelle ist notwendig, da aus dem Druck eines Belegs unter Umständen mehrere Belege (z.B. Lagerentnahmescheine) ""entstehen"" (Drucksplitting) können. So muß in der jeweiligen Anwendung (z.B. Auftragserfassung) alle Belege einer zurückgegebenen Druck-"
+T653FISK1;0;Kopftabelle für Fiskaldruck-Aufträge
+T653FISK2;0;Tabelle für Payment und Lines
+T653FISK3;0;ReceiptItems
+T653ZRAK;4671;Rechnungsdruck Kopf.Diese Tabelle bildet mit den Tabellent654zrak = pro Auftrag der Rechnung t655zrap = pro Position der Rechnung
+T654ZRAA;4711;
+T655ZRAP;9667;Rechnungsdruck Einzelpositionendiese Zwischentabelle bildet zusammen mit dern Tabellen t653zrak und t654zraa eine Einheit.
+T657ZBEK;522;Bestellungdruck Kopf (bildet zusammen mit der t657zbep) eine EInheit.
+T658ZBEP;1132;Mehrwertsteuersatz
+T658ZKL;0;Drucktabelle für die Ausgabe der Kabel-Wunschlängen pro Bestellposition.
+T659BTXT;39;
+T659GELK;33;Gelangensbestätigung Kopftabelle
+T659GELP;298;Gelangensbestätigung Positions-/Rechnungstabelle
+T659ZOPK;0;Zolltarifpapier Kopftabelle
+T659ZOPP;0;Zolltarifpapier Positionstabelle
+T659ZOT;0;Zolltarif-Nummer
+T659ZOTB;0;Zolltarif-Nummer-Bezeichnungen
+T660OBJ;1;Zuordnungstabelle für den Auftragskopf In dieser Tabelle werdenzu den Kundenobjekten die Lieferanschriften und die Ansprechpartner zugeordnet. Wird in SHC029 verwendet.
+T661DRVL;73098;
+T661DRVL_AID86881;63784;
+T661DRVL_SIC_AID73569;89207;
+T661LOG;2065;
+T661WMAILV;0;Tabelle zum Verwalten von Werbemails an Kunden
+T662RABA;7330;
+T662RAB2;62;Zwischentablle für die Rabatte zur Rechnungsprüfung
+T663CLD;0;Chargen/Längen Druckdatei.
+T663TETI;;Diese Zwischentabelle wird im SHC663ET für die Auswahl der Auftragspositionen benötigt
+T663UEBT;;
+T663ZETI;139256;Zwischentabelle zum Etikettendruck - wird gefüllt beim Programm SHC663ET
+T664TETI;;Dies Zwischentabelle wird nur vom Report für Etikettendruck benötigt wenn mehr als ein Etikett gedruckt werden soll
+T664TETIX;3403;Tracetabelle der temporären Tabelle t664teti
+T665SERA;0;Die Tabelle gibt an, für welche Artikel die Seriennummernlogik gilt
+T665SERK;0;Kopftabelle der eingelesenen Seriennummern
+T665SERP;0;Positionstabelle der Seriennummern
+T666SESS;0;
+T667SAULI;0;Auftragspositionen der zu scannenden Artikel
+T667SPOLI;0;Lieferpositionen der zu scannenden Artikel
+T668LKAT;0;Tabelle für Dateizuordnung Lieferantenkatalog
+T670GG;0;Pflegetabelle für Lieferanten-Gutschriftsgebühren
+T670GGK;5;
+T670GUT;72222;Verknüpfungstabelle zwischen gutgeschriebenen Auftragspositionen und den entspr. Rechnungen
+T671ZREK;0;
+T672ZLLK;0;Lieferscheinkopf für Kontrollrechnung
+T673ZREP;0;Zwischentabelle zum Andruck einer Kontrollrechnung oder Belastungsanzeige.Andruck aller Positionen,Diese Tabelle und t671zrek t672zllkstellen zusammen die Zwischentabllen für den Druck der Kontrollrechnung und der Belastungsanzeige dar.
+T674KWF;0;Workflow: Neuanlage und Änderung von Kunden und Lieferanten (Fa. Kerschgens)
+T675WTXT;12;
+T676RB1;38288;Zwischentabelle 1 (von 6) zum Ausdruck des Rechnungsaus- gangsbuches.t676rb1 = Ausgabe der einzelnen Rechnungen
+T676RB2;38347;Zwischentabelle 2 (von 6) zum Ausdruck des Rechnungsaus- gangsbuches.t676rb2 = Ausgabe der einzelnen Lieferscheine
+T676RB3;5908;Zwischentabelle 3 (von 6) zum Ausdruck des Rechnungsaus- gangsbuches.t676rb3 = Ausgabe der Summensätze
+T676RB4;;Zwischentabelle 4 (von 6) zum Ausdruck des Rechnungsaus- gangsbuches.t676rb4 = tempor. Tablezum Merken der gerade angedruckten Rechnung für Prüfläufe
+T676RB5;0;Zwischentabelle 5 (von 6) zum Ausdruck des Rechnungsaus- gangsbuches.t676rb5 = Ergebnis Prüflauf 1 und Prüflauf 2
+T676RB6;0;wischentabelle 6 (von 6) zum Ausdruck des Rechnungsaus- gangsbuches.t676rb6 = Ausgabe der Stornos
+T677DMS;254;Dokumentenköpfe für die elektronische Archivierung
+T677DMS_EX;0;Tabelle zur Aufnahme von externen Archiv-Belegen
+T677DMSP;4156;Keyinformationen für das Archivsystem
+T677DMS_REL;0;Release - DMS-Variabelen-Namen
+T677KORE;0;Workflow Kostenrechnungen eDoc
+T677KORE_POS;0;Positionentabelle Workflow Kostenrechnungen eDoc
+T678CHZAKO;0;Protokolltabelle für geänderte Zahlungskonditionen
+T678FAK;10598;Statustabelle pro Fakturierlauf
+T678FAKP;364354;Lieferungen, welche im Fakturierlauf verarbeitet wurden
+T678FAKR;363000;Rechnungen, welche im Fakturierlauf verarbeitet wurden
+T678FAKS;350173;
+T678FPROT;3208;Fehlerprotokoll der Faktura
+T678PERK;0;Periodenköpfe
+T678PERL;0;Lieferungen der Periode laut T096Stat
+T678PERR;0;Rechnungen pro Periode
+T678REK;0;Summen Rechnungseingang pro Periode
+T678REL;0;Summen je Lieferschein pro Periode
+T678RER;0;Summen je Rechnungseingang pro Periode
+T678RI;0;
+T678ST;0;
+T678WORK;0;Arbeitstabelle
+T679ERK;1928;Kundendefinitionen für elektronischen Rechnungsversand
+T679ERK_20141017;55;
+T679ERL;3458;Laufnummern für Elektronischen Rechnungsversand
+T679ERP;115811;Positionen für elektronischen Rechnungsversand
+T679ERPR;0;Elektronischer Rechnungsversand Positions-Response
+T679ERS;1;Steuerung für Rechnungsversand per Mail
+T680ADK;0;Adressausgabe Fegime Kopf
+T680ADKW;0;Adressausgabe Würth Compliance Kopf
+T680ADMW;0;Stammdaten für Shc_WEG_Compliance
+T680ADP;0;Adressdaten Fegime Positionen - Einzeladressen
+T680ADPW;0;Adressdaten Würth Compliance Positionen - Einzeladressen
+T680BOCE;0;Bocad-Ergebnistabelle
+T680BOCV;0;Bocad-Verarbeitung: aus den CSV_Dateien übernommene Datensätze
+T680EDI;0;Edifakt Schnittstellentabelle für Fegime In diese Tabelle werden alle Felder aus der Inhouse ASCII Datei eingelesen und dann erst weiterverarbeitet. Es werden alle Felder aller gelieferten Satzarten eingelesen, damit ggf. auf Belegen und für Auswertunge
+T680EDIM;0;Edifact Daten. Die Daten werden in ein clob abgestellt und nach der Verarbeitung (SHC_Edifact-format12) an den Besteller vermailt.
+T680FILE;0;Filetabelle für Edifakt. In dieser Tabelle werden die übernommenen Files verwaltet.
+T680IMP;0;Generelle Steuerung Import EDI-Dokumente
+T680INTRA;0;Intrastat - Warenverzeichnisliste
+T680INTRAWABE;0;Intrastat - Verweis Warengruppe Warennummer
+T680INTRAXML;0;In dieser Tabelle werden Intrahandelsstatistikmeldungen im XML Format hinterlegt
+T680LLS;0;Lieferanten/Lagersteuerung Aufbereitung Edifact-Dokumente
+T680LLT;0;Lieferanten/Lagersteuerung Liefertermin ORDRSP
+T680MDEK;0;Kopfdaten zur Übernahme von MDE-Daten
+T680MDEP;0;MDE Schnittstellendaten Position
+T680MDES;0;Steuerungstabelle für MDE-Schnittstellendaten
+T680OXID1;0;Oxid-Shop Bankauszugstabelle
+T680OXID2;0;Zahltabelle für Lieferungen und Bestellungen t680oxid1 und t680oxid2
+T681CONF;0;Konfiguration SITARA Verbandsdatenübernahme
+T681KAGR;0;Kalkulationsgruppenstamm für den Schattenartikelkatalog
+T681LIEF;0;Lieferantenstamm für den Schattenartikelkatalog
+T681STAT;0;Statistikgruppen für den Schattenartikelkatalog
+T682BAU;0;Baugruppenstamm für den Schattenartikelübernahme
+T682KAGR;0;Kalkulationsgruppen-Steuerungskopftabelle
+T682LIEF;0;Lieferanten-Steuerungskopftabelle
+T682STAT;0;Statistikgruppen-Steuerungskopftabelle
+T683FSTEU;0;Verarbeitungssteuerung (Feldsteuerung) für die Eingliederung des Schattenartikelstamm.
+T683STEU;0;Verarbeitungssteuerung für die Eingliederung des Schattenartikelstamm.
+T684FILE;0;Protokolliert, welche Dateien vom Verband eingegliedert wurden. * Stammdaten (Lieferanten, Kalkulationsgruppen und Statistikgruppen) * und Schattenartikelstamm
+T685PK;0;Protokollarten-Kopftabelle
+T685PP;0;Protokollarten-Positionstabelle
+T685PROT;0;Protokolldatei
+T686AKTIO;0;"aktuelle und zukünftige Einkaufsaktionen; Datenbezug über Webservice"
+T686BIK;0;
+T686BIP;0;T686BIK Bestellwertzusatzinformationen (Positionstabelle)
+T686EI;0;Informationsaustausch zwischen Produktmanagment und Disposition
+T687AI;1;Für jeden Auftrag der in die Kontrollliste aufgenommen wird existiert ein Satz.
+T687BGV;0;
+T687BGVB;0;
+T687BGVE;0;
+T687BGVL;0;
+T687BGVM;8;
+T687BGVMK;0;
+T687DRUCK;0;In dieser Tabelle werden die in der Kontrolliste auszugebenden Datensätze, entsprechend dem Programm SHC687, abgestellt
+T687FREIG;10;Freigabe-Steuerung
+T687GRP;0;
+T687LF;2;Kopf der Kontrollliste
+T687PO;6;Für jede Position eines Auftrages ist ein Satz vorhanden.
+T687SAC;0;
+T687SPER;1;Sperre von Gruppen oder Sachbearbeitern für die Freigabe
+T687STEU;1;Die Tabelle enthält pro angelegtem Kunden, welche Felder für die Kontrollliste der Aufträge aus der t081auk und t082auli zusätzlich angezeigt werden. Zusätzlich kann ein Feld als Zwangsfeld vorgesehen werden werden, was bedeutet, dass vorm Freigeben des A
+T688ABW;5;Inventur: Abwertungssätze
+T688ABWV;0;
+T688BE;144;Inventur: Bereichsdefinitionen
+T688BEW;120546;
+T688BEW_HD433257;89896;
+T688BEW_IMP;0;Temporäre Tabelle für den Import von externen Preisen u. Metallzuschläge
+T688BEW_MWEBDATUM;0;
+T688BEW_SICH10112025;109396;
+T688BEW_SICH31102026;120546;
+T688BEW_08032016;26188;
+T688BEW_30092019;17267;
+T688BE_1010;9;
+T688EP;48821;Protokolldatei bei Erfassung gemäß Zählliste Jede Erfassung ergibt eine Zeile (EP_LFID)
+T688ER;48112;Inventur: Erfassungstabelle für Blankoerfassung
+T688ERLIFO;0;
+T688ER_28092012_SIC;3;
+T688IMP_LS;0;Inventur-Importtabelle für Lagersysteme, wie z.B. Kasto, FMG, usw.
+T688KABW;10;
+T688LA;78;Inventur: Lagerdefinition
+T688LABW;0;Abwertung nach Lieferanten
+T688LIFO;0;LIFOBewertungLAYER
+T688LIFOGW;0;LIFOBewertungGrundwerte
+T688LIFOHIST;0;LIFOBewertungLAYERHistorie
+T688LWABW;0;
+T688MA;22;Inventur: Mandantendefinition
+T688MDE;0;Inventur mit einem MDE Gerät: Artikel, die in einem Bereich nicht gefundenwurden, können zur Übernahme in einen neuen Bereich vorgemerkt werden
+T688MENG;1604602;
+T688ONSAC;23;
+T688ONSESS;227;Sessiontabelle für die Online-Inventur (Fegime)
+T688PINV;0;Positionstabelle für die Inventur per PDA
+T688PR1;50;Inventurbestandsprüfung
+T688PR2;56;Prüfarten
+T688PR3;537;Prüfdetails
+T688SINV;0;Sessiontabelle für die Inventur per PDA
+T688SNR;0;
+T688ST;5;Inventur: Steuerungsdatei
+T688TMP;58872;
+T688TMPBL;;
+T688WABW;0;Abwertung nach Warenbereichen
+T688ZABW;10;
+T688ZABW2;0;
+T688ZL;501582;Zählliste
+T688ZL_HD433257;399478;
+T688ZL_PROT;371163;Änderungsprotokoll für ZL
+T688ZL_1010;5;
+T688ZL_2;10971;
+T688ZL_28092007;10971;
+T688ZL_28092012_SIC;5;
+T688ZU;166;
+T689EDIB;0;Bestellbestätigungen bei EDI-Bestellungen - Schnittstelle: EDI ORDERACK
+T690AFZ;0;Touren Anlieferzeiten
+T690CADISLOG;0;Log Tabelle für abgehende Requests der WebServices
+T690CADISWS;0;
+T690CLAD;0;Zwischentabelle für Cadis-Schnittstelle zum Aufbau einer Ladeliste
+T690CSS;0;
+T690DRUCK;0;Zu druckende Felder der aktuellen Station
+T690FEHLER;10;Mögliche Fehler bei der Ermittlung des Tourdatums
+T690FKON;0;
+T690GRP;0;Versandgruppen
+T690HEIDLER_TE;0;In die Tabelle schreibt Heidler HVS32 z. Bsp. die Daten für die Transport-Etiketten, z.Bsp. GS1
+T690HIST;0;
+T690IFC_DOCUMENT;0;Tabelle für erhaltene Dokumente zu einer Sendung (bspw. Lieferungsnachweis)
+T690IFC_DOCUMENT_SRC;0;Tabelle für Ursprungsinformationen zu allen erhaltenen Dokumenten und den jeweils beteiligten Schnittstellen
+T690IFC_ENTITY;0;Tabelle zur Auflösung von Entitäts-Ids in deren zugehörige, fachliche SHCware-Vorgangsnummern
+T690IFC_ENTITY_MAPPING;0;Tabelle für Zuordnung von Entitäts-Ids und externen Systemen bzw. Schnittstellen
+T690IFC_IMPORT;0;Tabelle zur Steuerung des automatischen Imports neuer Sendungsverfolgungsdaten
+T690IFC_RECV;0;Tabelle mit Antworten vom Zielsystem (bei asyncronen Schnittstellen)
+T690IFC_RECV_DATA;0;Empfangene Nachricht als CLOB - Reorganization nicht vergessen!
+T690IFC_RECV_POS;0;Empfangsdetails zu Versandpositionen
+T690IFC_SEND;0;Gemeinsame Tabelle für Nachrichtenübermittlung an externe Systeme für Versandvorgänge
+T690IFC_STATUS;0;Zentrale Tabelle für alle erhaltenen Sendungsinformationen aus externen Systemen in Bezug auf SHCware Vorgänge
+T690IFC_STATUS_MAPPING;35;Mapping von Statuscode zwischen externem System und SHC
+T690IFC_STATUS_SRC;0;Tabelle für Ursprungsinformationen zu allen erhaltenen Sendungsinformationen und den jeweiligen beteiligten Schnittstellen
+T690IFC_TIMING;0;Tabelle für geschätzte Zustellungszeiten einer Sendung
+T690IFC_TIMING_SRC;0;Tabelle für Ursprungsinformationen zu allen erhaltenen Zeitinformationen bzw. geschätzter Zustellzeiten und den jeweiligen beteiligten Schnittstellen
+T690K;0;Abarbeitung Komplettlieferungsaufträge
+T690KDIF;0;Kommissionier Differenzen
+T690LAD;30478;
+T690LAP;292556;
+T690LDAT;0;Wunsch - Tourdatum
+T690LDATF;0;Fehlertabelle für die Ermittlung des Tourdatums
+T690LKHIST;0;Protokollierung der Änderungen in der Logistikette
+T690LKON;0;Scan: Kontrolle der Ladelisten
+T690LVM;2;Verpackungsmittel Ladeliste
+T690PARK;0;Parkplätze der einzelnen Läger
+T690PKON;0;Scan: Kontrolle der Verpackungspositionen
+T690PLZTOUR;0;
+T690PRIO;0;
+T690SG;5;Stornierungsgründe für die Ladepositionen
+T690SHIPTRACK_PACKAGE;0;Tabelle zur Speicherung von Shiptrack-Informationen auf Paketebene
+T690SHIPTRACK_SHIPMENT;0;Tabelle zur Speicherung von Shiptrack-Informationen auf Sendungsebene
+T690ST;0;
+T690STMAP;46;Kratzer- Belade- und Entladeinformationen
+T690STPCK;0;
+T690STPIC;0;
+T690ST1;0;
+T690SV;0;Tabelle für die Seileverwaltung SHC690SV
+T690TAG;0;Zuordnung Tour und Wochentag je Kunde/Versandart
+T690THW;0;Tourenhinweise
+T690TOURIK;0;Standorte eines Auftrages
+T690TOURIK_TMPREL;0;
+T690TOURINTERN;0;Interne Lieferzeiten
+T690TOURIP;0;Standorte eines Auftrages. Wird für interne Tourenplanung verwendet.
+T690TOURIP_TMPREL;0;
+T690TOURIS;0;Storno während der Auslieferung
+T690TOURK;0;Tabelle für Tourenplan - Kopfdatei
+T690TOURLK;0;Standortmatrix
+T690TOURP;0;Tabelle für Tourenplan - Positionsdatei
+T690TOURP_UMB;0;Tabelle für Tourenplan - Umbuchungsprotokoll Scanner
+T690TOURST;0;Logistikstationen
+T690TTV;0;Tourenplan Terminverschiebungen
+T690TVW;0;Tourenverweise - Zuordnung Basistour zu Untertour - Verweis zu T690PRIO
+T690TVWK;0;Tourenverweise Kunde - Zuordnung Basistour zu Untertour - Verweis zu T690PRIO
+T690URL;13;Tabelle für Link zur Versandverfolgung für Kunden
+T690VAI;270438;Aufträge/Lieferungen, die in einen Versandvorgang aufgenommen sind
+T690VAIT;0;Tabelle für die Teilenummern bei Versandvorgängen
+T690VEP;0;Verpackungsmittelverwaltung - Gibt an, welche und wieviel Verpackungsmittel für einen Versandvorgang verwendet wurden. Zudem wird gespeichert, wieviel Stück von den Verpackungen zurückgemeldet wurden.
+T690VEPR;0;Verwaltung der mit einem Versandvorgang zurückgebrachten Verpackungsmittel
+T690VLOG_VART;0;Tabelle zur Pflege der Einstellungen für die Übergabe an VLOG zu den internen Versandarten
+T690VM;3;Verpackungsmittel
+T690VMART;0;Verpackungsmittel Artikelzuordnung
+T690VMID;0;
+T690VMT;3;
+T690VPO;292870;Verpackungspositionen eines Versandauftrags
+T690VPO1;0;Auftragspositionen pro Versandposition (optional). Hier wird pro Versandposition angegeben, welche Auftragspositionen mit dieser Versandposition/Verpackungsmittel verpackt wurden.
+T690VPO_15042015;66331;
+T690VSCAN;0;Versandmodul - Scanpflichtige Artikel
+T690VSPK;0;Prueftabelle für Verladescan (Kopf)
+T690VSPP;0;Prueftabelle für Verladescan (Positionen)
+T690VVG;293021;Tabelle für die Versandvorgänge
+T690VVG_20180426;9710;
+T690VVM;0;Versandvorgang Verpackungsmittel - Erfassung Versand über Verpackungsmittel - Zuordnung Lagerentnahmeschein zu Verpackungsmitteln
+T690VVML;0;Versandvorgang Verpackungsmittel - Erfassung Versand über Verpackungsmittel - Zuordnung Lagerentnahmeschein zu Verpackungsmitteln - Lieferung
+T690VVMP;0;Versandvorgang Verpackungsmittelposition - Erfassung Versand über Verpackungsmittel - Zuordnung Lagerentnahmeschein zu Verpackungsmitteln - Position
+T691KIB_ANFR;0;Anfragegründe für Email an Sachbearbeiter
+T691KIB_ANFR_FS;0;
+T691KIB_ANM;556;iKibes: Anfrage einer Anmeldung ins Kibes für Neukunden
+T691KIB_ANM_TMP;572;Temporäre Tabelle mit den ermittelten, möglichen Kunden einer Anfrage
+T691KIB_CHECKK;0;
+T691KIB_CHECKP;0;
+T691KIB_FILT;0;Filtervoreinstellungen der Abfragen
+T691KIB_FLOG;13920;iKibes: Protokollierung von fehlgeschlagenen Login-Versuchen
+T691KIB_HELP;1;iKibes - anzuzeigende Hilfetexte im Kibes
+T691KIB_KD;963;
+T691KIB_KDNR_PF;0;Erfassung der allgemeinen und der kundenspezifischen Gutschrifts-Bearbeitungsgebühren
+T691KIB_KDUEB;324;
+T691KIB_KD_20210211;661;
+T691KIB_KFZ_REKLK;0;Kopftabelle der Rückgaben im Kibes-KFZ. Pro Session kann es höchstens einen Kopfsatz geben.
+T691KIB_KFZ_REKLP;0;Tabelle der Rückgabepositionen im Kibes-KFZ.
+T691KIB_KGRP;0;Positionstabelle der Kundengruppen
+T691KIB_KRNR_PF;0;Erfassung der allgemeinen und lieferantenspezifischen Reklamtions-Bearbeitungsgebühren bei Bersorgungsartikel
+T691KIB_KSPRA;431;iKibes - Kopftabelle für die fremdsprachlichen Meldungen aus dem Kibes heraus
+T691KIB_LAG;2;iKibes: Bestandslager
+T691KIB_LAGABB;0;iKibes: Steuerung, wie die Bestellmengen auf die Bestandslager verteilt werden (bez. T624Pos)
+T691KIB_LAND;3;
+T691KIB_LIEF;3;iKibes - Lieferantenstruktur
+T691KIB_LOGO;65;iKibes - Firmenlogos. In dieser Tabelle werden vom Kunden Firmenlogos hinterlegt, die auf dem Artikeldatenblatt ausgedruckt werden können.
+T691KIB_MENU;29;iKibes - Menüstruktur im Kibes
+T691KIB_MPARA;14;iKibes - Parameter für die Menüprogramme im Kibes
+T691KIB_NAV;0;
+T691KIB_PANZ;5;iKibes - Steuerung der Anzeige der vom Kibeskunde pflegbaren Funktionsparameter
+T691KIB_PGRP;0;
+T691KIB_PPARA;2455;iKibes - sessionübergreifend gesetzte Parameter des Profils
+T691KIB_PROF;1037;
+T691KIB_PROF_BELEGMAIL;0;Tabelle zur Pflege von weiteren Beleg-Mail-Adressen pro Profil
+T691KIB_PROF_SIC;694;
+T691KIB_PROT;2762;
+T691KIB_PWERT;10;iKibes - Steuerung der Anzeige der vom Kibeskunde pflegbaren Funktionsparameter - Angabe der möglichen Werte
+T691KIB_REKLK;1;
+T691KIB_REKLP;1;
+T691KIB_SESS;50238;
+T691KIB_SMENU;0;iKibes - Schnellmenüstruktur eines Profils im Kibes
+T691KIB_SPARA;327852;iKibes - gesetzte Parameter der Session
+T691KIB_SPRA;465;iKibes - Positionstabelle für die fremdsprachlichen Meldungen aus dem Kibes heraus
+T691KIB_SSO;0;iKibes: Single sign on (Einmaliges Anmelden)
+T691KIB_STEU;419;iKibes - Funktionsparameter
+T691KIB_VART;1;iKibes: Versandarten im Kibes
+T691KIB_WAGR;1767;iKibes - Warengruppenstruktur
+T691KIB_ZUST;0;iKibes: Liste der zuständigen Sachbearbeiter des Kibes
+T692KIB_AMC;5527;
+T692KIB_AMC_PRE;0;Vorbereitungstabelle für T692KIB_AMC
+T692KIB_AN_FEAT;0;ETIM Eigenschaften, die in einer Anarbeitung verwendet werden können.
+T692KIB_AN_TASK;0;Tätigkeiten, die bei einer Anarbeitungsliste zu erledigen sind. Die Tätigkeiten sind hinterlegte ETIM Merkmale.
+T692KIB_BAU_ART;0;(3) digitale Bauakte: Artikel, die im angegebenen Zeitraum von den selektierten Lieferanten geliefert wurden.
+T692KIB_BAU_LIEF;0;(2) digitale Bauakte: Lieferanten, die im angegebenen Zeitraum Artikel fr das Objekt geliefert haben.
+T692KIB_BAU_OBJ;0;(1) digitale Bauakte: Objekte des Kunden Als Kunde möchte ich an Hand eines Projektes alle dazugehörigen Artikel und Positionen aus Lieferscheinen/ Aufträgen usw. gefiltert zu dem jeweiligen Objekt filtern und exportieren können / eine Art Bauakte zu ein
+T692KIB_ERG;500;iKibes: Speichern einer Artikel-Ergebnismenge zur weiteren Suche in der Suche
+T692KIB_FAAR;2098;Artikel einer Favoritenliste
+T692KIB_FAVO;579;iKibes: Favoriten eines Kunden bzw Profils
+T692KIB_KDSO;0;"iKibes: berechtigte Sortimente eines Kunden; d.h. Kunde darf nur Artikel aus seinen berechtigten Sortimenten bestellen"
+T692KIB_KSART;4;Kopftabelle der Kibes-Sonderartikel
+T692KIB_KSART_BANNER;0;Pflege von Bannern für eine Aktion (Flyacts)
+T692KIB_KSART_TOPICAREA;0;Kopftabelle für die Themenbereiche der Aktionsübersichtsseite
+T692KIB_KSART_TOPICASSIGN;0;Zuweisungstabelle für Aktionen zu Themen
+T692KIB_KSART_TOPICBANNER;0;Banner - Tabelle für die Themenbereiche
+T692KIB_KSUG;0;
+T692KIB_LAE;0;"Kibes: Längen für Stahlartikel; wird beim Bestellen der Artikel gefüllt"
+T692KIB_LBILD;0;Anzeige eines Lieferantenbildes in der Artikelliste
+T692KIB_LINK;7546;Anzeige eines externen Links in der Artikelliste.
+T692KIB_LINK_20171119;1554;
+T692KIB_LINK_20200515;7318;
+T692KIB_LINK_20210427;8951;
+T692KIB_LINK_20220721;9402;
+T692KIB_LINK_20230427;6624;
+T692KIB_LINK_20240512;3559;Anzeige eines externen Links in der Artikelliste.
+T692KIB_LOG;1464;iKibes: Protokollierung der Kundenaktionen im Kibes
+T692KIB_MHIST;5353;"iKibes: Kibes Artikel-Verkaufshistorie; wird benutzt zur Sortierung der gematchten Artikel"
+T692KIB_PID;0;Tabelle für das Direct-Online-Payment über den Webshop
+T692KIB_POSH;0;Beinhaltet Mengenhinweise fuer Warenkorbpositionen. SHC691PARA POS_MENG_HINWEIS
+T692KIB_PRLI;1;"Zuordnung von Lieferanschriften zu Profilen; d.h. Profile dürfen nur diese Lieferanschriften zum Bestellen von Artikel verwenden"
+T692KIB_PRSO;0;berechtigte Sortimente des Profils
+T692KIB_PSUG;0;
+T692KIB_RAB_KOPF;0;Pflege von Onlinerabatten (Kopftabelle)
+T692KIB_RAB_POS;0;Pflege von Onlinerabatten (Positionstabelle)
+T692KIB_REP;19706;iKibes - Daten für Artikelinfo/Artikeldatenblatt
+T692KIB_SART;0;iKibes: Liste der Sonderartikel
+T692KIB_SOAR;0;Artikel eines Sortiments
+T692KIB_SOLRL;0;
+T692KIB_SORT;0;iKibes: Artikelsortimente
+T692KIB_STRU;945;iKibes: Struktur
+T692KIB_SUCH;263012;iKibes: Protokollierung der Artikel-Sucheingaben zur Wiedervorlage bzw zur Suche in der Suche
+T692KIB_SUCHB;0;
+T692KIB_SYNB;0;iKibes: Kopftabelle der Synonyme. Einem Begriff können Synonyme hinterlegt werden. Ist der Begriff im Matchfeld (T692KIB_AMC.maco) vorhanden, dann werden alle Synonyme des Begriffs beim Matchcodeaufbau an das Matchfeld angehangen.
+T692KIB_SYNS;0;iKibes: Die Tabelle enthält die den Begriffen hinterlegten Synonyme.
+T692KIB_VERGL;0;
+T692KIB_VOR;5071;"iKibes: Kibes Vorgänge; beim Absenden des Warenkorbes wird ein Vorgang erzeugt"
+T692KIB_WAKO;208;iKibes: Warenkörbe/Bestellvorlagen pro Profil (Mitarbeiter)
+T692KIB_WIDGETD_ZDF;0;Datentabelle für Widget-Typ ZDF (Zahlen, Daten, Fakten). Hier werden die Einträge gepflegt, welche dem Kunden im Flyacts Shop angezeigt werden sollen.
+T692KIB_WIDGETK;0;
+T692KIB_WIDGETP;0;
+T692KIB_WIDGETZ;0;Widget Zuordnung
+T692KIB_WK;4640;iKibes: Warenkorb: alle Positionen, die im Kibes in den Warenkorb abgelegt werden, werden hier gespeichert
+T693KIB_BUDG;0;iKibes: Budgets
+T693KIB_KOLI;0;iKibes Industriekunde: Zuordnung von Lieferanschriften zu Kostenstellen
+T693KIB_PRKO;0;"iKibes Industriekunde: Zuordnung von Kostenstellen zu Profilen; d.h. Profile dürfen nur auf diese Kostenstellen Artikel bestellen"
+T693KIB_RESTB;0;iKibes: Restbudget
+T694KIB_ACTIVATION;0;Aktivierungen von Templates
+T694KIB_APPEARANCE;0;Definierte Erscheinungsbilder eines Widgets oder eines Drafts
+T694KIB_APPEARANCE_PARSED;0;Geparste Konfiguration des Erscheinungsbilds eines Widgets oder Drafts als Graph
+T694KIB_AREA;0;Bereiche in einem Template
+T694KIB_ASSIGNMENT;0;Freischaltungen von Templates
+T694KIB_BOX;2;enthaelt die Boxen zu einer Seite
+T694KIB_COOKIE;0;Cookies
+T694KIB_COOKIE_ASSIGN;0;Zuweisungstabelle für Banner und Cookie
+T694KIB_COOKIEBANNER;0;Kopftabelle für die Cookie-Banner
+T694KIB_HTML;0;
+T694KIB_PRICECHANGE;0;Erfassung der Preisfindung des Liefernaten
+T694KIB_SEITE;1;beinhaltet die Newsseiten in ihren verschiedenen Versionen
+T694KIB_TEMPLATE;0;Kopfinformationen zu den Templates
+T694KIB_VIEW;0;Aktivierungen von Templates
+T694KIB_WIDGET;0;Widgets auf einem Template innerhalb eines Bereichs
+T694KIB_ZUORD;0;
+T695PERG;0;Fa. Lotter: Verrechnung mit Lieferant Perger
+T696STAT;0;Lagerwertausgleichstabelle
+T696STAT1;285;
+T697ARTINFO;0;
+T697BELEGABT;0;
+T698XMLSTMT;0;In der Tabelle werden select-Statements hinterlegt, die über die XML-Schnittstelle ausgeführt werden. Die Ergebnisse werden als XML-Struktur über den Browser zurückgeliefert.
+T699ATP_LAGA;0;Tabelle zur ATP-Lagersteuerung, Definition der Anzeigelager zu einem Stammlager
+T699ATP_LAGG;0;Tabelle zur ATP-Lagersteuerung, Definition von Lagergruppen innerhalb eines Stammlagers
+T699ATP_LAGS;0;Tabelle zur ATP-Lagersteuerung, Definition der Stammlager
+T699ELB;0;Stammdatentabelle für gepflegte Konfiguratoren im SHC699ELB
+T699ELB_ARTIKEL;0;Stammdatentabelle für zugelassene Artikel pro Konfigurator im SHC699ELB
+T699ELB_HOOK;0;Stammdatentabelle für gepflegte Rückübertragungspunkte pro Konfigurator im SHC699ELB
+T699ELB_KUNDEN;0;Stammdatentabelle für zugelassene Kunden pro Konfigurator im SHC699ELB
+T699ELB_RECEIVE;0;Empfangstabelle für alle ELBRIDGE Rückübertragungen
+T699ELB_RESULT;0;Verarbeitete Positionsdaten aus der Rückübertragung
+T699ELB_RESULT_DOCS;0;Empfangene Dokumente pro Rückübertragungsposition
+T699ELB_RESULT_HEADER;0;Emfpangene Informationen zur gesamten Rückübertragung (bspw. Konfigurations-URL)
+T699ELB_UNITS;0;Mappingtabelle zwischen ELBRIDGE- und SHC-Mengeneinheiten
+T700BETR;0;Jahresabhangiger BetriebsstammDiese Tabelle ist eine Ergänzung zum Betriebsstamm T070BETR. Sie beinhaltet jahresabhängige Steuerungsangaben wie Buchungskreisnummer oder Kontenplankennzeichen.
+T700REO;0;Reorganisierte Wirtschaftsjahre
+T701HIST;0;Protokolltabelle Jahreseröffnungen
+T701PARA;0;Jahres- und Betriebsunabhangige Parameterdatei
+T702BART;0;Steuerungsdatei für die Buchungsmaske.
+T702BUZU;0;Buchungszusatz-Felder
+T702BUZU_INHALT;0;Inhalt der Buchungszusatz-Felder
+T702KMKOPF;0;
+T702KMPOS;0;
+T703HBLZ;1;
+T704HBAK;1;
+T705HUEB;0;Verrechnungskonten Überweisungen
+T706HSCH;0;
+T707HLAS;0;
+T708HEIN;0;
+T709KLIM;0;
+T709SACH;0;Finanzkonten
+T710WAUF;0;
+T711WAUS;0;
+T712WERT;0;
+T713HKBE;0;Hauptkontengruppen Forderungen Ausland Verbindlichkeiten
+T714HKTO;0;
+T715HKZU;0;
+T716HKPK;0;Personenkontenbezogene HauptgruppenzuordnungenPro Betrieb, Kontenart (Kunden bzw. Lieferanten) und Wirtschaftsjahr wird die Hauptkontengruppe angegeben, über die im jeweiligen Wirtschaftsjahr das Hauptkonto zu suchen ist. Ein Personenkonto kann nicht beb
+T717BANK;4149;Bankenstamm dieser Tabelle sind alle Banken / Bankleitzahlen anzulegen. Bei der Installation wird diese Tabelle ausgeliefert, muß aber vom Anwender weiter gepflegt werden. Über diese Tabelle erfolgt die Plausibilitätsprüfung der Bankleitzahlen (bei der P
+T720STFO;8;Steuerformeln
+T721STSA;12;Zu den Steuerformeln zugehörige Detailsätze.
+T722MWST;0;Mehrwertsteuerkonten den Steuerformeln zuordnen
+T723SAUF;0;Skontoaufwandskonten den Steuerformeln zuordnen
+T724SBAR;0;Skontobarverkaufskonten den Steuerformeln zuordnen
+T725SERT;0;Skontoertragskonten den Steuerformeln zuordnen
+T726VORS;0;Vorsteuerkonten den Steuerformeln zuordnen
+T727KOSP;0;
+T728VERB;0;Verbandsdaten
+T729BPER;0;Definition eines FIBU-Wirtschaftsjahres
+T729SPERR;0;Periode (vor Sysdate) wurde in T729bper schon mal gesperrt
+T731KONS;0;
+T732BAFK;0;Fehlerkonten der BankenBeim automatischen Buchen der Bankauszügen wird auf ein Fehlerkonto gebucht, wenn über die Zuordnung (Bankleitzahl und Kontonummer) kein Konto ermittelt werden kann.Ein Fehlerkonto ist für alle Hausbanken zu hinterlegen, für die die
+T733SFUM;0;Steuerschlüssel-UmsetzungstabelleDiese Tabelle muss gepflegt werden, wenn für Innergemeinschaftliche Erwerbe die Buchungssätze über die Rechnungsprüfung an die Buchhaltung übergeben werden und eine nach Steuerarten (steuerfrei, mit reduziertem oder vollem
+T734TEXT;0;
+T735DRTX;0;
+T736DIVA;0;
+T737EPAR;0;
+T738EZKO;0;
+T739EZPO;0;
+T740AKTIV;;
+T740BUKR;0;Buchungskreise
+T740GTEMP;;Buchungskreise
+T741BUDA;0;Buchungsdaten eines Buchungskreises
+T741BUDA_PROT;0;Protokolldaten wenn Buchungsdaten einer Buchung geändert werden
+T741GTEMP;;Buchungsdaten eines Buchungskreises
+T742BUPO;0;Buchungspsoitionen
+T742GTEMP;;Buchungspsoitionen
+T742ZUSA;0;Buchungszusatz-Informationen
+T743AZIF;;
+T744ZUGE;;Diese Tabelle ist Temporär und enthält die Verbindung zwischen zwei Belegen bevor sie zugeordnet werden.
+T745FAEL;0;
+T745GTEMP;;
+T746VORG;0;In dieser Tabelle stehen die vorhandenen Ausziferungsinformationen. Welche Belege untereinander zugeordnet wurden. Diese Tabelle besteht im Grunde aus zwei Indizes der Zuordnung und dem Wirtschaftsjahr in dem diese Zuordnung ein Rolle spielt. Es gibt d
+T747SKON;;
+T748GSKB;;Tabelle speichert die Buchungstextänderungen ausw dem Programm fi103nz und fügt selbige in der DB-Routine shc_fi103 wieder ein !
+T748GSKO;;
+T749CTRL;0;
+T751KOPA;0;Kontenparameter
+T752AZIFF;;
+T752BANK;;
+T752EPOS;0;
+T752FOCUS;;
+T752MAJA;0;
+T753SALD;0;Saldentabelle. Hier stehen die aktuellen Kontensalden pro Periode.
+T754TEXT;0;
+T755ESR;0;
+T757SEPA;0;
+T760KDVK;0;
+T761KDVP;0;
+T762JDVW;0;
+T763MAHN;0;
+T764MVOR;0;
+T765MVKD;0;
+T766MVEP;0;
+T767SEIN;0;
+T768WECH;0;
+T770ZAVW;0;Verwaltungsdatei für Zahlungsausgang/Lastschriften. Pro Sachbearbeiter und Tag können mehrere Vorschläge erfolgen, die mit einer Laufnummer versehen werden.
+T771ZAKP;0;Zahlungsvorschlags-Kopfsatz mit Personenkontendaten abhängig vom Kopfsatz in T770zavw.
+T772ZAETRIS;0;ETRIS Bank - Prenotification (ehemals Zahlliste) MITEGRO ZR
+T772ZAISG;0;Tabelle zum Einlesen der Zahldaten der ISG (zum Abgleich in FI700)
+T772ZAPO;0;Zahlungsvorschlags-Positionssatz. Pro Positionssatz kann die Zahlungsart und die Hausbank unterschiedlich sein.
+T773ZABA;0;Die Hausbanken, die für den Zahlungsvorschlag ausgewählt wurden, sind hier hinterlegt.
+T774VRRD;0;
+T775VRPS;0;
+T780USTP;0;
+T781USTS;0;
+T782USTK;0;
+T784USTD;0;
+T785USTW;0;
+T790BUKR;0;
+T790GTEMP;;
+T791BUDA;0;Stapelbchungsbelege
+T791GTEMP;;
+T792BUPO;0;Stapelbuchungspositionen
+T792GTEMP;;
+T793GTEMP;;
+T793ZUGE;0;
+T795FAEL;0;Faelligkeiten der Stapelbuchungen
+T795GTEMP;;
+T799BELEGHIST;0;
+T800HIST;0;Änderungshistorie für T800kont
+T800KONT;0;KontenplanAlle Sachkonten eines Kontenplans werden unter einem vordefinierten Kontenplankennzeichen erfasst. Es können alle gängigen Kontenpläne (SKR3 bzw. SKR4 von DATEV, Industriekontenplan oder ein individueller Kontenplan) verwendet werden.
+T800KOUM;0;Umsetztabelle für Kontenplanänderung
+T801KOKZ;0;Vorhandene Kontenplan-Kennzeichen.
+T802FEHL;0;
+T803SVOR;0;
+T804FAMT;0;
+T805WKTO;0;
+T806STZU;0;
+T807BESA;0;
+T808BEAB;0;
+T809DIFF;0;
+T809VORG;0;
+T810DIFF;0;
+T811GVC;0;
+T811GVC_CODES;0;
+T811ZAHLCODES;0;
+T812BAKO;0;
+T812COPY;0;
+T812PARA;0;Parameter für das einlesen der Bankauszüge (fi310neu)
+T813BAPO;0;
+T813COPY;0;
+T813OXID;0;Oxid-Shop Bankauszugstabelle
+T814BASK;0;
+T814COPY;0;
+T815BUINF;0;Fibu Buchungsinformations-Texte
+T819COMBO;235;
+T819COMBO_SACH;44;
+T819CONF;0;
+T820ZIVW;0;Kopfsatz für den Zinsvorschlag
+T821ZIKP;0;Kopfdatei (Eintrag pro Kunde) für die Zinsrechnung.
+T822ZIPO;0;Haupt-Positionsdatei für die Zinsrechnung. In dieser Tabelle stehen alle Hauptpositionen und Stornos von Unterpositionen die vorher nicht zugeordnet waren.
+T823ZIPU;0;Unter-Positionsdatei für die Zinsrechnung. In dieser Tabelle stehen alle zugeordneten Unterpositionen (auch Stornos solcher Unterpositionen). Der Aufbau entspricht T822ZIPO, es gibt jedoch eine Laufnummer für die Zuordnung zur Hauptposition.
+T830DBU;0;Die Stammdaten für Dauerbuchungen sind hier hinterlegt.Sie sind jahresunabhängig. Das Jahr wird im Pflegeprogramm nur zur Überprüfung der Konten benötigt.
+T831NWDATA;0;Nordwest-Belege
+T840AUST;0;
+T841AUSG;0;
+T842AUSK;0;
+T843ZUTB;0;
+T845LIQPAR;0;Parameter Liquiditätsüberwachung
+T845LIQPP;0;
+T846LIQPK;0;
+T847LIQIST;0;
+T847LIQPLAN;0;
+T847LIQSVIST;0;
+T847LIQSVPLAN;0;
+T848AART;0;Auftragsarten für die Liquiditätsüberwachung
+T848BART;0;Bestellarten für die Liquiditätsüberwachung
+T848KALENDER;0;
+T850ZGEW;0;Zahlungsgewohnheiten der Kunden (monatliche Ermittlung)
+T851GKVP;0;
+T851GKVS;0;
+T851KOST;0;
+T852BASL;0;
+T852UMSL;0;
+T853BASL;0;
+T853UMSL;0;
+T854KUML;0;
+T855KSGR;0;
+T855KSGT;0;
+T855KSGZ;0;
+T856KAGR;0;
+T857POVS;0;
+T859DEFK;0;
+T860CHRISTKONS;0;Daten zur Kostenstellenkonsolidierung auf Basis der Konsolidierungsparameter der Tabelle T181Konp
+T860KOST;0;
+T861PLAN;0;
+T870NUM;1;
+T872PLK;0;Kopftabelle für das SHC872(Preisliste-Konditionen)
+T872PLP;0;Positionstabelle für das SHC872(Preisliste-Konditionen)
+T872ZMMK;0;
+T872ZMMP;0;
+T875ZACIN;0;Rückdatei für ZAC-Daten (FEGIME)
+T875ZACIN_K;0;Rückdatei für ZAC-Daten (FEGIME)
+T880SCHK;0;Schnittstellen-Kopfdaten für Buchungssätze zur Übernahme in SHCware Fibu
+T881SCHP;0;Schnittstellen-Positionsdaten für Buchungssätze zur Übernahme in SHCware FibuEine Buchung gemäß SHCware-Logik besteht aus mindestens 2 Positionen (Buchung und Gegenbuchung). Dabei ist entweder das Feld Konto oder Gegenkonto mit dem Betrag in den passenden
+T882SJOB;0;
+T883BJOB;0;
+T885ASCI;0;
+T886ASCB;0;
+T887ASCU;0;
+T890ANEXT;0;
+T890ANST;0;AnlagenstammDurch die Anlagennummer ist er jahresunabhängig.Auch beim Wechsel des Kontenplan bleibt die Nummer gleich.
+T891ANSJ;0;Jahresabhängige Daten des Anlagegutes
+T892AHKO;0;Anschaffungs und Herstellungskosten (pro Wirtschaftsjahr)Zugänge und Abgänge werden beim Jahreswechsel in die AH-Kosten übernommen.
+T893ABEW;0;Buchwert Alt und Bewegungen (pro Wirtschaftsjahr)
+T894SOAB;0;Sonderabschreibungen (pro Wirtschaftsjahr).
+T895AMON;0;Wenn Buchungssätze erstellt werden, werden sie in dieser Tabelle protokolliert.Dadurch ist ein Wiederholungslauf möglich.Ausserdem können so bei Änderungen an den Afa-Kriterien bei der nächsten Aufbereitung der Buchungssätze mögliche Differenzen berücksic
+T896ASCH;0;Diverse Schlüssel und Bezeichnungen für die Anlagenbuchhaltung.
+T897USCH;0;Diverse Schlüssel und Bezeichnungen für die Anlagenbuchhaltung - 2. Hierarchiestufe
+T899AHIS;;Temporäre Tabelle für die Erstellung der Anlagenkartei (-historie)Die Tabelle kann mit der Funktion shc_anla.druck_historie aufbereitet werden.Weitere für die Liste benötigte Werte können aus T890anst und T891ansj hinzugelesen werden.
+T899ASPG;;
+T900LBW_CONFIG;0;Konfiguration für die Schnittstelle Südfactoring der LBW.
+T900LBW_DATEN;0;Hier werden die Daten für das Südfactoring gespeichert und zur Ausgabe in eine Datei bereitgehalten. Diese Datei darf nicht gelöscht werden.
+T900STLI;;
+T900STRP;;
+T901ZSFM;;
+T902PAGE;;
+T903AUSW;;
+T903AUSW_KOST;;Drucktabelle T903ausw_kost für den Druck der Kostenstellen-BWA
+T903AUSW_KSGG;;Zwischentabelle T903ausw_ksgg Struktur für den Druck der Kostenstellen-BWA
+T903AUSW_KSGR;;Zwischentabelle T903ausw_ksgr für den Druck der Kostenstellen-BWA nach Kostenstellengruppen
+T903BILA;;
+T903GUVR;;
+T904KTMP;;
+T905PLAN;;Temporary Table für Reportverarbeitung für Listen der Planzahlen
+T905USTK;;
+T905ZGEW;;Arbeitsdatei für FI875c
+T906KOST;;
+T906KSGR;;Temporäre Tabelle für Kostenstellengruppensaldenlisten
+T907STUFE;;
+T910LIQPLAN;;
+T910LIQRD;;
+T930DRAP;0;
+T930FAINR;0;Prüftabelle für SMDE-Aufträge
+T930FPROT;0;Transakationstabelle zwischen MDE-Erfasssung und Inventurverarbeitung
+T930JOB;1;Tabelle für die Menüjobs
+T930LOG;36;Log Tabelle
+T930MGR;1;Tabelle für Menügruppen
+T930MGRJOB;1;Tabelle für Menügruppen-Jobzuordnungen
+T930MIT;9;Tabelle für Mitarbeiter
+T930MNR;9;Tabelle für Menü/Mitarbeiter
+T930PARM;5;Tabelle für Parameter
+T930POS;0;Positionschlüssel für Stahl-MDE
+T930SESS;27;Tabelle für Sessions
+T930TA;0;Transakationstabelle zwischen MDE-Erfasssung und Inventurverarbeitung
+T930VF;0;Vorgangsverfolgung und Satzsperren für die MDE-Erfassung
+T930WAKO;0;
+T930WEDIFF;0;Differenzeliste Buchungen über MDE
+T996STAT1;0;Fegime Statistikausgabe der Verbandsdaten
+T996STAT2;0;
+T999APLAN;;Planwerte für die Anlagenbuchhaltung
+T999BUVORG;;
+T999DETI;0;
+T999FILE_CONTENT;0;Positionstabelle der Dateiimporte, eigentlicher Dateiinhalt
+T999FILE_HEADER;10;Kopftabelle der Dateiimporte
+T999FILELIST;;Temp. Table für Liste der einzulesenden Dateien (FileOpenDilaog.FMX)
+T999HKSAL;;Für FI133 Tabpage Personenkonten
+T999KSGT;;
+T999REPLACES;0;
+T999SEPA;0;
+T999UPRT;0;
+T999UTAB;0;
+U001GRUPPE;0;
+U001MBER;0;
+U001MENU;0;
+U001MFAVO;0;
+U001MPANEL;0;
+U001MPARA;0;
+U001MTREE;0;
+U001MZUORD;0;
+U002IGRUPPE;6;
+U002INODE;0;
+U002ITREE;0;
+U002LAY;0;
+U006ACTIVELAYOUT;0;
+U006LAYOUT;0;
+U006LAYPOS;0;
+U006PROGLAYOUT;0;
+U006PROGROLLE;0;
+U006ROLLE;3;
+U008BEZ;0;
+U008CONTROL;0;
+U008FIELD;0;
+U009KRIT;0;
+U009SET;0;
+U010PAGING;0;Paging Einstellungen für Programme/Sachbearbeiter/Menugruppen
+U010T;0;
+U340FILT;0;Tabelle für Abfragedefinition
+U340HINT;0;
+U340SACFILT;0;Tabelle für Abfragedefinition des Sachbearbeiters
+U340ULOV;0;Tabelle für Definition der dynamischen LOVs
+V000COUNTRIES;249;
+V000CURRENCIES;179;
+V000LANGUAGES;421;
+V406AP;30;
+V406BF;5;
+V406BP;31;
+WEB_RATE_LIMIT_CONFIG;0;
+WEB_REQUEST_LOG;0;
+WEG_BSAD;0;
+WEG_SHOP_REC_SPERRE;0;
+WERTZ_ARTIKEL;0;
+WERTZ_BESTAND;0;
+WERTZ_FAKTEN;0;
+WERTZ_KUNDEN;0;
+WF_AKT_FELDER;0;Workflowtabelle Pflege in SHCWF1 In dieser Tabelle werden pro Workflowdefinition ggf. die DB-Felder gespeichert, auf die sich das Ereignis bezieht.
+WF_AKT_PARAMETER;0;Workflow Tabelle Pflege in SHCWF1 In der Tabelle werden pro Workflowdefinition die Übergabeparameter gespeichert, die an das Programm oder den Report übergeben werden, welcher im Feld WF_DEFINITION.PROGRAMM_NAME hinterlegt ist.
+WF_BEDINGUNGEN;0;Workflow Tabelle Pflege in SHCWF1 In dieser Tabelle werden die Bedingungen pro Workflowdefinition und DB-Feld gespeichert
+WF_DEFINITION;0;
+WF_EINGANG_PARAM;0;Workflow Tabelle Anzeige im SHCWF2 dieser Tabelle werden die Parameter für das Programm oder den Report hinterlegt, weelches die Workflow-Meldung weiterbearbeitet.
+WF_EINGANGS_KORB;0;Workflow Eingangskorb (Anzeige SHCWF2) dieser Tabvelle werden die Workflow - Ergebnismeldungen abgestellt.
