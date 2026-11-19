@@ -33,7 +33,8 @@ führt die Abfragen selbst aus und schickt Ergebnisse zurück.
 | `schema/tables.csv` | 3.404 Tabellen | TABLE_NAME; NUM_ROWS; COMMENTS |
 | `schema/columns.csv` | 62.648 Spalten (inkl. Views) | TABLE_NAME; COLUMN_ID; COLUMN_NAME; DATA_TYPE; NULLABLE; PK; COMMENTS |
 | `schema/foreign_keys.csv` | 779 Oracle-FKs | TABLE_NAME; COLUMNS; REF_TABLE; REF_COLUMNS |
-| `schema/NOTES.md` | Erkenntnisse: Namensregeln, Schlüsselspalten, Kerntabellen, Beziehungen | |
+| `schema/joins.csv` | 329 Join-Muster aus ~4.250 Abfragen eines anderen SHCWare-Kunden (**ungeprüft**) | TABLE_1; TABLE_2; JOIN_CONDITION; FILES_TOTAL; FILES_VARIANT; VARIANTS; HINWEIS; OTHER_VARIANTS; STATUS |
+| `schema/NOTES.md` | Erkenntnisse: Namensregeln, Schlüsselspalten, Kerntabellen, Beziehungen, Fachregeln | |
 
 Alle CSVs: UTF-8, Trennzeichen `;`. Die Kommentare sind die gepflegten Oracle-Kommentare
 (ca. 2/3 der Tabellen, ca. 1/2 der Spalten haben eine Beschreibung) – **die wichtigste Quelle**.
@@ -44,7 +45,11 @@ grep -i 'rechnung' schema/tables.csv                 # Tabellen zu einem Thema
 grep '^T081AUK;' schema/columns.csv                  # alle Spalten einer Tabelle
 grep -i 'skonto' schema/columns.csv                 # Spalten nach Name/Beschreibung
 grep -E '(^|;)T056AD;' schema/foreign_keys.csv       # FKs von/zu einer Tabelle
+grep -E '(^|;)T086AUP;' schema/joins.csv              # bewährte Joins von/zu einer Tabelle
 ```
+**Für Joins zuerst `schema/joins.csv` nachsehen** (Spalte HINWEIS beachten: fehlendes MANR,
+Freifelder, SART-Filter). Einträge mit STATUS „ungeprueft“ vor Verwendung mit einer
+Prüfabfrage bestätigen; danach STATUS auf „bestaetigt (Datum)“ setzen.
 
 ## Wichtigste Fakten (Details in `schema/NOTES.md`)
 - Kerntabellen heißen `T<Nummer><Kürzel>`. Sicherungskopien ignorieren
@@ -59,6 +64,11 @@ grep -E '(^|;)T056AD;' schema/foreign_keys.csv       # FKs von/zu einer Tabelle
   **keine Oracle-FKs** → Joins aus gleichnamigen Schlüsselspalten + Kommentaren herleiten
   und mit Prüfabfrage absichern.
 - Status-/Kennzeichenfelder sind in den Spaltenkommentaren erklärt (z.B. `T081AUK.STAT`).
+- Artikelstamm liegt unter `T070BETR.BETART` (Betrieb für Artikelstamm), nicht zwingend
+  unter dem Beleg-Mandanten; Kennzeichen-Felder enthalten oft `' '` statt NULL;
+  Werte = Menge × Preis / `T051ART.PREIVK`. Details und Statistik-Tabellen in `NOTES.md`.
+- Fremde Abfragesammlungen: nur im Scratchpad auswerten (`tools/fremdanalyse/`), keine
+  Originale/Kundendaten ins Repo.
 - Der Oracle-Discoverer-Katalog (`EUL4_*`) enthält nur die aus den FKs generierten Joins –
   keine Zusatzinfo.
 - `T045DEF` ist ein Feldkatalog des alten dateibasierten Systems – normalerweise nicht nötig.
