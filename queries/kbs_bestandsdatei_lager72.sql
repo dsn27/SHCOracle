@@ -6,8 +6,11 @@
 --           947207/947216/947407/947416 (6/6/1/1). Zeilenzahl alt 2767 → neu 2768.
 -- Offen:    - Pakete: BEME/RUME = 0 → Lieferdatum bei Bestand 0 = heute + Vorlauf
 --             (Bestellungen der Komponenten werden nicht berücksichtigt).
---           - Doppelte Zeilen möglich, falls ein Artikel mehrere EANs (T080EAN), Preiszeilen
---             (T052PR) oder Zusatzinfos A44/A38 in mehreren SART (T336INFA) hat – nicht geprüft.
+--           - EAN: mehrere EANs je Artikel sind in SHCWare vorgesehen → 12 Artikel stehen doppelt
+--             in der Datei (je GTIN eine Zeile, gleicher Bestand). Entscheidung 2026-11-19: vorerst
+--             so lassen. Alternative: CTE ean1 mit ROW_NUMBER() OVER (PARTITION BY manr, arnr
+--             ORDER BY recnum DESC) rn … WHERE rn = 1 statt shc.t080ean (DESC = neueste EAN).
+--           - Preis (T052PR) und Zusatzinfos A44/A38 (T336INFA): je Artikel eindeutig (geprüft).
 --           - LIKE '26_%': '_' ist Platzhalter (= „beginnt mit 26, mind. 3 Zeichen“).
 --           - BEWC = ' ' (laut Kommentar wie 'B') wird nicht ausgegeben.
 with bestand as (

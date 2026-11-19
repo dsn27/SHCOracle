@@ -67,6 +67,11 @@ je Mandant ein Schema.
   für „eine GTIN pro Artikel“ eine Regel festlegen (z.B. `ROW_NUMBER() … ORDER BY RECNUM`).
   Änderungsprotokoll für Stammdaten: `T310CP1` (Kopf: `DATUM`, `SAC`, `TABELLE`, `KEYINHALT`)
   → `T310CP3` (Felder alt/neu) über `CID, TABELLE`.
+- **Zusatzinfos `T336INFA`** (2026-11-19, `SHC`): je `MANR, ARNR, INFOKZ` eine Zeile für `A44` und `A38`
+  (keine Dubletten trotz fehlendem `SART`-Filter). Bedeutung von A44/A38 noch unbekannt (Feldkatalog `T335INFO`).
+- **Lieferanten-Zusatzinfos:** `KBS_Helper.get_T337InfP_AsNumber('LIE', '<INFOKZ>', KRNR)` liest `T337INFP`
+  (z.B. `A20`, `A21` = Vorlaufzeiten in Tagen in der Bestandsdatei). Geprüfte Abfrage:
+  `queries/kbs_bestandsdatei_lager72.sql`.
 
 ## Fremdbestand (Abfragen eines anderen SHCWare-Kunden)
 Nur abgeleitetes, neutrales Wissen – Originale werden nicht im Repo gespeichert.
@@ -133,4 +138,6 @@ Alles hier gilt als **ungeprüft**, bis es auf der eigenen DB bestätigt ist.
   `BETR` = Betrieb, 0 = alle). Für Klartexte zu Codes (Versandarten, Gutschriftgründe, Touren …).
 - **Installationsabhängig – nie blind übernehmen:** Auftragsarten (`AART`), Lager-, Vertreter-,
   Warenbereichsnummern, Freifelder (`FRA*`, `FRN*`, `FREI`, `IND*`) und deren Bedeutung.
-- `T052PR` (alte Preisdatei, 123 Verwendungen) gibt es bei uns nicht mehr → heute `T052PRDAT`.
+- `T052PR` (alte Preisdatei, 123 Verwendungen): steht nicht in `tables.csv`, aber in `columns.csv` →
+  bei uns vermutlich ein **View** (auf `T052PRDAT`). `shc.t052pr` ist abfragbar (2026-11-19);
+  mit `KZPR = ' ' AND WAEC = ' '` eine Zeile je Artikel (`SHC`, `MANR = 46`). Tabelle: `T052PRDAT`.
