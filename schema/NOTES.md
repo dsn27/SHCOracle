@@ -54,6 +54,20 @@ je Mandant ein Schema.
 - `T045DEF` = Feldkatalog des alten dateibasierten Systems (DATEI/FELD, 8-stellige Dateinamen),
   vermutlich nicht nötig, da Oracle-Kommentare vorhanden.
 
+## Auf eigener DB bestätigt
+- **Zusatzinfos `T337INFP`** (bestätigt 2026-11-19, SHC/MANR 46): PK `SART, INFOKZ, MANR, SART56, ADRN`,
+  einzige Datenspalte `INHALT1` (VARCHAR2(1000)), keine weiteren Pflichtfelder.
+  Kunden-Zusatzinfo: `SART = 'KND'`, `SART56 = 'K'` (= `T056AD.SART`), `INFOKZ` = Infoschlüssel,
+  z.B. `'LNR'`. Join: `u.manr = t.manr AND u.adrn = t.adrn AND u.sart56 = t.sart AND u.sart = 'KND'
+  AND u.infokz = '…'`. Nicht jeder Kunde hat eine Zeile → `LEFT JOIN`. Per SQL neu angelegte Zeilen
+  (nur PK + `INHALT1`) werden im SHCWare korrekt angezeigt.
+- **`T056AD` EDI-/Lieferantenfelder:** `ILN_RECHNUNG`, `ILN_LIEFERANT` (VARCHAR2(23), ILN 13-stellig),
+  `KULI` (eigene Kundennr. beim Lieferanten), `VERB` (Verbandsnummer). Leere Werte sind bei MANR 46
+  überwiegend NULL (~8.000–8.500 je Spalte), nur ~670 je Spalte `' '` → beim Löschen NULL setzen.
+- **Stammdaten aus Excel aktualisieren:** bewährter Ablauf in `queries/t056ad_excel_abgleich_kunden.sql`
+  (Hilfstabelle `TMP_…` → Vorschau → Sicherung `<TABELLE>_BAK_YYYYMMDD` → UPDATE/MERGE ohne
+  AutoCommit → Prüfung → COMMIT). Excel-Spalten mit ILN/Nummern vorher als Text formatieren.
+
 ## Fremdbestand (Abfragen eines anderen SHCWare-Kunden)
 Nur abgeleitetes, neutrales Wissen – Originale werden nicht im Repo gespeichert.
 Alles hier gilt als **ungeprüft**, bis es auf der eigenen DB bestätigt ist.
