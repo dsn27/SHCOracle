@@ -19,10 +19,10 @@ führt die Abfragen selbst aus und schickt Ergebnisse zurück.
 - Ein **Schema pro Mandant**, alle mit (nahezu) gleicher Struktur:
   | Schema | Mandant |
   |---|---|
-  | `HS` | Herzau und Schmitt |
+  | `HS` | Herzau und Schmitt (`MANR = 50`) |
   | `SHC` | KBS (ein Betrieb: `MANR = 46`) |
-  | `SLDV` | SLDV |
-  | `BS` | B. Schmitt |
+  | `SLDV` | SLDV (`MANR = 60`) |
+  | `BS` | B. Schmitt (zwei Betriebe: `MANR = 30` und `70`; Artikelstamm beider unter 30!) |
   | `COCO` | unbekannt (vermutlich alter/Test-Mandant, 2.497 Tabellen) |
 - Ignorieren: `APEX_*`, `ORDS_METADATA` (Oracle APEX), `ANMELDUNG` (1 Login-Tabelle).
 - Tabellen immer mit Schema qualifizieren, z.B. `shc.t081auk`.

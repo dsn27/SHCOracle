@@ -75,8 +75,22 @@ Alles hier gilt als **ungeprüft**, bis es auf der eigenen DB bestätigt ist.
 - **Artikelstamm-Betrieb:** `T051ART.MANR` ist nicht zwingend der Mandant des Belegs, sondern
   `T070BETR.BETART` („Betriebsnummer für Artikelstamm“). Darum joinen viele Abfragen
   `T051ART` nur über `ARNR`. Sicher: `T051ART.MANR = (SELECT BETART FROM T070BETR WHERE MANR = <Beleg-MANR>)`.
-  → **Geprüft 2026-11-19, Schema `SHC`:** `T070BETR` hat genau einen Betrieb, `MANR = 46`,
-  `BETART = 46` → Artikel normal über `MANR + ARNR` joinen. (Andere Schemata noch offen.)
+  → **Geprüft 2026-11-19 (`T070BETR` aller Mandanten):**
+  | Schema | MANR | BETART |
+  |---|---|---|
+  | `SHC` | 46 | 46 |
+  | `HS` | 50 | 50 |
+  | `SLDV` | 60 | 60 |
+  | `BS` | 30 | 30 |
+  | `BS` | **70** | **30** |
+  → In `SHC`, `HS`, `SLDV` Artikel normal über `MANR + ARNR` joinen.
+  → In **`BS`** hat Betrieb 70 keinen eigenen Artikelstamm: für Belege mit `MANR = 70`
+    Artikel über `T051ART.MANR = 30` lesen. Allgemein gültige Form:
+    ```sql
+    JOIN bs.t070betr b  ON b.manr = p.manr
+    JOIN bs.t051art  a  ON a.manr = b.betart AND a.arnr = p.arnr
+    ```
+    Gilt vermutlich auch für andere artikelbezogene Stammdaten (Warengruppen, Preise) – je Tabelle prüfen.
 - **Blank statt NULL:** Kennzeichen-/Freifelder enthalten oft `' '` (ein Leerzeichen) statt NULL
   (z.B. `T155PRGR.FREI = ' '`, `T064WGTX.UWGR = ' '`). Robust filtern mit `TRIM(spalte) IS NULL`.
 - **Preiseinheit:** Werte = Menge × Preis / `T051ART.PREIVK` (Preisfaktor 1/10/12/100/1000), z.B.
