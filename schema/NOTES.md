@@ -53,6 +53,13 @@ je Mandant ein Schema.
   enthalten ebenfalls keine Kern-Belegtabellen → keine zusätzliche Information.
 - `T045DEF` = Feldkatalog des alten dateibasierten Systems (DATEI/FELD, 8-stellige Dateinamen),
   vermutlich nicht nötig, da Oracle-Kommentare vorhanden.
+- **Pakete/Stücklisten – Bestand** (geprüft 2026-11-19, `SHC`, Artikel 947207, Lager 72):
+  Paketartikel (`T051ART.KZSL = 'P'`) haben **keinen eigenen Satz in `T075LAG`**. SHCWare
+  (Artikelinfo UP012) zeigt als „verfügbar“ die Anzahl kompletter Pakete aus den Komponenten:
+  `MIN(TRUNC(T075LAG.VERF der Komponente / T060STL.MENUA))` über alle Zeilen von
+  `T060STL` mit `HARNR = Paketartikel`, `SATZART = 'STUELI'` (Join `T060STL.MANR, UARNR` →
+  `T075LAG.MANR, ARNR` + Lager). Abfragen, die nur `T075LAG` zum Artikel lesen, liefern für
+  Pakete Bestand 0. `KZSL` `S` (Stückliste) / `K` (Konfiguration) noch nicht geprüft.
 
 ## Fremdbestand (Abfragen eines anderen SHCWare-Kunden)
 Nur abgeleitetes, neutrales Wissen – Originale werden nicht im Repo gespeichert.
