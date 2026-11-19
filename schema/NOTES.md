@@ -53,3 +53,15 @@ je Mandant ein Schema.
   enthalten ebenfalls keine Kern-Belegtabellen → keine zusätzliche Information.
 - `T045DEF` = Feldkatalog des alten dateibasierten Systems (DATEI/FELD, 8-stellige Dateinamen),
   vermutlich nicht nötig, da Oracle-Kommentare vorhanden.
+
+## Fremdbestand (Abfragen eines anderen SHCWare-Kunden)
+Nur abgeleitetes, neutrales Wissen – Originale werden nicht im Repo gespeichert.
+Alles hier gilt als **ungeprüft**, bis es auf der eigenen DB bestätigt ist.
+
+- Paket 1 (122 Dateien, Migrationsskripte ca. 2001–2003): fast nur `INSERT … SELECT` 1:1 von
+  einem Alt-Schema ins neue Schema → **kein Abfrage-/Join-Wissen**. Erkenntnisse:
+  - Die alte FIBU (Tabellen `T1xx`, z.B. `T133EPOS`, `T132KONT`) existiert im aktuellen Schema
+    nicht mehr; die FIBU liegt heute in `T7xx`/`T8xx` (z.B. `T741BUDA`, `T742BUPO`, `T800KONT`).
+    Fremde Abfragen auf `T1xx`-FIBU-Tabellen sind daher nicht übertragbar.
+  - `T083LAE` (Schnittlängen) mit `SART='E'`: `AINR` enthält die Bestellnummer
+    → Join auf `T141BEK` (Bestell-Kopf) über `MANR` + `T141BEK.BENR = T083LAE.AINR`.
