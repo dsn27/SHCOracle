@@ -42,3 +42,13 @@ je Mandant ein Schema.
 | T007SAC | Sachbearbeiter | |
 | T012AART | Auftragsarten | |
 | T045DEF | „Dateidefinitionen“ – evtl. SHCWare-eigener Feldkatalog (prüfen) | |
+
+## Beziehungen
+- `foreign_keys.csv`: 779 echte Oracle-FKs in 612 Tabellen – aber die Kern-Belegtabellen
+  (Aufträge, Lieferungen, Rechnungen, Artikel) haben **keine** FKs. Dort Joins über
+  gleichnamige Schlüsselspalten (MANR + AINR/PONR/KDNR/ARNR …) herleiten.
+- Meist referenziert: `T070BETR` (Betriebstamm), `T800KONT` (Kontenplan).
+- `EUL4_*` = Oracle-Discoverer End User Layer (597 Join-Definitionen in `EUL4_KEY_CONS`)
+  → mögliche Quelle für fachlich gepflegte Joins.
+- `T045DEF` = Feldkatalog des alten dateibasierten Systems (DATEI/FELD, 8-stellige Dateinamen),
+  vermutlich nicht nötig, da Oracle-Kommentare vorhanden.
