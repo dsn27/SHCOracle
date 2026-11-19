@@ -60,6 +60,13 @@ je Mandant ein Schema.
   `T060STL` mit `HARNR = Paketartikel`, `SATZART = 'STUELI'` (Join `T060STL.MANR, UARNR` →
   `T075LAG.MANR, ARNR` + Lager). Abfragen, die nur `T075LAG` zum Artikel lesen, liefern für
   Pakete Bestand 0. `KZSL` `S` (Stückliste) / `K` (Konfiguration) noch nicht geprüft.
+- **EANs `T080EAN`** (2026-11-19, `SHC`): Ein Artikel darf laut Fachbereich **mehrere EANs**
+  haben (PK ist `EAN, MANR`, nicht `ARNR`). In `SHC`/`MANR = 46` betrifft das 13 Artikel
+  (je 2 EANs); `ART` und `VEREVK` sind dort leer, `T051ART` hat kein EAN-Feld → es gibt kein
+  Kennzeichen für eine „Haupt-EAN“. Ein Join `T051ART` → `T080EAN` vervielfacht also Zeilen;
+  für „eine GTIN pro Artikel“ eine Regel festlegen (z.B. `ROW_NUMBER() … ORDER BY RECNUM`).
+  Änderungsprotokoll für Stammdaten: `T310CP1` (Kopf: `DATUM`, `SAC`, `TABELLE`, `KEYINHALT`)
+  → `T310CP3` (Felder alt/neu) über `CID, TABELLE`.
 
 ## Fremdbestand (Abfragen eines anderen SHCWare-Kunden)
 Nur abgeleitetes, neutrales Wissen – Originale werden nicht im Repo gespeichert.
