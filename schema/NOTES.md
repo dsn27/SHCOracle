@@ -48,7 +48,8 @@ je Mandant ein Schema.
   (Aufträge, Lieferungen, Rechnungen, Artikel) haben **keine** FKs. Dort Joins über
   gleichnamige Schlüsselspalten (MANR + AINR/PONR/KDNR/ARNR …) herleiten.
 - Meist referenziert: `T070BETR` (Betriebstamm), `T800KONT` (Kontenplan).
-- `EUL4_*` = Oracle-Discoverer End User Layer (597 Join-Definitionen in `EUL4_KEY_CONS`)
-  → mögliche Quelle für fachlich gepflegte Joins.
+- `EUL4_*` = Oracle-Discoverer End User Layer (597 Join-Definitionen in `EUL4_KEY_CONS`).
+  Geprüft: die Joins wurden aus den Oracle-FKs generiert (Stichproben 1:1 identisch) und
+  enthalten ebenfalls keine Kern-Belegtabellen → keine zusätzliche Information.
 - `T045DEF` = Feldkatalog des alten dateibasierten Systems (DATEI/FELD, 8-stellige Dateinamen),
   vermutlich nicht nötig, da Oracle-Kommentare vorhanden.
