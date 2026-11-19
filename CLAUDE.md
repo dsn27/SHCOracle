@@ -13,7 +13,10 @@ führt die Abfragen selbst aus und schickt Ergebnisse zurück.
 - Bei unsicheren Joins zuerst eine kleine **Prüfabfrage** geben (z.B. Kardinalität/Duplikate
   prüfen, `COUNT(*)` vor und nach dem Join), bevor eine große Auswertung gebaut wird.
 - Vor jeder Abfrage klären: **welcher Mandant** (Schema) – oder alle zusammen (`UNION ALL`).
-- Nur lesende Abfragen (`SELECT`) vorschlagen, nie DML/DDL auf Produktivdaten.
+- Standard: nur lesende Abfragen (`SELECT`). Änderungen (DML) nur auf ausdrücklichen Wunsch des
+  Benutzers und nur abgesichert nach dem Ablauf in `queries/t056ad_excel_abgleich_kunden.sql`:
+  Hilfstabelle `TMP_…` → Vorschau → Sicherung `<TABELLE>_BAK_YYYYMMDD` → DML ohne AutoCommit →
+  Prüfabfrage → `COMMIT`.
 
 ## Datenbank
 - Ein **Schema pro Mandant**, alle mit (nahezu) gleicher Struktur:
