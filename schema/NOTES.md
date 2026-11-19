@@ -65,3 +65,43 @@ Alles hier gilt als **ungeprüft**, bis es auf der eigenen DB bestätigt ist.
     Fremde Abfragen auf `T1xx`-FIBU-Tabellen sind daher nicht übertragbar.
   - `T083LAE` (Schnittlängen) mit `SART='E'`: `AINR` enthält die Bestellnummer
     → Join auf `T141BEK` (Bestell-Kopf) über `MANR` + `T141BEK.BENR = T083LAE.AINR`.
+
+- Paket 2 (ca. 12.000 Dateien → 4.609 eindeutige `.sql`, davon 4.253 reine Auswertungen,
+  überwiegend aktuelle SHCWare-Version, Schema `SHC`): 306 der 381 referenzierten
+  T-Tabellen existieren auch bei uns. Daraus abgeleitet: **`schema/joins.csv`**
+  (329 Tabellenpaare, je Paar die umfassendste häufige Join-Variante + Alternativen + Hinweise).
+
+### Regeln aus Paket 2 (ungeprüft, aber vielfach verwendet)
+- **Artikelstamm-Betrieb:** `T051ART.MANR` ist nicht zwingend der Mandant des Belegs, sondern
+  `T070BETR.BETART` („Betriebsnummer für Artikelstamm“). Darum joinen viele Abfragen
+  `T051ART` nur über `ARNR`. Sicher: `T051ART.MANR = (SELECT BETART FROM T070BETR WHERE MANR = <Beleg-MANR>)`.
+  → Bei uns prüfen, ob `BETART = MANR` ist.
+- **Blank statt NULL:** Kennzeichen-/Freifelder enthalten oft `' '` (ein Leerzeichen) statt NULL
+  (z.B. `T155PRGR.FREI = ' '`, `T064WGTX.UWGR = ' '`). Robust filtern mit `TRIM(spalte) IS NULL`.
+- **Preiseinheit:** Werte = Menge × Preis / `T051ART.PREIVK` (Preisfaktor 1/10/12/100/1000), z.B.
+  Lagerwert `SUM(NVL(T075LAG.EFFB,0) * NVL(T075LAG.DUPR,0) / NVL(T051ART.PREIVK,1))`
+  (`EFFB` = effektiver Bestand, `DUPR` = Durchschnittspreis). Analog Inventur `T688BEW.IST * PREISINV`.
+- **Warengruppentexte `T064WGTX`** (PK `MANR, WABE, HWGR, UWGR`): Text der Hauptwarengruppe =
+  Satz mit `UWGR = ' '`.
+- **Adressen `T056AD`:** `SART = 'K'` Kunden (am häufigsten), `'L'` Lieferanten, `'AN'`, `'AD'` selten.
+  Nebentabellen mit `MANR, SART, ADRN`: `T042WKOM` (Kommunikation, `ART` z.B. TEL1/FAX/MHS/WWW),
+  `T058ASP` (Ansprechpartner), `T355VERT` (Vertreter je Kunde, `SART='K'`, `LFDNR=1` = Hauptvertreter).
+- **Statistik-Tabellen** (fertig verdichtet, für Umsatzauswertungen bevorzugt genutzt):
+  | Tabelle | Inhalt | typische Kennzahlen / Filter |
+  |---|---|---|
+  | `T096STAT` | Statistik-Einzelsätze je Belegposition | `SART='V'` Verkauf / `'E'` Einkauf; `VKWERT`, `EKWERT`, `MENGE`, `KG`; Rohertrag = `VKWERT-EKWERT`; `GSART` L/S/B = Lager/Strecke/Besorgung; oft `WABE <> '99'` |
+  | `T155PRGR` | Kunde × Produktgruppe × Jahr | `VKGES`, `EKGES`, `MGGES`, Monatsfelder `MG01..`; Filter `TRIM(FREI) IS NULL` |
+  | `T156KUST` | Kunden-Statistik je Jahr | `VKGES`; Filter `TRIM(FREI) IS NULL` |
+  | `T153VEST` | Vertreter × Produktgruppe | Monatsumsätze `VK01..VK12`, `VTRN` |
+  | `T075STAT` | Bestands-Statistik je Stichtag | `EFFB`, `VKMENGE`, `WERT_DUPR` |
+  | `T688ZL` / `T688BEW` | Inventur Zählliste / Bewertung | `SOLL`, `IST`, `PREISDUPR`, `PREISINV`, `DATUM` |
+- **Lieferscheine `T082AULI`:** Join zu Positionen `T087POLI` über `MANR, AINR, LAUF`;
+  `T087POLI.AUFPOS` = Auftragsposition (`T086AUP.PONR`). Häufige Filter `STAT = 3` bzw. `8`
+  (Bedeutung laut Kommentar: 3 = Entnahmeschein gedruckt …). Rechnung: `T084RESU` über `MANR, KDNR, RENR`.
+- **Bestellungen:** `T141BEK` Kopf → `T146BEP` Positionen über `MANR, BENR`; Lieferant = `T056AD` mit `SART='L'`, `ADRN = KRNR`.
+- **Lagerbewegungen `T092EP.VORG`:** E Eingang, A Abgang, ID Inventurdifferenz, B Berichtigung, V Vortrag.
+- **Schlüsseldatei `T065SCH`:** generische Nachschlagetabelle (`SART` = Schlüsselart, `SCHL` = Schlüssel,
+  `BETR` = Betrieb, 0 = alle). Für Klartexte zu Codes (Versandarten, Gutschriftgründe, Touren …).
+- **Installationsabhängig – nie blind übernehmen:** Auftragsarten (`AART`), Lager-, Vertreter-,
+  Warenbereichsnummern, Freifelder (`FRA*`, `FRN*`, `FREI`, `IND*`) und deren Bedeutung.
+- `T052PR` (alte Preisdatei, 123 Verwendungen) gibt es bei uns nicht mehr → heute `T052PRDAT`.
