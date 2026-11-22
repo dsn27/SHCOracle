@@ -167,4 +167,8 @@ Alles hier gilt als **ungeprüft**, bis es auf der eigenen DB bestätigt ist.
   `'MAN'` = von Hand eingebuchte Charge – existiert nie in LogiCAL (179 mit Bestand, Stand
   2026-11-22, laufend neue). `T036MENG.DLAB` wird seit 11/2020 nicht mehr gepflegt; Chargen
   werden trotzdem auf `VERF = 0` gesetzt (9.321 Stück).
+  Artikelbestand (`T075LAG.EFFB`) ≠ Summe Chargen (`T036MENG.VERF`, LTYP 'T') ist bei HS der
+  Normalfall (nur 81 von 217 Artikel/Lager ohne Leichen stimmen; 2026-11-22). Einheit beidseitig kg,
+  kein fester Faktor; teils negativer Artikelbestand (Lager 66), teils Artikel 0 bei Chargen mit
+  Bestand (Lager 69, Lochbleche) → Chargen sind kein verlässlicher Spiegel des Artikelbestands.
   Achtung Oracle: `'' = ''` ist nie wahr (`''` ist NULL) → `TRIM(x) IS NULL` verwenden.
