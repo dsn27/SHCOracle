@@ -155,3 +155,12 @@ Alles hier gilt als **ungeprüft**, bis es auf der eigenen DB bestätigt ist.
 - `T052PR` (alte Preisdatei, 123 Verwendungen): steht nicht in `tables.csv`, aber in `columns.csv` →
   bei uns vermutlich ein **View** (auf `T052PRDAT`). `shc.t052pr` ist abfragbar (2026-11-19);
   mit `KZPR = ' ' AND WAEC = ' '` eine Zeile je Artikel (`SHC`, `MANR = 46`). Tabelle: `T052PRDAT`.
+- **LogiCAL (Blechverwaltung) ↔ SHCWare, HS (`MANR = 50`)** – geprüft 2026-11-22:
+  LogiCAL-Tabellen `DIP_BLECHE`, `DIP_MATERIAL`, `DIP_LAGER` (DevExpress XPO: `OID`, `GCRECORD`
+  ≠ NULL = gelöscht) sind aus der HS-Sitzung unqualifiziert erreichbar (Schema noch ungeklärt).
+  Charge = `T036MENG` mit `LTYP = 'T'`; Join `DIP_BLECHE.EXREF1 = T036MENG.LAGO` und
+  `DIP_MATERIAL.OID = DIP_BLECHE.MATERIAL AND DIP_MATERIAL.ARTIKELNR = T036MENG.ARNR`.
+  Aktives Blech: `GCRECORD IS NULL AND VERBRAUCHT = 0 AND AUSGEBUCHT = 0`. Eine Charge hat oft
+  mehrere aktive Bleche (528 von 1.179). Lagerplatz: `DIP_BLECHE.LAGER` → `DIP_LAGER.OID`,
+  `DIP_LAGER.VALUE` = `T036MENG.LGORT`. Abgleich: `queries/hs_blechchargen_abgleich_logical.sql`.
+  Achtung Oracle: `'' = ''` ist nie wahr (`''` ist NULL) → `TRIM(x) IS NULL` verwenden.
