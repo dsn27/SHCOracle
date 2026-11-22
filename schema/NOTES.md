@@ -163,4 +163,8 @@ Alles hier gilt als **ungeprüft**, bis es auf der eigenen DB bestätigt ist.
   Aktives Blech: `GCRECORD IS NULL AND VERBRAUCHT = 0 AND AUSGEBUCHT = 0`. Eine Charge hat oft
   mehrere aktive Bleche (528 von 1.179). Lagerplatz: `DIP_BLECHE.LAGER` → `DIP_LAGER.OID`,
   `DIP_LAGER.VALUE` = `T036MENG.LGORT`. Abgleich: `queries/hs_blechchargen_abgleich_logical.sql`.
+  `T036MENG.IDENT` (LTYP 'T', HS): Normalformat mit Sternchen-Auffüllung (z.B. `**1378.00`);
+  `'MAN'` = von Hand eingebuchte Charge – existiert nie in LogiCAL (179 mit Bestand, Stand
+  2026-11-22, laufend neue). `T036MENG.DLAB` wird seit 11/2020 nicht mehr gepflegt; Chargen
+  werden trotzdem auf `VERF = 0` gesetzt (9.321 Stück).
   Achtung Oracle: `'' = ''` ist nie wahr (`''` ist NULL) → `TRIM(x) IS NULL` verwenden.

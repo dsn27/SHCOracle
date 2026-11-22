@@ -5,6 +5,10 @@
 -- Geprüft:  2026-11-22 – 215 Zeilen (202 fehlt, 7 anderer Artikel, 2 verbraucht, 4 ausgebucht);
 --           alle Artikel existieren in DIP_MATERIAL. 1.179 Chargen sind in LogiCAL aktiv
 --           (davon 528 mit mehreren aktiven Blechen je Charge, vermutlich mehrere Tafeln).
+--           IDENT-Gruppen der 1.394 Chargen mit Bestand: alle 1.179 aktiven haben das normale
+--           Sternchen-Format (z.B. '**1378.00'); die 215 nicht aktiven: 179 'MAN' (von Hand
+--           eingebucht, nie in LogiCAL), 22 Sternchen (echte Differenzen), 12 leer (LAGO 4-stellig,
+--           8989/8990/98xx), 2 sonstige ('4711', '003153').
 -- Join:     DIP_BLECHE.EXREF1 = T036MENG.LAGO, DIP_MATERIAL.OID = DIP_BLECHE.MATERIAL,
 --           DIP_MATERIAL.ARTIKELNR = T036MENG.ARNR.
 --           Aktiv in LogiCAL: GCRECORD IS NULL AND VERBRAUCHT = 0 AND AUSGEBUCHT = 0.
@@ -47,6 +51,12 @@ select case
          when lc.anz_ausgebucht > 0       then '4 ausgebucht'
          else                                  '5 geloescht/sonstiges'
        end as zustand_logical,
+       case
+         when trim(lc.ident) = 'MAN' then 'MAN'
+         when lc.ident like '%*%'    then 'Sternchen'
+         when trim(lc.ident) is null then 'leer'
+         else                             'sonstige'
+       end as ident_gruppe,
        lc.lanr, lc.lago as charge, lc.ident, lc.arnr, a.arbe,
        lc.lgort, lc.kapaz, lc.verf, lc.dlzu, lc.dlab,
        case when lc.anz_gleicher_artikel = 0 and lc.anz_bleche > 0
