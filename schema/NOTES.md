@@ -86,6 +86,19 @@ je Mandant ein Schema.
 - **Stammdaten aus Excel aktualisieren:** bewährter Ablauf in `queries/t056ad_excel_abgleich_kunden.sql`
   (Hilfstabelle `TMP_…` → Vorschau → Sicherung `<TABELLE>_BAK_YYYYMMDD` → UPDATE/MERGE ohne
   AutoCommit → Prüfung → COMMIT). Excel-Spalten mit ILN/Nummern vorher als Text formatieren.
+- **Automatischer Datenversand `T499ISEL7`** (geprüft 2026-11-22, SHC): PK `AUSART` (Name der
+  Ausgabeart, **kein** `MANR`), Abfrage in `LSQL` (CLOB). Keine Historie, keine Sicherungskopie in
+  irgendeinem Schema. Der Versandjob läuft um ca. **05:00** und erzeugt je Ausgabeart mehrere
+  Abfragen um den `LSQL`-Text herum: `Begin DECLARE Cursor c1 is <LSQL> …`,
+  `select count(*) from (<LSQL>)`, `select * from (<LSQL>)` und eine großgeschriebene Fassung
+  ohne Zeilenumbrüche. `PERIODE` kennt neben den kommentierten Werten (T/M/W/X/Q/J) auch **`'A'`**
+  (Bedeutung unbekannt, z.B. `BESTAND KBS WEB`).
+- **Alten Wert einer Spalte wiederfinden** (z.B. überschriebenes `LSQL`): Flashback
+  (`AS OF TIMESTAMP`) reicht nur Stunden zurück; nach 2 Tagen kam `ORA-01555`. Den Text einer
+  dynamisch ausgeführten Abfrage findet man in **`V$SQL` / `V$SQLAREA`** (Benutzer hat Leserechte;
+  Text war nach 2 Tagen noch da): Filter auf `LAST_ACTIVE_TIME` vor der Änderung, Kandidaten mit
+  aktuellen Texten vergleichen (Leerzeichen per `REGEXP_REPLACE(…, '\s', '')` entfernen,
+  `DBMS_LOB.INSTR`). Ablauf: `queries/t499isel7_alten_lsql_wiederfinden.sql`.
 
 ## Fremdbestand (Abfragen eines anderen SHCWare-Kunden)
 Nur abgeleitetes, neutrales Wissen – Originale werden nicht im Repo gespeichert.
