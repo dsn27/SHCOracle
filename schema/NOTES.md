@@ -176,4 +176,6 @@ Alles hier gilt als **ungeprüft**, bis es auf der eigenen DB bestätigt ist.
   `CHARGE = '00000'` ist **kein** sicheres Leichen-Kennzeichen: 96 solcher Chargen sind in LogiCAL
   aktiv. Von Hand eingebuchte (`IDENT = 'MAN'`) haben `LSDA` mit Uhrzeit, Schnittstellen-Chargen
   ohne. Sicheres Kriterium für Leichen = kein aktives Blech in LogiCAL.
+  Trigger auf `HS.T036MENG` (2026-11-22): `T036MENG_HOCHREGALLAGER` (AFTER ROW, I/U/D),
+  `T036MENG_NULLTRIG` (BEFORE ROW, I/U/D), `T036MENG_ORAFLEX` (BEFORE ROW, I/U) – vor DML Code prüfen.
   Achtung Oracle: `'' = ''` ist nie wahr (`''` ist NULL) → `TRIM(x) IS NULL` verwenden.
