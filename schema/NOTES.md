@@ -124,6 +124,12 @@ Alles hier gilt als **ungeprüft**, bis es auf der eigenen DB bestätigt ist.
     JOIN bs.t051art  a  ON a.manr = b.betart AND a.arnr = p.arnr
     ```
     Gilt vermutlich auch für andere artikelbezogene Stammdaten (Warengruppen, Preise) – je Tabelle prüfen.
+- **Geschäftsjahr (Wirtschaftsjahr) `T070BETR.ABWIJ`** – laut SHCWare-Doku (SHC070):
+  `0` = Kalenderjahr; `1..12` = Startmonat, GJ heißt wie das Kalenderjahr des Starts;
+  `13..24` = Startmonat `ABWIJ - 12`, GJ heißt wie das **folgende** Kalenderjahr.
+  Achtung: Spaltenkommentar nennt nur 0–12 und ist damit unvollständig.
+  → **Geprüft 2026-11-22:** `SHC` (`MANR = 46`): `ABWIJ = 22` → GJ beginnt am **01.10.**,
+  GJ 24/25 (= GJ 2025) = 01.10.2024–30.09.2025. Andere Mandanten noch nicht geprüft.
 - **Blank statt NULL:** Kennzeichen-/Freifelder enthalten oft `' '` (ein Leerzeichen) statt NULL
   (z.B. `T155PRGR.FREI = ' '`, `T064WGTX.UWGR = ' '`). Robust filtern mit `TRIM(spalte) IS NULL`.
 - **Preiseinheit:** Werte = Menge × Preis / `T051ART.PREIVK` (Preisfaktor 1/10/12/100/1000), z.B.
