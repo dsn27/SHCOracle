@@ -171,4 +171,9 @@ Alles hier gilt als **ungeprüft**, bis es auf der eigenen DB bestätigt ist.
   Normalfall (nur 81 von 217 Artikel/Lager ohne Leichen stimmen; 2026-11-22). Einheit beidseitig kg,
   kein fester Faktor; teils negativer Artikelbestand (Lager 66), teils Artikel 0 bei Chargen mit
   Bestand (Lager 69, Lochbleche) → Chargen sind kein verlässlicher Spiegel des Artikelbestands.
+  View `V036CH` = Chargenübersicht mit WE-Daten (`CHARGE` = Lieferanten-Charge, `LSDA`, `KRNR`,
+  `WE_NUMMER`, Schmelz-/Zeugnis-Nr.), eindeutig je `MANR, LANR, LTYP, LAGO` (geprüft HS).
+  `CHARGE = '00000'` ist **kein** sicheres Leichen-Kennzeichen: 96 solcher Chargen sind in LogiCAL
+  aktiv. Von Hand eingebuchte (`IDENT = 'MAN'`) haben `LSDA` mit Uhrzeit, Schnittstellen-Chargen
+  ohne. Sicheres Kriterium für Leichen = kein aktives Blech in LogiCAL.
   Achtung Oracle: `'' = ''` ist nie wahr (`''` ist NULL) → `TRIM(x) IS NULL` verwenden.
