@@ -155,27 +155,73 @@ Alles hier gilt als **ungeprüft**, bis es auf der eigenen DB bestätigt ist.
 - `T052PR` (alte Preisdatei, 123 Verwendungen): steht nicht in `tables.csv`, aber in `columns.csv` →
   bei uns vermutlich ein **View** (auf `T052PRDAT`). `shc.t052pr` ist abfragbar (2026-11-19);
   mit `KZPR = ' ' AND WAEC = ' '` eine Zeile je Artikel (`SHC`, `MANR = 46`). Tabelle: `T052PRDAT`.
-- **LogiCAL (Blechverwaltung) ↔ SHCWare, HS (`MANR = 50`)** – geprüft 2026-11-22:
-  LogiCAL-Tabellen `DIP_BLECHE`, `DIP_MATERIAL`, `DIP_LAGER` (DevExpress XPO: `OID`, `GCRECORD`
-  ≠ NULL = gelöscht) sind aus der HS-Sitzung unqualifiziert erreichbar (Schema noch ungeklärt).
-  Charge = `T036MENG` mit `LTYP = 'T'`; Join `DIP_BLECHE.EXREF1 = T036MENG.LAGO` und
-  `DIP_MATERIAL.OID = DIP_BLECHE.MATERIAL AND DIP_MATERIAL.ARTIKELNR = T036MENG.ARNR`.
-  Aktives Blech: `GCRECORD IS NULL AND VERBRAUCHT = 0 AND AUSGEBUCHT = 0`. Eine Charge hat oft
-  mehrere aktive Bleche (528 von 1.179). Lagerplatz: `DIP_BLECHE.LAGER` → `DIP_LAGER.OID`,
-  `DIP_LAGER.VALUE` = `T036MENG.LGORT`. Abgleich: `queries/hs_blechchargen_abgleich_logical.sql`.
-  `T036MENG.IDENT` (LTYP 'T', HS): Normalformat mit Sternchen-Auffüllung (z.B. `**1378.00`);
-  `'MAN'` = von Hand eingebuchte Charge – existiert nie in LogiCAL (179 mit Bestand, Stand
-  2026-11-22, laufend neue). `T036MENG.DLAB` wird seit 11/2020 nicht mehr gepflegt; Chargen
-  werden trotzdem auf `VERF = 0` gesetzt (9.321 Stück).
-  Artikelbestand (`T075LAG.EFFB`) ≠ Summe Chargen (`T036MENG.VERF`, LTYP 'T') ist bei HS der
-  Normalfall (nur 81 von 217 Artikel/Lager ohne Leichen stimmen; 2026-11-22). Einheit beidseitig kg,
-  kein fester Faktor; teils negativer Artikelbestand (Lager 66), teils Artikel 0 bei Chargen mit
-  Bestand (Lager 69, Lochbleche) → Chargen sind kein verlässlicher Spiegel des Artikelbestands.
-  View `V036CH` = Chargenübersicht mit WE-Daten (`CHARGE` = Lieferanten-Charge, `LSDA`, `KRNR`,
-  `WE_NUMMER`, Schmelz-/Zeugnis-Nr.), eindeutig je `MANR, LANR, LTYP, LAGO` (geprüft HS).
-  `CHARGE = '00000'` ist **kein** sicheres Leichen-Kennzeichen: 96 solcher Chargen sind in LogiCAL
-  aktiv. Von Hand eingebuchte (`IDENT = 'MAN'`) haben `LSDA` mit Uhrzeit, Schnittstellen-Chargen
-  ohne. Sicheres Kriterium für Leichen = kein aktives Blech in LogiCAL.
-  Trigger auf `HS.T036MENG` (2026-11-22): `T036MENG_HOCHREGALLAGER` (AFTER ROW, I/U/D),
-  `T036MENG_NULLTRIG` (BEFORE ROW, I/U/D), `T036MENG_ORAFLEX` (BEFORE ROW, I/U) – vor DML Code prüfen.
-  Achtung Oracle: `'' = ''` ist nie wahr (`''` ist NULL) → `TRIM(x) IS NULL` verwenden.
+- **Oracle: Leerstring = NULL.** `x = ''` und `NVL(x, '') = ''` sind nie wahr →
+  `TRIM(x) IS NULL` verwenden (Fehler steckte in alten LogiCAL-Skripten).
+- **ORA-01799:** keine Unterabfrage im `ON` eines Outer Joins (z.B. `T051ART.MANR = (SELECT BETART …)`)
+  → Wert vorher in eine CTE holen und `CROSS JOIN`en.
+
+## LogiCAL (Blechverwaltung) ↔ SHCWare – HS (`MANR = 50`), geprüft 2026-11-22
+
+### Tabellen und Joins
+- LogiCAL-Tabellen `DIP_BLECHE`, `DIP_MATERIAL`, `DIP_LAGER` (DevExpress XPO: Schlüssel `OID`,
+  `GCRECORD IS NOT NULL` = gelöscht) sind aus der HS-Sitzung **unqualifiziert** erreichbar
+  (Besitzer-Schema / Synonym noch nicht geklärt: `all_tables`/`all_synonyms` prüfen).
+- SHCWare-Charge = `T036MENG` mit `LTYP = 'T'` (PK `MANR, LANR, LTYP, LAGO`; `LAGO` = Zugangsnummer).
+- Join Charge ↔ Blech: `DIP_BLECHE.EXREF1 = T036MENG.LAGO`
+  und `DIP_MATERIAL.OID = DIP_BLECHE.MATERIAL AND DIP_MATERIAL.ARTIKELNR = T036MENG.ARNR`.
+- Aktives Blech: `GCRECORD IS NULL AND VERBRAUCHT = 0 AND AUSGEBUCHT = 0`.
+  Eine Charge hat oft **mehrere** aktive Bleche (528 von 1.179) → vor Mengen-Joins aggregieren.
+- Lagerplatz: `DIP_BLECHE.LAGER` → `DIP_LAGER.OID`; `DIP_LAGER.VALUE` = `T036MENG.LGORT`
+  (`VALUE` nicht eindeutig → altes Skript nimmt `MIN(OID)` je `VALUE`).
+- View **`V036CH`** = Chargenübersicht mit WE-Daten: `CHARGE` (Lieferanten-Charge), `LSDA`
+  (Eingang), `KRNR`, `LIEFNAME`, `WE_NUMMER`, Schmelz-/Zeugnis-Nr., `DICKE`, `BREITE`, `KG`.
+  Eindeutig je `MANR, LANR, LTYP, LAGO`.
+
+### Kennzeichen
+- `T036MENG.IDENT` (LTYP 'T'): Chargen aus der LogiCAL-Schnittstelle haben eine Zahl mit
+  Sternchen-Auffüllung (z.B. `**1378.00`) – alle 1.179 aktiven Chargen haben dieses Format.
+- `IDENT = 'MAN'` = **von Hand eingebuchte Charge** → existiert nie in LogiCAL, wird darum nie
+  über LogiCAL verbraucht. Es entstehen laufend neue (letzte 19.11.2026). `LSDA` hat dann eine Uhrzeit.
+- `V036CH.CHARGE = '00000'` ist **kein** sicheres Leichen-Kennzeichen (96 davon sind in LogiCAL aktiv).
+  Altes Skript `… charge = '00000' and lsda < '01.01.2025'` daher nicht verwenden.
+- `T036MENG.DLAB` wird seit 11/2020 nicht mehr gepflegt; verbrauchte Chargen stehen auf `VERF = 0`
+  (9.321 Stück, `FR3` bleibt leer; nur 9 Chargen mit `FR3 = 'I'`).
+
+### Befund (Stand 2026-11-22)
+| | Chargen mit Bestand |
+|---|---|
+| aktiv in LogiCAL | 1.179 |
+| nicht aktiv in LogiCAL (= Leichen) | **215** |
+| davon `MAN` (von Hand) | 179 |
+| davon Sternchen, in LogiCAL fehlt/verbraucht/ausgebucht/gelöscht | 22 |
+| davon `IDENT` leer (LAGO 4-stellig 8989/8990/98xx, 2023–2024) | 12 |
+| davon sonstige (`4711`, `003153`, 2017) | 2 |
+| davon in LogiCAL unter **anderem Artikel** (Teilmenge der obigen) | 7 |
+Alle Artikel der 215 existieren in `DIP_MATERIAL`.
+- **Artikelbestand ≠ Chargenbestand ist bei HS der Normalfall:** `T075LAG.EFFB` = Summe
+  `T036MENG.VERF` nur bei 81 von 217 Artikel/Lager ohne Leichen. Einheit beidseitig kg, kein fester
+  Faktor. Teils negativer Artikelbestand (Lager 66), teils Artikel 0 bei Chargen mit Bestand
+  (Lager 69, Lochbleche – laut LogiCAL aktiv!). Abgang wird am Artikel gebucht, Chargen nicht
+  (vollständig) abgebaut → Chargen sind kein verlässlicher Spiegel des Artikelbestands.
+
+### Alte Skripte (vom Benutzer gefunden)
+- `MERGE INTO dip_bleche … SET lager = …`: überträgt `T036MENG.LGORT` → `DIP_BLECHE.LAGER`
+  (Richtung SHCWare → LogiCAL), dazu ein Vorschau-SELECT. Schwächen: `NVL(TRIM(lgort),'') = ''`
+  nie wahr; Vorschau joint `dip_lager` inner → Bleche ohne Lager fehlen in der Vorschau.
+
+### Trigger auf `HS.T036MENG` (vor jeder DML prüfen)
+`T036MENG_HOCHREGALLAGER` (AFTER EACH ROW, I/U/D), `T036MENG_NULLTRIG` (BEFORE EACH ROW, I/U/D),
+`T036MENG_ORAFLEX` (BEFORE EACH ROW, I/U). Code noch nicht angesehen (`all_source`).
+`T036HIST` (Protokoll Mengenänderungen: `VERF_OLD/NEW`, `OSUSER`, `PROG`) wird von keinem
+`T036HIST`-Trigger befüllt – vermutlich vom Programm selbst.
+
+### Bereinigung – Stand und nächste Schritte
+- Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für
+  Chargen); Artikelbestand bleibt, Korrektur später per Inventur.
+- 2026-11-22: Kundenliste (215 Zeilen) exportiert → `queries/hs_blechchargen_ausbuchliste_kunde.sql`.
+  **Warten auf Freigabe des Kunden** (bes. die 7 Chargen „unter anderem Artikel“).
+- Vorschlag: `VERF = 0`, `FR3` unverändert (wie normal verbrauchte Chargen) – noch nicht bestätigt.
+- Danach: Trigger-Code prüfen → `TMP_`-Hilfstabelle mit freigegebenen Chargen → Vorschau →
+  `T036MENG_BAK_YYYYMMDD` → `UPDATE` ohne AutoCommit → Prüfabfrage → `COMMIT`.
+- Offen: Warum werden `MAN`-Chargen angelegt (Prozess)? Was ist Lager 69? Mengenabgleich der
+  aktiven Chargen gegen LogiCAL (Gewicht der Tafeln) – Spalten von `DIP_BLECHE` noch unbekannt.
