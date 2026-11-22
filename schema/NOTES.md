@@ -130,6 +130,17 @@ Alles hier gilt als **ungeprüft**, bis es auf der eigenen DB bestätigt ist.
   Achtung: Spaltenkommentar nennt nur 0–12 und ist damit unvollständig.
   → **Geprüft 2026-11-22:** `SHC` (`MANR = 46`): `ABWIJ = 22` → GJ beginnt am **01.10.**,
   GJ 24/25 (= GJ 2025) = 01.10.2024–30.09.2025. Andere Mandanten noch nicht geprüft.
+  FiBu-Perioden je Wirtschaftsjahr stehen zusätzlich in `T729BPER` (`BETRIEB, JAHR, PERIODE,
+  DATUM_VON, DATUM_BIS`) – laut Statistik leer, nicht geprüft.
+- **Kundenstamm / Umsatz (aus Spaltenkommentaren, 2026-11-22, noch nicht mit Daten geprüft):**
+  - `T056AD.FR3` = Kennzeichen inaktiv: `1` = inaktiv, sonst aktiv → aktive Kunden: `NVL(FR3,0) <> 1`.
+  - `T056AD.KDSTAT` = Kundenbranche, Klartext in `T065SCH` mit `SART = 'BRANCHE'`, `SCHL = KDSTAT`.
+  - Kundenumsatz je Zeitraum: `T096STAT` mit `SART = 'V'`, Datum `REDA` (Rechnungsdatum),
+    Wert `VKWERT`, Kunde `KDNR` (= `T056AD.ADRN`). **Erst pro Kunde verdichten, dann joinen.**
+  - Mögliche Duplikate pro Kunde (PK enthält mehr als `MANR, SART, ADRN`):
+    `T042WKOM` (PK + `PERSNR, KENN, FOLGE, ART`; Firmen-Mail: `ART = 'email1'`, `PERSNR = 0`),
+    `T679ERK` (E-Rechnung, PK `MANR, KDNR, ART` – mehrere Versandarten je Kunde möglich),
+    `T337INFP` (Zusatzinfos, PK `SART, INFOKZ, MANR, SART56, ADRN`).
 - **Blank statt NULL:** Kennzeichen-/Freifelder enthalten oft `' '` (ein Leerzeichen) statt NULL
   (z.B. `T155PRGR.FREI = ' '`, `T064WGTX.UWGR = ' '`). Robust filtern mit `TRIM(spalte) IS NULL`.
 - **Preiseinheit:** Werte = Menge × Preis / `T051ART.PREIVK` (Preisfaktor 1/10/12/100/1000), z.B.
