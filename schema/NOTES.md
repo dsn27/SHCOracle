@@ -86,6 +86,17 @@ je Mandant ein Schema.
 - **Stammdaten aus Excel aktualisieren:** bewährter Ablauf in `queries/t056ad_excel_abgleich_kunden.sql`
   (Hilfstabelle `TMP_…` → Vorschau → Sicherung `<TABELLE>_BAK_YYYYMMDD` → UPDATE/MERGE ohne
   AutoCommit → Prüfung → COMMIT). Excel-Spalten mit ILN/Nummern vorher als Text formatieren.
+- **Seriennummern `T093NR`** (bestätigt 2026-11-23, SHC/MANR 46): eine Zeile je Seriennummer,
+  Bezug zum Auftrag über `MANR, AIBENR (= AINR), PONR (= Auftragspos.), LAUF (= Lieferungslauf)`.
+  `RECNUM` setzt der Trigger `T093NR_ORAFLEX` bei jedem INSERT aus der Sequence `T093NR_DFSEQ`
+  (mitgegebener Wert wird überschrieben). Von SHCWare befüllt: `BLNR = 0` (auch nach
+  Lieferscheindruck/Rechnung nicht nachgetragen), `BEDA` = Erfassungsdatum der Seriennummer
+  (bei Nacherfassung später als das Lieferdatum), `KONT` = Kundennr., `MENGE = 1`,
+  `PREIS`/`RENR`/`REDA` meist NULL, `FRN1_LG` = Lagernummer (KBS: 72).
+  Gerätestamm `T036SN` wird für KBS-Handelsartikel nicht geführt. Nacherfassung per SQL:
+  `queries/t093nr_seriennummern_nachpflegen.sql`.
+- **Dictionary-Abfragen:** `ALL_TAB_COLUMNS.DATA_DEFAULT` und `ALL_TRIGGERS.TRIGGER_BODY` sind `LONG`
+  → nicht in `UNION ALL` verwenden (ORA-01790); Trigger-Quelltext über `ALL_SOURCE`.
 
 ## Fremdbestand (Abfragen eines anderen SHCWare-Kunden)
 Nur abgeleitetes, neutrales Wissen – Originale werden nicht im Repo gespeichert.
