@@ -93,7 +93,8 @@ je Mandant ein Schema.
   Lieferscheindruck/Rechnung nicht nachgetragen), `BEDA` = Erfassungsdatum der Seriennummer
   (bei Nacherfassung später als das Lieferdatum), `KONT` = Kundennr., `MENGE = 1`,
   `PREIS`/`RENR`/`REDA` meist NULL, `FRN1_LG` = Lagernummer (KBS: 72).
-  Gerätestamm `T036SN` wird für KBS-Handelsartikel nicht geführt. Nacherfassung per SQL:
+  Gerätestamm `T036SN` wird für KBS-Handelsartikel nicht geführt. Nacherfassung per SQL
+  (nur `T093NR`, im SHCWare korrekt angezeigt):
   `queries/t093nr_seriennummern_nachpflegen.sql`.
 - **Dictionary-Abfragen:** `ALL_TAB_COLUMNS.DATA_DEFAULT` und `ALL_TRIGGERS.TRIGGER_BODY` sind `LONG`
   → nicht in `UNION ALL` verwenden (ORA-01790); Trigger-Quelltext über `ALL_SOURCE`.

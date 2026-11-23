@@ -3,7 +3,8 @@
 --           erfassen (T093NR, eine Zeile je Seriennummer)
 -- Mandant : SHC / KBS (MANR = 46, Lager 72) – für andere Mandanten Schema/MANR/Lager anpassen
 -- Geprüft : 2026-11-23 – Auftrag 1620725 Pos. 1, Artikel 110784, Lieferschein 1376369 Lauf 1,
---           4 Seriennummern eingefügt (RECNUM 404356–404359 per Trigger)
+--           4 Seriennummern eingefügt (RECNUM 404356–404359 per Trigger), committet,
+--           Anzeige im SHCWare danach korrekt
 --
 -- ACHTUNG : Ändert Produktivdaten! Nur auf ausdrücklichen Wunsch, AutoCommit AUS,
 --           alle Schritte im selben SQL-Fenster.
