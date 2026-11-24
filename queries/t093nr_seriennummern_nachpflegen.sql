@@ -4,7 +4,12 @@
 -- Mandant : SHC / KBS (MANR = 46, Lager 72) – für andere Mandanten Schema/MANR/Lager anpassen
 -- Geprüft : 2026-11-23 – Auftrag 1620725 Pos. 1, Artikel 110784, Lieferschein 1376369 Lauf 1,
 --           4 Seriennummern eingefügt (RECNUM 404356–404359 per Trigger), committet,
---           Anzeige im SHCWare danach korrekt
+--           Anzeige im SHCWare danach korrekt.
+--           2026-11-24 – Auftrag 1619402 Pos. 1 über zwei Lieferscheine (Kunde schreibt
+--           „1619402/01“, „/02“ = LAUF!): Variante mit Zuordnung je Lauf, siehe Schritt 4b.
+-- Hinweise: Kunden schreiben Seriennummern teils mit Leerzeichen („FR 020195922“) → ohne
+--           Leerzeichen erfassen (so stehen sie in T093NR). Vor dem Einfügen immer Schritt 3:
+--           dieselbe Nummer wurde einmal für zwei Aufträge genannt (Tippfehler des Kunden).
 --
 -- ACHTUNG : Ändert Produktivdaten! Nur auf ausdrücklichen Wunsch, AutoCommit AUS,
 --           alle Schritte im selben SQL-Fenster.
@@ -79,6 +84,26 @@ select 0, l.manr, s.nr, trim(l.arnr), trim(l.kdnr), 0, l.lauf, trunc(sysdate),
    and l.aufpos = 1
    and not exists (select 1 from shc.t093nr n
                     where upper(trim(n.nummer)) = s.nr);
+
+
+-- -------------------------------------------------------------------------------------
+-- Schritt 4b: Variante für mehrere Lieferscheine (Läufe) – Lauf je Seriennummer angeben,
+--             Lager aus der Auftragsposition
+-- -------------------------------------------------------------------------------------
+insert into shc.t093nr
+       (recnum, manr, nummer, arnr, kont, blnr, lauf, beda,
+        aibenr, ponr, menge, preis, renr, reda, frn1_lg)
+select 0, l.manr, s.nr, trim(l.arnr), trim(l.kdnr), 0, l.lauf, trunc(sysdate),
+       l.ainr, l.aufpos, 1, null, null, null, p.lanr
+  from (select 1 as lauf, 'FR020195682' as nr from dual union all
+        select 2,         'FR020195922'       from dual union all
+        select 2,         'FR020195918'       from dual) s
+  join shc.t087poli l
+    on l.manr = 46 and l.ainr = 1619402 and l.aufpos = 1 and l.lauf = s.lauf
+  join shc.t086aup p
+    on p.manr = l.manr and p.ainr = l.ainr and p.ponr = l.aufpos
+ where not exists (select 1 from shc.t093nr n
+                    where upper(replace(n.nummer, ' ', '')) = s.nr);
 
 
 -- -------------------------------------------------------------------------------------
