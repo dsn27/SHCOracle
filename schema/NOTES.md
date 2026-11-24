@@ -100,6 +100,9 @@ je Mandant ein Schema.
   Die SHCWare-Suche über die Auftragsnummer zeigt aber nur die Seriennummern aus Lauf 1
   (bestätigt 2026-11-24 an 1619098: nur `P` sichtbar, `P1929438` aus Lauf 2 nicht) → kein Datenfehler.
   Kunden schreiben „Auftrag/01“, „/02“ = Lieferschein-Lauf.
+  `T087POLI.GERE` („Gerätenr. erfasst J/N“) ist **kein** verlässlicher Marker: von ~4.060 Lieferpositionen
+  mit Seriennummern (AINR ≥ 1615000) haben nur 514 `J`, 3.343 `N`, 205 `' '` (geprüft 2026-11-24)
+  → bei Nacherfassung nicht anpassen.
 - **Dictionary-Abfragen:** `ALL_TAB_COLUMNS.DATA_DEFAULT` und `ALL_TRIGGERS.TRIGGER_BODY` sind `LONG`
   → nicht in `UNION ALL` verwenden (ORA-01790); Trigger-Quelltext über `ALL_SOURCE`.
 
