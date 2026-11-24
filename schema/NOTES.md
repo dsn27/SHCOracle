@@ -96,6 +96,10 @@ je Mandant ein Schema.
   Gerätestamm `T036SN` wird für KBS-Handelsartikel nicht geführt. Nacherfassung per SQL
   (nur `T093NR`, im SHCWare korrekt angezeigt):
   `queries/t093nr_seriennummern_nachpflegen.sql`.
+  Teillieferungen: SHCWare speichert die Seriennummern im `LAUF` der jeweiligen Lieferung (2, 3, 4 …).
+  Die SHCWare-Suche über die Auftragsnummer zeigt aber nur die Seriennummern aus Lauf 1
+  (bestätigt 2026-11-24 an 1619098: nur `P` sichtbar, `P1929438` aus Lauf 2 nicht) → kein Datenfehler.
+  Kunden schreiben „Auftrag/01“, „/02“ = Lieferschein-Lauf.
 - **Dictionary-Abfragen:** `ALL_TAB_COLUMNS.DATA_DEFAULT` und `ALL_TRIGGERS.TRIGGER_BODY` sind `LONG`
   → nicht in `UNION ALL` verwenden (ORA-01790); Trigger-Quelltext über `ALL_SOURCE`.
 
