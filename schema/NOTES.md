@@ -86,23 +86,48 @@ je Mandant ein Schema.
 - **Stammdaten aus Excel aktualisieren:** bewährter Ablauf in `queries/t056ad_excel_abgleich_kunden.sql`
   (Hilfstabelle `TMP_…` → Vorschau → Sicherung `<TABELLE>_BAK_YYYYMMDD` → UPDATE/MERGE ohne
   AutoCommit → Prüfung → COMMIT). Excel-Spalten mit ILN/Nummern vorher als Text formatieren.
-- **Seriennummern `T093NR`** (bestätigt 2026-11-23, SHC/MANR 46): eine Zeile je Seriennummer,
+- **Seriennummern `T093NR`** (bestätigt 2026-11-23/24, SHC/MANR 46): eine Zeile je Seriennummer,
   Bezug zum Auftrag über `MANR, AIBENR (= AINR), PONR (= Auftragspos.), LAUF (= Lieferungslauf)`.
   `RECNUM` setzt der Trigger `T093NR_ORAFLEX` bei jedem INSERT aus der Sequence `T093NR_DFSEQ`
-  (mitgegebener Wert wird überschrieben). Von SHCWare befüllt: `BLNR = 0` (auch nach
-  Lieferscheindruck/Rechnung nicht nachgetragen), `BEDA` = Erfassungsdatum der Seriennummer
-  (bei Nacherfassung später als das Lieferdatum), `KONT` = Kundennr., `MENGE = 1`,
-  `PREIS`/`RENR`/`REDA` meist NULL, `FRN1_LG` = Lagernummer (KBS: 72).
-  Gerätestamm `T036SN` wird für KBS-Handelsartikel nicht geführt. Nacherfassung per SQL
-  (nur `T093NR`, im SHCWare korrekt angezeigt):
-  `queries/t093nr_seriennummern_nachpflegen.sql`.
-  Teillieferungen: SHCWare speichert die Seriennummern im `LAUF` der jeweiligen Lieferung (2, 3, 4 …).
-  Die SHCWare-Suche über die Auftragsnummer zeigt aber nur die Seriennummern aus Lauf 1
-  (bestätigt 2026-11-24 an 1619098: nur `P` sichtbar, `P1929438` aus Lauf 2 nicht) → kein Datenfehler.
-  Kunden schreiben „Auftrag/01“, „/02“ = Lieferschein-Lauf.
-  `T087POLI.GERE` („Gerätenr. erfasst J/N“) ist **kein** verlässlicher Marker: von ~4.060 Lieferpositionen
-  mit Seriennummern (AINR ≥ 1615000) haben nur 514 `J`, 3.343 `N`, 205 `' '` (geprüft 2026-11-24)
-  → bei Nacherfassung nicht anpassen.
+  (mitgegebener Wert wird überschrieben; Quelltext gelesen).
+  Beobachtete Befüllung durch SHCWare (Zeilen Sep.–Nov. 2026): `BLNR = 0` (auch bei längst gedruckten/
+  berechneten Lieferscheinen), `BEDA` = Datum der Erfassung (kann nach dem Lieferdatum liegen),
+  `KONT` = Kundennr., `MENGE = 1`, `PREIS`/`RENR`/`REDA` fast immer NULL, `FRN1_LG` = Lagernummer
+  (KBS: 72). Bei Teillieferungen steht die Seriennummer im `LAUF` der jeweiligen Lieferung (2, 3, 4 …).
+  Für Artikel 110784 bzw. die Seriennummern `…020195…` gibt es keine Zeilen im Gerätestamm `T036SN`.
+- **SHCWare-Anzeige der Seriennummern** (bestätigt 2026-11-24): Die Suche über die Auftragsnummer zeigt
+  nur Seriennummern aus Lauf 1 (Gegenprobe 1619098: `P` aus Lauf 1 sichtbar, `P1929438` aus Lauf 2 nicht).
+  Per SQL nachgetragene Nummern in Lauf 1 werden dort angezeigt.
+- **Rechnungsdruck und Seriennummern – OFFEN** (Stand 2026-11-24):
+  - Nachträglich (nach dem Rechnungsdruck) per SQL in `T093NR` erfasste Nummern erscheinen auf dem
+    Rechnungs-Duplikat **nicht** (Rechnungen 506133, 505980). Auch zusätzliche Zeilen in `T487KOM4` ändern
+    daran nichts (505980).
+  - Rechnung 504576 (1617025 Lauf 2, Nummern von SHCWare vor der Rechnung erfasst) zeigt die Nummern im
+    Duplikat.
+  - Ursache **unbekannt**. Kein Unterschied gefunden in `T093NR`, `T487KOM4`, `T087POLI.GERE/STAT/FSTAT`,
+    `T089KTXT` (keine Kurztexte bei beiden Aufträgen).
+  - `T487KOM4` wird laut `ALL_DEPENDENCIES` von keinem Druck-Package gelesen (nur `SHC_ONLKOM*`,
+    `SHC_T056AEN`, `SHC_T056L`).
+  - `T093NR` lesen u.a. `REP_REPORTCURSOR_PKG`, `NET_REPORT_PKG`, `SHC_FAKT`, `SHC_FAK1`,
+    `SHC_DRUCKVK_ST`, `SHC_LE_DRUCK` (vollständige Liste über `ALL_DEPENDENCIES`). Nächster belastbarer
+    Schritt: deren Quelltext (`ALL_SOURCE`) an den `T093NR`-Stellen lesen oder SHCWare-Support fragen.
+- **Rechnungsdruck-Zwischentabellen** (bestätigt 2026-11-24): Jeder Druck einer Rechnung, auch ein Duplikat,
+  erzeugt eine neue `DRUCKID` in `T653ZRAK` (Kopf) / `T655ZRAP` (Positionen); ältere Drucke bleiben stehen.
+  `T653ZRAK.AUSDRUCK` ist nicht der Druckzeitpunkt (bei allen Drucken einer Rechnung gleich, 00:00).
+  Seriennummern stehen weder in `T655ZRAP.SP41–SP100` noch in `KTEXT1_VOR`/`KTEXT2_NACH` (geprüft an 504576).
+- **Kommissionierung `T487KOM1/3/4`** (bestätigt 2026-11-24): `T487KOM3` = kommissionierte Position
+  (`AINR, LAUF, POS`, kein `MANR`; Mandant über `T487KOM1.MANR` via `KOM3.IDKOM1 = KOM1.ID`).
+  `T487KOM4` = Seriennummern dazu (`IDKOM3` → `KOM3.ID`, Oracle-FK; `IDKOM1`), von der Kommissionierung
+  gleichzeitig mit `T093NR` geschrieben. Befüllung: `BLNR = 1`, `BEDA` NULL, `KDNR`, `ARNR`, `MENGE = 1`.
+  `ID` aus Sequence `T487KOM4_SEQ`, kein Trigger. Nicht jeder Auftrag ist kommissioniert (1620725 hat
+  keine `T487KOM3`-Zeile).
+- **Kennzeichen `T087POLI.GERE`** („Gerätenr. erfasst J/N“) passt nicht zu vorhandenen Seriennummern: von
+  ~4.060 Lieferpositionen mit Seriennummern (AINR ≥ 1615000) haben 514 `J`, 3.343 `N`, 205 `' '`.
+- Kunden schreiben „Auftrag/01“, „/02“ = Lieferschein-Lauf. Seriennummern teils mit Leerzeichen
+  („FR 020195922“); in `T093NR` stehen sie ohne.
+- Nacherfassung per SQL: `queries/t093nr_seriennummern_nachpflegen.sql` (inkl. Änderungsprotokoll).
+- **`ALL_DEPENDENCIES`**: zeigt, welche Packages/Trigger/Views eine Tabelle verwenden – belastbarer
+  Einstieg, um Programmlogik zu finden, statt zu raten.
 - **Dictionary-Abfragen:** `ALL_TAB_COLUMNS.DATA_DEFAULT` und `ALL_TRIGGERS.TRIGGER_BODY` sind `LONG`
   → nicht in `UNION ALL` verwenden (ORA-01790); Trigger-Quelltext über `ALL_SOURCE`.
 

@@ -2,14 +2,27 @@
 -- Zweck   : Seriennummern zu einer bereits gelieferten Auftragsposition nachträglich
 --           erfassen (T093NR, eine Zeile je Seriennummer)
 -- Mandant : SHC / KBS (MANR = 46, Lager 72) – für andere Mandanten Schema/MANR/Lager anpassen
--- Geprüft : 2026-11-23 – Auftrag 1620725 Pos. 1, Artikel 110784, Lieferschein 1376369 Lauf 1,
---           4 Seriennummern eingefügt (RECNUM 404356–404359 per Trigger), committet,
---           Anzeige im SHCWare danach korrekt.
---           2026-11-24 – Auftrag 1619402 Pos. 1 über zwei Lieferscheine (Kunde schreibt
---           „1619402/01“, „/02“ = LAUF!): Variante mit Zuordnung je Lauf, siehe Schritt 4b.
--- Hinweise: Kunden schreiben Seriennummern teils mit Leerzeichen („FR 020195922“) → ohne
---           Leerzeichen erfassen (so stehen sie in T093NR). Vor dem Einfügen immer Schritt 3:
---           dieselbe Nummer wurde einmal für zwei Aufträge genannt (Tippfehler des Kunden).
+-- Geprüft : 2026-11-23/24 – Aufträge 1620725 und 1619402 (siehe Änderungsprotokoll unten).
+--           Ergebnis: Nummern stehen in T093NR wie von SHCWare angelegt; in der SHCWare-Suche
+--           über die Auftragsnummer sichtbar (diese zeigt grundsätzlich nur Lauf 1).
+-- EINSCHRÄNKUNG (offen): Auf dem Rechnungs-Duplikat erscheinen so nachgetragene Nummern
+--           NICHT (geprüft 506133, 505980). Ursache unbekannt – siehe schema/NOTES.md,
+--           „Rechnungsdruck und Seriennummern – OFFEN“. Wer die Nummern auf der Rechnung
+--           braucht: vorher klären (SHCWare-Support bzw. Quelltext der Druck-Packages).
+-- Hinweise: Kunden schreiben „Auftrag/01“, „/02“ = Lieferschein-Lauf (LAUF), siehe Schritt 4b.
+--           Seriennummern teils mit Leerzeichen („FR 020195922“) → ohne Leerzeichen erfassen
+--           (so stehen sie in T093NR). Vor dem Einfügen immer Schritt 3: dieselbe Nummer wurde
+--           einmal für zwei Aufträge genannt (Tippfehler des Kunden).
+--
+-- Änderungsprotokoll (Produktiv, SHC/MANR 46, alle committet):
+--   2026-11-23  T093NR  +4  1620725 Lauf 1 Pos 1  FR020195678–681       RECNUM 404356–404359
+--   2026-11-24  T093NR  +3  1619402 Lauf 1 Pos 1  FR020195682           RECNUM 404409
+--                           1619402 Lauf 2 Pos 1  FR020195918, …922     RECNUM 404411, 404410
+--   2026-11-24  T487KOM4 +3 1619402 (IDKOM3 265815 / 266348), dieselben 3 Nummern, ID aus
+--                           T487KOM4_SEQ (≥ 188282). Versuch für den Rechnungsdruck – ohne
+--                           Wirkung; entspricht dem, was die Kommissionierung schreibt, bleibt
+--                           stehen. Rückgängig: delete from shc.t487kom4 where ainr = 1619402
+--                           and idkom3 in (265815, 266348);
 --
 -- ACHTUNG : Ändert Produktivdaten! Nur auf ausdrücklichen Wunsch, AutoCommit AUS,
 --           alle Schritte im selben SQL-Fenster.
@@ -19,11 +32,11 @@
 --             (mitgegebener Wert wird überschrieben → Platzhalter 0)
 --   BLNR    = 0 (wird auch nach Lieferscheindruck/Rechnung NICHT nachgetragen)
 --   LAUF    = Lauf der Lieferung (T087POLI.LAUF)
---   BEDA    = Erfassungsdatum der Seriennummer (bei Nacherfassung = Tag der Erfassung)
+--   BEDA    = Datum der Erfassung (bei SHCWare teils nach dem Lieferdatum); hier TRUNC(SYSDATE)
 --   KONT    = Kundennummer, AIBENR = AINR, PONR = Auftragsposition (T087POLI.AUFPOS)
 --   MENGE   = 1, PREIS/RENR/REDA = NULL, FRN1_LG = Lagernummer (T081AUK/T086AUP.LANR)
---   T036SN (Gerätestamm) wird bei KBS-Handelsartikeln nicht geführt → nichts mitpflegen.
--- Platzhalter unten: :manr, :ainr, :ponr, Seriennummern, Lager 72
+--   T036SN (Gerätestamm): für Artikel 110784 / Serie …020195… keine Zeilen → nicht gepflegt.
+-- Anpassen: MANR, AINR, LAUF, Position und Seriennummern stehen unten als feste Werte.
 -- =====================================================================================
 
 
