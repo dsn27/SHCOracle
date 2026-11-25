@@ -245,8 +245,17 @@ In allen Fällen: `VERF → 0`, **`FR3` unverändert**, `ANZAHL` unverändert (m
   `FRN2 = -3` = Markierung dieser Bereinigung (wird zu Beginn auf 0 zurückgesetzt).
 - `SET_INFOS('UEB_ALTCHG_AUSBUCH','DP',50,…)` wird **nach** dem UPDATE aufgerufen → wirkt erst auf
   die nächste Zeile (Fehler; richtig: vorher aufrufen).
-- Danach je Artikel/Lager mit `FRN2 = -3`: lokale Funktion `Abgleich(50, lanr, arnr, 'DIP', 'DIP')`
-  – vermutlich Abgleich Artikelbestand `T075LAG` an die Chargen (Code noch nicht gesehen).
+- Stichtag `c_cutoff_date = DATE '2022-01-01'` (nur `00000`-Chargen mit Eingang vor 2022).
+- Danach je Artikel/Lager mit `FRN2 = -3`: lokale Funktion `Abgleich(50, lanr, arnr, 'DIP', 'DIP')`:
+  - `Summe_t036`: Summe der Chargen (`LTYP IN ('T','K')`, `VERF > 0`, `FR3 <> 'I'`), umgerechnet
+    nach `T051ART.BERKZ` (bei `FORMATV = 'J'` wie `'4'`): `'3'/'4'` → `VERF`; `'1'` → × `THHGW`;
+    `'2'` → `VERF` bzw. `ANZAHL × KAPAZ`; `'5'` → über `T636MENG` (`DICKE`, `BREITE`; Join
+    `T636MENG.ZUNR = T036MENG.LAGO`); gerundet mit `SHC_STAHL.STAHL_RUNDEN`.
+  - `T075LAG.VERF := Summe Chargen`, `EFFB := Summe + (EFFB_alt − VERF_alt)`, `EPZAE := max EPNR + 1`.
+  - Bewegung in `T092EP`: `VORG = 'B'` (Berichtigung), `MENGE` = neu − alt, `EIPR = 0`,
+    `TEXT = 'DIP'`; vorher `SET_INFOS(prog, 'K', manr, 0, 0, 0)`.
+  - **D.h. der Artikelbestand wird komplett auf die Chargensumme gesetzt** (nimmt auch alle
+    anderen Differenzen mit), nicht nur um die ausgebuchte Menge reduziert.
 
 ### Bereinigung – Stand und nächste Schritte
 - Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für
