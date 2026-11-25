@@ -220,6 +220,18 @@ Alle Artikel der 215 existieren in `DIP_MATERIAL`.
   bei `LTYP = 'R'` zusätzlich `T069LGORT`. Fehler werden nur über `SHC_PROTOKOLL('FM', …)`
   protokolliert, die Exception wird geschluckt (kein Abbruch).
 - Keiner der Trigger ändert direkt `T075LAG`.
+- `SHC_BESTAND.PROTOKOLL36` schreibt nur `T036HIST` (bei Änderung von VERF/ANZAHL/SOLL/IST/FR3/4/5
+  oder INSERT); `PROG`, `VART`, `VORGANG` … kommen aus Package-Globals (`pProg` …), sonst leer.
+  Fehler beim Insert → `RAISE` (DML bricht ab). Keine weiteren Seiteneffekte.
+
+### Wie SHCWare Chargen ausbucht (`T036HIST`, HS, LTYP 'T', 12/2025–11/2026)
+| PROG | VART | Anzahl | Muster |
+|---|---|---|---|
+| `UEB_DIP_CHARGENBEST` | DP | 2.963 | LogiCAL-Schnittstelle (laufend) |
+| `UEB_ALTCHG_AUSBUCH` | DP | 262 | einmalige Altchargen-Bereinigung am 17.01.2026 (16:53–17:14) |
+| (leer) | | 24 + 8 | SQL von Hand (8× zusätzlich `ANZAHL 1 → 0`) |
+| `SHC036LCV` | K | 5 | Programm SHC036 |
+In allen Fällen: `VERF → 0`, **`FR3` unverändert**, `ANZAHL` unverändert (meist 1).
 
 ### Bereinigung – Stand und nächste Schritte
 - Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für

@@ -12,6 +12,10 @@
 --           Schlägt das fehl, bricht das UPDATE ab (RAISE). T036MENG_HOCHREGALLAGER legt ggf.
 --           den Lagerort (T036LGORT) an – harmlos. Kein Trigger ändert T075LAG.
 --
+-- Methode : VERF = 0, FR3 und ANZAHL unverändert – so bucht auch die LogiCAL-Schnittstelle
+--           (PROG UEB_DIP_CHARGENBEST) und die Altchargen-Bereinigung vom 17.01.2026
+--           (PROG UEB_ALTCHG_AUSBUCH) aus (T036HIST geprüft 2026-11-25).
+--
 -- ACHTUNG : Ändert Produktivdaten! AutoCommit in PL/SQL Developer AUS.
 -- =====================================================================================
 
