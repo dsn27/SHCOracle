@@ -266,7 +266,13 @@ In allen Fällen: `VERF → 0`, **`FR3` unverändert**, `ANZAHL` unverändert (m
   nicht vorhanden“ (`IDENT = 'MAN'`, kein Blech in LogiCAL) werden ausgebucht. Die übrigen
   (Sternchen, leer, sonstige, anderer Artikel) bleiben vorerst stehen.
   Abgrenzung auf den Stand der Kundenliste: `V036CH.LSDA < DATE '2026-11-23'`.
-- Vorschlag: `VERF = 0`, `FR3` unverändert (wie normal verbrauchte Chargen) – noch nicht bestätigt.
+- Methode bestätigt (T036HIST): `VERF = 0`, `FR3`/`ANZAHL` unverändert.
+- Hilfstabelle `HS.TMP_BLECH_MAN_20261125` (179 Chargen, 28.579,86 kg), Vorschau ok (2026-11-25).
+- Auswirkung auf Artikelbestand (135 Artikel/Lager, alle `FORMATV = 'J'` → Chargensumme = `VERF`):
+  nur 34× gilt Artikel = übrige Chargen + MAN. Variante „Artikel − MAN“ → 64 Artikel negativ
+  (−2.821,69 kg). Variante `Abgleich` (Artikel = Chargensumme) → netto −19.316,63 kg, davon
+  12 Erhöhungen (+4.663,74 kg; v.a. 103802 1.4539 Lager 66: +4.151,2 kg). 28 Artikel schon ≤ 0.
+  → Die MAN-Mengen sind am Artikel oft schon (teilweise) abgebucht.
 - Danach: Trigger-Code prüfen → `TMP_`-Hilfstabelle mit freigegebenen Chargen → Vorschau →
   `T036MENG_BAK_YYYYMMDD` → `UPDATE` ohne AutoCommit → Prüfabfrage → `COMMIT`.
 - Offen: Warum werden `MAN`-Chargen angelegt (Prozess)? Was ist Lager 69? Mengenabgleich der

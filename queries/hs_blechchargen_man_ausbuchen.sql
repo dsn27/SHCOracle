@@ -77,3 +77,15 @@ select count(*)                                                as anz_tmp,
   left join (select distinct exref1 from dip_bleche) d
          on d.exref1 = x.lago;
 -- Ergebnis 2026-11-25 vorher: 179 gefunden, 179 mit Bestand, alle übrigen 0, Summe 28.579,86 kg.
+
+
+-- -------------------------------------------------------------------------------------
+-- Schritt 3: Sicherung der betroffenen Zeilen (erwartet 179)
+-- -------------------------------------------------------------------------------------
+create table hs.t036meng_bak_20261125 as
+select t.*
+  from hs.t036meng t
+ where (t.manr, t.lanr, t.ltyp, t.lago) in
+       (select x.manr, x.lanr, x.ltyp, x.lago from hs.tmp_blech_man_20261125 x);
+
+select count(*) as anz, sum(verf) as summe_verf from hs.t036meng_bak_20261125;
