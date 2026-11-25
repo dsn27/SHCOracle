@@ -1,7 +1,10 @@
 -- =====================================================================================
 -- Zweck   : Von Hand eingebuchte Blech-Chargen (T036MENG.IDENT = 'MAN'), die es in LogiCAL
 --           nicht gibt (kein DIP_BLECHE mit EXREF1 = LAGO), in SHCWare ausbuchen (VERF = 0).
---           Nur der Chargenbestand – Artikelbestand T075LAG bleibt unverändert.
+--           Danach Artikelbestand je betroffenem Artikel/Lager wie die Altchargen-Bereinigung vom
+--           17.01.2026 (HS.UEBERNAHME_ALT_AUSBUCHEN, lokale Funktion Abgleich) auf die Summe der
+--           Chargen setzen: T075LAG.VERF/EFFB + Berichtigungsbuchung T092EP (VORG 'B', EIPR 0).
+--           Entscheidung Benutzer 2026-11-25: Variante B (wie Januar).
 -- Mandant : HS (MANR = 50)
 -- Freigabe: Kunde 2026-11-25 (Grund „Von Hand eingebucht, in LogiCAL nicht vorhanden“ aus
 --           queries/hs_blechchargen_ausbuchliste_kunde.sql, Export vom 22.11.2026)
@@ -89,3 +92,171 @@ select t.*
        (select x.manr, x.lanr, x.ltyp, x.lago from hs.tmp_blech_man_20261125 x);
 
 select count(*) as anz, sum(verf) as summe_verf from hs.t036meng_bak_20261125;
+
+-- Zusätzlich Artikelbestand sichern (erwartet 135 Artikel/Lager):
+create table hs.t075lag_bak_20261125 as
+select l.*
+  from hs.t075lag l
+ where l.manr = 50
+   and (l.lanr, l.arnr) in
+       (select distinct x.lanr, x.arnr from hs.tmp_blech_man_20261125 x);
+
+select count(*) as anz, sum(verf) as summe_verf, sum(effb) as summe_effb
+  from hs.t075lag_bak_20261125;
+
+
+-- -------------------------------------------------------------------------------------
+-- Schritt 4: Ausbuchen + Abgleich (PL/SQL-Block, AutoCommit AUS!)
+--   - Set_Infos VOR jedem UPDATE (PROTOKOLL36 setzt die Globals nach jedem Satz zurück)
+--   - Summe_t036/Abgleich 1:1 aus HS.UEBERNAHME_ALT_AUSBUCHEN, aber OHNE "when others"
+--     → jeder Fehler bricht den ganzen Block ab, Oracle macht alle Änderungen des Blocks rückgängig
+--   - Der Block macht KEIN commit.
+-- -------------------------------------------------------------------------------------
+declare
+  c_prog  constant varchar2(50) := 'UEB_MANCHG_AUSBUCH';
+  c_text  constant varchar2(20) := 'MANCHG AUSBUCH';
+  cnt_chg pls_integer := 0;
+  cnt_art pls_integer := 0;
+
+  function summe_t036(inManr in number, inLanr in number, inArnr in varchar2) return number is
+    nBetlag hs.t036meng.lanr%type;
+    nBetArt hs.t036meng.manr%type;
+    cursor ct051art is
+      select thhgw, berkz, txmevk, formatv, katr
+        from hs.t051art
+       where manr = nBetArt
+         and arnr = inArnr;
+    xT051Art ct051art%rowtype;
+    cursor ct036meng is
+      select a.anzahl, a.kapaz, a.verf, b.breite, b.dicke, a.kzlv, a.ltyp
+        from hs.t036meng a, hs.t636meng b
+       where a.manr = nBetlag
+         and a.arnr = inArnr
+         and a.lanr = inLanr
+         and a.manr = b.manr(+)
+         and a.arnr = b.arnr(+)
+         and a.lanr = b.lanr(+)
+         and a.lago = b.zunr(+)
+         and a.verf > 0
+         and nvl(a.fr3, ' ') != 'I'
+         and nvl(a.ltyp, ' ') in ('T', 'K');
+    l_menge number := 0;
+    r_summe number;
+    l_berkz varchar2(1);
+  begin
+    nBetArt := hs.shc_util.get_betart(inManr);
+    nBetlag := hs.shc_util.get_betlag(inManr, inLanr);
+    open ct051art;
+    fetch ct051art into xT051Art;
+    close ct051art;
+    if xT051Art.formatv = 'J' then
+      l_berkz := '4';
+    else
+      l_berkz := xT051Art.berkz;
+    end if;
+    for x in ct036meng loop
+      r_summe := null;
+      if l_berkz = '1' then
+        if x.kzlv = 'V' then r_summe := x.verf * xT051Art.thhgw;
+        else                 r_summe := x.anzahl * x.kapaz * xT051Art.thhgw;
+        end if;
+      elsif l_berkz = '2' then
+        if x.kzlv = 'V' then r_summe := x.verf;
+        else                 r_summe := x.anzahl * x.kapaz;
+        end if;
+      elsif l_berkz in ('3', '4') then
+        r_summe := x.verf;
+      elsif l_berkz = '5' then
+        if upper(rtrim(xT051Art.txmevk)) = 'QM' then
+          r_summe := x.verf * (x.breite / 1000);
+        else
+          r_summe := (x.dicke * x.breite * x.kapaz / 1000) * xT051Art.thhgw * x.anzahl;
+        end if;
+      end if;
+      if x.ltyp = 'K' then
+        r_summe := x.verf;
+      end if;
+      l_menge := nvl(l_menge, 0) + nvl(r_summe, 0);
+    end loop;
+    return nvl(hs.shc_stahl.stahl_runden(l_menge, nBetArt, inArnr), 0);
+  end summe_t036;
+
+  procedure abgleich(inManr in number, inLanr in number, inArnr in varchar2) is
+    nBetlag hs.t036meng.lanr%type;
+    cursor ct092ep is
+      select max(epnr) from hs.t092ep
+       where manr = nBetlag and arnr = inArnr and lanr = inLanr;
+    cursor ct075lag is
+      select rowid rid, effb, verf from hs.t075lag
+       where manr = nBetlag and lanr = inLanr and arnr = inArnr
+         for update;
+    x75          ct075lag%rowtype;
+    l_anz        pls_integer;
+    l_summe_verf number;
+    l_effb_neu   number;
+    l_buch_menge number;
+    l_maxepnr    number;
+  begin
+    nBetlag := hs.shc_util.get_betlag(inManr, inLanr);
+    l_summe_verf := summe_t036(inManr, inLanr, inArnr);
+    hs.shc_bestand.set_infos(c_prog, 'K', inManr, 0, 0, 0);
+
+    select count(*) into l_anz from hs.t075lag
+     where manr = nBetlag and lanr = inLanr and arnr = inArnr;
+    if l_anz = 0 then
+      insert into hs.t075lag (manr, lanr, arnr) values (nBetlag, inLanr, inArnr);
+    end if;
+
+    open ct075lag;
+    fetch ct075lag into x75;
+    close ct075lag;
+
+    l_effb_neu   := nvl(l_summe_verf, 0) + (nvl(x75.effb, 0) - nvl(x75.verf, 0));
+    l_buch_menge := nvl(l_summe_verf, 0) - nvl(x75.verf, 0);
+
+    open ct092ep;
+    fetch ct092ep into l_maxepnr;
+    close ct092ep;
+    l_maxepnr := nvl(l_maxepnr, 0) + 1;
+
+    update hs.t075lag
+       set verf  = l_summe_verf,
+           effb  = l_effb_neu,
+           epzae = l_maxepnr
+     where rowid = x75.rid;
+
+    insert into hs.t092ep
+      (manr, arnr, lanr, epnr, vorg, datwz, blnr, beda, reda, menge, eipr, text)
+    values
+      (nBetlag, inArnr, inLanr, l_maxepnr,
+       'B', trunc(sysdate), l_maxepnr, trunc(sysdate), trunc(sysdate),
+       l_buch_menge, 0, c_text);
+  end abgleich;
+
+begin
+  -- 1) Chargen ausbuchen (VERF = 0; FR3/ANZAHL unverändert)
+  for t in (select manr, lanr, ltyp, lago from hs.tmp_blech_man_20261125) loop
+    hs.shc_bestand.set_infos(c_prog, 'DP', 50, null, null, null);
+    update hs.t036meng
+       set verf = 0
+     where manr = t.manr
+       and lanr = t.lanr
+       and ltyp = t.ltyp
+       and lago = t.lago
+       and verf > 0;
+    cnt_chg := cnt_chg + sql%rowcount;
+  end loop;
+
+  if cnt_chg <> 179 then
+    raise_application_error(-20001, 'Erwartet 179 Chargen, geändert: ' || cnt_chg);
+  end if;
+
+  -- 2) Artikelbestand je Artikel/Lager auf Chargensumme setzen
+  for a in (select distinct lanr, arnr from hs.tmp_blech_man_20261125) loop
+    abgleich(50, a.lanr, a.arnr);
+    cnt_art := cnt_art + 1;
+  end loop;
+
+  dbms_output.put_line('Chargen ausgebucht: ' || cnt_chg || ' / Artikel abgeglichen: ' || cnt_art);
+end;
+/
