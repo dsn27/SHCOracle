@@ -49,3 +49,30 @@ select count(*)                                   as anz,
        min(nvl(lsda, dlzu))                       as erster_eingang,
        max(nvl(lsda, dlzu))                       as letzter_eingang
   from hs.tmp_blech_man_20261125;
+-- Ergebnis 2026-11-25: 179 Zeilen, 179 verschiedene Chargen (= Kunden-Export).
+
+
+-- -------------------------------------------------------------------------------------
+-- Schritt 2: Vorschau / Prüfung (vor UND nach dem UPDATE ausführen)
+--   vorher : gefunden = noch_mit_bestand = 179, alle übrigen Zähler 0
+--   nachher: schon_0 = verf_geaendert_seit_tmp = 179, noch_mit_bestand = 0
+-- -------------------------------------------------------------------------------------
+select count(*)                                                as anz_tmp,
+       count(t.lago)                                           as gefunden,
+       count(*) - count(t.lago)                                as nicht_gefunden,
+       sum(case when t.verf > 0 then 1 else 0 end)             as noch_mit_bestand,
+       sum(case when t.verf = 0 then 1 else 0 end)             as schon_0,
+       sum(case when t.verf <> x.verf then 1 else 0 end)       as verf_geaendert_seit_tmp,
+       sum(case when trim(t.ident) <> 'MAN' then 1 else 0 end) as ident_nicht_man,
+       sum(case when nvl(t.fr3, ' ') <> nvl(x.fr3, ' ') then 1 else 0 end) as fr3_geaendert,
+       count(d.exref1)                                         as jetzt_in_logical,
+       sum(x.verf)                                             as summe_verf_tmp,
+       sum(t.verf)                                             as summe_verf_aktuell
+  from hs.tmp_blech_man_20261125 x
+  left join hs.t036meng t
+         on t.manr = x.manr
+        and t.lanr = x.lanr
+        and t.ltyp = x.ltyp
+        and t.lago = x.lago
+  left join (select distinct exref1 from dip_bleche) d
+         on d.exref1 = x.lago;
