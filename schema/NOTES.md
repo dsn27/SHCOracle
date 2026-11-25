@@ -280,6 +280,8 @@ In allen Fällen: `VERF → 0`, **`FR3` unverändert**, `ANZAHL` unverändert (m
   Sicherungen `HS.T036MENG_BAK_20261125`, `HS.T075LAG_BAK_20261125`.
 - Danach: Trigger-Code prüfen → `TMP_`-Hilfstabelle mit freigegebenen Chargen → Vorschau →
   `T036MENG_BAK_YYYYMMDD` → `UPDATE` ohne AutoCommit → Prüfabfrage → `COMMIT`.
-- Offen: übrige 36 Leichen (22 Sternchen, 12 IDENT leer, 2 sonstige – inkl. 7 „anderer Artikel“).
-- Offen: Warum werden `MAN`-Chargen angelegt (Prozess)? Was ist Lager 69? Mengenabgleich der
+- **Projekt abgeschlossen (2026-11-25):** Kunde wollte nur die MAN-Chargen ausbuchen; keine
+  weiteren Änderungen. Die folgenden Punkte sind **nicht beauftragt**, nur zur Info:
+- Nicht bereinigt: übrige 36 Leichen (22 Sternchen, 12 IDENT leer, 2 sonstige – inkl. 7 „anderer Artikel“).
+- Ungeklärt: Warum werden `MAN`-Chargen angelegt (Prozess)? Es entstehen laufend neue. Was ist Lager 69? Mengenabgleich der
   aktiven Chargen gegen LogiCAL (Gewicht der Tafeln) – Spalten von `DIP_BLECHE` noch unbekannt.
