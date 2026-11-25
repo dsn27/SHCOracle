@@ -223,6 +223,11 @@ Alle Artikel der 215 existieren in `DIP_MATERIAL`.
 - `SHC_BESTAND.PROTOKOLL36` schreibt nur `T036HIST` (bei Änderung von VERF/ANZAHL/SOLL/IST/FR3/4/5
   oder INSERT); `PROG`, `VART`, `VORGANG` … kommen aus Package-Globals (`pProg` …), sonst leer.
   Fehler beim Insert → `RAISE` (DML bricht ab). Keine weiteren Seiteneffekte.
+  Setzen: `SHC_BESTAND.SET_INFOS(prog, vart, manr, vorgang, lauf, ponr)` (2 Overloads, Spec Z. 8/17),
+  z.B. `SHC_Bestand.Set_Infos('UEB_ALTCHG_AUSBUCH','DP',50,null,null,null)` in Prozedur
+  `HS.UEBERNAHME_ALT_AUSBUCHEN` (Altchargen-Bereinigung 17.01.2026). **Achtung:** `PROTOKOLL36`
+  ruft nach jedem Satz `Init_Globals` → Globals gelten nur für **eine** Zeile → `SET_INFOS` vor
+  jedem Einzel-UPDATE aufrufen (Schleife), sonst bleibt `PROG` ab der 2. Zeile leer.
 
 ### Wie SHCWare Chargen ausbucht (`T036HIST`, HS, LTYP 'T', 12/2025–11/2026)
 | PROG | VART | Anzahl | Muster |
