@@ -76,3 +76,4 @@ select count(*)                                                as anz_tmp,
         and t.lago = x.lago
   left join (select distinct exref1 from dip_bleche) d
          on d.exref1 = x.lago;
+-- Ergebnis 2026-11-25 vorher: 179 gefunden, 179 mit Bestand, alle übrigen 0, Summe 28.579,86 kg.

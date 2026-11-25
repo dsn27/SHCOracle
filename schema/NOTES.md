@@ -238,6 +238,16 @@ Alle Artikel der 215 existieren in `DIP_MATERIAL`.
 | `SHC036LCV` | K | 5 | Programm SHC036 |
 In allen Fällen: `VERF → 0`, **`FR3` unverändert**, `ANZAHL` unverändert (meist 1).
 
+### Prozedur `HS.UEBERNAHME_ALT_AUSBUCHEN` (Altchargen-Bereinigung 17.01.2026)
+- Auswahl: `V036CH` mit `CHARGE = '00000' AND LSDA < c_cutoff_date` (ohne LogiCAL-Prüfung! –
+  `00000` ist kein sicheres Kriterium, siehe oben).
+- Je Charge: `UPDATE t036meng SET verf = 0, anzahl = 1, frn2 = -3` (über `RECNUM`);
+  `FRN2 = -3` = Markierung dieser Bereinigung (wird zu Beginn auf 0 zurückgesetzt).
+- `SET_INFOS('UEB_ALTCHG_AUSBUCH','DP',50,…)` wird **nach** dem UPDATE aufgerufen → wirkt erst auf
+  die nächste Zeile (Fehler; richtig: vorher aufrufen).
+- Danach je Artikel/Lager mit `FRN2 = -3`: lokale Funktion `Abgleich(50, lanr, arnr, 'DIP', 'DIP')`
+  – vermutlich Abgleich Artikelbestand `T075LAG` an die Chargen (Code noch nicht gesehen).
+
 ### Bereinigung – Stand und nächste Schritte
 - Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für
   Chargen); Artikelbestand bleibt, Korrektur später per Inventur.
