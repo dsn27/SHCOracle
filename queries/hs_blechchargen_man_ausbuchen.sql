@@ -8,7 +8,14 @@
 -- Mandant : HS (MANR = 50)
 -- Freigabe: Kunde 2026-11-25 (Grund „Von Hand eingebucht, in LogiCAL nicht vorhanden“ aus
 --           queries/hs_blechchargen_ausbuchliste_kunde.sql, Export vom 22.11.2026)
--- Status  : IN ARBEIT – noch nicht ausgeführt
+-- Status  : AUSGEFÜHRT 2026-11-25, commit durch Benutzer. Ergebnis: 179 Chargen auf 0
+--           (28.579,86 kg), 179 × T036HIST mit PROG 'UEB_MANCHG_AUSBUCH', 135 Artikel/Lager
+--           abgeglichen: T075LAG VERF 82.289,33 → 62.972,70, EFFB 85.935,34 → 66.618,71,
+--           135 × T092EP VORG 'B' TEXT 'MANCHG AUSBUCH' (Summe −19.316,63). Kontrolle in SHCWare
+--           an 100060 ok (−6.152,72 kg, Restbestand = Chargen 3.884,11 kg).
+--           Sicherungen: HS.T036MENG_BAK_20261125, HS.T075LAG_BAK_20261125 (einige Wochen behalten);
+--           Hilfstabelle HS.TMP_BLECH_MAN_20261125 nach ein paar Tagen löschen.
+--           Wiederverwendung: Datum/Tabellennamen anpassen, Erwartungswerte (179/135) neu ermitteln.
 --
 -- Trigger : T036MENG_NULLTRIG → SHC_BESTAND.PROTOKOLL36 schreibt je geänderter Zeile einen
 --           Satz in T036HIST (VERF_OLD/NEW, OSUSER, DATUM; PROG/VART leer, da nicht aus SHCWare).

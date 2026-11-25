@@ -273,7 +273,13 @@ In allen Fällen: `VERF → 0`, **`FR3` unverändert**, `ANZAHL` unverändert (m
   (−2.821,69 kg). Variante `Abgleich` (Artikel = Chargensumme) → netto −19.316,63 kg, davon
   12 Erhöhungen (+4.663,74 kg; v.a. 103802 1.4539 Lager 66: +4.151,2 kg). 28 Artikel schon ≤ 0.
   → Die MAN-Mengen sind am Artikel oft schon (teilweise) abgebucht.
+- **2026-11-25 ausgeführt (Variante B, wie Januar), commit ok:** 179 MAN-Chargen `VERF = 0`
+  (`T036HIST.PROG = 'UEB_MANCHG_AUSBUCH'`), 135 Artikel/Lager per Abgleich auf Chargensumme
+  (`T092EP` `VORG 'B'`, `TEXT 'MANCHG AUSBUCH'`, −19.316,63 kg). Alle Prüfwerte exakt wie erwartet;
+  SHCWare-Kontrolle 100060 ok. Skript: `queries/hs_blechchargen_man_ausbuchen.sql`.
+  Sicherungen `HS.T036MENG_BAK_20261125`, `HS.T075LAG_BAK_20261125`.
 - Danach: Trigger-Code prüfen → `TMP_`-Hilfstabelle mit freigegebenen Chargen → Vorschau →
   `T036MENG_BAK_YYYYMMDD` → `UPDATE` ohne AutoCommit → Prüfabfrage → `COMMIT`.
+- Offen: übrige 36 Leichen (22 Sternchen, 12 IDENT leer, 2 sonstige – inkl. 7 „anderer Artikel“).
 - Offen: Warum werden `MAN`-Chargen angelegt (Prozess)? Was ist Lager 69? Mengenabgleich der
   aktiven Chargen gegen LogiCAL (Gewicht der Tafeln) – Spalten von `DIP_BLECHE` noch unbekannt.

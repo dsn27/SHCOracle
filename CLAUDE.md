@@ -71,8 +71,8 @@ Prüfabfrage bestätigen; danach STATUS auf „bestaetigt (Datum)“ setzen.
   unter dem Beleg-Mandanten; Kennzeichen-Felder enthalten oft `' '` statt NULL;
   Werte = Menge × Preis / `T051ART.PREIVK`. Details und Statistik-Tabellen in `NOTES.md`.
 - **LogiCAL (Blechverwaltung, HS):** Tabellen `DIP_*` (unqualifiziert), Charge `T036MENG`
-  (`LTYP='T'`) ↔ `DIP_BLECHE.EXREF1 = LAGO`. Laufendes Bereinigungsprojekt (215 Chargen-Leichen,
-  wartet auf Kundenfreigabe) – Stand und nächste Schritte in `NOTES.md`, Abschnitt „LogiCAL“.
+  (`LTYP='T'`) ↔ `DIP_BLECHE.EXREF1 = LAGO`. Bereinigung: 179 MAN-Chargen am 2026-11-25 ausgebucht
+  (inkl. Artikel-Abgleich); 36 Leichen offen – Stand und nächste Schritte in `NOTES.md`, Abschnitt „LogiCAL“.
 - Fremde Abfragesammlungen: nur im Scratchpad auswerten (`tools/fremdanalyse/`), keine
   Originale/Kundendaten ins Repo.
 - Der Oracle-Discoverer-Katalog (`EUL4_*`) enthält nur die aus den FKs generierten Joins –
