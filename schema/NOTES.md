@@ -209,11 +209,17 @@ Alle Artikel der 215 existieren in `DIP_MATERIAL`.
   (Richtung SHCWare → LogiCAL), dazu ein Vorschau-SELECT. Schwächen: `NVL(TRIM(lgort),'') = ''`
   nie wahr; Vorschau joint `dip_lager` inner → Bleche ohne Lager fehlen in der Vorschau.
 
-### Trigger auf `HS.T036MENG` (vor jeder DML prüfen)
-`T036MENG_HOCHREGALLAGER` (AFTER EACH ROW, I/U/D), `T036MENG_NULLTRIG` (BEFORE EACH ROW, I/U/D),
-`T036MENG_ORAFLEX` (BEFORE EACH ROW, I/U). Code noch nicht angesehen (`all_source`).
-`T036HIST` (Protokoll Mengenänderungen: `VERF_OLD/NEW`, `OSUSER`, `PROG`) wird von keinem
-`T036HIST`-Trigger befüllt – vermutlich vom Programm selbst.
+### Trigger auf `HS.T036MENG` (Code geprüft 2026-11-25)
+- `T036MENG_ORAFLEX` (BEFORE ROW, I/U): setzt nur bei INSERT `RECNUM` aus `T036MENG_DFSEQ`.
+- `T036MENG_NULLTRIG` (BEFORE ROW, I/U/D): ersetzt NULL in `LAGO/IDENT` (→ `' '`),
+  `KAPAZ/VERF/ANZAHL` (→ 0), `DLZU` (→ 01.01.0001); entfernt `FR3 = 'I'`, wenn `VERF` auf > 0
+  geändert wird; schreibt **jede** Änderung als Historie über `SHC_BESTAND.PROTOKOLL36(Hist)`
+  (→ `T036HIST`, Aktion I/U/D, `VERF_OLD/NEW` …). Ein SQL-`UPDATE` wird also protokolliert.
+- `T036MENG_HOCHREGALLAGER` (AFTER ROW, I/U/D): bei `LTYP = 'T'` und `LGORT` ≠ `' '` →
+  `SHC_KABELANLAGE.INSERT_T036LGORT(manr, lanr, arnr, lgort)` (Lagerort zum Artikel anlegen);
+  bei `LTYP = 'R'` zusätzlich `T069LGORT`. Fehler werden nur über `SHC_PROTOKOLL('FM', …)`
+  protokolliert, die Exception wird geschluckt (kein Abbruch).
+- Keiner der Trigger ändert direkt `T075LAG`.
 
 ### Bereinigung – Stand und nächste Schritte
 - Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für
