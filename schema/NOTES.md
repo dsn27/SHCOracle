@@ -220,6 +220,10 @@ Alle Artikel der 215 existieren in `DIP_MATERIAL`.
   Chargen); Artikelbestand bleibt, Korrektur später per Inventur.
 - 2026-11-22: Kundenliste (215 Zeilen) exportiert → `queries/hs_blechchargen_ausbuchliste_kunde.sql`.
   **Warten auf Freigabe des Kunden** (bes. die 7 Chargen „unter anderem Artikel“).
+- 2026-11-25: **Kunde hat entschieden:** alle Chargen mit Grund „Von Hand eingebucht, in LogiCAL
+  nicht vorhanden“ (`IDENT = 'MAN'`, kein Blech in LogiCAL) werden ausgebucht. Die übrigen
+  (Sternchen, leer, sonstige, anderer Artikel) bleiben vorerst stehen.
+  Abgrenzung auf den Stand der Kundenliste: `V036CH.LSDA < DATE '2026-11-23'`.
 - Vorschlag: `VERF = 0`, `FR3` unverändert (wie normal verbrauchte Chargen) – noch nicht bestätigt.
 - Danach: Trigger-Code prüfen → `TMP_`-Hilfstabelle mit freigegebenen Chargen → Vorschau →
   `T036MENG_BAK_YYYYMMDD` → `UPDATE` ohne AutoCommit → Prüfabfrage → `COMMIT`.
