@@ -103,6 +103,7 @@ select l.*
 
 select count(*) as anz, sum(verf) as summe_verf, sum(effb) as summe_effb
   from hs.t075lag_bak_20261125;
+-- Ergebnis 2026-11-25: T036MENG_BAK 179 / 28.579,86; T075LAG_BAK 135 / VERF 82.289,33 / EFFB 85.935,34
 
 
 -- -------------------------------------------------------------------------------------
@@ -260,3 +261,52 @@ begin
   dbms_output.put_line('Chargen ausgebucht: ' || cnt_chg || ' / Artikel abgeglichen: ' || cnt_art);
 end;
 /
+
+
+-- -------------------------------------------------------------------------------------
+-- Schritt 5: Prüfung im SELBEN Fenster (vor dem commit)
+--   erwartet: T036MENG auf 0 = 179 / 28.579,86; T036HIST = 179 / 28.579,86;
+--             T075LAG VERF ≈ 82.289,33 − 19.316,63 = 62.972,70; EFFB ≈ 85.935,34 − 19.316,63 = 66.618,71;
+--             T092EP = 135 / ≈ −19.316,63; T075LAG <> Chargensumme = 0
+--   dann: commit;   sonst: rollback;
+-- -------------------------------------------------------------------------------------
+select '1 T036MENG auf 0' as pruefung, count(*) as anz, sum(b.verf) as menge
+  from hs.t036meng_bak_20261125 b
+  join hs.t036meng t
+    on t.manr = b.manr and t.lanr = b.lanr and t.ltyp = b.ltyp and t.lago = b.lago
+ where t.verf = 0
+union all
+select '2 T036HIST mit PROG', count(*), sum(h.verf_old)
+  from hs.t036hist h
+ where h.manr = 50
+   and h.prog = 'UEB_MANCHG_AUSBUCH'
+   and h.datum >= trunc(sysdate)
+union all
+select '3 T075LAG VERF neu', count(*), sum(l.verf)
+  from hs.t075lag_bak_20261125 b
+  join hs.t075lag l on l.manr = b.manr and l.lanr = b.lanr and l.arnr = b.arnr
+union all
+select '4 T075LAG EFFB neu', count(*), sum(l.effb)
+  from hs.t075lag_bak_20261125 b
+  join hs.t075lag l on l.manr = b.manr and l.lanr = b.lanr and l.arnr = b.arnr
+union all
+select '5 T092EP Berichtigung', count(*), sum(e.menge)
+  from hs.t092ep e
+ where e.manr = 50
+   and e.vorg = 'B'
+   and e.text = 'MANCHG AUSBUCH'
+   and e.datwz = trunc(sysdate)
+union all
+select '6 T075LAG <> Chargensumme', count(*), null
+  from hs.t075lag_bak_20261125 b
+  join hs.t075lag l on l.manr = b.manr and l.lanr = b.lanr and l.arnr = b.arnr
+  left join (select lanr, arnr, sum(verf) as s
+               from hs.t036meng
+              where manr = 50
+                and ltyp in ('T', 'K')
+                and verf > 0
+                and nvl(fr3, ' ') <> 'I'
+              group by lanr, arnr) c
+         on c.lanr = l.lanr and c.arnr = l.arnr
+ where abs(nvl(l.verf, 0) - nvl(c.s, 0)) > 0.01
+order by 1;
