@@ -300,6 +300,12 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
   meist leer (15.804), `0` 846, `1` 16, `2` 74. `T086AUP.NEGA` Lager 66: `2` 1,41 Mio., leer 0,90 Mio., `0` 0,32 Mio.
   (Lager 69 ähnlich) → Positionen ohne Lagerführung sind gängig.
 - Lieferschein → Auftrag: `T082AULI` (PK `MANR, AINR, LAUF`, `BLNR` = Lieferscheinnr. = `T092EP.BLNR`).
+- **Aufbau eines LogiCAL-Auftrags in `T086AUP`** (5 Lieferscheine geprüft 2026-11-26, HS): je Teil ein
+  Paket-Hauptartikel `800…` (`KZSL = 1`, `NEGA` meist `0`), darunter Komponenten (`KZSL = 2`): der
+  **Blechartikel mit `NEGA` NULL** (= mit Lagerführung, bucht Abgang und prüft Bestand), Verschnitt/Schrott
+  `80019000` mit negativer Menge und Anarbeitung `444`, `105`, `333` (`KZMA = 1`) jeweils mit `NEGA = 2`.
+  `T086AUP.NEGA` entspricht in allen Fällen `T051ART.NEGA` → wird offenbar beim Anlegen aus dem Artikel übernommen.
+  Kundenmaterial: Blechkomponente mit Menge 0,01.
 
 ### Bereinigung – Stand und nächste Schritte
 - Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für
