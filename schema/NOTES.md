@@ -341,6 +341,11 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
   `VERFNEGA` = beim Zubuchen negativen Bestand auf 0 heben (Kennung = Lager, Default N).
   Die 5 geprüften LogiCAL-Aufträge haben `AART = 'LM'`. `T092EP.TEXT` bei Abgängen = `AART-Kundenname` (`LM-…`, `LE-…`, `GL-…`).
   `T012AART` PK `MANR, AART06`, Text `TEXT06`. `T620LP.MANR/AINR/PONR` = angelegter Auftrag (Kennzeichnung nach Import).
+- **Auftragsarten HS seit 07/2025 vs. LogiCAL** (`EXISTS T620LP satzart 'KALK2'`, 2026-11-26): `LM` „Lieferschein (ST.3)“
+  **nur LogiCAL** (9.380 Aufträge); `AM` „Lieferangebot“ fast nur LogiCAL (Angebote); `LE` gemischt (25 LogiCAL, 1.066 andere,
+  davon 256 mit Blechkomponente); `LS`, `AL`, `GL`, `GD`, `BV`, `AB` (fast) nur ohne LogiCAL. In `LM`-Aufträgen 199 Aufträge /
+  226 Positionen „Einzelposition mit Lagerführung“ in Lager 66/69 (würden mit `LAGERFORTSONDER` LM/66,69 keinen Bestand mehr
+  buchen) – noch zu prüfen, welche Artikel.
 
 ### Bereinigung – Stand und nächste Schritte
 - Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für
