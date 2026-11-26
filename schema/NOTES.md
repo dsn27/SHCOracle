@@ -345,7 +345,10 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
   **nur LogiCAL** (9.380 Aufträge); `AM` „Lieferangebot“ fast nur LogiCAL (Angebote); `LE` gemischt (25 LogiCAL, 1.066 andere,
   davon 256 mit Blechkomponente); `LS`, `AL`, `GL`, `GD`, `BV`, `AB` (fast) nur ohne LogiCAL. In `LM`-Aufträgen 199 Aufträge /
   226 Positionen „Einzelposition mit Lagerführung“ in Lager 66/69 (würden mit `LAGERFORTSONDER` LM/66,69 keinen Bestand mehr
-  buchen) – noch zu prüfen, welche Artikel.
+  buchen): 71 Artikel, davon `295151` „Laserdummy“ 141 Positionen mit Menge 0; Rest je 1–9 Positionen Handelsware/Zukauf
+  (Hebelschlösser, Schrauben, Gitterroste, Rohre, Flachstahl 3.477 kg, Dübelmörtel, Lohnleistungen wie lackieren/beizen).
+- `DIP_MATERIAL` enthält **nicht nur Bleche**, sondern auch Handelsware/Zukaufteile, die LogiCAL verkauft → „Artikel in
+  `DIP_MATERIAL`“ ist kein Kriterium für Blech. Blech = Artikel mit Chargen `T036MENG LTYP 'T'` / Tafeln in `DIP_BLECHE`.
 
 ### Bereinigung – Stand und nächste Schritte
 - Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für
