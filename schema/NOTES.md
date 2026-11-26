@@ -306,6 +306,16 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
   `80019000` mit negativer Menge und Anarbeitung `444`, `105`, `333` (`KZMA = 1`) jeweils mit `NEGA = 2`.
   `T086AUP.NEGA` entspricht in allen Fällen `T051ART.NEGA` → wird offenbar beim Anlegen aus dem Artikel übernommen.
   Kundenmaterial: Blechkomponente mit Menge 0,01.
+- **Code mit `T620LP` (Owner HS, `all_source`, 2026-11-26):** Import der LogiCAL-Aufträge = Package
+  **`SHC043`**, Funktion `kalk2_verarbeite_auftrag` (Z. ~6423–9148) mit `kalk2_pruef_auftrag` (Auftragsart aus
+  Konstante `DIAS/KALK2_AART`, Lager aus `feld19`/`feld12`), `kalk2_aufbau_83` (Längen `T083LAE`),
+  `kalk2_aufbau_charge` (Satz 4 Chargenteil, Verweis Satz 2 `feld17` → Satz 4 `feld6`, WE-Nr. `feld10` = `T036MENG.LAGO`),
+  `kalk2_charge_verbraucht` (`feld3 = 'V'`, `T034TRZU`). `SHC043` setzt **kein** `NEGA` – die Position übernimmt es in
+  `SHC_AB001` aus dem Artikel (`row_t086aup.nega := LTRIM(row_t051art.nega)`, Z. 6239/35704; Z. 35708: bei Geschäftsart
+  ohne Lagerführung wird `NEGA` auf 2 gesetzt). `SHC_FAKT` Z. ~4437 hat eine Sonderbehandlung für Artikel aus
+  `T620LP` mit `satzart = 'KALK2'`; `SHC_AB001A` Z. ~13843 liest Bestands-/Schrottkonto aus `T620LP`.
+  Fehlermeldung bei Sperre: `SHC_AB001` Z. 12144 „Negative Bestände nicht erlaubt. Bitte ändern Sie die Liefermenge!“.
+  Weitere Konstante: `DIAS/VERFNEGA` (`SHC_EK010_3`).
 
 ### Bereinigung – Stand und nächste Schritte
 - Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für
