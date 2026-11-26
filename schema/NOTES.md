@@ -280,6 +280,22 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
 - LogiCAL übergibt mit dem Auftrag (`T620LP`, `KALK2`) Materialartikel und Gewicht der Position
   und je verwendeter Tafel einen Satz 4 (Chargenteil, `feld3` = Charge, `feld8` = Gewicht).
 
+- **Bestätigt über alle MAN-Chargen (Abfrage 2026-11-26, `T036HIST` I/MAN seit 07/2025):** 85 MAN-Chargen
+  (rund 20 t) in 16 Monaten, fast alle `SHC036LCV` (v.a. forconi, ebleuel, henkel). Bei praktisch allen folgt
+  direkt danach (`EPNR` +1 bis +2) der Rechnungsabgang `VORG 'A'` desselben Artikels/Lagers, mit
+  Lieferscheindatum vor der Nachbuchung → MAN-Charge = Behelf, um die Rechnung freizubekommen.
+  Ausnahmen: Umbuchung 69 → 66 (101001, ±4), eine Gutschrift (`GL-`, Menge negativ), zwei MAN-Chargen
+  vom 26.11.2026 ohne Rechnung (noch offen).
+- Die Artikelbuchung beim Anlegen einer MAN-Charge (`VORG 'B'`, ohne Text) ist meist **größer als die
+  Charge** (z.B. MAN 26 → Artikel +2.756): `SHC036LCV` setzt den Artikel offenbar ebenfalls auf die
+  Chargensumme und gibt dabei die Rechnungsabgänge seit dem letzten DIP-Lauf zurück.
+- 8 Fälle mit Rechnungsabgang **0,01 kg**: LogiCAL übergibt bei `OhneMaterialKosten` (Kundenmaterial)
+  den Materialartikel mit Gewicht 0,01 (`SHCWareExportHelper`, `feld4 = "0,01"`); auch das sperrt die
+  Rechnung, wenn der Artikel ≤ 0 steht.
+- Mögliche Stellschrauben (Kommentare, ungeprüft): `T070BETR.LAGF` (1 = keine negativen Bestände,
+  ganzer Betrieb), `T069BLAG.RES09` (Lagerführung je Lager), `T051ART.NEGA` / `T086AUP.NEGA`
+  (0/1 = mit Lagerführung, 2 = ohne Lagerführung, je Artikel bzw. Auftragsposition).
+
 ### Bereinigung – Stand und nächste Schritte
 - Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für
   Chargen); Artikelbestand bleibt, Korrektur später per Inventur.
