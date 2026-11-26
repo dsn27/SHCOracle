@@ -410,7 +410,9 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
     Lagerführung. Wirkt nur für neu eingegliederte Aufträge.
 - **Setter (gelesen 2026-11-26):** `SHC_AB001_I.Set_t086aup_nega(inoutValue IN OUT t086aup.nega%TYPE)` prüft
   `SHC_AB001_L.CheckAenderungen(0,'T086AUP','NEGA',…)` (sonst `raise_application_error -20001`); bei Wechsel `0 → 2` und
-  `GetStatusPosition() in (0,2)` Zweig mit `CheckIsLagerfuehrung` (Bestandskorrektur? Rest ab Z. 6745 nicht gelesen).
+  `GetStatusPosition() in (0,2)` (laut Kommentar nicht in Erfassung) und `CheckIsLagerfuehrung` →
+  `shc_ab001.SaveLagerbestand(manr, lanr, arnr, -meng, -rume, 0, 0, …)` = Bestand der Position zurückbuchen; danach
+  `row_t086aup.nega := inoutValue; UpdateStatusPosition`. → Im Import direkt nach `initposition` setzen (Menge/Rückstand 0).
   `Set_t086aup_rest_nega` setzt `REST` Stelle 18. `SavePosition2` setzt `NEGA` aus dem Artikel nur im Sammelartikel-Zweig;
   sonst nur `LoadPositionDefaults` (Z. 6239) und „Kaputt“-Geräte.
 - Änderungsvorschlag für SHC (Code, Fragen, Test): `shc-aenderungen/SHC043_HERZAU_UK_ohne_Lagerfuehrung.md`.

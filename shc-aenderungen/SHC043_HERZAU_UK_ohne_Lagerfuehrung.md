@@ -29,10 +29,10 @@ Bei den übrigen lokalen Variablen (z. B. nach `lPos_in_weiterem_Lauf varchar2(1
     lNega_UK          t086aup.nega%type;                                    --<Kürzel> <Datum> (Vorgang: <Nr.>) HERZAU: UK ohne Lagerführung
 ```
 
-### 2. In der Schleife der Unterkomponenten, vor dem Speichern der UK
+### 2. In der Schleife der Unterkomponenten, direkt nach `initposition`
 
-Unmittelbar **vor** der Zeile `shc_ab001.row_t386pos_zusi0.kalkstatus := lKalkStatus;` (Z. ~8218, direkt vor
-`-- UK speichern` / `SHC_AB001.SavePosition(FALSE)`):
+Unmittelbar **nach** der Zeile `shc_ab001.SetIndikator('ISKLIMFREIGABE', TRUE);` (Z. ~8053) und **vor**
+`lstep := 18;` / `-- Menge setzen` – also bevor Bestell-, Liefer- und Rückstandsmenge der UK gesetzt werden:
 
 ```sql
               --<Kürzel> <Datum> (Vorgang: <Nr.>) HERZAU: Unterkomponente (Blech) ohne Lagerführung anlegen.
@@ -40,7 +40,9 @@ Unmittelbar **vor** der Zeile `shc_ab001.row_t386pos_zusi0.kalkstatus := lKalkSt
               -- Artikel = Summe der Chargen). Mit Lagerführung würden Lieferschein und Rechnung das Blech ein
               -- zweites Mal abbuchen und wegen T070BETR.LAGF = 1 die Rechnung sperren.
               -- Nur für neu angelegte Positionen; Positionen in weiteren Läufen behalten ihr Kennzeichen.
+              -- Gesetzt direkt nach initposition, solange Menge und Rückstand der Position noch 0 sind.
               if gshc043_anw = 'HERZAU'
+                 and nvl(lnum,0) = 0
                  and nvl(lPos_in_weiterem_Lauf,'N') != 'J'
                  and nvl(trim(shc_ab001_i.Get_t086aup_nega),'0') != '2' then
                  begin
@@ -61,6 +63,12 @@ Hinweise zum Code:
 
 - Gesetzt wird über `SHC_AB001_I.Set_t086aup_nega` (IN OUT, daher Variable), wie in `SHC_AB001A` bei der
   Geschäftsartenänderung. Der Setter prüft selbst über `SHC_AB001_L.CheckAenderungen`, ob die Änderung erlaubt ist.
+- Warum direkt nach `initposition`: Wechselt `NEGA` von `0` auf `2` und ist `GetStatusPosition() in (0,2)`, bucht
+  der Setter den Bestand der Position zurück (`SaveLagerbestand` mit `-meng`, `-rume`, Z. 6743–6764). Laut
+  Kommentar betrifft das nur gespeicherte Positionen, nicht solche in Erfassung. An dieser Stelle sind Menge und
+  Rückstand der neuen UK ohnehin noch 0 – selbst wenn der Zweig greift, wird nichts gebucht. Positionen in weiteren
+  Läufen (bereits gespeichert) sind ausgenommen.
+- `lnum` ist an dieser Stelle das Ergebnis von `initposition`; schlägt sie fehl, wird nichts gesetzt.
 - `Set_t086aup_rest_nega` (Stelle 18 von `REST`) wird nicht gebraucht: `CheckIsLagerfuehrung` wertet
   `NEGA = '2'` **oder** `REST`-Stelle 18 aus; `SHC_AB001A` setzt für „ohne Lagerführung“ ebenfalls nur `NEGA`.
 - `SavePosition2` setzt `NEGA` nur im Zweig für Sammelartikel neu aus dem Artikel; Blechartikel sind keine
@@ -70,8 +78,9 @@ Hinweise zum Code:
 
 ## Fragen an SHC
 
-1. Löst `Set_t086aup_nega('2')` für eine neue, noch nicht gespeicherte Position eine Bestandskorrektur aus
-   (Zweig ab Z. 6743 in `SHC_AB001_I`, `GetStatusPosition() in (0,2)`)? Erwartet: nein.
+1. Welchen Wert hat `shc_ab001.GetStatusPosition()` direkt nach `initposition` einer neuen UK? Erwartet: nicht 0
+   oder 2 (Erfassung), sodass der Korrekturzweig in `Set_t086aup_nega` nicht greift – und falls doch, mit
+   Menge/Rückstand 0 nichts bucht.
 2. Einstandspreis: LogiCAL übergibt `feld9 = 0`, `SHC043` setzt deshalb keinen `EIPR`. Kommt der
    Durchschnittspreis bei `NEGA = '2'` weiterhin in die Position (Rohertrag)?
 3. Statistik (`T096STAT`): Werden Menge und kg der Blechposition ohne Lagerführung weiter fortgeschrieben?
