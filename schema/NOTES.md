@@ -325,7 +325,16 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
 - `SHC_FAKT.pruef_158_sonder` („Sonderfunktion für Fa. Drösser“): TRUE, wenn `T620LP` (`MANR, AINR, PONR`) zur
   Position einen Satz `KALK2` mit `feld3 = ARNR` hat. Aufrufer noch nicht gelesen.
 - `SHC_AB001A.storno_umbuchung` liest nur `satzart = 'KALKH'` („nur für Herzau“, 2011) – LogiCAL schreibt heute `KALK2`.
-- `SHC_AB001` Z. 35711: `SHC_AB001_L.CheckIsLagerfuehrung` setzt `NEGA` bei Geschäftsart ohne Lagerführung.
+- `SHC_FAKT.pruef_158_sonder` wird nur in der Statistik (`T096STAT`, `arnr_96`/`menge_96`, Pakete `verb_stl = 'H'`) genutzt –
+  keine Wirkung auf Bestand oder Bestandsprüfung.
+- **`SHC_AB001_L.CheckIsLagerfuehrung`** (gelesen 2026-11-26) – Position **ohne** Lagerführung, wenn (in dieser Reihenfolge):
+  0 `T069BLAG.RES09 = 'N'` (Positionslager) · 1 Sammelartikel (`SAMM > 0`) · 2 Auftragsart `T012AART.PA06 < 1` ·
+  3 `T081AUK.WERTKZ = 'J'` · 4 Paket-Hauptartikel (`KZSL = '1'`) · 5 `NEGA = '2'` oder `SUBSTR(T086AUP.REST,18,1) = '2'` ·
+  6 Geschäftsart `SUBSTR(T086AUP.REST,10,1)` mit `T065SCH SART='GA' ZAHL2 = 1` (setzt `NEGA := '2'`) · 7 Lieferung `STAT = '9'` ·
+  8 `T012AART.PA111` 1–7 (innerbetriebliche Verrechnung) · **9 Konstante `DIAS/LAGERFORTSONDER`** (seit 08/2025, MA:443130):
+  `shc_get_konstante('DIAS','LAGERFORTSONDER', MANR, AART, '-1')` = Liste von Lagernummern; liegt die Position in einem
+  dieser Lager → ohne Lagerführung. Aktive Konstanten: `T323FKON` (`APPTYP, KONSTANTE, MANR, KENNUNG, INHALT`),
+  Doku: `T322DKON`.
 
 ### Bereinigung – Stand und nächste Schritte
 - Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für
