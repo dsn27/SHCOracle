@@ -347,6 +347,12 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
   226 Positionen „Einzelposition mit Lagerführung“ in Lager 66/69 (würden mit `LAGERFORTSONDER` LM/66,69 keinen Bestand mehr
   buchen): 71 Artikel, davon `295151` „Laserdummy“ 141 Positionen mit Menge 0; Rest je 1–9 Positionen Handelsware/Zukauf
   (Hebelschlösser, Schrauben, Gitterroste, Rohre, Flachstahl 3.477 kg, Dübelmörtel, Lohnleistungen wie lackieren/beizen).
+  Geprüft: alle außer `100902` (ALMg3) **ohne Chargen und ohne Tafeln in LogiCAL** = echte Handelsware/Zukauf (68 Artikel,
+  ~85 Positionen in 16 Monaten). LogiCAL übergibt das Lager nur im Kopf (`T620LP` Kopfsatz `feld19`), nicht je Position.
+- **Lösungsvorschlag (Stand 2026-11-26, noch nicht entschieden):** A) `T323FKON` `DIAS/LAGERFORTSONDER`, MANR 50, Kennung `LM`,
+  Inhalt `66,69` → Positionen von LogiCAL-Aufträgen in 66/69 ohne Lagerführung (Nebenwirkung: Handelsware oben bucht keinen
+  Abgang mehr); B) Handelsware aus anderem Lager (braucht Lager je Position in LogiCAL/`SHC043`); C) `SHC043` setzt `NEGA = 2`
+  nur an Blechkomponenten (`KZSL = 2`) – SHC-Code. Statistik/Rohertrag ohne Lagerführung mit SHC klären.
 - `DIP_MATERIAL` enthält **nicht nur Bleche**, sondern auch Handelsware/Zukaufteile, die LogiCAL verkauft → „Artikel in
   `DIP_MATERIAL`“ ist kein Kriterium für Blech. Blech = Artikel mit Chargen `T036MENG LTYP 'T'` / Tafeln in `DIP_BLECHE`.
 
