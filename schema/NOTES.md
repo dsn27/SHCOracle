@@ -257,6 +257,29 @@ In allen Fällen: `VERF → 0`, **`FR3` unverändert**, `ANZAHL` unverändert (m
   - **D.h. der Artikelbestand wird komplett auf die Chargensumme gesetzt** (nimmt auch alle
     anderen Differenzen mit), nicht nur um die ausgebuchte Menge reduziert.
 
+### Warum der Kunde vor der Rechnung nachbuchen muss (Analyse 2026-11-26)
+Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisation 08.07.2025:
+- **`IDENT` der LogiCAL-Charge = Tafelgewicht aus LogiCAL** (`**3416.00`, `**2342.40`). Die
+  Schnittstelle setzt die Charge auf dieses Gewicht: WE 3.562 (29.10.2026) → DIP −146 → 3.416.
+- **Der DIP-Abgleich setzt den Artikel bei jedem Lauf, in dem sich eine Charge des Artikels ändert,
+  auf die Chargensumme** (`T092EP VORG 'B' TEXT 'DIP'`). Abgänge aus Rechnungen (`VORG 'A'`) seit dem
+  letzten Lauf werden dabei **zurückgegeben**: 30.10.2026 −138,32 = Charge −146 + Abgang 7,68;
+  12.12.2025 +3.904 = Abgänge 390,4 + 3.562,4 − Charge 48,8; 25.11.2026 +4.151,2 = Abgang 4.831,2 − MAN 680.
+  → Der Artikelbestand folgt LogiCAL (Tafelverbrauch); Rechnungsabgänge wirken nur bis zum nächsten Lauf.
+- **Ablauf, der zur Sperre führt:** Tafel in LogiCAL verbraucht (09.11.2026: Charge 011381 −3.416,
+  Artikel −3.416) → danach Lieferung/Rechnung desselben Materials (LS 430392, 4.831,2 kg) zieht den
+  Artikel ein zweites Mal ab → verfügbarer Bestand −2.687,2 → Rechnung gesperrt (HS hat vermutlich
+  `T070BETR.LAGF = 1`, keine negativen Bestände; ungeprüft) → Nachbuchung von Hand.
+- **Die Nachbuchung erzeugt die Leichen:** 23.11.2026 `SHC036LCV` (forconi) legt MAN-Charge 011438
+  (2.700) an **und** bucht den Artikel +2.700 (EP 27, ohne Text); erst danach die Rechnung (EP 28,
+  `DATWZ` = Lieferscheindatum 12.11.). Der nächste Abgleich nimmt den Artikelzugang wieder zurück,
+  die MAN-Charge bleibt dauerhaft → Chargensumme und Artikel zu hoch. Gleiches Muster am 30.07.2025
+  (Artikel +8.927,2, MAN 010289 680). Erklärt die laufend neuen MAN-Chargen.
+- `T092EP.EPNR` ist die Buchungsreihenfolge; `DATWZ` kann davor liegen (Lieferscheindatum).
+  `T092EP.MENGE` ist bei `A` positiv gespeichert (EK192 zeigt negativ).
+- LogiCAL übergibt mit dem Auftrag (`T620LP`, `KALK2`) Materialartikel und Gewicht der Position
+  und je verwendeter Tafel einen Satz 4 (Chargenteil, `feld3` = Charge, `feld8` = Gewicht).
+
 ### Bereinigung – Stand und nächste Schritte
 - Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für
   Chargen); Artikelbestand bleibt, Korrektur später per Inventur.
