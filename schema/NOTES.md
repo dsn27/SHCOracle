@@ -316,6 +316,16 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
   `T620LP` mit `satzart = 'KALK2'`; `SHC_AB001A` Z. ~13843 liest Bestands-/Schrottkonto aus `T620LP`.
   Fehlermeldung bei Sperre: `SHC_AB001` Z. 12144 „Negative Bestände nicht erlaubt. Bitte ändern Sie die Liefermenge!“.
   Weitere Konstante: `DIAS/VERFNEGA` (`SHC_EK010_3`).
+- **`SHC043.kalk2_aufbau_charge`** (Code gelesen 2026-11-26): je Chargensatz aus LogiCAL sucht der Import die Charge
+  direkt über `LAGO` (Parameter WE-Nr., `feld10` – **LogiCAL füllt `feld10` nicht**) oder über `T034TRZU.FREI_6 = Charge`
+  (erst mit `VERF > 0`, dann ohne) → `T036MENG.IDENT = T034TRZU.TRNR`, `LAGO = ZUNR`. Gefunden: `UPDATE t036meng SET verf =
+  verf − Menge` (Anzahl bleibt) und Auftragslängensatz `T037APKL`/`T637APKL` (`LTYP 'T'`, `AIBENR` = Auftrag). Nicht gefunden:
+  nur `shc_protokoll('FM','SHC043','Keine Chargenzuordnung möglich! …')`, Import läuft weiter. Kein Zugriff auf `T075LAG`.
+  `kalk2_charge_verbraucht` (Satz 5, `feld3 = 'V'`): Charge `VERF = 0, ANZAHL = 0`.
+- `SHC_FAKT.pruef_158_sonder` („Sonderfunktion für Fa. Drösser“): TRUE, wenn `T620LP` (`MANR, AINR, PONR`) zur
+  Position einen Satz `KALK2` mit `feld3 = ARNR` hat. Aufrufer noch nicht gelesen.
+- `SHC_AB001A.storno_umbuchung` liest nur `satzart = 'KALKH'` („nur für Herzau“, 2011) – LogiCAL schreibt heute `KALK2`.
+- `SHC_AB001` Z. 35711: `SHC_AB001_L.CheckIsLagerfuehrung` setzt `NEGA` bei Geschäftsart ohne Lagerführung.
 
 ### Bereinigung – Stand und nächste Schritte
 - Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für
