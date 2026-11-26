@@ -395,8 +395,8 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
   LogiCAL-Aufträgen freizubekommen – siehe „Warum der Kunde vor der Rechnung nachbuchen muss“.
 - **`SHC043` (Package-Export vom Benutzer, gelesen 2026-11-26, Code nicht im Repo; Zeilen = Package-Datei):**
   - Kundenweiche `gshc043_anw` aus Konstante `DIAS/SHC043_ANW` (je Betrieb); leer → in `kalk2_pruef_auftrag` `'DROESSER'`,
-    in `kalkH_pruef_auftrag` `'HERZAU'`. Im KALK2-Pfad gibt es Sonderzweige für `'HERZAU'` (Z. 8027, 8137) – Wert für HS
-    noch nicht geprüft.
+    in `kalkH_pruef_auftrag` `'HERZAU'`. Im KALK2-Pfad gibt es Sonderzweige für `'HERZAU'` (Z. 8027, 8137).
+    **HS (geprüft 2026-11-26): `T323FKON` `SHC043_ANW` = `HERZAU`** (MANR und Kennung leer = gilt für das ganze Schema).
   - Unterkomponenten-Schleife in `kalk2_verarbeite_auftrag` Z. ~7986–8353: Cursor `ct620lp_uk` = alle Sätze `feld1 = '3'`
     mit `feld11` = Verknüpfung der Hauptposition (`feld15`) – Blech **und** Anarbeitung. Je UK: `shc_ab001.initposition`
     (Z. 8038/8040) → Setter `SHC_AB001_I.Set_t086aup_beme/vkpr/eipr`, `Set_t087poli_menge` → `SHC_AB001.SavePosition(FALSE)`
