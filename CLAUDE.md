@@ -72,8 +72,9 @@ Prüfabfrage bestätigen; danach STATUS auf „bestaetigt (Datum)“ setzen.
   Werte = Menge × Preis / `T051ART.PREIVK`. Details und Statistik-Tabellen in `NOTES.md`.
 - **LogiCAL (Blechverwaltung, HS):** Tabellen `DIP_*` (unqualifiziert), Charge `T036MENG`
   (`LTYP='T'`) ↔ `DIP_BLECHE.EXREF1 = LAGO`. Bereinigung abgeschlossen: 179 MAN-Chargen am
-  2026-11-25 ausgebucht (inkl. Artikel-Abgleich), keine weiteren Änderungen gewünscht – Details in
-  `NOTES.md`, Abschnitt „LogiCAL“.
+  2026-11-25 ausgebucht (inkl. Artikel-Abgleich). Ursache der MAN-Chargen geklärt (2026-11-26): Rechnungen von
+  LogiCAL-Aufträgen (`LM`) buchen das Blech ein zweites Mal ab, HS sperrt negative Bestände; Lösungsvorschlag
+  Konstante `LAGERFORTSONDER` wartet auf Kunde/SHC – Details in `NOTES.md`, Abschnitt „LogiCAL“.
 - Fremde Abfragesammlungen: nur im Scratchpad auswerten (`tools/fremdanalyse/`), keine
   Originale/Kundendaten ins Repo.
 - Der Oracle-Discoverer-Katalog (`EUL4_*`) enthält nur die aus den FKs generierten Joins –

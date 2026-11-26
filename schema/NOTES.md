@@ -258,6 +258,15 @@ In allen Fällen: `VERF → 0`, **`FR3` unverändert**, `ANZAHL` unverändert (m
     anderen Differenzen mit), nicht nur um die ausgebuchte Menge reduziert.
 
 ### Warum der Kunde vor der Rechnung nachbuchen muss (Analyse 2026-11-26)
+**Ergebnis in Kürze:** Blech wird doppelt abgebucht – (1) der DIP-Lauf (`UEB_DIP_CHARGENBEST`) bucht die in LogiCAL
+verbrauchte Tafel an der Charge aus und setzt den Artikel auf die Chargensumme, (2) die Rechnung des LogiCAL-Auftrags
+(Auftragsart `LM`) bucht die Blechkomponente (`T086AUP.NEGA` leer = mit Lagerführung) noch einmal ab. HS lässt keine
+negativen Bestände zu (`T070BETR.LAGF = 1`) → Rechnung gesperrt → Kunde legt MAN-Charge an (`SHC036LCV`) → der nächste
+DIP-Lauf nimmt den Artikelzugang zurück, die MAN-Charge bleibt als Leiche. 85 MAN-Chargen (~20 t) 07/2025–26.11.2026.
+Lösungsvorschlag: Konstante `DIAS/LAGERFORTSONDER` (MANR 50, Kennung `LM`, Inhalt `66,69`), Details unten.
+Abfragen: `queries/hs_rechnungssperre_blech_analyse.sql`. Kundenunterlage (Claude Docs, 2026-11-26):
+https://claude.ai/artifact/XGGS3mMvb6ZmLWTX1x9W45
+
 Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisation 08.07.2025:
 - **`IDENT` der LogiCAL-Charge = Tafelgewicht aus LogiCAL** (`**3416.00`, `**2342.40`). Die
   Schnittstelle setzt die Charge auf dieses Gewicht: WE 3.562 (29.10.2026) → DIP −146 → 3.416.
@@ -268,8 +277,8 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
   → Der Artikelbestand folgt LogiCAL (Tafelverbrauch); Rechnungsabgänge wirken nur bis zum nächsten Lauf.
 - **Ablauf, der zur Sperre führt:** Tafel in LogiCAL verbraucht (09.11.2026: Charge 011381 −3.416,
   Artikel −3.416) → danach Lieferung/Rechnung desselben Materials (LS 430392, 4.831,2 kg) zieht den
-  Artikel ein zweites Mal ab → verfügbarer Bestand −2.687,2 → Rechnung gesperrt (HS hat vermutlich
-  `T070BETR.LAGF = 1`, keine negativen Bestände; ungeprüft) → Nachbuchung von Hand.
+  Artikel ein zweites Mal ab → verfügbarer Bestand −2.687,2 → Rechnung gesperrt (`T070BETR.LAGF = 1`,
+  keine negativen Bestände, bestätigt) → Nachbuchung von Hand.
 - **Die Nachbuchung erzeugt die Leichen:** 23.11.2026 `SHC036LCV` (forconi) legt MAN-Charge 011438
   (2.700) an **und** bucht den Artikel +2.700 (EP 27, ohne Text); erst danach die Rechnung (EP 28,
   `DATWZ` = Lieferscheindatum 12.11.). Der nächste Abgleich nimmt den Artikelzugang wieder zurück,
@@ -382,5 +391,20 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
 - **Projekt abgeschlossen (2026-11-25):** Kunde wollte nur die MAN-Chargen ausbuchen; keine
   weiteren Änderungen. Die folgenden Punkte sind **nicht beauftragt**, nur zur Info:
 - Nicht bereinigt: übrige 36 Leichen (22 Sternchen, 12 IDENT leer, 2 sonstige – inkl. 7 „anderer Artikel“).
-- Ungeklärt: Warum werden `MAN`-Chargen angelegt (Prozess)? Es entstehen laufend neue. Was ist Lager 69? Mengenabgleich der
-  aktiven Chargen gegen LogiCAL (Gewicht der Tafeln) – Spalten von `DIP_BLECHE` noch unbekannt.
+- ~~Ungeklärt: Warum werden `MAN`-Chargen angelegt?~~ **Geklärt 2026-11-26:** Behelf, um gesperrte Rechnungen von
+  LogiCAL-Aufträgen freizubekommen – siehe „Warum der Kunde vor der Rechnung nachbuchen muss“.
+- Weiter offen: Was ist Lager 69? Mengenabgleich der aktiven Chargen gegen LogiCAL (Gewicht der Tafeln).
+
+### Rechnungssperre – Stand (2026-11-26)
+- Kundenunterlage erstellt (Link oben), Empfehlung Weg A (`LAGERFORTSONDER` LM/66,69), C (SHC043 setzt `NEGA = 2` nur an
+  der Blechkomponente) als dauerhafte Lösung. **Wartet auf:** Freigabe Kunde, Klärung mit SHC (Konstante in der
+  Version wirksam? Statistik/Einstandspreis/Rohertrag ohne Lagerführung? Kosten C).
+- Danach: Konstante setzen, an nächster LogiCAL-Rechnung prüfen; erst dann neue MAN-Chargen 011438 (2.700 kg, 103802),
+  011453 (300 kg, 1016008), 011454 (270 kg, 100230) wie am 25.11. ausbuchen (`queries/hs_blechchargen_man_ausbuchen.sql`,
+  Datum/Erwartungswerte anpassen).
+- Bis dahin: Kunde soll keine MAN-Chargen mehr anlegen.
+- Offen, nicht beauftragt: 256 `LE`-Aufträge ohne LogiCAL (seit 07/2025) verkaufen Blech aus 66/69 – Abgang wird vom
+  nächsten DIP-Lauf vermutlich zurückgenommen, Charge bleibt → möglicherweise zweite Quelle zu hoher Chargenbestände.
+- LogiCAL-Seite (Repo LogiCal, `SHCWareExportHelper`): Kundenmaterial geht mit 0,01 kg raus (`OhneMaterialKosten`);
+  Chargensatz 4 ohne `feld10` (WE-Nr.) → `SHC043.kalk2_aufbau_charge` findet die Charge nur über `T034TRZU.FREI_6`
+  (meist nicht) und bucht sie dann nicht ab – würde `feld10` gefüllt, buchte der Import die Charge zusätzlich zum DIP-Lauf ab.
