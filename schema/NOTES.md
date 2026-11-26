@@ -326,7 +326,7 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
   Fehlermeldung bei Sperre: `SHC_AB001` Z. 12144 „Negative Bestände nicht erlaubt. Bitte ändern Sie die Liefermenge!“.
   Weitere Konstante: `DIAS/VERFNEGA` (`SHC_EK010_3`).
 - **`SHC043.kalk2_aufbau_charge`** (Code gelesen 2026-11-26): je Chargensatz aus LogiCAL sucht der Import die Charge
-  direkt über `LAGO` (Parameter WE-Nr., `feld10` – **LogiCAL füllt `feld10` nicht**) oder über `T034TRZU.FREI_6 = Charge`
+  direkt über `LAGO` (Parameter WE-Nr., `feld10` – im KALK2-Pfad fest `'0'`, siehe „SHC043 (Package-Export …)“) oder über `T034TRZU.FREI_6 = Charge`
   (erst mit `VERF > 0`, dann ohne) → `T036MENG.IDENT = T034TRZU.TRNR`, `LAGO = ZUNR`. Gefunden: `UPDATE t036meng SET verf =
   verf − Menge` (Anzahl bleibt) und Auftragslängensatz `T037APKL`/`T637APKL` (`LTYP 'T'`, `AIBENR` = Auftrag). Nicht gefunden:
   nur `shc_protokoll('FM','SHC043','Keine Chargenzuordnung möglich! …')`, Import läuft weiter. Kein Zugriff auf `T075LAG`.
