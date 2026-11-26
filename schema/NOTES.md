@@ -335,6 +335,12 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
   `shc_get_konstante('DIAS','LAGERFORTSONDER', MANR, AART, '-1')` = Liste von Lagernummern; liegt die Position in einem
   dieser Lager → ohne Lagerführung. Aktive Konstanten: `T323FKON` (`APPTYP, KONSTANTE, MANR, KENNUNG, INHALT`),
   Doku: `T322DKON`.
+- **Stand HS (2026-11-26):** `KALK2_AART`, `LAGERFORTSONDER`, `VERFNEGA` sind in `T323FKON` **nicht gesetzt**. Doku
+  (`T322DKON`): `KALK2_AART` = Auftragsart für Aufträge aus der KALK2-Schnittstelle (je Betrieb, Kennung = Kunde);
+  `LAGERFORTSONDER` Inhalt = Lager ohne Lagerführung (Komma getrennt), Betrieb, **Kennung = Auftragsart**;
+  `VERFNEGA` = beim Zubuchen negativen Bestand auf 0 heben (Kennung = Lager, Default N).
+  Die 5 geprüften LogiCAL-Aufträge haben `AART = 'LM'`. `T092EP.TEXT` bei Abgängen = `AART-Kundenname` (`LM-…`, `LE-…`, `GL-…`).
+  `T012AART` PK `MANR, AART06`, Text `TEXT06`. `T620LP.MANR/AINR/PONR` = angelegter Auftrag (Kennzeichnung nach Import).
 
 ### Bereinigung – Stand und nächste Schritte
 - Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für
