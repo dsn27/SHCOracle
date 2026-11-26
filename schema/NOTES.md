@@ -295,6 +295,11 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
 - Mögliche Stellschrauben (Kommentare, ungeprüft): `T070BETR.LAGF` (1 = keine negativen Bestände,
   ganzer Betrieb), `T069BLAG.RES09` (Lagerführung je Lager), `T051ART.NEGA` / `T086AUP.NEGA`
   (0/1 = mit Lagerführung, 2 = ohne Lagerführung, je Artikel bzw. Auftragsposition).
+- **Stand HS (geprüft 2026-11-26):** `T070BETR.LAGF = 1` für MANR 50 → negative Bestände gesperrt (Ursache der
+  Rechnungssperre bestätigt). `T069BLAG.RES09` für Lager 66/69 leer. `T051ART.NEGA` der Artikel mit Lager 66/69:
+  meist leer (15.804), `0` 846, `1` 16, `2` 74. `T086AUP.NEGA` Lager 66: `2` 1,41 Mio., leer 0,90 Mio., `0` 0,32 Mio.
+  (Lager 69 ähnlich) → Positionen ohne Lagerführung sind gängig.
+- Lieferschein → Auftrag: `T082AULI` (PK `MANR, AINR, LAUF`, `BLNR` = Lieferscheinnr. = `T092EP.BLNR`).
 
 ### Bereinigung – Stand und nächste Schritte
 - Entscheidung Benutzer: zuerst nur die 215 Chargen in SHCWare abbauen (LogiCAL führend für
