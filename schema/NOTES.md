@@ -393,6 +393,21 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
 - Nicht bereinigt: übrige 36 Leichen (22 Sternchen, 12 IDENT leer, 2 sonstige – inkl. 7 „anderer Artikel“).
 - ~~Ungeklärt: Warum werden `MAN`-Chargen angelegt?~~ **Geklärt 2026-11-26:** Behelf, um gesperrte Rechnungen von
   LogiCAL-Aufträgen freizubekommen – siehe „Warum der Kunde vor der Rechnung nachbuchen muss“.
+- **`SHC043` (Package-Export vom Benutzer, gelesen 2026-11-26, Code nicht im Repo; Zeilen = Package-Datei):**
+  - Kundenweiche `gshc043_anw` aus Konstante `DIAS/SHC043_ANW` (je Betrieb); leer → in `kalk2_pruef_auftrag` `'DROESSER'`,
+    in `kalkH_pruef_auftrag` `'HERZAU'`. Im KALK2-Pfad gibt es Sonderzweige für `'HERZAU'` (Z. 8027, 8137) – Wert für HS
+    noch nicht geprüft.
+  - Unterkomponenten-Schleife in `kalk2_verarbeite_auftrag` Z. ~7986–8353: Cursor `ct620lp_uk` = alle Sätze `feld1 = '3'`
+    mit `feld11` = Verknüpfung der Hauptposition (`feld15`) – Blech **und** Anarbeitung. Je UK: `shc_ab001.initposition`
+    (Z. 8038/8040) → Setter `SHC_AB001_I.Set_t086aup_beme/vkpr/eipr`, `Set_t087poli_menge` → `SHC_AB001.SavePosition(FALSE)`
+    (Z. 8220) → Chargen (`ct620lp_ch`, Satz 4 mit `feld6` = UK-`feld12`) → `kalk2_aufbau_charge(..., inLago => '0')`.
+  - **Korrektur:** Im KALK2-Pfad übergibt `SHC043` `inLago` fest `'0'` → Charge wird immer über `T034TRZU.FREI_6` gesucht;
+    `feld10` von LogiCAL spielt dort keine Rolle (nur im KALKH-Pfad, Z. ~10469). Menge = `feld8` (+ `feld11`).
+  - `eipr` wird nur gesetzt, wenn `feld9 != 0`; LogiCAL schickt `feld9 = "0"` → Einstandspreis kommt aus SHCWare.
+  - **Weg C konkret:** in der UK-Schleife zwischen `initposition` und `SavePosition` `NEGA` auf `'2'` setzen
+    (`SHC_AB001_I.Set_t086aup_nega`, wie `SHC_AB001A` Z. 8192), z.B. nur bei `gshc043_anw = 'HERZAU'` oder hinter neuer
+    Konstante. Alle UKs (auch Anarbeitung, die ohnehin `NEGA = 2` hat) – Handelsware kommt als Satz 2 ohne UK, bleibt mit
+    Lagerführung. Wirkt nur für neu eingegliederte Aufträge.
 - Weiter offen: Was ist Lager 69? Mengenabgleich der aktiven Chargen gegen LogiCAL (Gewicht der Tafeln).
 
 ### Rechnungssperre – Stand (2026-11-26)
@@ -406,5 +421,5 @@ Zeitstrahl `T092EP` + `T036HIST` für 103802 (1.4539) Lager 66 seit Reorganisati
 - Offen, nicht beauftragt: 256 `LE`-Aufträge ohne LogiCAL (seit 07/2025) verkaufen Blech aus 66/69 – Abgang wird vom
   nächsten DIP-Lauf vermutlich zurückgenommen, Charge bleibt → möglicherweise zweite Quelle zu hoher Chargenbestände.
 - LogiCAL-Seite (Repo LogiCal, `SHCWareExportHelper`): Kundenmaterial geht mit 0,01 kg raus (`OhneMaterialKosten`);
-  Chargensatz 4 ohne `feld10` (WE-Nr.) → `SHC043.kalk2_aufbau_charge` findet die Charge nur über `T034TRZU.FREI_6`
-  (meist nicht) und bucht sie dann nicht ab – würde `feld10` gefüllt, buchte der Import die Charge zusätzlich zum DIP-Lauf ab.
+  `SHC043` sucht die Charge im KALK2-Pfad nur über `T034TRZU.FREI_6` (LAGO fest `'0'`) und findet sie offenbar meist
+  nicht (keine `T036HIST`-Einträge aus dem Import bei 103802) – fände er sie, würde zusätzlich zum DIP-Lauf abgebucht.
